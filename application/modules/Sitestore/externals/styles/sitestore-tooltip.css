@@ -1,0 +1,279 @@
+/* $Id: sitestore_tooltip.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+.sitestore_show_owner_tooltip {
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: center;
+	padding: 5px 10px 5px 5px;
+	width: auto;
+	font-size: .8em;
+	margin-top:5px;
+	font-weight:normal;
+	clear:both;
+}
+.sitestore_show_owner_tooltip_wrapper:hover .sitestore_show_owner_tooltip {
+	display: block;
+}
+.sitestore_show_owner_tooltip_wrapper:hover .sitestore_show_owner_tooltip a {
+	color:#FFFFFF !important;
+}
+.sitestore_show_owner_tooltip_wrapper .sitestore_show_owner_tooltip img {
+	margin-top:-12px;
+	left: 5px;
+	position: absolute;
+}
+/*	css for tooltip start here */
+div.sitestore_tooltip {
+	position:absolute;
+	z-index:100;
+	margin-left:-84px;
+	margin-top:10px;
+}
+.sitestore_tooltip_content_outer {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius:3px;
+	display: block;
+	background: #222;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	width: 260px;
+	font-size: .8em;
+	margin:0;
+	-moz-box-shadow:3px 3px 3px #bcbcbc;
+	-webkit-box-shadow:3px 3px 3px #bcbcbc;
+	box-shadow: 3px 3px 3px #bcbcbc;
+	float:left;
+}
+.sitestore_tooltip_content_outer .sitestore_tooltip_content_inner {
+	width:250px;
+	float:left;
+	background:#FFFFFF;
+	padding:5px;
+	position:relative;
+}
+.sitestore_tooltip_arrow {
+	position:absolute;
+	width:250px;
+	text-align:center;
+	top:-18px;
+}
+.sitestore_tooltip_arrow img {
+	border:none;
+	width:13px;
+	height:9px;
+	float:none;
+}
+.sitestores_tooltip_info {
+	overflow: hidden;
+}
+.sitestores_tooltip_info .title {
+	font-weight:bold;
+	margin-bottom:1px;
+	float:left;
+	width:100%;
+	color:#5F93B4;
+}
+.sitestores_tooltip_info .title > a {
+	color:#5F93B4;
+	max-width:200px;
+	float:left;
+}
+.sitestores_tooltip_info .title a:hover {
+	color:#4e81a1;
+}
+.sitestores_tooltip_info .title span {
+	margin-left:5px;
+	margin-top:3px;
+	float:right;
+}
+.sitestores_tooltip_info_date {
+	font-size: .8em;
+	color:#999;
+}
+.sitestores_tooltip_info_date a{
+	color:#5F93B4;
+}
+.sitestores_tooltip_info_date a:hover{
+	color:#4e81a1;
+}
+/*	css for tooltip end here */
+/*	css for suggestsitestore tooltip start here */
+div.suggestsitestore_tooltip {
+	float: left;
+	margin-left: -34px;
+	margin-top: 49px;
+	position: absolute;
+	z-index: 100;
+}
+.suggestsitestore_tooltip_content_outer {
+	display: block;
+	background: #222;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	width: 260px;
+	font-size: .8em;
+	margin:0;
+	-moz-box-shadow:3px 3px 3px #bcbcbc;
+	-webkit-box-shadow:3px 3px 3px #bcbcbc;
+	box-shadow: 3px 3px 3px #bcbcbc;
+	float:left;
+}
+.suggestsitestore_tooltip_content_outer .suggestsitestore_tooltip_content_inner {
+	width:250px;
+	float:left;
+	background:#FFFFFF;
+	padding:5px;
+	position:relative;
+}
+.suggestsitestore_tooltip_arrow {
+	left: 50%;
+	margin-left: -7px;
+	position: absolute;
+	text-align: center;
+	top: -18px;
+	width: 10px;
+}
+.suggestsitestore_tooltip_arrow img {
+	border:none;
+	float:none;
+}
+.suggestsitestores_tooltip_info {
+	overflow: hidden;
+}
+.suggestsitestores_tooltip_info .title {
+	font-weight:bold;
+	margin-bottom:1px;
+	float:left;
+	width:100%;
+	color:#5F93B4;
+}
+.suggestsitestores_tooltip_info .title a {
+	color:#5F93B4;
+	max-width:200px;
+	float:left;
+}
+.suggestsitestores_tooltip_info .title a:hover {
+	color:#4e81a1;
+}
+.suggestsitestores_tooltip_info .title span {
+	margin-left:5px;
+	margin-top:3px;
+	float:right;
+}
+.suggestsitestores_tooltip_info_date {
+	font-size: .8em;
+	color: #999999;
+}
+.suggestsitestores_tooltip_info_date ul {
+	padding:0;
+}
+.suggestsitestores_tooltip_info_date ul li {
+	padding:0;
+}
+/*	css for suggstsitestoretooltip end here */
+/*Map Location Details Tooltip start hete*/
+#map_canvas {
+	clear:both;
+}
+ul.sitestores_locationdetails {
+	clear: both;
+	width:300px;
+	margin:10px;
+}
+ul.sitestores_locationdetails > li {
+	clear: both;
+	padding: 0px 0px 15px 0px;
+	overflow: hidden;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info_title {
+	font-weight:bold;
+	width:100%;
+	margin-bottom:5px;
+	color:#5F93B4;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info_title > a {
+	float:left;
+	max-width:250px;
+	color:#5F93B4;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info_title > a:hover {
+	color:#4e81a1;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info_title span {
+	float:right;
+	margin-right:5px;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info_title span.sitestore_rating_star span {
+	float:left;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_photo {
+	float: left;
+	overflow: hidden;
+	margin-right: 8px;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_photo img {
+	max-width: 100px;
+	max-height:120px;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info {
+	overflow: hidden;
+}
+ul.sitestores_locationdetails .sitestores_locationdetails_info_date {
+	font-size: .8em;
+	line-height:16px;
+}
+/*Map Location Details Tooltip end hete*/
+/* offer show tooltip */
+.sitestoreoffer_show_tooltip {
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	font-size:11px;
+	margin-left: 0;
+	font-weight:normal;
+	max-width:200px;
+	z-index:100;
+	margin-top:10px;
+}
+.sitestoreoffer_show_tooltip img.arrow {
+	cursor: pointer;
+	float: left;
+	margin: -13px 3px 0;
+}
+.sitestoreoffer_show_tooltip_wrapper:hover .sitestoreoffer_show_tooltip {
+	display: block;
+}
+/* review show tooltip */
+.sitestorereview_show_tooltip {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius:3px;
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	max-width: 200px;
+	font-size: .8em;
+	margin-top:60px;
+	font-weight:normal;
+}
+.sitestorereview_show_tooltip_wrapper:hover .sitestorereview_show_tooltip{
+	display: block;
+}
+.sitestorereview_show_tooltip_wrapper img.arrow {
+	cursor: pointer;
+	float: left;
+	margin: -13px 3px 0;
+}

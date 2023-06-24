@@ -1,0 +1,1 @@
+INSERT IGNORE INTO `engine4_core_menuitems` (`name`, `module`, `label`, `plugin`, `params`, `menu`, `submenu`, `order`) VALUES ("sesalbum_admin_main_integrateothermodule", "sesalbum", "Integrate Plugins", "", '{"route":"admin_default","module":"sesalbum","controller":"integrateothermodule","action":"index"}', "sesalbum_admin_main", "", 995);

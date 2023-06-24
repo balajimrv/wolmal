@@ -1,0 +1,705 @@
+.minimenu_mobile > a > span.minimenu_mobile_icon {
+	background-position: -40px -224px;
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 16px;
+}
+.minimenu_mobile > a:hover > span.minimenu_mobile_icon, .minimenu_mobile.active > a > span.minimenu_mobile_icon {
+	background-position: 1px -224px;
+	background-repeat: no-repeat;
+}
+.mobile_menu_container {
+	display: none;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 100%;
+	float: left;
+	width: 100%;
+	background: #333;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+	box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.8);
+}
+.mobile_menu_container ul.mobile_menu {
+	padding-bottom: 3px;
+	max-height: 500px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.mobile_menu_container ul.mobile_menu > li {
+	float: none;
+}
+.mobile_menu_container ul.mobile_menu > li > a {
+	display: block;
+	padding: 0px 12px;
+	line-height: 34px;
+	font-size: 14px;
+	border-top: 1px solid #2c2c2c;
+	color: #EEE;
+	text-decoration: none;
+	font-weight: bold;
+}
+.mobile_menu_container ul.mobile_menu > li ul li > a {
+	color: #DDD;
+	padding: 0px 24px;
+	line-height: 24px;
+	font-size: 12px;
+}
+.mobile_menu_top {
+	overflow: hidden;
+}
+.mobile_search {
+	width: 70%;
+	float: left;
+}
+html[dir="rtl"] .mobile_search {
+	float: right;
+}
+#global_search_form_mobile input {
+	background: url(images/sprite_black.png) #EEE no-repeat 5px -276px;
+	margin: 10px;
+	padding: 8px 3% 8px 10%;
+	font-size: 14px;
+	color: #888;
+	width: 80%;
+	height: 16px;
+	border: 1px solid #222;
+}
+html[dir="rtl"] #global_search_form_mobile input {
+	padding: 8px 10% 8px 3%;
+	background-position: right -242px;
+	border-radius: 3px;
+}
+.mobile_menu_top ul.mobile_minimenu {
+	float: right;
+	padding: 10px;
+}
+html[dir="rtl"] .mobile_menu_top ul.mobile_minimenu {
+	float: left;
+}
+.mobile_menu_top ul.mobile_minimenu > li {
+	float: left;
+}
+html[dir="rtl"] .mobile_menu_top ul.mobile_minimenu > li {
+	float: right;
+}
+.mobile_menu_top ul.mobile_minimenu > li + li {
+	margin-left: 3px;
+}
+html[dir="rtl"] .mobile_menu_top ul.mobile_minimenu > li + li {
+	margin-left: 0px;
+	margin-right: 3px;
+}
+.mobile_menu_top ul.mobile_minimenu > li > a {
+	display: block;
+	background-color: #444;
+	border: 1px solid #222;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #EEE;
+	height: 32px;
+	line-height: 30px;
+	padding: 0px 8px;
+}
+.mobile_menu_top ul.mobile_minimenu > li > a > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.mobile_menu_top ul.mobile_minimenu > li > a > span.mobile_minimenu_icon_type {
+	background: url(images/sprite_black.png) no-repeat -19px -223px;
+	height: 16px;
+	width: 16px;
+}
+.mobile_menu_top ul.mobile_minimenu > li > a > span + span {
+	display: none;
+	padding: 0px 5px;
+}
+.mobile_minimenu_profile_button > a {
+	background: none !important;
+	border: none !important;
+	padding: 0px !important;
+	line-height: 0px;
+}
+.mobile_minimenu_profile_button > a > img {
+	width: 32px;
+	height: 32px;
+	border-radius: 3px;
+	border: 1px solid #222;
+}
+.mobile_menu_container a.toggle_closer {
+	background: #333;
+	color: #EEE;
+	font-size: 26px;
+	font-weight: normal;
+	position: absolute;
+	top: 100%;
+	right: 0%;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	margin-top: -3px;
+	box-shadow: inset 0px -2px 4px rgba(0,0,0,0.3);
+}
+html[dir="rtl"] .mobile_menu_container a.toggle_closer {
+	right: auto;
+	left: 0%;
+}
+
+
+
+/* RESPONSIVE DESIGN, using media-queries, starts here */
+@media only screen and (max-width: $theme_content_width) {
+	#global_header .layout_main,
+	#global_footer .layout_main{padding:0;}
+	#global_header .layout_page_header, 
+	html body #global_footer {
+		width: 100%;
+		border-radius: 0px;
+	}
+	 #global_header .layout_page_header .layout_main {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#global_header .header_2.layout_theme_header_menu_bar .layout_core_menu_main,
+	#global_header .header_3.layout_theme_header_menu_bar .layout_core_menu_main {
+		width: 100%;
+	}
+	div#global_content {
+		width: 98%;
+		padding-left: 1%;
+		padding-right: 1%;
+		border: none;
+	}
+	.layout_page_footer {
+		width: 100%;
+		border-left: none;
+		border-right: none;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+	.layout_page_footer .layout_main {
+		padding: 0px 10px;
+	}
+	.layout_left, .layout_right {
+		width: 20%;
+		padding: 0 0 0 0;
+		margin: 0 0;
+	}
+	.layout_middle {
+		padding: 0 1%;
+		margin: 0 0;
+	}
+	.layout_top .layout_middle {
+		padding: 0px;
+	}
+	.width_main, #global_page_core-index-index #global_wrapper > #global_content .layout_top > .layout_middle > div.generic_layout_container .tabbed_members_container {
+		width: 100%;
+	}
+	 .layout_theme_header_menu_bar {
+	text-align: center !important;
+	}
+	 .layout_theme_header_menu_bar div#global_search_form_container {
+	float: right;
+	}
+	 html[dir="rtl"] .layout_theme_header_menu_bar div#global_search_form_container {
+	float: left;
+	}
+	 .generic_layout_container > h3 {
+	font-size: 100%;
+	}
+	 #gototop {
+	display: none !important;
+	}
+	 .form-element input, form#filter_form input, .form-element select, form.filters select, form#filter_form select, .form-element textarea {
+	width: 90%;
+	}
+	 .form-element input[type="checkbox"], .form-element input[type="radio"], form#filter_form input[type="checkbox"], form#filter_form input[type="radio"] {
+	width: auto;
+	}
+	.layout_core_menu_main {
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+	 .layout_core_menu_main > ul > li {
+	padding: 0px !important;
+	background: none !important;
+	}
+	 .layout_core_menu_main > ul > li > a {
+	padding: 0px 6px;
+	}
+	 .layout_core_menu_mini > div {
+	padding: 0px 10px;
+	}
+	 .connect_box_form .form-element input[type="text"], .connect_box_form .form-element input[type="email"], .connect_box_form .form-element input[type="password"], .connect_box_form .form-element input.text, .connect_box_form .form-element select {
+	width: 94%;
+	padding: 2%;
+	}
+	 #memberphotomenu_photo > div {
+	border: none;
+	padding: 0px;
+	}
+	 a.memberphotomenu_photo_edit {
+	width: auto !important;
+	}
+	 a.memberphotomenu_photo_edit > span.memberphotomenu_photo_edit_icon {
+	display: none;
+	}
+	 .layout_page_footer .width_main {
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+	}
+	 .social_icons {
+	position: relative;
+	right: auto;
+	left: auto;
+	top: auto !important;
+	float: right;
+	overflow: hidden;
+	}
+	 html[dir="rtl"] .social_icons {
+	float: left;
+	}
+	 .social_icons ul > li {
+	float: left;
+	margin: 2px;
+	}
+	 html[dir="rtl"] .social_icons ul > li {
+	float: right;
+	}
+	 .social_icons ul > li > a {
+	border-radius: 3px !important;
+	}
+	 .social_icons ul > li > div.social_icons_tip {
+	display: none !important;
+	}
+	 #global_footer .footer_1 .social_icons ul > li > a {
+	padding: 3px;
+	}
+	 #global_footer .footer_1 div.footer_language {
+	margin: 0px 5px;
+	}
+	 #global_page_core-index-index .layout_top .layout_middle {
+	padding: 0px;
+	}
+	 .tabs_alt > ul > li > a {
+	min-width: 0px;
+	}
+	 .browsemembers_results>ul>li {
+	width: 45%;
+	}
+	 .music_player {
+	width: 300px;
+	}
+	 #global_page_core-index-index #global_content {
+	width: 100%;
+	+rounded(0px);
+	margin: 0px;
+	}
+	 .px_slider, .px_slider .slides > li {
+	height: auto !important;
+	}
+	 .px_slider div.px_slider_illustration, .px_slider div.px_slider_content {
+	padding: 20px 0px !important;
+	}
+	 .px_slider .slides > li .px_slider_container {
+	padding: 0px 10px;
+	}
+}
+ @media only screen and (max-width: 900px) {
+#global_header {
+	position: relative !important;
+	top: auto !important;
+}
+#global_wrapper {
+	padding-top: 0px !important;
+}
+#memberthumb_container > div.memberthumb_options ul li a > span.memberthumb_link_icon {
+	display: none !important;
+}
+#memberthumb_container > div.memberthumb {
+	float: none;
+}
+#memberthumb_container > div.memberthumb_options {
+	clear: both;
+	margin-top: 10px;
+}
+.layout_theme_home {
+	height: auto;
+}
+.browsemembers_results > ul > li {
+	width: auto;
+	display: block;
+}
+form.activity .compose-menu > a {
+	padding: 0px !important;
+	background-position: center center !important;
+	text-indent: -999em;
+	width: 32px;
+}
+.comments {
+	width: 100%;
+}
+.minimenu_mobile {
+	display: inline-block !important;
+}
+#global_header .header_3 {
+	padding-top: 0px;
+}
+#global_header .header_2, #global_header .header_4 {
+	padding-bottom: 0px;
+}
+#global_header .header_4 .layout_core_menu_container > div.header_Top > div.width_main {
+	width: auto !important;
+}
+#global_header .header_4 .layout_core_menu_mini, #global_header .header_5 .layout_core_menu_mini {
+	width: 100%;
+}
+#global_header .header_4 .layout_core_menu_mini > div > ul, #global_header .header_5 .layout_core_menu_mini > div > ul {
+	text-align: center;
+}
+#global_header .header_5 .layout_core_menu_logo {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+}
+#global_header .header_5 .header_bannerad {
+	display: none;
+}
+a.memberphotomenu_photo_edit {
+	display: none !important;
+}
+.layout_theme_header_menu_bar .layout_core_menu_main, #global_header #global_search_form_container, .layout_core_menu_mini .minimenu_profile_button, .layout_core_menu_mini .minimenu_post, .layout_core_menu_mini .minimenu_logout, .layout_core_menu_mini #editprofile_pulldown, #global_header .header_2 .header_Bottom, #global_header .header_3 .header_Top {
+	display: none;
+}
+.tabbed_members > ul {
+	text-align: center;
+	width: 100%;
+}
+.tabbed_members > ul > li {
+	float: none;
+	display: inline-block;
+}
+div.albums_viewmedia {
+	min-width: 200px;
+}
+div.albums_viewmedia #media_photo {
+	max-width: 100%;
+}
+.music_player {
+	width: 250px;
+}
+ul.message_view .message_quick_entry .message_view_leftwrapper {
+	display: none;
+}
+#messages_form_reply > div, #messages_form_reply.global_form div.form-element {
+	width: 100%;
+	max-width: 100%;
+}
+ul.message_view .message_view_info {
+	clear: both;
+	padding-top: 10px;
+}
+ul.message_view .message_view_from {
+	text-align: left;
+}
+#messages_form_reply .form-description, #messages_form_reply .form-elements, #messages_form_reply.global_form > div > div {
+	padding: 0px;
+}
+}
+@media only screen and (max-width: 767px) {
+	.layout_left, .layout_right {
+		width: 25%;
+		padding: 0 1% 0 0;
+		float: left;
+		clear: both;
+		margin: 0px;
+	}
+	html[dir="rtl"] .layout_left, html[dir="rtl"] .layout_right {
+		width: 25%;
+		padding: 0 0 0 1%;
+		float: right;
+		margin: 0px;
+	}
+	.layout_middle {
+		padding: 0 0 0 1%;
+	}
+	html[dir="rtl"] .layout_middle {
+		padding: 0 1% 0 0;
+	}
+	ul.feed .feed_item_body .feed_item_icon {
+		background: none;
+	}
+	ul.feed .feed_item_body .feed_item_attachments .music_player.playlist_short_player {
+		display: none !important;
+	}
+	ul.feed .feed_item_body .feed_item_attachments .music_player {
+		display: block !important;
+		width: auto;
+	}
+	ul.feed .feed_item_body .feed_item_attachments .video_object object {
+		width: 100%;
+		height: auto;
+	}
+	.tabs_alt > ul > li > a, .tabs > ul li > a {
+		border: none !important;
+	}
+	#global_footer .footer_2 .footer_col {
+		float: none;
+		width: 100%;
+	}
+	#global_footer .footer_2 .footer_col > div {
+		padding: 15px 30px !important;
+	}
+	.footer_copyright, .social_icons, #global_footer .footer_1 .footer_menu, #global_footer .footer_1 .footer_language {
+		float: none !important;
+		width: 100%;
+		text-align: center !important;
+		margin-bottom: 10px;
+	}
+	#global_footer .footer_2 .footer_col.col_1 > div > * {
+		text-align: left !important;
+	}
+	html[dir="rtl"] #global_footer .footer_2 .footer_col.col_1 > div > * {
+		text-align: right !important;
+	}
+	.social_icons ul > li, #global_footer .footer_1 .footer_menu li {
+		float: none !important;
+		display: inline-block;
+	}
+	.layout_theme_home > div > div {
+		float: none !important;
+		clear: both;
+		text-align: center !important;
+		width: 100% !important;
+	}
+	.layout_theme_home > div > div.home_img {
+		display: none;
+	}
+	.layout_theme_home_boxes .home_boxes > div {
+		width: 49%;
+	}
+	.layout_theme_home_boxes .home_boxes.fourcol > div:nth-child(2n+3) {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+	.layout_theme_home_boxes .home_boxes > div > div > a > img {
+		margin-top: 20px;
+	}
+	.layout_theme_home_bottom > div > * {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+	}
+	#top_connection_box_container {
+		position: absolute;
+	}
+	#top_connection_box_container > div {
+		top: 0%;
+		margin: 0px;
+		left: 0px;
+		width: 100%;
+		border-radius: 0px;
+	}
+	.connect_box_form_login .global_form .form-elements > .form-wrapper:first-child .form-element, .connect_box_form_login .global_form #password-wrapper .form-element {
+		background: #f9f9f9;
+		padding: 0px;
+		width: 100%;
+	}
+	.music_player_controls_right {
+		float: none;
+		clear: both;
+	}
+	.music_player_controls_wrapper > div > span {
+		border: none !important;
+	}
+	.global_form div.form-label {
+		text-align: left;
+	}
+	html[dir="rtl"] .global_form div.form-label {
+		text-align: right;
+	}
+	ul.albums_manage .albums_manage_info {
+		clear: both;
+	}
+	ul.albums_editphotos > li .albums_editphotos_title_input input, ul.albums_editphotos > li .album_editphotos_caption_input textarea {
+		width: 90%;
+	}
+	.youtube_iframe_big {
+		width: 100%;
+		height: 300px;
+	}
+	.music_browse_info {
+		clear: both;
+	}
+	.layout_theme_home .home_headlines .home_account_buttons {
+		text-align: center;
+	}
+	html.connectbox_opened #top_connection_box_container {
+		overflow-y: visible;
+	}
+	.px_slider .slides > li .px_slider_container div.px_slider_illustration {
+		display: none !important;
+	}
+	.px_slider .slides > li .px_slider_container div.px_slider_content {
+		width: 100% !important;
+		text-align: center !important;
+	}
+	.px_slider .slides > li .px_slider_container .slider_buttons > div.slider_signup_button > a:hover {
+		box-shadow: none;
+	}
+	.px_slider .flex-direction-nav a {
+		display: none;
+	}
+	ul.home_photos > li {
+		width: 49%;
+		margin: 0 0 10px 2%;
+	}
+	html[dir="rtl"] ul.home_photos > li {
+		margin: 0 2% 10px 0;
+	}
+	ul.home_photos > li:nth-child(2n+3) {
+		clear: left;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	ul.forum_categories .forum_icon, ul.forum_topics .forum_topics_icon {
+		display: none;
+	}
+	ul.forum_categories .forum_lastpost, ul.forum_topics .forum_topics_lastpost, div.forum_topic_title {
+		width: 96%;
+		padding: 5px 2%;
+	}
+	ul.forum_topics .forum_topics_title h3 {
+		overflow: visible;
+	}
+	div.forum_header_pages {
+		float: none;
+		overflow: visible;
+		clear: both;
+	}
+	ul.group_discussions_thread .group_discussions_thread_info,
+	ul.event_discussions_thread .event_discussions_thread_info {
+		overflow: visible;
+		clear: both;
+	}
+	ul.group_discussions > li > *, ul.event_discussions > li > * {
+		float: none !important;
+		margin: 10px 0px !important;
+	}
+	ul.group_discussions .group_discussions_replies,
+	ul.event_discussions .event_discussions_replies {
+		display: none;
+	}
+}
+@media only screen and (max-width: 463px) {
+	.layout_middle {
+		padding: 0 !important;
+	}
+	.layout_left, .layout_right {
+		display: none;
+	}
+	#global_page_user-profile-index .layout_left {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	#global_page_user-index-browse .layout_left,
+	#global_page_music-index-browse .layout_right,
+	#global_page_album-index-browsee .layout_right,
+	#global_page_blog-index-index .layout_right,
+	#global_page_classified-index-index .layout_right,
+	#global_page_poll-index-browse .layout_right,
+	#global_page_group-index-browse .layout_right,
+	#global_page_event-index-browse .layout_right,
+	#global_page_video-index-browse .layout_right,
+	#global_page_music-index-browse .layout_right {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	#tabs-navtabbed .view_more_links {
+		float: left;
+	}
+	html[dir="rtl"] #tabs-navtabbed .view_more_links {
+		float: right;
+	}
+	.layout_theme_home_boxes .home_boxes > div {
+		float: none !important;
+		margin: 0px !important;
+		width: 100% !important;
+	}
+	#social_login_box > div, #social_login_box > div + div {
+		float: none;
+	}
+	.feed_item_attachments .video_info,
+	.feed_attachment_event > div > div{
+		clear: both;
+	}
+	.global_form div.form-element {
+		max-width: 250px;
+	}
+	.px_slider .slides > li .px_slider_container .slider_buttons {
+		display: inline-block;
+		text-align: center;
+	}
+	#memberprofile_cover .memberprofile_cover_linkimg > img {
+		max-width: 100px;
+		max-height: 140px;
+	}
+	#memberprofile_cover div#memberprofile_cover_details #memberprofile_cover_status {
+		margin-left: 120px;
+	}
+	.updates_pulldown_active .pulldown_contents_wrapper,
+	#core_menu_mini_menu_update.mini_pulldown_active .pulldown_contents_wrapper,
+	#messages_pulldown.mini_pulldown_active .pulldown_contents_wrapper,
+	#requests_pulldown.mini_pulldown_active .pulldown_contents_wrapper{
+		min-width: 290px;
+	}
+	ul.forum_topic_posts .forum_topic_posts_author {
+		float: none;
+		width: auto;
+		clear: both;
+		margin-bottom: 10px;
+	}
+	ul.forum_topic_posts .forum_topic_posts_info_top_options {
+		overflow: visible;
+		clear: both;
+	}
+	textarea {
+		width: 96%;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	.messages_list .messages_list_info {
+		clear: both;
+		padding-top: 10px;
+	}
+	
+
+}
+/*Custom CSS*/
+@media only screen and (max-width: 463px) {
+	.browsemembers_results > ul > li{
+		width:50%;
+	}
+	.activitypoints_vault_total, .activitypoints_vault_balance{width:100%;margin:5px 0;}
+	.uptopusers .entry .image-wrap{width:auto;}
+}
+@media only screen and (max-width: 540px) {
+	/*Slider*/
+	.px_slider .slides > li:first-child .px_slider_container div.px_slider_content{padding:110px 0 !important;}
+	.px_slider .slides > li .px_slider_container h1{
+		font-size:25px;
+		font-weight:bold;
+		line-height:30px;
+	}
+	.px_slider .slides > li .px_slider_container h2{
+		font-size:17px;
+		font-weight:bold;
+	}*
+}

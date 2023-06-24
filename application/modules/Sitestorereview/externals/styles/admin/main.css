@@ -1,0 +1,56 @@
+ /* $Id: main.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+/*
+RATING ICONS
+Used wherever icons are shown for rating things.
+*/
+.rating
+{
+  clear: both;
+  overflow: hidden;
+}
+/* small icons */
+.rating_star_generic
+{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-repeat: no-repeat;
+  font-size: 1px;
+  cursor: default;
+}
+.rating_star,
+.rating_star_half
+{
+  background-image: url(~/application/modules/Sitestorereview/externals/images/star.png);
+}
+.rating_star_half
+{
+  background-image: url(~/application/modules/Sitestorereview/externals/images/star_half.png);
+  width: 4px;
+}
+html[dir="rtl"] .rating_star_half
+{
+  background-image: url(~/application/modules/Sitestorereview/externals/images/star_half_rtl.png);
+}
+
+
+/*review parameters*/
+.admin_review_popup {
+	margin:10px;
+}
+.admin_review_popup .form-label{
+	display:none !important;
+}
+#global_page_sitestorereview-admin-ratingparameter-manage .settings form {
+	float:none;
+}
+#global_page_sitestorereview-admin-ratingparameter-manage .settings .form-description {
+	max-width:none;
+}
+.admin-review-cat{
+	float:left;
+	list-style:disc;
+}
+.admin-review-cat li{
+	margin-left:15px;
+}	

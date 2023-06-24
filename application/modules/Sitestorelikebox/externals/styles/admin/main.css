@@ -1,0 +1,42 @@
+/* $Id: main.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+.admin_likebox_wrapper{
+	float:right;
+	width:300px;
+}
+.admin_likebox_wrapper > h3{
+	float:left;
+}
+.sitestorelikebox_style_revert{
+	float:right;
+	margin-top:5px;
+}
+.admin_likebox_admin_preview{
+	clear:both;
+	margin-top:10px;
+}
+
+.splb-admin-colorpicker-wrapper{
+	margin-top:15px;
+	float:right;
+}
+.splb-admin-colorpicker-label{
+	float:left;
+	font-weight:bold;
+	padding-top:2px;
+	color:#5C5C5C;
+}
+.splb-admin-colorpicker-element{
+	float:left;
+	margin-left:10px;
+}
+.splb-admin-colorpicker-element input[type="text"]{
+	width:100px !important;
+}
+/*Global Settings*/
+#global_page_sitestorelikebox-admin-settings-index #likebox_info-wrapper{
+	border-top:none ;
+}
+#global_page_sitestorelikebox-admin-settings-index #tab_common-wrapper #tab_common-label{
+	width:auto;
+	border-bottom:none;
+}

@@ -1,0 +1,53 @@
+/* $Id: main.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+#global_page_sitestoreinvite-admin-global-global #TB_ajaxContent{width:600px !important;}
+#global_page_sitestoreinvite-admin-global-global #TB_ajaxContent.sitestore_admin_popup{
+	margin:0px;
+}
+#global_page_sitestoreinvite-admin-global-global .form-sub-heading{
+	margin-top:10px;
+	border-top: 1px solid #EEEEEE;
+
+	height: 1em;
+	margin-bottom: 15px;
+}
+#global_page_sitestoreinvite-admin-global-global .form-sub-heading div{
+	display: block;
+	overflow: hidden;
+	padding: 4px 6px 4px 0px;
+	font-weight: bold;
+	float:left;
+	margin-top:10px;
+}
+#global_page_sitestoreinvite-admin-global-global .settings form {float:none;}
+#global_page_sitestoreinvite-admin-global-global .settings .form-description {max-width: none;}
+#global_page_sitestoreinvite-admin-global-global .settings .form-element{max-width:680px;}
+#global_page_sitestoreinvite-admin-global-global .settings .form-elements h3{margin-top:20px;}
+#global_page_sitestoreinvite-admin-global-global .settings .form-element .description {max-width:none;}
+#global_page_sitestoreinvite-admin-global-global .settings .form-wrapper{float:none !important;}
+/*FAQ*/
+#global_page_sitestoreinvite-admin-global-appconfigs .settings .form-wrapper {
+	width:650px;
+}   
+#global_page_sitestoreinvite-admin-global-appconfigs .settings .form-element{
+	max-width:400px;
+}
+#global_page_sitestoreinvite-admin-global-appconfigs .form-sub-heading{
+	clear:both;
+}
+/*css for help*/
+#global_page_sitestoreinvite-admin-global-appconfigs .guidelines_faq li > div{
+	clear:both;
+	border-left:3px solid #ccc;
+	padding:5px 5px 5px 10px;
+	margin:5px;
+	font-family:arial;
+	line:height:18px;
+}
+#global_page_sitestoreinvite-admin-global-appconfigs .guidelines_faq li > a{font-weight:bold;}
+#global_page_sitestoreinvite-admin-global-appconfigs .guidelines_faq li div b{font-weight:bold;}
+#global_page_sitestoreinvite-admin-global-appconfigs .guidelines_faq li div p{clear:both;margin:5px 0;}
+#global_page_sitestoreinvite-admin-global-appconfigs .code{ background-color:#F9F6D5;padding:10px;color:#000;font-family: "Trebuchet MS",tahoma,verdana,arial,serif;}
+#global_page_sitestoreinvite-admin-global-appconfigs .steps{border-bottom-width:1px;padding:5px;clear:both;overflow: auto;}
+#global_page_sitestoreinvite-admin-global-appconfigs .steps > a{font-weight:bold;margin-bottom:5px;float:left;}
+#global_page_sitestoreinvite-admin-global-appconfigs .steps > a + div{ background-color:#F9F6D5;padding:10px;color:#000;clear:both;}

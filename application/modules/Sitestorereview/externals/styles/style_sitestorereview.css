@@ -1,0 +1,364 @@
+/* $Id: style_sitestorereview.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+/*Review Tab*/
+ul.sitestorereview_profile {
+	clear:both;
+}
+ul.sitestorereview_profile > li {
+	clear:both;
+	padding:10px;
+	overflow:hidden;
+}
+ul.sitestorereview_profile > li + li {
+	border-top-width:1px;
+}
+.sitestorereview_overallrating {
+	width:210px;
+	float:left;
+	border-right-width:1px;
+	padding-right:10x;
+	margin-right:-1px;
+}
+.sitestorereview_browse_overallrating {
+	float:right;
+	border-left-width:1px;
+	border-right-width:0px;
+	padding-left:10px;
+	padding-right:0px;
+	margin:0 0 0 -1px;
+}
+.sitestorereview_browse_info{
+	border-right-width:1px;
+	padding-right:10px;
+}
+.sitestorereview_overallrating_rate {
+	clear:both;
+	padding:0px 0px 5px;
+	float:left;
+	width:100%;
+}
+ul.sitestorereview_profile > li .sitestorereview_overallrating div + div {
+	padding:2px 0px 7px;
+}
+.sitestorereview_overallrating_rate > div.title {
+	float:left;
+	font-size:11px;
+	width:110px;
+	font-weight:bold;
+}
+.sitestorereview_overall_rating .review_cat_title b, .sitestorereview_overallrating_rate > div.title b {
+	float:left;
+	margin-top:6px;
+}
+.sitestorereview_overallrating_rate > div.rates {
+	float:left;
+	margin-left:5px;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_options {
+	padding:5px 0 0;
+	clear:both;
+	float:left;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_options > a {
+	margin:3px 0px 0px 0px;
+	font-size:.8em;
+	padding-top:1px;
+	float:left;
+	line-height:16px;
+	margin-right:10px;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_info {
+	overflow:hidden;
+	border-left-width:1px;
+	padding-left:15px;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_title {
+	font-size:14px;
+	margin-bottom:5px;
+	overflow:auto;
+	font-weight:bold;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_title span{
+	float:right;
+	margin-left:10px;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_title > a {
+	font-size:13px;
+	overflow:hidden;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_info_date {
+	font-size:.8em;
+}
+ul.sitestorereview_profile li .sitestorereview_profile_info_des {
+	margin-top:5px;
+}
+/*review widgets*/
+.sitestore_sidebar_list .sitestorereview_overall_rating .review_cat_title {
+	overflow:hidden;
+	font-weight:bold;
+}
+#global_page_sitestorereview-index-view .sitestore_sidebar_list .sitestorereview_overall_rating .review_cat_title {
+	font-weight:normal;
+}
+.sitestore_sidebar_list .sitestorereview_overall_rating .review_cat_rating {
+	float:right;
+	width:80px;
+	margin-left:5px;
+	padding-top:2px;
+}
+ul.sitestorereview_sidebar li, ul.sitestorereview_sidebar li * {
+	font-size:11px !important;
+}
+.sitestore_sidebar_list .sitestorereview_overall_recommended b {
+	font-size:12px;
+}
+/*total reviews*/
+ul.sitestorereview_rating {
+	border-width: 1px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	padding: 5px;
+}
+ul.sitestorereview_rating li {
+	clear: both;
+	overflow: hidden;
+	padding:3px 5px;
+}
+ul.sitestorereview_rating .sitestorereview_overall_rating .review_cat_title {
+	overflow:hidden;
+	font-weight:bold;
+	float:left;
+	width:215px;
+}
+ul.sitestorereview_rating .sitestorereview_overall_rating .review_cat_rating {
+	float:left;
+	margin-left:5px;
+	padding-top:2px;
+}
+/*rating*/
+/* use the background position according to the table above to display the required images*/
+.rating-box {
+	background-image: url(../images/rating-img.png);
+	width:130px;
+	height:10px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	background-repeat:no-repeat;
+	margin:0;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.nostar-box {
+	background-position:0 0;
+}
+.onestar-box {
+	background-position:0 -12px;
+}
+.twostar-box {
+	background-position:0 -24px;
+}
+.threestar-box {
+	background-position:0 -36px;
+}
+.fourstar-box {
+	background-position:0 -48px;
+}
+.fivestar-box {
+	background-position:0 -60px;
+}
+ul.rating-box li {
+	cursor: pointer;
+	float:left;
+	margin:0 3px;
+	text-indent:-999em;
+	clear:none !important;
+}
+ul.rating-box li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:24px;
+	height:10px;
+	text-decoration:none;
+	z-index: 200;
+}
+ul.rating-box li.one a {
+	left:0px;
+}
+ul.rating-box li.two a {
+	left:27px;
+}
+ul.rating-box li.three a {
+	left:53px;
+}
+ul.rating-box li.four a {
+	left:79px;
+}
+ul.rating-box li.five a {
+	left:106px;
+}
+ul.rating-box li a:hover {
+	background-image: url(../images/rating-img.png);
+	z-index:2;
+	width:130px;
+	height:10px;
+	overflow:hidden;
+	left:0;
+}
+ul.rating-box li.one a:hover {
+	background-position:0 -12px;
+}
+ul.rating-box li.two a:hover {
+	background-position:0 -24px;
+}
+ul.rating-box li.three a:hover {
+	background-position:0 -36px;
+}
+ul.rating-box li.four a:hover {
+	background-position:0 -48px;
+}
+ul.rating-box li.five a:hover {
+	background-position:0 -60px;
+}
+/*show rating*/
+.rating-box-small {
+	background-image: url(../images/rating-img-small.png);
+	width:63px;
+	height:5px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	background-repeat:no-repeat;
+	margin:3px;
+}
+.rating-box-small li {
+	cursor: pointer;
+	float:left;
+	text-indent:-999em;
+	clear:none !important;
+	padding:0px !important;
+	font-size:0px;
+}
+.nostar-small-box {
+	background-position:0 0;
+}
+.halfstar-small-box {
+	background-position:0 -6px;
+}
+.onestar-small-box {
+	background-position:0 -12px;
+}
+.onehalfstar-small-box {
+	background-position:0 -18px;
+}
+.twostar-small-box {
+	background-position:0 -24px;
+}
+.twohalfstar-small-box {
+	background-position:0 -30px;
+}
+.threestar-small-box {
+	background-position:0 -36px;
+}
+.threehalfstar-small-box {
+	background-position:0 -42px;
+}
+.fourstar-small-box {
+	background-position:0 -48px;
+}
+.fourhalfstar-small-box {
+	background-position:0 -54px;
+}
+.fivestar-small-box {
+	background-position:0 -60px;
+}
+/*SITESTORE REVIEW VIEW STORE START HERE*/
+.sitestorereviews_gutter {
+	padding: 7px;
+	overflow: hidden;
+	text-align:center;
+	margin-bottom:15px;
+}
+.sitestorereviews_gutter img {
+	width: 99%;
+	margin: 0px auto 0px auto;
+}
+.sitestorereviews_gutter_options {
+	margin-top:15px;
+	clear:both;
+}
+.sitestorereviews_gutter_name {
+	display: block;
+	margin: 5px;
+	font-size:17px;
+}
+ul.sitestorereviews_view {
+	overflow:hidden;
+}
+ul.sitestorereviews_view > li {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	overflow:hidden;
+	min-height:300px;
+}
+ul.sitestorereviews_view h3 {
+	margin-bottom: 1px;
+	letter-spacing:normal;
+  margin-bottom: 10px;
+}
+ul.sitestorereviews_view .sitestorereviews_view_stats {
+	font-size: 8pt;
+}
+ul.sitestorereviews_view .sitestorereviews_view_body {
+	line-height: 1.5em;
+	padding: 5px 5px 0px 0px;
+	border-top-width:1px;
+}
+.sitestorereview_more_link{
+	float:right!important;
+	font-size: 11px;
+	margin-right:5px;
+}
+.sitestorereview_more_sep {
+	float:right!important;
+	font-size: 11px;
+	margin-right:5px;
+}
+#global_page_sitestorereview-index-view .review_cat_title{
+	padding-top:6px !important;
+}
+#global_page_sitestorereview-index-view .tip{
+	margin:0px !important;
+}
+#global_page_sitestorereview-index-view .tip span{
+	float:none;
+	display:block;
+	margin-bottom:15px;
+}
+/*create and edit store*/
+.sitestorereview_write_txtarea{
+	width:300px !important;
+	max-width:300px !important;
+	height:120px !important;
+}
+
+/*review of day*/
+.sitestore_review_code b.c-l{
+	background-image: url(../images/rev-code.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:18px;
+	height:16px;
+	margin-right:5px;
+}
+.sitestore_review_code b.c-r{
+	background-image: url(../images/rev-code.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	width:18px;
+	height:19px;
+}
+
+@media only screen and (max-width: 380px){
+ul.sitestorereview_profile li .sitestorereview_profile_info {width:95%; border-top-width:1px;border-left-width:0;padding:10px 0;}
+}

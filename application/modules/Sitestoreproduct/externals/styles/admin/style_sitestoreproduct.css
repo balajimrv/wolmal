@@ -1,0 +1,67 @@
+/* $Id: style_sitestoreproduct.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+/*------------ALL INVOICE WORK AND TABLE WORK-------------*/
+
+.invoice_details_wrap{
+	border-width:1px;
+	overflow:hidden;
+}
+.invoice_add_details_wrap{
+	border-right-width:1px;
+	width: 50%;
+}
+.invoice_add_details + .invoice_add_details ,
+.product_detail_table table tr + tr
+{
+	border-top-width:1px;
+}
+.invoice_add_details,
+.invoice_order_details_wrap li,
+.invoice_ttlamt_box_wrap,
+.invoice_note_box{
+	padding: 10px;
+}
+.invoice_order_details_wrap{
+	width: 600px;
+}
+.invoice_order_details_wrap li{
+	border-bottom-width: 1px;
+}
+.invoice_order_details_wrap li > div + div{
+  overflow: hidden;
+}
+.product_detail_table{
+	margin:0;
+	border:none;
+}
+.product_detail_table table{
+	width:100%;
+	border-width: 1px;
+	margin-top:1px;
+}
+.product_detail_table_head{
+	background-color:#EAEAEA !important;
+}
+.product_detail_table_head th, 
+.product_detail_table .quantity,
+.product_detail_table .price,
+.product_detail_table .total{
+	text-align:center;
+}
+.product_detail_table table td + td{
+	border-left-width:1px;
+}
+.product_detail_table .quantity,
+.product_detail_table .price,
+.product_detail_table .total,
+.invoice_order_info{
+	width:170px;
+}
+.product_detail_table .product{
+	width:452px;
+	text-align:center;
+}
+.invoice_ttlamt_box_wrap{
+	background: none repeat scroll 0 0 #EAEAEA;
+  border: 1px solid #CCCCCC;
+}

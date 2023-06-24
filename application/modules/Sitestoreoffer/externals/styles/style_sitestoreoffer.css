@@ -1,0 +1,146 @@
+ /* $Id: style_sitestoreoffer.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+ 
+ /*Create and Edit Form*/
+ #global_page_sitestoreoffer-index-create p.error,
+ #global_page_sitestoreoffer-index-edit p.error{
+	 font-size:11px !important;
+	 color:red;
+ }
+ #global_page_sitestoreoffer-index-create #photo{
+	 float:left;
+	 margin-top:-10px;
+ }
+ #global_page_sitestoreoffer-index-edit input:disabled{
+	 background-color:#E0E0E0;
+ }
+ #global_page_sitestoreoffer-index-create #end_time-wrapper .calendar_output_span,
+ #global_page_sitestoreoffer-index-edit #end_time-wrapper .calendar_output_span {
+	 display:inline-block;
+	 margin-right:15px;
+	 min-width:60px;
+ }
+ #global_page_sitestoreoffer-index-create #end_time-wrapper select + select, 
+ #global_page_sitestoreoffer-index-edit #end_time-wrapper select + select {
+	 margin-left:5px;
+ }
+ #global_page_sitestoreoffer-index-edit #global_content_simple > .clr{
+	 margin:10px;
+	 width:595px;
+ }
+ #global_page_sitestoreoffer-index-edit #global_content_simple .global_form div.form-label{
+	 width:90px;
+ }
+ #global_page_sitestoreoffer-index-edit #global_content_simple .global_form div > p{
+	 min-width:450px;
+ }
+ /*Offer Listing*/
+ #global_page_sitestoreoffer-index-index div.global_form > div > div > h3{
+	background:none;
+	padding:0px;
+	font-weight:bold;
+	font-size:17px;
+}
+#global_page_sitestoreoffer-index-index div.global_form > div > div > h3{
+	background:none;
+	padding:0px;
+	font-weight:bold;
+	font-size:17px;
+}
+ ul.sitestoreoffer_list{
+	 clear: both;
+ }
+ ul.sitestoreoffer_list > li{
+	 clear: both;
+	 padding: 5px 10px 15px;
+	 overflow: hidden;
+ }
+ ul.sitestoreoffer_list > li + li{
+	 padding-top: 15px;
+	 border-top-width:1px;
+	 border-top-style:solid;
+ }
+ ul.sitestoreoffer_list > li.sitestoreoffer_show + li{
+	 border-top:none;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_options{
+	 float: right;
+	 overflow: hidden;
+	 padding-left: 20px;
+	 width:150px;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_options > a{
+	 clear: both;
+	 display: block;
+	 margin: 5px;
+	 font-size: .8em;
+	 padding-top: 2px;
+	 padding-bottom: 2px;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_photo{
+	 float:left;
+	 margin-right:10px;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_info{
+	 overflow: hidden;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_info_title{
+	 font-weight:bold;
+	 overflow:hidden;
+	 margin-bottom:5px;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_info_title span{
+	 float: right;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_info_title h3{
+	 margin: 0px;
+	 overflow:hidden;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_info_date{
+	 font-size:0.8em;
+ }
+ ul.sitestoreoffer_list .sitestoreoffer_list_info_blurb{
+	 margin: 5px 0;
+ }
+ /*Offer View Page*/
+ .sitestoreoffer_view{
+	 clear:both;
+ }
+ .sitestoreoffer_view_stat{
+	 font-size:11px;
+	 margin-bottom:10px;
+ }
+ .sitestoreoffer_view_options a{
+	 margin-bottom:5px;
+ }
+ /*Offer preview Popup*/
+ .sitestore_offer_priview_popup{
+	 width:530px;
+	 margin:10px 0 0 10px;
+ }
+ .sitestore_offer_priview_popup_head{
+	 padding-bottom:10px;
+ }
+ .sitestore_offer_priview_popup button{
+	 margin-top:10px;
+ }
+ */*Check Availability Button*/
+#submit_form #coupon_code-element input,
+#submit_form #coupon_code-element #coupon_code_varifys,
+#submit_form #coupon_code-element #coupon_code_alert{
+  float:left;
+}
+#submit_form #coupon_code-element a.check_availability_button{
+  border-radius:3px 3px 3px 3px;
+  float:left;
+  font-size:11px;
+  margin-left:10px;
+  margin-top:2px;
+  padding:3px !important;
+}
+#submit_form #coupon_code-element #coupon_code_alert{
+  clear:both;
+  margin-top:5px;
+}
+#submit_form #coupon_code-element #coupon_code_alert img{
+  margin-right:5px;
+}

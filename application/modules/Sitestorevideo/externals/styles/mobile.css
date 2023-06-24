@@ -1,0 +1,33 @@
+/* $Id: mobile.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+.activity_icon_sitestorevideo_new, .icon_type_sitestorevideo {
+	background-image: url(~/application/modules/Sitestore/externals/images/icons/video16.png);
+}
+/*view store*/
+div.sitestorevideo_view{
+	text-align:center;
+}
+.sitestorevideo_view h3{
+	 text-align:center;
+}
+.sitestorevideo_date{
+	text-align:center;
+	color:$theme_font_color_light;
+}
+.sitestorevideo_view .video_desc{
+	text-align:center;
+}
+.sitestore_video_options{
+	display:none;
+}
+div.sitestorevideo_view .rating {
+	display: inline-block;
+	margin-top: 7px;
+}
+#global_page_sitestorevideo-index-view .comments {
+    width: auto;
+}
+/*store profile tab*/
+.sitestorevideo_profile_options{
+	display:none;
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `engine4_album_albums` ADD `draft` TINYINT(1) NOT NULL DEFAULT "0";

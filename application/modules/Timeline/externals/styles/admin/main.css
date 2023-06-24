@@ -1,0 +1,36 @@
+table.admin_table .global_form_box{float:left;}
+table.admin_table .global_form_box input[type=file]{margin-right: 70px;}
+table.admin_table .global_form_box + div{ margin-top: 6px; margin-left: 7px;}
+
+.form-element label[for=cover_height],
+.form-element label[for=cover_width]{float:left}
+.form-element > div{clear:both; margin-bottom:5px;}
+
+#timeline_cover{border:1px solid #D7E8F1; width:99.8%; margin-top:20px;}
+.upload-cover-wrapper{margin-top:10px; padding-top:10px;}
+.cover-tab h3{width:180px; padding-right:15px; font-size:10pt; letter-spacing:0; float:left;}
+.cover-tab  p{clear:both}
+.reset_cover_btn {float:right; moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 5px;
+	font-weight: bold;
+	border: none;
+	background-color: #619DBE;
+	border: 1px solid #50809B;
+	color: white;
+	background-image: url(~/application/modules/Core/externals/images/buttonbg.png);
+	background-repeat: repeat-x;
+	background-position: 0px 1px;
+	font-family: tahoma, verdana, arial, sans-serif;
+}
+.upload-cover-wrapper .form-elements{margin-left: 195px; margin-top: 3px;}
+.upload-cover-wrapper .form-elements .cover-label,
+.upload-cover-wrapper .form-elements .form-label {display:none;}
+.upload-cover-wrapper input[type=file]{float:left;}
+.upload-cover-wrapper button{margin-bottom:10px;}
+
+div.icons_collection_activator > ul {display: none; position: absolute; width: 170px; z-index:2; background:#F8F8F8; border:1px solid #aaa; padding:5px; border-radius:3px}
+div.icons_collection_activator:hover > ul {display: block;}
+div.icons_collection_activator > ul > li {cursor: pointer; float: left; margin-right: 5px;}
+.icons_collection_activator{display:inline-block; cursor:pointer;}

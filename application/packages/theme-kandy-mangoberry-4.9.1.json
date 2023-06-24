@@ -1,0 +1,404 @@
+{
+  "type": "theme",
+  "name": "kandy-mangoberry",
+  "version": "4.9.1",
+  "revision": "10267",
+  "path": "application\/themes\/kandy-mangoberry",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Kandy Mangoberry",
+  "description": null,
+  "thumb": "thumb.png",
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Kandy Mangoberry",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Theme",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/themes\/kandy-mangoberry": {
+      "type": "directory",
+      "path": "application\/themes\/kandy-mangoberry",
+      "structure": [
+        {
+          "path": "mobile.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 20869,
+          "sha1": "84f1d640542dcd69e0538ec3372f550374959f9a"
+        },
+        {
+          "path": "constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6493,
+          "sha1": "e06028d419a6ae90a5f8fce8ffd5702d51e4c9c5"
+        },
+        {
+          "path": "thumb.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3221,
+          "sha1": "de82012880df603340d85c80d22153dbbaa32f22"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1242,
+          "sha1": "9424fe5cbe89e76769e4e5e89b3b55d8e42b1ea1"
+        },
+        {
+          "path": "theme.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 32409,
+          "sha1": "0f855725ce260f4fbfba8ac20da6992b47f71f53"
+        },
+        {
+          "path": "color-variants",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-limeorange",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6550,
+          "sha1": "16660a72076cdbecf6732430cd6197c0517d1f64"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/thumb.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3142,
+          "sha1": "8a3d2b7acac593ed7a265fab9ccc15845dd1d9e7"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images\/arrow_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1136,
+          "sha1": "1a5f10f41b5ae745647c2a22da796b679dc2f5f6"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images\/home_btn.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2087,
+          "sha1": "42583fe4e43dbd52ed386025e7b5a45adb62ef70"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images\/widget_header_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1213,
+          "sha1": "579498af43ad543476b6a5cda6080a06d85cd34a"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images\/footer_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 921,
+          "sha1": "2ad3249bf743fabc8ec3ef2de33f76af5ea1f7f1"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images\/sep.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 917,
+          "sha1": "1e04a81bc2a1e1ad4316c78e5e36210342b7be19"
+        },
+        {
+          "path": "color-variants\/kandy-limeorange\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1504,
+          "sha1": "ec58636e83f837156c69a8ba85b1f324a61880b1"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6552,
+          "sha1": "152eb8e34442a1577c7f3bd50f708316d29f32cf"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/thumb.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3220,
+          "sha1": "e7fb90b5113590ef6ec8baf2fdf3fefbb3cc4c47"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images\/arrow_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1076,
+          "sha1": "54b7218447cd9a87287e8435be931b4c2cf5a92c"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images\/home_btn.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2073,
+          "sha1": "536c7d3502ffacbe8bc39d8f107f101d2c234afb"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images\/widget_header_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1213,
+          "sha1": "1618b20a62a2a6a2b0a873b133dd1c130c805e2f"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images\/footer_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 921,
+          "sha1": "2ad3249bf743fabc8ec3ef2de33f76af5ea1f7f1"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images\/sep.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 917,
+          "sha1": "1e04a81bc2a1e1ad4316c78e5e36210342b7be19"
+        },
+        {
+          "path": "color-variants\/kandy-watermelon\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1489,
+          "sha1": "5b713e11b11deecb12426b7f178c3676fdc39ae6"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6550,
+          "sha1": "f9f2f39f772579204c311efd524539d1f0b239a2"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/thumb.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2995,
+          "sha1": "448917a46ff115f721613bbf649989891de99066"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images\/arrow_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1139,
+          "sha1": "b4ef978be54ae533374ab84a4394bc291262078e"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images\/home_btn.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2067,
+          "sha1": "70e2e2d0efc37280cec27d0adfefed2a249796a3"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images\/widget_header_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1213,
+          "sha1": "da8c8e2e081a733e2633b7c564bf222ee7b06774"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images\/footer_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 921,
+          "sha1": "2ad3249bf743fabc8ec3ef2de33f76af5ea1f7f1"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images\/sep.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 917,
+          "sha1": "1e04a81bc2a1e1ad4316c78e5e36210342b7be19"
+        },
+        {
+          "path": "color-variants\/kandy-cappuccino\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1471,
+          "sha1": "656c2cbbce78658de40efc7e852368d488f4dba4"
+        },
+        {
+          "path": "images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "images\/arrow_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1132,
+          "sha1": "09a4852817cbde5ca5ca4ddb462f8040df6064ce"
+        },
+        {
+          "path": "images\/home_btn.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2089,
+          "sha1": "76478a39f50d632ed1320ce1761aac0d876c6ffd"
+        },
+        {
+          "path": "images\/widget_header_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1213,
+          "sha1": "fe908dc29e5c4e374fbcbef72af2ab62d1c583f9"
+        },
+        {
+          "path": "images\/icon_explore.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1255,
+          "sha1": "dfb863ec87676f91bc315cf088d159bb8cb815ca"
+        },
+        {
+          "path": "images\/footer_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 921,
+          "sha1": "2ad3249bf743fabc8ec3ef2de33f76af5ea1f7f1"
+        },
+        {
+          "path": "images\/sep.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 917,
+          "sha1": "1e04a81bc2a1e1ad4316c78e5e36210342b7be19"
+        },
+        {
+          "path": "images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1489,
+          "sha1": "f8f26b7d7e9362d56fedae6308474f684dee2b6c"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,310 @@
+/* $Id: style_sitestoreform.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+#global_page_sitestoreform-siteform-index .sitestoreform_form .global_form > div > div{
+	background:none !important;
+	border:none;
+	border-radius:0;
+	padding:0px;
+}
+#global_page_sitestoreform-siteform-index .global_form > div > div > h3 + p{
+	max-width:650px;
+}
+#global_page_sitestoreform-siteform-index .global_form input + label{
+	max-width:450px;
+}
+/*SITESTORE FORM CREATE STORE START HERE*/
+.admin_fields_options{
+	clear:both;
+	margin-bottom:10px;
+}
+ul.admin_fields{
+	overflow: hidden;
+}
+ul.admin_fields ul.admin_fields{
+	margin-bottom: 5px;
+}
+ul.admin_fields > li{
+	clear: both;
+	overflow: hidden;
+	margin: 5px 0px 0px 0px;
+}
+ul.admin_fields .field{
+	background-repeat:no-repeat !important;
+}
+ul.admin_fields .field, ul.admin_fields .heading{
+	display: inline-block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	overflow: hidden;
+	padding: 7px 10px 7px 7px;
+	background-repeat: no-repeat;
+	background-position: 8px 8px;
+}
+html[dir="rtl"] ul.admin_fields .field, html[dir="rtl"] ul.admin_fields .heading{
+	padding: 7px 7px 7px 10px;
+	background-position: 95% 50%;
+}
+ul.admin_fields ul.admin_fields .field{
+	background-color: #faefe9;
+	border: 1px solid #dacec8;
+}
+ul.admin_fields .heading{
+	background-color: #f1fae9;
+	border: 1px solid #cfe1c1;
+}
+ul.admin_fields .item_title{
+	display: inline-block;
+	overflow: hidden;
+	font-weight: bold;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+ul.admin_fields .item_title > span{
+	font-weight: normal;
+}
+ul.admin_fields .item_handle{
+	cursor: move;
+	display: inline-block;
+	overflow: hidden;
+	font-weight: bold;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	float:left;
+	width: 24px;
+	margin: -7px;
+	padding: 7px;
+}
+html[dir="rtl"] ul.admin_fields .item_handle{
+	float: right;
+}
+ul.admin_fields .item_options{
+	float: right;
+	overflow: hidden;
+	text-align: right;
+	margin-left: 10px;
+	color: #aaa;
+}
+html[dir="rtl"] ul.admin_fields .item_options{
+	float: left;
+	text-align: left;
+	margin-left: 0px;
+	margin-right: 10px;
+}
+ul.admin_fields .item_options > a{
+	font-weight: bold;
+	font-size: .8em;
+}
+ul.admin_fields .field_extraoptions{
+	clear: both;
+	overflow: hidden;
+}
+ul.admin_fields .field_extraoptions_explain{
+	display: block;
+	margin: 7px 0px 7px 0px;
+	font-size: .8em;
+	color: #999;
+}
+ul.admin_fields .field_extraoptions_explain > span{
+	display: block;
+	margin-top: 2px;
+}
+ul.admin_fields .field_extraoptions > a{
+	display: inline-block;
+	font-weight: bold;
+	padding: 6px 8px 5px 17px;
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	outline: none;
+	font-size: .8em;
+	margin-left: 24px;
+}
+html[dir="rtl"] ul.admin_fields .field_extraoptions > a{
+	padding: 6px 17px 5px 8px;
+	background-position: 95% 50%;
+	margin-left: 0px;
+	margin-right: 24px;
+}
+ul.admin_fields .field_extraoptions.active > a{
+	background-color: #8197ab;
+	color: #fff;
+	text-decoration: none;
+}
+ul.admin_fields .field_extraoptions.active .field_extraoptions_contents_wrapper{
+	display: block;
+	cursor: default;
+}
+ul.admin_fields .field_extraoptions_contents_wrapper{
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	min-width: 200px;
+	padding: 4px;
+	background-color: #8197ab;
+	z-index: 99999999;
+	margin-top: 22px;
+	margin-left: 24px;
+}
+html[dir="rtl"] ul.admin_fields .field_extraoptions_contents_wrapper{
+	margin-left: 0px;
+	margin-right: 24px;
+}
+ul.admin_fields .field_extraoptions_contents{
+	overflow: hidden;
+	background: #fff;
+}
+ul.field_extraoptions_choices{
+	overflow: hidden;
+	max-height: 300px;
+	max-width: 300px;
+	overflow-y: auto;
+}
+ul.field_extraoptions_choices > li{
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+}
+ul.field_extraoptions_choices .field_extraoptions_choices_label{
+	display: block;
+	overflow: hidden;
+	padding: 7px;
+	font-size: .8em;
+}
+ul.field_extraoptions_choices .field_extraoptions_choices_label:hover{
+	background-color: #eee;
+	cursor: pointer;
+	border-right: 1px solid #ddd;
+}
+html[dir="rtl"] ul.field_extraoptions_choices .field_extraoptions_choices_label:hover{
+	border-right: none;
+	border-left: 1px solid #ddd;
+}
+ul.field_extraoptions_choices .field_extraoptions_choices_options{
+	float: right;
+	overflow: hidden;
+	color: #aaa;
+	padding: 5px;
+	margin-left: 5px;
+}
+html[dir="rtl"] ul.field_extraoptions_choices .field_extraoptions_choices_options{
+	float: left;
+	margin-left: 0px;
+	margin-right: 5px;
+}
+ul.field_extraoptions_choices .field_extraoptions_choices_options > a{
+	font-size: .8em;
+	font-weight: bold;
+}
+.field_extraoptions_add{
+	overflow: hidden;
+	padding: 5px 7px 5px 7px;
+	border-bottom: 1px solid #ddd;
+}
+.field_extraoptions_add > input{
+	width: 200px;
+	font-size: .8em;
+	color: #999;
+}
+/* For showing/hiding dependent fields */
+.admin_field_dependent_field_wrapper{
+	display: none;
+}
+.admin_field_dependent_field_wrapper.active{
+	display: block;
+	padding-left: 50px;
+}
+html[dir="rtl"] .admin_field_dependent_field_wrapper.active{
+	padding-left: 0px;
+	padding-right: 50px;
+}
+/* Profile question autosuggest */
+.field-autosuggest{
+	position: absolute;
+	border: 1px solid #aaa;
+	background: #fff;
+}
+.field-autosuggest li{
+	padding: 5px;
+}
+.field-autosuggest li + li{
+	border-top: 1px solid #eee;
+}
+.field-autosuggest li:hover{
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+.field-autosuggest .autocompleter-choice{
+	font-size: .8em;
+	font-weight: bold;
+}
+.field-autosuggest .autocompleter-queried{
+	font-weight: bold;
+	background-color: #fff4c2;
+}
+/*SITESTORE FORM CREATE STORE END HERE*/
+/*SMOOTHBOX SETTINGS FORM*/
+.global_form_smoothbox{
+	overflow: hidden;
+	padding: 15px 15px 5px 15px;
+}
+.global_form_smoothbox .form-wrapper{
+	margin-top: 15px;
+}
+.global_form_smoothbox .form-label{
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-bottom: 4px;
+}
+.global_form_smoothbox .form-label label{
+	font-weight: bold;
+}
+.global_form_smoothbox .form-element input[type=text], .global_form_smoothbox .form-element textarea{
+	width: 250px;
+}
+.global_form_smoothbox #buttons-wrapper button{
+	margin-right: 3px;
+}
+html[dir="rtl"] .global_form_smoothbox #buttons-wrapper button{
+	margin-right: 0px;
+	margin-left: 3px;
+}
+.sitestoreform_separator{
+	margin:20px 0;
+	clear:both;
+	height:0px; 
+	border-top-width:1px;
+	border-top-style:solid;
+}
+/*form icon start here*/
+/*ICONS*/
+.admin_fields_options_addquestion{
+	background-image: url(~/application/modules/Fields/externals/images/admin/field_add.png);
+}
+.admin_fields_options_addheading{
+	background-image: url(~/application/modules/Fields/externals/images/admin/heading_add.png);
+}
+.admin_fields_options_addtype{
+	background-image: url(~/application/modules/Fields/externals/images/admin/type_add.png);
+}
+.admin_fields_options_renametype{
+	background-image: url(~/application/modules/Fields/externals/images/admin/type_rename.png);
+}
+.admin_fields_options_deletetype{
+	background-image: url(~/application/modules/Fields/externals/images/admin/type_delete.png);
+}
+ul.admin_fields .field{
+	border: 1px solid #c1d6e1;
+	background-image: url(~/application/modules/Fields/externals/images/admin/field.png);
+}
+ul.admin_fields ul.admin_fields .field{
+	background-image: url(~/application/modules/Fields/externals/images/admin/field.png);
+}
+ul.admin_fields .heading{
+	background-image: url(~/application/modules/Fields/externals/images/admin/heading.png);
+}
+ul.admin_fields .field_extraoptions > a{
+	background-image: url(~/application/modules/Core/externals/images/admin/more.png);
+}
+ul.admin_fields .field_extraoptions.active > a{
+	background-image: url(~/application/modules/Core/externals/images/admin/more_active.png);
+}
+/*form icon end here*/

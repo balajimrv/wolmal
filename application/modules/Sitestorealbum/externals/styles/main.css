@@ -1,0 +1,22 @@
+/* $Id: main.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+.item_icon_sitestore_album, .notification_type_sitestorealbum_create{
+  background-image: url(~/application/modules/Sitestore/externals/images/photo/view.png);
+}
+/* Activity Feed Album */
+ul.feed .feed_attachment_sitestore_photo {
+	display: inline-block;
+	overflow: hidden;
+	margin: 0px 0px 5px 0px;
+	vertical-align: top;
+}
+ul.feed .feed_attachment_sitestore_photo a {
+	display: block;
+	float: left;
+}
+ul.feed .feed_attachment_sitestore_photo a > img {
+	display: inline-block;
+	max-width: 90px;
+	max-height: 90px;
+	vertical-align: top;
+}

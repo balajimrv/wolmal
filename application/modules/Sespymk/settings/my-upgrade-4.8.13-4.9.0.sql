@@ -1,0 +1,1 @@
+UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sespymk_general","module":"sespymk"}' WHERE `engine4_core_menuitems`.`name` = "sespymk_home_findfriends";

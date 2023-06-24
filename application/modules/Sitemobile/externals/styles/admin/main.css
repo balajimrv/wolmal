@@ -1,0 +1,163 @@
+
+/*Icons*/
+.sm_icon_photos{
+	background-image: url(~/application/modules/Sitemobile/externals/images/admin/photos.png);
+}
+.icon_help{
+	background-image: url(~/application/modules/Seaocore/externals/images/help.gif);
+}
+
+.mleft5{
+	margin-left:5px;
+}
+.sm_admin_link{
+	margin-bottom:10px;
+}
+.sm_icon_view{
+	background-image: url(~/application/modules/Sitemobile/externals/images/admin/eye.png);
+	display:inline-block;
+	height:16px;
+	vertical-align:bottom;
+	width:16px;
+}
+/*Edit Icon*/
+.sm_crop_icon h4{
+	margin-bottom:5px;
+}
+.sm_crop_icon #lassoImg{
+  border: 1px solid black;
+  display: block;
+}
+.sm_crop_icon #preview-thumbnail img{
+  margin-right: 5px;
+  font-size: 0px;
+  line-height: 0px;
+}
+.sm_crop_icon #lassoImg,
+.sm_crop_icon #lassoMask{
+	margin-bottom:15px;
+}
+/* Avoid changing these as they are needed for cropping tool */
+.sm_crop_icon #preview-thumbnail img{
+  position: relative;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  float: left;
+  overflow: hidden;
+}
+.sm_crop_icon #EditPhoto #done-wrapper div{
+  margin: 0px;
+  padding: 0px;
+}
+.sm_crop_icon div.preview-thumbnail{
+  border: 1px solid black;
+  margin-right: 5px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  font-size: 0px;
+  line-height: 0px;
+  visibility: visible;
+  opacity: 1;
+  float: left;
+}
+.sm_crop_icon img.loading_icon{
+  float: left;
+  margin-right: 5px;
+  border: none;
+}
+.sm_crop_icon #thumbnail-controller{
+  float: left;
+}
+/*Menu Editor*/
+.sm_admin_menus_items li .item_wrapper{
+	width:300px;
+}
+.sm_admin_menus_items li .sm_admin_menu_sep{
+	background-color:#dbdbdb;
+}
+.sm_admin_menus_items li .sm_admin_menu_sep span.item_label{
+	font-weight:bold;
+	font-size:12px;
+}
+.sm_admin_menus_items .item_options img{
+	vertical-align:middle;
+}
+
+/**/
+.sm-page-head span{
+	font-size:13px;
+	margin-left:5px;
+}
+.sm-page-head span a.buttonlink{
+	margin-right:0;
+}
+.sm_admin_theme_editor_edit_wrapper .theme_edit_file select{
+	width:200px;
+}
+
+
+/*Theme Customization Css*/
+#mobiletheme_customization-wrapper{
+  overflow:hidden!important;
+}
+#mobiletheme_customization-wrapper #mobiletheme_customization-label{
+  font-size:20px;
+  font-weight:normal!important;
+  width:100%;
+  text-align:center;
+}
+#mobiletheme_customization-element{
+  max-width:100%!important;
+  float:left;
+}
+#mobiletheme_customization-element ul.form-options-wrapper{
+  margin-top:20px;
+  text-align:center;
+}
+#mobiletheme_customization-element ul.form-options-wrapper label{
+  line-height:20px;
+  text-transform:lowercase;
+}
+#mobiletheme_customization-element input[type="radio"]{
+  display:inline-block;
+  float:none;
+  vertical-align:bottom;
+}
+#mobiletheme_customization-element ul.form-options-wrapper label{
+  display:table-caption;
+  width:100%;
+  display:block;
+  text-align:center;
+}
+#mobiletheme_customization-element ul li{
+ width:19%;
+ display:inline-block;
+ background-repeat:no-repeat;
+ background-position:top center;
+ line-height:165px;
+ margin:0 0 20px 0;
+ background-image:url(~/application/modules/Sitemobile/externals/images/admin/theme.png);
+ }
+#mobiletheme_customization-element ul li + li{
+ margin-right:5px;
+}
+#mobiletheme_customization-element ul li:nth-child(1){
+ background-position:top left;
+ }
+#mobiletheme_customization-element ul li:nth-child(2){
+ background-position: -165px top;
+ }
+#mobiletheme_customization-element ul li:nth-child(3){
+ background-position: -335px top;
+ }
+#mobiletheme_customization-element ul li:nth-child(4){
+ background-position: right top;
+ }
+ #mobiletheme_customization-element ul li:last-child{
+ background-position:center -193px;
+ clear:both;
+ width:100%;
+ }
+

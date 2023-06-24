@@ -1,0 +1,112 @@
+
+/*Locker Pages CSS Start Here*/
+.vbpage_des{
+	margin-bottom:20px;
+}
+.vbpage_points_row .activitypoints_vault_balance,
+.vbpage_points_row .activitypoints_vault_total{
+	min-height:130px;
+	padding:20px;
+}
+.activitypoints_help_table{
+	max-width:500px !important;
+	width:100% !important;
+}
+@media only screen and (max-width:950px){
+	#global_page_activitypoints-topusers-index table td{
+		display:block;
+		width:100%;
+	}
+	#global_page_activitypoints-topusers-index table td *{
+		box-sizing:border-box;
+	}
+	#global_page_activitypoints-topusers-index table td > div{
+		max-width:100%;
+		width:100% !important;
+	}
+	#global_page_activitypoints-topusers-index table td + td > div{
+		padding:10px;
+	}
+}
+@media only screen and (max-width:767px){
+	.vbpage_points_row .activitypoints_vault_balance,
+	.vbpage_points_row .activitypoints_vault_total{
+		width:49%;
+	}
+	.vbpage_points_row .activitypoints_vault_total{
+		margin-left:2%;
+	}
+	html .uptopusers .entry{
+		padding:5px 5px 0 5px;
+	}
+	html .uptopusers .entry .image-wrap{
+		width:40px;
+	}
+}
+@media only screen and (max-width:500px){
+	.vbpage_points_row .activitypoints_vault_balance,
+	.vbpage_points_row .activitypoints_vault_total{
+		margin:10px 0 0;
+		width:100%;
+	}
+	.activitypoints_vault_bottom{
+		padding:20px 0;
+	}
+	.activitypoints_help_table{
+		max-width:100% !important;
+	}
+	html table.activitypoints_help_table thead tr th,
+	html table.activitypoints_help_table tbody tr td,
+	html table.activitypoints_transactions_table tr th,
+	html table.activitypoints_transactions_table tr td{
+		padding-left:5px;
+		padding-right:5px;
+		white-space:normal;
+		vertical-align:top;
+	}
+	html table.activitypoints_transactions_table tr td:nth-child(1){
+		white-space:nowrap;
+	}
+	.activitypoints_faq h2{ 
+		padding:0 !important;
+		text-align:center;
+		font-size:17px;
+	}
+	.activitypoints_transactions_results > div{
+    text-align: center;
+    margin: 5px 0 !important;
+    display: block !important;
+		font-weight:bold;
+	}
+}
+@media only screen and (max-width:480px){
+	.activitypoints_transactions_search *{
+		box-sizing:border-box;	
+	}
+	.activitypoints_transactions_search{
+		padding:0;
+		width:100%;
+	}
+	.activitypoints_transactions_search form > div{
+		margin:0;
+		padding:0 10px;
+		float:none;
+	}
+	.activitypoints_transactions_search form > div input,
+	.activitypoints_transactions_search form > div label,
+	.activitypoints_transactions_search form > div select{
+		margin-left:0;
+		margin-right:0;
+	}
+	.activitypoints_transactions_search form > div input,
+	.activitypoints_transactions_search form > div select{
+		height:40px;
+		padding:0 10px;
+	}
+	.activitypoints_transactions_search .buttons{
+		padding:0;
+		margin-bottom:10px; 
+	}
+	.uptopusers .entry .options{display:none;}
+}
+/*Locker Pages CSS End Here*/

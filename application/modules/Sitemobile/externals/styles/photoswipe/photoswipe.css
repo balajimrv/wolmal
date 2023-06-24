@@ -1,0 +1,257 @@
+/*
+ * photoswipe.css
+ * Copyright (c) %%year%% by Code Computerlove (http://www.codecomputerlove.com)
+ * Licensed under the MIT license
+ *
+ * Default styles for PhotoSwipe
+ * Avoid any position or dimension based styles
+ * where possible, unless specified already here.
+ * The gallery automatically works out gallery item
+ * positions etc.
+ */
+body.ps-active, body.ps-building, div.ps-active, div.ps-building{
+	background: #000;
+	overflow: hidden;
+}
+body.ps-active *, div.ps-active *{ 
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+	display: none;
+}
+body.ps-active *:focus, div.ps-active *:focus{ 
+	outline: 0; 
+}
+/* Document overlay */
+div.ps-document-overlay{
+	background: #000;
+}
+/* UILayer */
+div.ps-uilayer{ 
+	background: #000;
+	cursor: pointer;
+}
+/* Zoom/pan/rotate layer */
+div.ps-zoom-pan-rotate{
+	background: #000;
+}
+div.ps-zoom-pan-rotate *  { display: block; }
+/* Carousel */
+div.ps-carousel-item-loading{ 
+	background: url(~/application/modules/Sitemobile/externals/images/photoswipe/loader.gif) no-repeat center center; 
+}
+div.ps-carousel-item-error{ 
+	background: url(~/application/modules/Sitemobile/externals/images/photoswipe/error.gif) no-repeat center center; 
+}
+/* Caption */
+div.ps-caption{ 
+	background: #000000;
+	background: -moz-linear-gradient(top, #303130 0%, #000101 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303130), color-stop(100%,#000101));
+	border-bottom: 1px solid #42403f;
+	color: #ffffff;
+	font-size: 13px;
+	font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+	text-align: center;
+}
+div.ps-caption *  { display: block; }
+
+div.ps-caption-bottom{ 
+	border-top: 1px solid #42403f;
+	border-bottom: none;
+	min-height: 44px;
+}
+div.ps-caption-content{
+	padding: 13px; 
+	display: block;
+}
+
+.ps-caption-content .ps-caption-content-count{
+  clear: both;
+  padding-top: 5px;
+}
+/* Toolbar */
+div.ps-toolbar{ 
+	background: #000000;
+	background: -moz-linear-gradient(top, #303130 0%, #000101 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303130), color-stop(100%,#000101));
+	border-top: 1px solid #42403f;
+	color: #ffffff;
+	font-size: 13px;
+	font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+	text-align: center;
+	height: 44px;
+	display: table;
+	table-layout: fixed;
+}
+div.ps-toolbar * { 
+	display: block;
+}
+div.ps-toolbar-top {
+	border-bottom: 1px solid #42403f;
+	border-top: none;
+}
+div.ps-toolbar-close, 
+div.ps-toolbar-previous, 
+div.ps-toolbar-next, 
+div.ps-toolbar-play, 
+div.ps-toolbar-comments, 
+div.ps-toolbar-tags, 
+div.ps-toolbar-like,
+.ps-toolbar-unlike, 
+div.ps-toolbar-voteup,
+.ps-toolbar-votedown,
+div.ps-toolbar-fullview {
+	cursor: pointer;
+	display: table-cell;
+}
+div.ps-toolbar div div.ps-toolbar-content{
+	width: 44px;
+	height: 44px;
+	margin: 0 auto 0;
+	background-image: url(~/application/modules/Sitemobile/externals/images/photoswipe/icons.png);
+	background-repeat: no-repeat;
+}
+div.ps-toolbar-close div.ps-toolbar-content{
+	background-position: 0 0;
+}
+div.ps-toolbar-previous div.ps-toolbar-content{
+	background-position: -44px 0;
+}
+div.ps-toolbar-previous-disabled div.ps-toolbar-content{
+	background-position: -44px -44px;
+}
+div.ps-toolbar-next div.ps-toolbar-content{
+	background-position: -132px 0;
+}
+div.ps-toolbar-next-disabled div.ps-toolbar-content{
+	background-position: -132px -44px;
+}
+div.ps-toolbar-play div.ps-toolbar-content{
+	background-position: -88px 0;
+}
+div.ps-toolbar-like div.ps-toolbar-content,div.ps-toolbar-voteup div.ps-toolbar-content{
+	background-position: -176px 0;
+}
+div.ps-toolbar-unlike div.ps-toolbar-content,div.ps-toolbar-votedown div.ps-toolbar-content{
+	background-position: -220px 0;
+}
+div.ps-toolbar-comments div.ps-toolbar-content{
+	background-position: -264px 0;
+}
+div.ps-toolbar-fullview div.ps-toolbar-content{
+	background-position: -308px 0;
+}
+div.ps-toolbar-tags div.ps-toolbar-content{
+	background-position: -352px 0;
+}
+/*Focus*/
+div.ps-toolbar-close div.ps-toolbar-content{
+	background-position: 0 0;
+}
+div.ps-popup-wapper *, div.ps-poup-like-content *, div.ps-tag-content *{
+  display: block;
+}
+.ps-poup-like-content{
+  z-index: 9999;
+   display: block !important;
+}
+.ps-popup-wapper{
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+}
+.ps-popup-content{
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
+/*Photo Comments*/
+.ps-carousel-comments, 
+.ps-carousel-show-tags{
+	overflow:auto;
+}
+.ps-carousel-close-comment-box,
+.ps-carousel-close-tag-box{ 
+	margin: 0.5em 0 !important;
+	text-align: center;
+}
+.ps-carousel-comments .comments .comments_options{
+	padding:1em 0;
+	margin:0;
+}
+.ps-carousel-comments div.sm-comments-top *,
+.ps-carousel-comments div.comments .comments_date *,
+.ps-carousel-comments .comments_likes *{
+	display:inline-block;
+}
+/*Tags View*/
+.ps-carousel-show-tags > div{
+	padding:.5em;
+}
+.ps-carousel-item .tag-item {
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+.ps-carousel-item .tag-item > span {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 2px 2px 2px 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 2px 4px;
+  text-align: center;
+  text-shadow: 0 0 1px #000;
+  white-space: nowrap;
+}
+.toolbar-active.ps-toolbar>div {
+  visibility: hidden;
+}
+.toolbar-active.ps-toolbar>.active {
+  visibility: visible;
+}
+.toolbar-active.ps-toolbar {
+  display: table!important;
+  opacity: 1!important;
+  background: none !important;
+  border-top:none !important;
+}
+.tag-container-active .tag-item.detected {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,.5);
+  box-shadow: 0 0 3px #000;
+  background-color: rgba(0,0,0,.2);
+}
+.tag-container-active .tag-container>ul {
+  background: 0 repeat scroll 0 0 rgba(0,0,0,.6);
+  border: 1px solid rgba(255,255,255,.4);
+  display: block;
+  min-width: 130px;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+}
+.tag-container-active .tag-container li {
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 9px;
+  text-shadow: 0 0 0 #000;
+  background: #000;
+}
+
+.tag-container  li.text {
+  border-bottom: 1px solid rgba(255,255,255,.4);
+  padding-top: 0!important;
+  display: block;
+  height: 14px;
+}
+.tag-container-active .selected {
+  display: block;
+}
+.tag-container-active .tag-container {
+  display: block!important;
+}

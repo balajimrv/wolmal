@@ -1,0 +1,2 @@
+
+INSERT IGNORE INTO `engine4_semods_actionpoints` (`action_type` ,`action_enabled` ,`action_name` ,`action_points` ,`action_pointsmax` ,`action_rolloverperiod` ,`action_requiredplugin` ,`action_group` ,`action_module` ,`action_custom`) VALUES('comment_activity',  '1',  'Comment on Newsfeed Activity ',  '10',  '100',  '86400',  NULL,  '100',  '',  '1');

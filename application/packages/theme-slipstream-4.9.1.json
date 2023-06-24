@@ -1,0 +1,260 @@
+{
+  "type": "theme",
+  "name": "slipstream",
+  "version": "4.9.1",
+  "revision": "10267",
+  "path": "application\/themes\/slipstream",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Slipstream",
+  "description": null,
+  "thumb": "slipstream.jpg",
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Slipstream",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Theme",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/themes\/slipstream": {
+      "type": "directory",
+      "path": "application\/themes\/slipstream",
+      "structure": [
+        {
+          "path": "mobile.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 18444,
+          "sha1": "ce1686baa30258e046fb9d99394d17e216d070b9"
+        },
+        {
+          "path": "constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7892,
+          "sha1": "154f2394ae5304a8a69e381c86365c0e6abe55f7"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1661,
+          "sha1": "7717c81ae5128b213622b6a8b01ad4d8feafa99f"
+        },
+        {
+          "path": "theme.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 42149,
+          "sha1": "8d5d1fce29a169b6fc70198d332c7fb3daee629e"
+        },
+        {
+          "path": "default_theme.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6099,
+          "sha1": "c856fdd2883d36da80815b29ded822a70d2a3ee8"
+        },
+        {
+          "path": "images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "images\/ss_tab_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 121,
+          "sha1": "16f10b82f714d930636c5ab9d6ec41c23ede2263"
+        },
+        {
+          "path": "images\/ss_bg2.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 36714,
+          "sha1": "60c9600f4b23e557d7d6dd10c1a2fdd3c38b8e27"
+        },
+        {
+          "path": "images\/ss_header_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 257,
+          "sha1": "a915fdc7692b65cfa0591f36638e38b318be61f9"
+        },
+        {
+          "path": "images\/topbar_menu_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 170,
+          "sha1": "565dda63d0039d02852e14ef58766797f25ee2f7"
+        },
+        {
+          "path": "images\/ss_comment_bg2.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1078,
+          "sha1": "cfd00290082564d73039463bee3fad27c35929eb"
+        },
+        {
+          "path": "images\/topbar_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 13285,
+          "sha1": "189deb8f84195b62aa20afb1c9433503cf44534f"
+        },
+        {
+          "path": "images\/ss_mobile_bg.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 8482,
+          "sha1": "d868c4a7196cc37f762b2b33028d3783498855ea"
+        },
+        {
+          "path": "images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "images\/ss_bg.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 23037,
+          "sha1": "38fb8b52d6416fc383d619c5728e5f1acad62690"
+        },
+        {
+          "path": "images\/ss_feed_divider.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 223,
+          "sha1": "2c2b3e1ce2d68c3c77664302fabb2322af2b9339"
+        },
+        {
+          "path": "images\/ss_mainforeground_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 119,
+          "sha1": "9529cd9355b8eb1f570227a52a10782305642fe5"
+        },
+        {
+          "path": "images\/ss_button_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 171,
+          "sha1": "10422cd4acd0f05aa6cf40bc4b14d1e3f0015720"
+        },
+        {
+          "path": "images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "images\/ss_comment_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 280,
+          "sha1": "c41c1836e7a4de614863c47ea472ab226a8e4dbb"
+        },
+        {
+          "path": "images\/ss_pulldown_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 121,
+          "sha1": "2e807a3e6ea961d5fe4148be4993f762f18883a4"
+        },
+        {
+          "path": "images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "images\/ss_uparrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 262,
+          "sha1": "cc1f6be18e7010bca77cb65d00d41dd574c930ee"
+        },
+        {
+          "path": "images\/ss_foreground_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 123,
+          "sha1": "fb947ec61f43c27e152a0ad0a44138af74c49b44"
+        },
+        {
+          "path": "slipstream.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4466,
+          "sha1": "141957d151302ba3f6a98e464efbadb3cf9f8541"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,511 @@
+                                                                
+@include "~/application/modules/Core/externals/styles/constants.css";
+
+
+
+
+/* TRANSACTIONS */
+.activitypoints_transactions_search_wrapper
+{
+  max-width: 700px;
+  clear: both;
+  overflow: hidden;
+}
+.activitypoints_transactions_search
+{
+  +rounded(5px);
+  +foreground;
+  padding: 7px;
+  float: left;
+  border: 0px;
+}
+.activitypoints_transactions_search > form
+{
+  overflow: hidden;
+  border: 1px solid #d7e8f1;
+  background: #fff;
+  padding: 15px;
+}
+.activitypoints_transactions_search form > div
+{
+  float: left;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.activitypoints_transactions_search form > div:first-child
+{
+  margin-left: 0px;
+}
+.activitypoints_transactions_search div label
+{
+  font-size: 8pt;
+  font-weight: bold;
+  display: block;
+  margin-left: 10px;
+}
+.activitypoints_transactions_search div input, div.activitypoints_transactions_search div select
+{
+  width: auto;
+  margin-top: 3px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.activitypoints_transactions_search div select option
+{
+  padding-left: 3px;
+}
+.activitypoints_transactions_search .buttons
+{
+  padding: 15px;
+}
+
+.activitypoints_transactions_results {
+  overflow:hidden;
+}
+
+.activitypoints_transactions_results > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.activitypoints_transactions_results > div + div {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+
+/* Send points */
+
+td.activitypoints_browse_field {
+  padding:5px;
+}
+
+.activitypoints_browse_field .tag {
+  margin: 0px;
+}
+
+/*
+ADMIN TABLE LIST 
+Styles most tabular data in the admin panel.
+*/
+table.activitypoints_transactions_table thead tr th
+{
+  +foreground;
+  padding: 10px;
+  border-bottom: 1px solid #aaa;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  white-space: nowrap;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  color: #666;
+}
+table.activitypoints_transactions_table thead tr th a
+{
+  font-weight: bold;
+}
+table.activitypoints_transactions_table tbody tr:nth-child(even)
+{
+  background-color: #f8f8f8;
+}
+table.activitypoints_transactions_table tbody tr td
+{
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: .9em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+th.activitypoints_transactions_table_short
+{
+  width: 1%;
+}
+td.activitypoints_transactions_table_options
+{
+  color: #ccc;
+}
+.activitypoints_transactions_table_centered
+{
+  text-align: center;
+}
+.activitypoints_transactions_table_bold,
+.activitypoints_transactions_table_bold a
+{
+  font-weight: bold;
+}
+td.activitypoints_transactions_table_options > span.sep
+{
+  display: none;
+}
+td.activitypoints_transactions_table_options > a + span.sep
+{
+  display: inline;
+}
+
+
+
+
+
+/* User Home Points Widget */
+
+.layout_activitypoints_userhome_points
+{
+  clear: both;
+  overflow: auto;
+  Xwidth: 100%;
+  margin-bottom: 15px;
+}
+
+.layout_activitypoints_userhome_points > div
+{
+  +foreground;
+  +rounded;
+  padding: 2px;
+  overflow: hidden;
+}
+
+
+/* Profile Points Widget */
+
+.layout_activitypoints_profile_points
+{
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.layout_activitypoints_profile_points > h3
+{
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+
+.layout_activitypoints_profile_points > ul
+{
+  +foreground;
+  +rounded;
+  padding: 10px;
+}
+.layout_activitypoints_profile_points > ul > li
+{
+  font-size: .8em;
+}
+.layout_activitypoints_profile_points > ul > li + li
+{
+  margin-top: 5px;
+}
+
+
+
+/* Site Home Page Top Users Widget */
+.layout_activitypoints_list_topusers
+{
+  clear: both;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.layout_activitypoints_list_topusers > ul
+{
+  +foreground;
+  +rounded;
+  padding: 5px;
+}
+.layout_activitypoints_list_topusers > ul > li
+{
+  clear: both;
+  overflow: hidden;
+  padding: 3px 5px 3px 5px;
+}
+.layout_activitypoints_list_topusers a.topuserswidget_thumb
+{
+  float: left;
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+.layout_activitypoints_list_topusers a.topuserswidget_thumb > span
+{
+  display: block;
+}
+.layout_activitypoints_list_topusers .topuserswidget_info
+{
+  padding: 0px 0px 0px 6px;
+  overflow: hidden;
+}
+.layout_activitypoints_list_topusers .topuserswidget_name
+{
+  font-weight: bold;
+}
+.layout_activitypoints_list_topusers .topuserswidget_points
+{
+  font-size: .8em;
+  color: $theme_font_color_light;
+}
+
+
+/* help */
+
+.activitypoints_faq_header {
+
+  font-size:120%;
+  font-weight:bold;
+  margin-bottom:5px;
+
+}
+
+.activitypoints_faq_questions {
+  margin-bottom: 5px;
+}
+
+.activitypoints_faq {
+  Xmargin-left:5px;
+  padding:10px;  
+}
+
+
+
+table.activitypoints_help_table thead tr th
+{
+  +foreground;
+  padding: 10px;
+  border-bottom: 1px solid #aaa;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  white-space: nowrap;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  color: #666;
+}
+table.activitypoints_help_table thead tr th a
+{
+  font-weight: bold;
+}
+table.activitypoints_help_table tbody tr:nth-child(even)
+{
+  background-color: #f8f8f8;
+}
+table.activitypoints_help_table tbody tr td
+{
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: .9em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+th.activitypoints_help_table_short
+{
+  width: 1%;
+}
+td.activitypoints_help_table_options
+{
+  color: #ccc;
+}
+.activitypoints_help_table_centered
+{
+  text-align: center;
+}
+.activitypoints_help_table_bold,
+.activitypoints_help_table_bold a
+{
+  font-weight: bold;
+}
+td.activitypoints_help_table_options > span.sep
+{
+  display: none;
+}
+td.activitypoints_help_table_options > a + span.sep
+{
+  display: inline;
+}
+
+
+
+
+
+#activitypoints_act_now {
+  background:transparent url(/application/modules/Activitypoints/externals/images/download_now.png) no-repeat scroll left top;
+  color:#993300;
+  display:block;
+  font-family:Tahoma,Arial;
+  font-weight:bold;
+  font-size:14px;
+  height:26px;
+  margin:0px;
+  padding:0px;
+  text-decoration:none;
+  width:100px;
+  border:0px;
+  padding-bottom: 3px;
+}
+
+#activitypoints_act_now span {
+  margin:10px;
+}
+
+
+.activitypoints_points {
+  background: url(/application/modules/Activitypoints/externals/images/userpoints_coins16.png) top left no-repeat;
+  padding-left: 18px;
+}
+
+
+/* progress */
+
+.activitypoints-progress-wrap {
+  position: relative;
+  border: 1px solid #CCC;
+
+  background-color: #fff;
+  padding: 1px;  
+}
+
+.activitypoints-progress-wrap, .activitypoints-progress-value, .activitypoints-progress-text {
+  width: 155px;
+  height: 30px;
+}
+
+.activitypoints-progress-value {
+  background-color:#00A4F3;
+}
+
+.activitypoints-progress-wrap {
+}
+
+.activitypoints-progress-value {
+  background-color: #79B4D4
+}
+
+/*
+.activitypoints-progress-wrap, .activitypoints-progress-value {
+  background: #bdbdbd url(/application/modules/Activitypoints/externals/images/progress.png) top left no-repeat;
+  background-color: #79B4D4
+}
+*/
+
+.activitypoints-progress-text {
+  position: absolute;
+  top:0; left:0;
+
+  padding-top: 5px;
+
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.activitypoints_vault_balance {
+  width: 300px;
+  float: left;
+  padding: 10px;
+  padding-left: 40px;
+  background-color: #f6f6f6;
+}
+
+.activitypoints_vault_balance_title {
+  padding-bottom: 12px;  
+}
+
+.activitypoints_vault_balance_title strong {
+  color: #777;
+}
+
+.activitypoints_vault_balance_coin, .activitypoints_vault_total_coin, .activitypoints_vault_rating_star {
+  float: left;
+  margin-right: 8px;
+}
+
+.activitypoints_vault_balance_text {
+  font-size: 24px;
+  color: #777 !important;
+}
+
+.activitypoints_vault_balance_text #userpoints_balance {
+  font-weight: bold;
+}
+
+.activitypoints_vault_balance #up_sendpoints_success {
+  background-color: #F3FFF3;
+  padding: 7px;
+  font-weight: bold;
+}
+
+.activitypoints_vault_balance #up_sendpoints_success img {
+  float:left;
+  margin-right: 5px;
+}
+
+.activitypoints_vault_balance #up_sendpoints_fail {
+  background-color: #FFEBE8;
+  padding: 7px;
+  font-weight: bold;
+}
+
+.activitypoints_vault_balance #up_sendpoints_fail img {
+  float:left;
+  margin-right: 5px;
+}
+
+.activitypoints_vault_balance #up_sendpoints_progress {
+  padding: 7px;
+}
+
+.activitypoints_vault_total {
+  width: 300px;
+  float: left;
+  padding: 10px;
+  padding-left: 40px;
+  background-color: #f6f6f6;
+  margin-left: 10px
+}
+
+.activitypoints_vault_total_title {
+  padding-bottom: 12px;
+}
+
+.activitypoints_vault_total_title strong {
+  color: #777;
+}
+
+.activitypoints_vault_total_text {
+  font-size: 24px;
+  color: #777;
+}
+
+.activitypoints_vault_bottom {
+  padding-left: 10px;
+  padding-top: 40px;
+}
+
+.activitypoints_vault_rating {
+  width: 300px;
+  float: left;
+}
+
+.activitypoints_vault_rating_title {
+  padding-bottom: 12px;
+}
+
+.activitypoints_vault_rating_title strong {
+  color: #777;
+}
+
+.activitypoints_vault_rating_text {
+  font-size: 24px;
+}
+
+.activitypoints_vault_rating_text strong {
+  color: #777;
+}
+                            
+                            

@@ -1,0 +1,3377 @@
+{
+  "type": "module",
+  "name": "sitegateway",
+  "version": "4.9.2",
+  "revision": null,
+  "path": "application\/modules\/Sitegateway",
+  "repository": null,
+  "date": "Fri, 19 May 2017 16:23:49 +0000",
+  "title": "Advanced Payment Gateways \/ Stripe Connect \/  PayPal Adaptive ",
+  "description": "Advanced Payment Gateways \/ Stripe Connect \/  PayPal Adaptive ",
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "<a href=\"http:\/\/www.socialengineaddons.com\" style=\"text-decoration:underline;\" target=\"_blank\">SocialEngineAddOns<\/a>"
+  ],
+  "meta": {
+    "date": "Fri, 19 May 2017 16:23:49 +0000",
+    "title": "Advanced Payment Gateways \/ Stripe Connect \/  PayPal Adaptive ",
+    "description": "Advanced Payment Gateways \/ Stripe Connect \/  PayPal Adaptive ",
+    "developer": null,
+    "authors": [
+      "<a href=\"http:\/\/www.socialengineaddons.com\" style=\"text-decoration:underline;\" target=\"_blank\">SocialEngineAddOns<\/a>"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh"
+  ],
+  "callback": {
+    "path": "application\/modules\/Sitegateway\/settings\/install.php",
+    "class": "Sitegateway_Installer",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    {
+      "type": "PhpExtension",
+      "name": "MCrypt",
+      "extension": "mcrypt",
+      "defaultErrorType": 1,
+      "messages": {
+        "noExtension": "We recommend installing the mcrypt extension. Your payment gateway login information will be stored encrypted if this extension is available."
+      }
+    },
+    {
+      "type": "PhpExtension",
+      "name": "Curl",
+      "extension": "curl",
+      "messages": {
+        "noExtension": "The Curl extension is required."
+      }
+    }
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/modules\/Sitegateway": {
+      "type": "directory",
+      "path": "application\/modules\/Sitegateway",
+      "structure": [
+        {
+          "path": "Bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 712,
+          "sha1": "dbc0385a7cfbfd7474358b39090d0bec682c7444"
+        },
+        {
+          "path": "Plugin",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Plugin\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1300,
+          "sha1": "ee151274fa061c82657ae5b842a4ce4e59019d5f"
+        },
+        {
+          "path": "Plugin\/Job",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Plugin\/Job\/PaymentStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2821,
+          "sha1": "8bc6aeac96c2a842a7ebd25454cb4d778f03de8d"
+        },
+        {
+          "path": "Plugin\/Gateway",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Plugin\/Gateway\/Payumoney.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 54748,
+          "sha1": "0f7b6d239016df11ca5875b15bbf7a243d90fbdf"
+        },
+        {
+          "path": "Plugin\/Gateway\/MangoPay.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 67161,
+          "sha1": "5105c84d6586a4e5f6fd08025157d19cadb8c9e6"
+        },
+        {
+          "path": "Plugin\/Gateway\/Abstract.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 25187,
+          "sha1": "8322f60929b187af42a6de5ced8b323967f1194f"
+        },
+        {
+          "path": "Plugin\/Gateway\/Stripe.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 52479,
+          "sha1": "d8ae50efe2f82ee31ce6027fe749efa7b7029300"
+        },
+        {
+          "path": "Plugin\/Gateway\/newpayumoney.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 46536,
+          "sha1": "2aa360fc3569f3f07ef43cc2d051514cec8e89d6"
+        },
+        {
+          "path": "Plugin\/Gateway\/Adaptivepaypal.php_",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 63653,
+          "sha1": "a3e715dd0e92074bcad790013e402a2f4846dfdb"
+        },
+        {
+          "path": "Plugin\/Gateway\/Paynow.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 44565,
+          "sha1": "35f33f9c25d960f558df80c407c0e1367d80ca9b"
+        },
+        {
+          "path": "Plugin\/Gateway\/PayPalAdaptive.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 81589,
+          "sha1": "346ef095cbcbd31a91db94dc70d1f4c1ab549c21"
+        },
+        {
+          "path": "Plugin\/Task",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Plugin\/Task\/Payout.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1331,
+          "sha1": "cc776aff9f1e1fd2e97aa2692bf6e479ac11dbfa"
+        },
+        {
+          "path": "Api",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Api\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 23041,
+          "sha1": "9996aeda4ad627644fbb02003a835e963c3dfc1f"
+        },
+        {
+          "path": "settings",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/install.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 17364,
+          "sha1": "fdb09693205eaa5c329e67990641bfddcec8f0f3"
+        },
+        {
+          "path": "settings\/my.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 597,
+          "sha1": "af3eaaaa5768093745dc2b215b7341b33be61abf"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Service",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Service\/Newgatewayname.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 8886,
+          "sha1": "5ca1941f49430df033d274d54d937a59873fe695"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Service\/Newgatewayname",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Service\/Newgatewayname\/Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1710,
+          "sha1": "a5e768a96028532145f91b3b8779d58512d556e9"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Payment",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Payment\/Gateway",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/libraries\/Engine\/Payment\/Gateway\/Newgatewayname.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7361,
+          "sha1": "2f28eec1edff86405a61dc2ac2138090071efced"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Plugin",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Plugin\/Gateway",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Plugin\/Gateway\/Newgatewayname.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 42117,
+          "sha1": "63a41890e8227a3f07e278848ce5b3c21d73bd97"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/settings",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/settings\/newGatewayName_queries.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 524,
+          "sha1": "e7253a9acb8766bf39d6bc12233217f9374a5028"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Form",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Form\/Admin",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Form\/Admin\/Gateway",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Form\/Admin\/Gateway\/Newgatewayname.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 913,
+          "sha1": "48fa143dd084b9e294d4ff28a424d7aadf30243b"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Form\/Order",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/Form\/Order\/Newgatewayname.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2720,
+          "sha1": "8255cb7371768dd55dc9fe40416b0454c536771b"
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/externals",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/externals\/images",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/new-gateway-skeleton\/application\/modules\/Sitegateway\/externals\/images\/newgatewayname.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 135,
+          "sha1": "8cd2d25e20939f418979536b20037c3ca4026e0e"
+        },
+        {
+          "path": "settings\/manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3630,
+          "sha1": "3e5f4a8404b9a67818fab57963b2148e5ce80962"
+        },
+        {
+          "path": "views",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-gateways",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-gateways\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2480,
+          "sha1": "281db4e6bc18d163f9d5b8e18ee7888c40221378"
+        },
+        {
+          "path": "views\/scripts\/admin-gateways\/edit.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 810,
+          "sha1": "d8fde9b9e63c59b069c1704129ce8eb0fffe2000"
+        },
+        {
+          "path": "views\/scripts\/payment",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/payment\/process.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 9520,
+          "sha1": "fb72a82cdb121cf210aea6f5a74d77c6fd2f7226"
+        },
+        {
+          "path": "views\/scripts\/admin-integration",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-integration\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 11432,
+          "sha1": "20757386724b800098da07d8241d892a2783079d"
+        },
+        {
+          "path": "views\/scripts\/admin-package",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-package\/create.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3217,
+          "sha1": "0a0007b4c47cc7d2fdf11dc66a9e6723473d7bf6"
+        },
+        {
+          "path": "views\/scripts\/admin-index",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-index\/raw-order-detail.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 832,
+          "sha1": "ce418fc1a8204e69b3fd25d98fc7761b125f0678"
+        },
+        {
+          "path": "views\/scripts\/admin-index\/raw-transaction-detail.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 844,
+          "sha1": "0decbe802cd0de6a31f9a2b288a68b7cb3f6d03d"
+        },
+        {
+          "path": "views\/scripts\/admin-index\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7056,
+          "sha1": "e9decd04eaa9145a84d9499605ed7a7caa63a9a0"
+        },
+        {
+          "path": "views\/scripts\/admin-index\/detail.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4057,
+          "sha1": "e213bacc95075aa3407dad3edb865cf29797bff0"
+        },
+        {
+          "path": "views\/scripts\/_stripeConnectButton.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3800,
+          "sha1": "b83ee2a7f861c1a7660de5545ac35688335061ec"
+        },
+        {
+          "path": "views\/scripts\/payumoney",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/payumoney\/process.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1851,
+          "sha1": "2e57cef60b70c0950308763439e1b5edbd2bfd8e"
+        },
+        {
+          "path": "views\/scripts\/_stripeChargeMethod.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1939,
+          "sha1": "995639b553fd47a4dae97f822ebf911057f9fed0"
+        },
+        {
+          "path": "views\/scripts\/admin-settings",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/readme.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1231,
+          "sha1": "ba7d50ad46050feee9db3d502eb9cd5e713d8d59"
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/faq.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 736,
+          "sha1": "a50d36ee66dcdeb94ef41e51c4f313554c66d0fd"
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2259,
+          "sha1": "440a3d4d200d97e75609554897627cb4178da9dd"
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/faq_help.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 28241,
+          "sha1": "16785d1348d707d47b746ab8fff455ed51daa3a3"
+        },
+        {
+          "path": "views\/sitemobile",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/sitemobile\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/sitemobile\/scripts\/payment",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/sitemobile\/scripts\/payment\/process.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3226,
+          "sha1": "7046cb54023f2cf391f0b1bbe392aaa8a2c438a5"
+        },
+        {
+          "path": "Form",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Transactions",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Transactions\/Filter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5385,
+          "sha1": "b8ad6eeb81ea9f0093c0867c3dfa7db5686a2503"
+        },
+        {
+          "path": "Form\/Admin\/Integration",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Integration\/Create.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1284,
+          "sha1": "6b2c3966a747b640ce4ce9f130ff976d0deda6c5"
+        },
+        {
+          "path": "Form\/Admin\/Settings",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Settings\/Global.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 9337,
+          "sha1": "24a251c6bc7419a3685c1e7ebbce367dbb6f153a"
+        },
+        {
+          "path": "Form\/Admin\/Settings\/Global.php_",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 8564,
+          "sha1": "76b031194f9ea2ecd537874e7fe2dafce2dbd7b6"
+        },
+        {
+          "path": "Form\/Admin\/Gateway",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Gateway\/Payumoney.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1788,
+          "sha1": "981ff59ef3a04ac82bc3ca8d8f46d1244b1a2ffb"
+        },
+        {
+          "path": "Form\/Admin\/Gateway\/MangoPay.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1635,
+          "sha1": "148a0bc0dd141a587a85201aecd5a2cb6202958a"
+        },
+        {
+          "path": "Form\/Admin\/Gateway\/Stripe.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5911,
+          "sha1": "dc40235765b2e9fa4556385187e310f57a827dd9"
+        },
+        {
+          "path": "Form\/Admin\/Gateway\/Adaptivepaypal.php_",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2146,
+          "sha1": "343c890996d13a3226b60b69644373a63aadd4f3"
+        },
+        {
+          "path": "Form\/Admin\/Gateway\/Paynow.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3690,
+          "sha1": "4ede122f6e844edb770d233e82b0ca3b3e320042"
+        },
+        {
+          "path": "Form\/Admin\/Gateway\/PayPalAdaptive.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2519,
+          "sha1": "5ede0da59a0a508ccd6262d8a930dcb31b57e6c2"
+        },
+        {
+          "path": "Form\/Order",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Order\/Payumoney.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4098,
+          "sha1": "31b773cb06904f1c3af65e5557a514deb7faba7f"
+        },
+        {
+          "path": "Form\/Order\/MangoPay.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2701,
+          "sha1": "2baab0d51f59379a23d9b5b2c2ac73f799dd1612"
+        },
+        {
+          "path": "Form\/Order\/Stripe.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3521,
+          "sha1": "2b009b049a55fee651a4488a7f7d2794287c0fe4"
+        },
+        {
+          "path": "Form\/Order\/Paynow.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5152,
+          "sha1": "00f237242d7a37dc9fd9fae916387c5bdf5d8c95"
+        },
+        {
+          "path": "Form\/Order\/Kyc.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2624,
+          "sha1": "989d8498c3bf4ca8126a5e71d6290fe8e468885c"
+        },
+        {
+          "path": "Form\/Order\/PayPalAdaptive.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2726,
+          "sha1": "323ea19502c687389f7e893dd34b85af5baf926f"
+        },
+        {
+          "path": "Model",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Model\/Transaction.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 482,
+          "sha1": "b1103e2c2dc26c8b0339bc8b5473776731ffdb9c"
+        },
+        {
+          "path": "Model\/DbTable",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Model\/DbTable\/Transactions.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1535,
+          "sha1": "e3eedd13739e562f23dcdd48f23f3b9bb64efbda"
+        },
+        {
+          "path": "controllers",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "controllers\/AdminIndexController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 18094,
+          "sha1": "0afdee32d9146c67e84456a04537a028935c35c6"
+        },
+        {
+          "path": "controllers\/PaymentController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 26816,
+          "sha1": "d70d8891ef41cec68852e764822eac0c5a1cd2e3"
+        },
+        {
+          "path": "controllers\/AdminIntegrationController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4510,
+          "sha1": "63653ecde44cddfb7031afc93997d68320e87a3d"
+        },
+        {
+          "path": "controllers\/license",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "controllers\/license\/license3.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 8341,
+          "sha1": "95bc9a02601762fa810405617dc53931e5bbee4d"
+        },
+        {
+          "path": "controllers\/license\/license1.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 35945,
+          "sha1": "7e386a824e8a188d836e798898fd6dc2afdde423"
+        },
+        {
+          "path": "controllers\/license\/license2.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 9970,
+          "sha1": "f1eca90cffcaf4ce8aa5fa6c758f8ed18a054af6"
+        },
+        {
+          "path": "controllers\/license\/license.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7410,
+          "sha1": "1db9611ee3c933cf25dca24adebdfe79a36a29f5"
+        },
+        {
+          "path": "controllers\/license\/widgetSettings.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 783,
+          "sha1": "da623186fd3d5c2d574564a4ddef3e3a5ee5ccc0"
+        },
+        {
+          "path": "controllers\/AdminGatewaysController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 9415,
+          "sha1": "9c6ca62338c69f5d0889240a1e4107d0f3c1d6a9"
+        },
+        {
+          "path": "controllers\/AdminSettingsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1353,
+          "sha1": "cbe33ef35e6f0660adbddd08e98d7f213530b193"
+        },
+        {
+          "path": "controllers\/PayumoneyController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1252,
+          "sha1": "1b14593516a4680f71e8b9ee448fbd736d896de7"
+        },
+        {
+          "path": "controllers\/AdminPackageController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7211,
+          "sha1": "e049ad3de2de00a783817b77fd8bdd425220186d"
+        },
+        {
+          "path": "externals",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/.htaccess",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 147,
+          "sha1": "9f1638a8edbe1c5d28789e017fb35b2f2465f01e"
+        },
+        {
+          "path": "externals\/styles",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/styles\/style.css",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 6071,
+          "sha1": "1ed0fd3be8a187e3af705c54051f18af1cc003d7"
+        },
+        {
+          "path": "externals\/styles\/main.css",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 365,
+          "sha1": "0e62d1ea8577d33597e44fd470d9b4b56497598e"
+        },
+        {
+          "path": "externals\/images",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/images\/express.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 914,
+          "sha1": "f36f4fbacf79db12ddb14ce9964f15ac6a89bd1e"
+        },
+        {
+          "path": "externals\/images\/calender.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 386,
+          "sha1": "1cd2329780f4e075fbd52d173b3a54c57dff11c1"
+        },
+        {
+          "path": "externals\/images\/mangopay.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3265,
+          "sha1": "161c3deadd503142ec3e49ac09038ef667b68e79"
+        },
+        {
+          "path": "externals\/images\/paynow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3691,
+          "sha1": "88ba101c3c4e3ce5cc1fbe67910eced979301514"
+        },
+        {
+          "path": "externals\/images\/mangopay.png--",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 135,
+          "sha1": "8cd2d25e20939f418979536b20037c3ca4026e0e"
+        },
+        {
+          "path": "externals\/images\/mollie.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5747,
+          "sha1": "f77aa6f880eb398677537f8028dd53fb714596c6"
+        },
+        {
+          "path": "externals\/images\/stripe.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2566,
+          "sha1": "64034f143d6687b18fb25aca13f7ab4f60bfd55e"
+        },
+        {
+          "path": "externals\/images\/diners.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 650,
+          "sha1": "e440b2156802429b6216aa267d6e90f12d2adcff"
+        },
+        {
+          "path": "externals\/images\/email.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 393,
+          "sha1": "f47b89c5f39bbb2dfe17794a6100bb878f6f1b41"
+        },
+        {
+          "path": "externals\/images\/stripe-connect.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3421,
+          "sha1": "749b4a83d88cd3373f3adb75f41e86f1b676efc0"
+        },
+        {
+          "path": "externals\/images\/mastercard.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 867,
+          "sha1": "df878c85b871a1375efe634a7a04bf42cc1ae16c"
+        },
+        {
+          "path": "externals\/images\/paypaladaptive.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3500,
+          "sha1": "e2ced892db776aee5b8dfeb772a4b29fa562fc3d"
+        },
+        {
+          "path": "externals\/images\/payumoney.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2662,
+          "sha1": "32189fbb61f7c072aaa0fc9f7d21c7843579fbb5"
+        },
+        {
+          "path": "externals\/images\/card.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 263,
+          "sha1": "6550118ec62f19871a86247064798bb817559a21"
+        },
+        {
+          "path": "externals\/images\/paypal.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3500,
+          "sha1": "e2ced892db776aee5b8dfeb772a4b29fa562fc3d"
+        },
+        {
+          "path": "externals\/images\/discover.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 623,
+          "sha1": "344af6cd60f579958e91f262b33667cf095f57cc"
+        },
+        {
+          "path": "externals\/images\/lock.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 555,
+          "sha1": "0c978dd560cb82f6b510f4229b95dd170ba97883"
+        },
+        {
+          "path": "externals\/images\/jcb.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 680,
+          "sha1": "dadf334319ad2f0ea83594d7e82ed74641a375b2"
+        },
+        {
+          "path": "externals\/images\/adaptivepaypal.png--",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 135,
+          "sha1": "8cd2d25e20939f418979536b20037c3ca4026e0e"
+        },
+        {
+          "path": "externals\/images\/visa.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 694,
+          "sha1": "44432bea0c2f7ba5299dd5f868a47b90bfcd7647"
+        }
+      ]
+    },
+    "application\/libraries\/Stripe": {
+      "type": "directory",
+      "path": "application\/libraries\/Stripe",
+      "structure": [
+        {
+          "path": ".coveralls.yml",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 96,
+          "sha1": "8d29eb394b6435b0c366aadbf050151fe44d2b14"
+        },
+        {
+          "path": ".gitignore",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 353,
+          "sha1": "8cd584d3d1578bcfa65a8871ed3c3c4483ac07d6"
+        },
+        {
+          "path": "data",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "data\/ca-certificates.crt",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 281570,
+          "sha1": "e71ec0d75757dfe6bd12c35cd59790135781392e"
+        },
+        {
+          "path": "data\/test.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 95,
+          "sha1": "0ec63b140374ba704a58fa0c743cb357683313dd"
+        },
+        {
+          "path": "LICENSE",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1072,
+          "sha1": "4c50b0becfdde9514c48f5affd100d4f13d78014"
+        },
+        {
+          "path": "composer.json",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 721,
+          "sha1": "d954fd23eb36f2ba6d908b057805b4a46585d9d4"
+        },
+        {
+          "path": "phpunit.no_autoload.xml",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 437,
+          "sha1": "a633ff7c17251d87505244760a12ee1cbc10a52d"
+        },
+        {
+          "path": "tests",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "tests\/bootstrap.no_autoload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 86,
+          "sha1": "5d94e90a2857fe190785a2b8b6e4678eb8a6ec1d"
+        },
+        {
+          "path": "tests\/BalanceTransactionTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 252,
+          "sha1": "dc60c6a459ae6a2de52b6c177c28608d131de5fa"
+        },
+        {
+          "path": "tests\/AuthenticationErrorTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 329,
+          "sha1": "500b02605608b82220b7a8137501a60a127e4c85"
+        },
+        {
+          "path": "tests\/PlanTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1308,
+          "sha1": "b56ecd4261af69636f86a77215e0174212269003"
+        },
+        {
+          "path": "tests\/BalanceTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 350,
+          "sha1": "ee2383c4eec7e0290227539538969cefaac92bf0"
+        },
+        {
+          "path": "tests\/RequestOptionsTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1761,
+          "sha1": "1de025ad5cb2ce05c1beb7202dee4d4961201db7"
+        },
+        {
+          "path": "tests\/CardErrorTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 953,
+          "sha1": "9ef36b7b18b575f4fcfc868d2384f635c81df918"
+        },
+        {
+          "path": "tests\/ErrorTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 635,
+          "sha1": "dbd506ad74b7bf29950148556e5f95c5e5d787bb"
+        },
+        {
+          "path": "tests\/CouponTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 756,
+          "sha1": "23b10ce2c1e729f317682e2dda795b53cb2926b0"
+        },
+        {
+          "path": "tests\/ApiRequestorTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 782,
+          "sha1": "04d4236db3b3ad9cc7098cd2f01ce299056899b8"
+        },
+        {
+          "path": "tests\/TokenTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 283,
+          "sha1": "46a2cc690d24e4edf13ebf77a93bdb68b5f4ea92"
+        },
+        {
+          "path": "tests\/ObjectTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1786,
+          "sha1": "713ab3ce344b3efeb4330b040779e1a3b2ce00f5"
+        },
+        {
+          "path": "tests\/CurlClientTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1344,
+          "sha1": "5fe71b088914fcc5376c6d3c3ba1cd9b5da68205"
+        },
+        {
+          "path": "tests\/bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 47,
+          "sha1": "cee2c265d4095c5a75b7fb5424136697e569a06a"
+        },
+        {
+          "path": "tests\/SubscriptionTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1788,
+          "sha1": "ab6c347b1a794738c2636188abe814a916702950"
+        },
+        {
+          "path": "tests\/RefundTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1868,
+          "sha1": "55b6e056d623a43ecd80ab3984c02f8c034a5835"
+        },
+        {
+          "path": "tests\/TransferTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3053,
+          "sha1": "80795bc6cf7caa05d95c3918d019134ac7d5408a"
+        },
+        {
+          "path": "tests\/RecipientTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3410,
+          "sha1": "372f3129e0ced65ce264c49e8009cd2992a5d464"
+        },
+        {
+          "path": "tests\/DiscountTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 890,
+          "sha1": "a479867651501153714adfe0aeecbe78352b59fe"
+        },
+        {
+          "path": "tests\/CustomerTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 8775,
+          "sha1": "4db135567c99822f0ebe325928d5a5635e2e8397"
+        },
+        {
+          "path": "tests\/BitcoinReceiverTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3538,
+          "sha1": "8945d5bbc61e6f85085f0af373c266946074b63f"
+        },
+        {
+          "path": "tests\/TestCase.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5839,
+          "sha1": "112d6f496aae6ced7f7b12c170e59309993ca94a"
+        },
+        {
+          "path": "tests\/ApplicationFeeRefundTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 370,
+          "sha1": "b4a170439ab5964d135a15adc6599f70eb05a3ee"
+        },
+        {
+          "path": "tests\/InvalidRequestErrorTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 567,
+          "sha1": "cbb64ef8a2be6234a24850a6850c854a20bb23fe"
+        },
+        {
+          "path": "tests\/TransferReversalTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 311,
+          "sha1": "95fa84eb20a941ef3e0cdc9556826ae29e0f970d"
+        },
+        {
+          "path": "tests\/UtilTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1176,
+          "sha1": "946be098648a2273f0bb741404cd33cafb3428ca"
+        },
+        {
+          "path": "tests\/AccountTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7115,
+          "sha1": "a898688cc6c0e8577ed77833fb62b2248c265c15"
+        },
+        {
+          "path": "tests\/ApplicationFeeTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 477,
+          "sha1": "291133c0f717f0bb8e399274f08260262f884b5e"
+        },
+        {
+          "path": "tests\/ChargeTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5014,
+          "sha1": "596ac1edeccc0c18d07c900f01e1db3f48b38a16"
+        },
+        {
+          "path": "tests\/InvoiceTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1442,
+          "sha1": "2937fdd5a7405d6fd44a5f6d258638c2fd13b548"
+        },
+        {
+          "path": "tests\/FileUploadTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1178,
+          "sha1": "8aed8a7588f524f0d0528acd382b7258db5b2ea3"
+        },
+        {
+          "path": "README.md",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2794,
+          "sha1": "3511399f36407e0605f0109042c7948f0123a832"
+        },
+        {
+          "path": "build.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 887,
+          "sha1": "b9b0f32069034a2415de551655601f5d090c446a"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 6307,
+          "sha1": "39f4358f76fc047aece080de4cfa77e072cb4e25"
+        },
+        {
+          "path": ".travis.yml",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 170,
+          "sha1": "7788a244b4b725c075d334d51e8fd1577c2b2172"
+        },
+        {
+          "path": "phpunit.xml",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 425,
+          "sha1": "4c6193f9ac86a1c69a4c2467ead03efeefd8b211"
+        },
+        {
+          "path": "init.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2473,
+          "sha1": "158189228081060ab1c8842fc072a14976d1efd1"
+        },
+        {
+          "path": "lib",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "lib\/ApplicationFee.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1313,
+          "sha1": "f16d7ecf906109849e5008da55604b13fe8818de"
+        },
+        {
+          "path": "lib\/HttpClient",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "lib\/HttpClient\/ClientInterface.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 708,
+          "sha1": "8bd41708e8d668fe560ca5626181bdeca7db6d58"
+        },
+        {
+          "path": "lib\/HttpClient\/CurlClient.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5346,
+          "sha1": "e380fa4830cf4822aa0b2e070581af6e95d1c210"
+        },
+        {
+          "path": "lib\/Charge.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3565,
+          "sha1": "aa301704a7107a71b6470e7a82e4011eac091dcd"
+        },
+        {
+          "path": "lib\/SingletonApiResource.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 704,
+          "sha1": "7a5bcb4a13ede21321c363113ebb18d65135318b"
+        },
+        {
+          "path": "lib\/Plan.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1232,
+          "sha1": "0d5b8a26818257a191d38e878610c9c3c37588be"
+        },
+        {
+          "path": "lib\/Error",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "lib\/Error\/RateLimit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 309,
+          "sha1": "29488dfba04520a60ed2d766b28624c27eca0fb1"
+        },
+        {
+          "path": "lib\/Error\/ApiConnection.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 69,
+          "sha1": "3fcfbf6b4173c809b1cd9a096893f6f8dcb824c3"
+        },
+        {
+          "path": "lib\/Error\/Authentication.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 70,
+          "sha1": "b0faf1a0bf6371056fd3b485e5f7e34bbfc4f3bf"
+        },
+        {
+          "path": "lib\/Error\/Base.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 629,
+          "sha1": "945557534426f1a116736c7fde8b23c199da3cf1"
+        },
+        {
+          "path": "lib\/Error\/Api.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 59,
+          "sha1": "f50e22a117245f763ad7a15b1c71b676d615cb81"
+        },
+        {
+          "path": "lib\/Error\/Card.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 348,
+          "sha1": "dc77bb2e154773b9598fa1a1fd10ccf0f61008c0"
+        },
+        {
+          "path": "lib\/Error\/InvalidRequest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 335,
+          "sha1": "1595e8bf49af525ccfa6be98d298cd11ba0d0bbd"
+        },
+        {
+          "path": "lib\/AttachedObject.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 612,
+          "sha1": "792bff03b293da7a7d56da607ee44f46ecdd84c7"
+        },
+        {
+          "path": "lib\/BitcoinReceiver.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1664,
+          "sha1": "1cd09ff0c303b43eb4441072e2d752ce2b59eb50"
+        },
+        {
+          "path": "lib\/Balance.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 267,
+          "sha1": "e2afe7e18298d91fd1ae9e07b84dec8ec5adf01c"
+        },
+        {
+          "path": "lib\/TransferReversal.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 953,
+          "sha1": "621d55120c2c00cd0a25168f8de93375cb732dd5"
+        },
+        {
+          "path": "lib\/FileUpload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1000,
+          "sha1": "bf5eb59a9e13952619527b26b461d57e3bd1a5f1"
+        },
+        {
+          "path": "lib\/Stripe.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1643,
+          "sha1": "8e5b8a343eb7eaee2bd206db12cdaa9b515704c8"
+        },
+        {
+          "path": "lib\/AlipayAccount.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 75,
+          "sha1": "56e1d8782dc2b5f8c609a093f97ff2694df10097"
+        },
+        {
+          "path": "lib\/Refund.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 902,
+          "sha1": "58169216c50dd91f6a4dfca68621eda908c464af"
+        },
+        {
+          "path": "lib\/Token.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 570,
+          "sha1": "ca3776bd0593e6ef2196edeaff231eb0d426f6ce"
+        },
+        {
+          "path": "lib\/Subscription.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1480,
+          "sha1": "1b971922984bac672265b6c10f1bfb87ad012cf2"
+        },
+        {
+          "path": "lib\/Event.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 547,
+          "sha1": "6b24f94b54648c39b6254b81afe95fab72b0755f"
+        },
+        {
+          "path": "lib\/Object.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7731,
+          "sha1": "477dc6c11b769941534e48dd45fd7f8ab8c48226"
+        },
+        {
+          "path": "lib\/ExternalAccount.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1767,
+          "sha1": "cc4d32dda6ff261c5faa8bad6474e4bb18ed4cbc"
+        },
+        {
+          "path": "lib\/ApplicationFeeRefund.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 917,
+          "sha1": "5b46248badfe08ffdbbed7c83a26c184ce365de6"
+        },
+        {
+          "path": "lib\/Transfer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1654,
+          "sha1": "3e802fc9982396d59762719b9c4233fa9f6c6b53"
+        },
+        {
+          "path": "lib\/Util",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "lib\/Util\/RequestOptions.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2368,
+          "sha1": "138ce0e4e73d17634e2444b5c3133a00b936f041"
+        },
+        {
+          "path": "lib\/Util\/Util.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3732,
+          "sha1": "77b5f60d4ad5394d86e5799b0d7640cfe45f4194"
+        },
+        {
+          "path": "lib\/Util\/Set.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 755,
+          "sha1": "72ba54b49fcdd6cad75a0f4eaa8c154cf863343f"
+        },
+        {
+          "path": "lib\/Recipient.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1622,
+          "sha1": "7cad3d17bbc553a90f0c7ec4afc8dbf4cfa5b577"
+        },
+        {
+          "path": "lib\/BitcoinTransaction.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 76,
+          "sha1": "a57a89abdc77f8df1ea5f923cc7f3207a71d251c"
+        },
+        {
+          "path": "lib\/Account.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1255,
+          "sha1": "b115843727971c591845592acf3de1c7d5d084c8"
+        },
+        {
+          "path": "lib\/Customer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3908,
+          "sha1": "be53c12cefd865c4ab877aab5c259f271347d7f5"
+        },
+        {
+          "path": "lib\/ApiRequestor.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7062,
+          "sha1": "e01b85add542fe704d6e873bad7e8a840a3730d3"
+        },
+        {
+          "path": "lib\/Coupon.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1252,
+          "sha1": "4e97dca2b2164d370063b9acabad58d7d96c712a"
+        },
+        {
+          "path": "lib\/BankAccount.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 73,
+          "sha1": "129080c923f9475624091c4a8d0acdfacd41bef2"
+        },
+        {
+          "path": "lib\/Invoice.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1726,
+          "sha1": "0b80cc72874daf849151f72f9b12a5cd3d3b2308"
+        },
+        {
+          "path": "lib\/Collection.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1748,
+          "sha1": "b687ecede4f97e7135bb4463a7efc94f9589dda9"
+        },
+        {
+          "path": "lib\/InvoiceItem.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1306,
+          "sha1": "3b691b4ef6613de53435cc05e69cc9a992a11bf3"
+        },
+        {
+          "path": "lib\/ApiResource.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5169,
+          "sha1": "bbd4f7a5b6c09871950017680c7450f3578dca97"
+        },
+        {
+          "path": "lib\/Card.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 66,
+          "sha1": "a4e5cb89f9a99e5b6059cd1a73e726a9d5c8c752"
+        },
+        {
+          "path": "lib\/BalanceTransaction.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 876,
+          "sha1": "21097d6e0f094dbcc22b2a6d792a81f4ef34b22e"
+        },
+        {
+          "path": "VERSION",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 6,
+          "sha1": "353ee68ca2468dce6464d331044643d350fd256f"
+        }
+      ]
+    },
+    "application\/libraries\/MangoPay": {
+      "type": "directory",
+      "path": "application\/libraries\/MangoPay",
+      "structure": [
+        {
+          "path": "vendor",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/composer",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/composer\/ClassLoader.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 12466,
+          "sha1": "26c8bd202a695a91e29b967326f1f9a9d362ea37"
+        },
+        {
+          "path": "vendor\/composer\/LICENSE",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1075,
+          "sha1": "608e2bae61df8b2460ce605645b3c9bd0813ec31"
+        },
+        {
+          "path": "vendor\/composer\/autoload_real.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1310,
+          "sha1": "f7a55d440a7d7d218b0e9c1f364761300dad338d"
+        },
+        {
+          "path": "vendor\/composer\/autoload_psr4.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 194,
+          "sha1": "47f0b1290599454b3dd0011f4a2bb822480a4209"
+        },
+        {
+          "path": "vendor\/composer\/installed.json",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1183,
+          "sha1": "2c04300d4dbd8c0232a42f81691a9473c273b66d"
+        },
+        {
+          "path": "vendor\/composer\/autoload_classmap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 147,
+          "sha1": "18ba25b0d28f23bbbff9bd1fe224768654e18881"
+        },
+        {
+          "path": "vendor\/composer\/autoload_namespaces.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 201,
+          "sha1": "f8e9978bde28ad6efd48f6df2744c9bc05cdb300"
+        },
+        {
+          "path": "vendor\/psr",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/psr\/log",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/LoggerAwareInterface.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 288,
+          "sha1": "9a4e36d1879076f2c49338eeeeec01378c95bd2d"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/InvalidArgumentException.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 96,
+          "sha1": "0f3f25e790aca80fd623f4adfedf5fc8b541c437"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/Test",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/Test\/LoggerInterfaceTest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3874,
+          "sha1": "32640322456a0115c310ff934a9bea31cc5c2651"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/LoggerTrait.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3288,
+          "sha1": "980dc169e1c512a80de31b598c4c977478d10247"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/LogLevel.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 312,
+          "sha1": "3e297fb87cfa2d1bdace579c0bcb53197791f459"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/NullLogger.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 641,
+          "sha1": "b6e7c878832614c574e641cbadf1b053e11042ba"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/LoggerInterface.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2965,
+          "sha1": "8e6d82899aba3ce39ebebc140a2b871ae0da2028"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/AbstractLogger.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3024,
+          "sha1": "6b0960b22485aac33ff6a8948ad5bfdce4718f80"
+        },
+        {
+          "path": "vendor\/psr\/log\/Psr\/Log\/LoggerAwareTrait.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 351,
+          "sha1": "08f3841ddbd7653f4ced2daca2015c301e9af53a"
+        },
+        {
+          "path": "vendor\/psr\/log\/.gitignore",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7,
+          "sha1": "8c196ea633c934065ddf9f05370e83fdf52ed7c4"
+        },
+        {
+          "path": "vendor\/psr\/log\/LICENSE",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1085,
+          "sha1": "f59f1535e88d1c3717f27b756e4ebe746aa152a3"
+        },
+        {
+          "path": "vendor\/psr\/log\/composer.json",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 358,
+          "sha1": "2004c1818830e4788d5cbb03ae214a0696a8207f"
+        },
+        {
+          "path": "vendor\/psr\/log\/README.md",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1088,
+          "sha1": "94501e93abeab9e99ad0eb58f44cb40fd93a711c"
+        },
+        {
+          "path": "vendor\/autoload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 183,
+          "sha1": "eb794424f42cf2f7143941c665091d2bdc9084b0"
+        },
+        {
+          "path": "LICENSE",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1075,
+          "sha1": "8217914c1a98556aa88b799d4fec2702ea3b2c92"
+        },
+        {
+          "path": "composer.json",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 350,
+          "sha1": "0b5c20e6d0d8c039638c5b28ae83921aaf96ff38"
+        },
+        {
+          "path": "README.md",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 8479,
+          "sha1": "43de6a1da642f107cafa45683225ba4c955a694b"
+        },
+        {
+          "path": "MangoPay",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "MangoPay\/DisputeDocumentStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 241,
+          "sha1": "db7acd25cd2a1fef90089ec2a6dfb8f146d8c518"
+        },
+        {
+          "path": "MangoPay\/Repudiation.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2057,
+          "sha1": "6031f5fd8e48b21e9b2e01d17507a86c3071bc0f"
+        },
+        {
+          "path": "MangoPay\/PayInPaymentDetailsDirectDebit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 402,
+          "sha1": "d23e03a7270937c3970e017f5e3381627c7c5493"
+        },
+        {
+          "path": "MangoPay\/CardRegistrationStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 191,
+          "sha1": "444b80d0025b5c3ca4b6c617e67d9737f13208aa"
+        },
+        {
+          "path": "MangoPay\/DisputeReason.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 346,
+          "sha1": "ff02ca7ecef7396a1cd47ae7f863f76d97afa8b7"
+        },
+        {
+          "path": "MangoPay\/LegalPersonType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 157,
+          "sha1": "567631d18976f8f8bdd9ab712c3bf6fe83d1e9de"
+        },
+        {
+          "path": "MangoPay\/KycDocument.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 387,
+          "sha1": "ffddbd5241666a4a40af95306bb337b21172cf01"
+        },
+        {
+          "path": "MangoPay\/FilterBase.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 445,
+          "sha1": "553a289e3c6531b220d38068e6472dcd19b57459"
+        },
+        {
+          "path": "MangoPay\/BankAccountDetailsCA.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 528,
+          "sha1": "4f66481bb6608955d540d8fe2e31510e088f2552"
+        },
+        {
+          "path": "MangoPay\/ApiCards.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1850,
+          "sha1": "b2c50d9c6e0f82cf6630d2641e80bb6ab177d522"
+        },
+        {
+          "path": "MangoPay\/BankAccountDetails.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 142,
+          "sha1": "bd687f991650f4200438291c9ac0344a69a52671"
+        },
+        {
+          "path": "MangoPay\/ApiEvents.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 605,
+          "sha1": "a472653f62499949ee44d489cc5fb7149f267b09"
+        },
+        {
+          "path": "MangoPay\/EventType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2487,
+          "sha1": "93ee7e07b719d930285f95cba79fed7d0e860569"
+        },
+        {
+          "path": "MangoPay\/ApiResponses.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 524,
+          "sha1": "a0298c19d3806db0d17ee2353bdc1aa07d76259c"
+        },
+        {
+          "path": "MangoPay\/DisputeDocumentPage.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 143,
+          "sha1": "afbecc5a5d0768170c8c4ffbd3f6f53312e7e5db"
+        },
+        {
+          "path": "MangoPay\/Response.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 533,
+          "sha1": "0ccc522bea4c7749134f6a91674056e93021e746"
+        },
+        {
+          "path": "MangoPay\/PayInStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 170,
+          "sha1": "206d4e34b34a29882c0c9e0f1d3bece7e5dc9e8c"
+        },
+        {
+          "path": "MangoPay\/ApiUsers.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 12362,
+          "sha1": "841b7c61eee7bc8dc643e4d68f9bc3c021a1520b"
+        },
+        {
+          "path": "MangoPay\/PayInPaymentType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 227,
+          "sha1": "7920801bb5bd5cb97d6c51e197ae94feffcee00e"
+        },
+        {
+          "path": "MangoPay\/PayOutPaymentDetails.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 152,
+          "sha1": "e5b9e3b62acea72dc31b9b7c5a12e3825208c78e"
+        },
+        {
+          "path": "MangoPay\/SortDirection.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 99,
+          "sha1": "370fc4cdc3ac61d933ddbbf64b11a7d7fe9d1962"
+        },
+        {
+          "path": "MangoPay\/ClientLogoUpload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 116,
+          "sha1": "0c4e960173f84ae359540a411a3c555b6833b9fd"
+        },
+        {
+          "path": "MangoPay\/Pagination.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1035,
+          "sha1": "196e60547b1f97bbdbde6656cff7259e5ca99dee"
+        },
+        {
+          "path": "MangoPay\/UserLegal.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2309,
+          "sha1": "fda7255a2e657e317263b437bdd2c4a58ad27c35"
+        },
+        {
+          "path": "MangoPay\/Transaction.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2148,
+          "sha1": "5227d3523f7a6149639185b11054e22da8e48b6f"
+        },
+        {
+          "path": "MangoPay\/MangoPayApi.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4250,
+          "sha1": "004c293f376ed1134dec756ad2bc19deaff04517"
+        },
+        {
+          "path": "MangoPay\/Sorting.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1487,
+          "sha1": "702257eec05b94ded89657a4122df26b459a2f19"
+        },
+        {
+          "path": "MangoPay\/PayOut.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1185,
+          "sha1": "dc44a9fd71ee6fd2e25379bee11c6caa1fc3efed"
+        },
+        {
+          "path": "MangoPay\/Refund.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 973,
+          "sha1": "a2f1aa32ee4db2dcedfe2f5847f02bf4847aafd6"
+        },
+        {
+          "path": "MangoPay\/ApiDisputes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 8878,
+          "sha1": "f1499703d5491f83ee1c0d5e19ca42f7e18c112b"
+        },
+        {
+          "path": "MangoPay\/Money.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 325,
+          "sha1": "8d3524615a616d01ffbc14b08a6ad01759bcc050"
+        },
+        {
+          "path": "MangoPay\/RefundReasonDetails.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 355,
+          "sha1": "2706b2717992972de251d444757fe9c49e0741f1"
+        },
+        {
+          "path": "MangoPay\/FilterKycDocuments.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 425,
+          "sha1": "fd2c22d2a9ccc9b479181fedaa4f230da74c1ce5"
+        },
+        {
+          "path": "MangoPay\/Libraries",
+          "dir": true,
+          "file": false,
+          "perms": "2777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "MangoPay\/Libraries\/ApiOAuth.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1251,
+          "sha1": "f86ba75561622e0ce91930f18432f09c5c1213c5"
+        },
+        {
+          "path": "MangoPay\/Libraries\/OAuthToken.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 979,
+          "sha1": "aaf3ad84f9b360e768d207227f1512712fb457f7"
+        },
+        {
+          "path": "MangoPay\/Libraries\/ResponseException.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1669,
+          "sha1": "6fb098278e42eeab4d9070b907ebcb27d0d2490e"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Dto.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 898,
+          "sha1": "164d32d958920301a1003c291e3dc6b0e9157a4d"
+        },
+        {
+          "path": "MangoPay\/Libraries\/RestTool.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 12028,
+          "sha1": "8dc8cf262d7b3eb26e94a9aa0a80bcfbc76525b3"
+        },
+        {
+          "path": "MangoPay\/Libraries\/ApiBase.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 18587,
+          "sha1": "381b6e147ae5b965c3cb9e1446eae98b0b54aaab"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Upload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 198,
+          "sha1": "e095eed6686f6b293c2a5033ed41129cb880f5e5"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 76,
+          "sha1": "3d6b7be8b800c319dabb53fc8660b38c646daf96"
+        },
+        {
+          "path": "MangoPay\/Libraries\/AuthenticationHelper.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3197,
+          "sha1": "bf5d0751c3073c9a5f1bbbdbf83f5f64a9d4f210"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Configuration.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1328,
+          "sha1": "e1a42e9be29ec4807c8bd8aaa057a0e3e10b47a3"
+        },
+        {
+          "path": "MangoPay\/Libraries\/UrlTool.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2103,
+          "sha1": "8ad15325fad31a636af6fb10cec548be7a4d1328"
+        },
+        {
+          "path": "MangoPay\/Libraries\/AuthorizationTokenManager.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1932,
+          "sha1": "c5074c11b45b0e937c4717651ebef1244575ac35"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Error.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 316,
+          "sha1": "632ae5419a5240c87a5774d2570754bfef939b1f"
+        },
+        {
+          "path": "MangoPay\/Libraries\/EntityBase.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 804,
+          "sha1": "15a88b55131692b2c1659cf812095f6953973da7"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Document.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 718,
+          "sha1": "2a608373ece55a22c46024024b94e77d3cb4ff22"
+        },
+        {
+          "path": "MangoPay\/Libraries\/Logs.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 306,
+          "sha1": "838f99c08e91f8e0271636e0654472ad8ffc2d82"
+        },
+        {
+          "path": "MangoPay\/Libraries\/RequestType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 188,
+          "sha1": "4d4b65ecb70808e7b5e843747863a04c06bb5771"
+        },
+        {
+          "path": "MangoPay\/Libraries\/DefaultStorageStrategy.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2170,
+          "sha1": "7b561a0c4c884978183bb0b93bed327b714a49f1"
+        },
+        {
+          "path": "MangoPay\/Libraries\/IStorageStrategy.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 476,
+          "sha1": "db76fce421f74b46c94f1a10ec42cf90b961a9e8"
+        },
+        {
+          "path": "MangoPay\/PayInExecutionDetails.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 152,
+          "sha1": "26f3c2b0280552d56f0806b4594af112cf4f6964"
+        },
+        {
+          "path": "MangoPay\/BankAccountDetailsOTHER.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 581,
+          "sha1": "5d5cd79dfc6f397c02888c740c0ea3fe02dc8044"
+        },
+        {
+          "path": "MangoPay\/PayInTemplateURLOptions.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 218,
+          "sha1": "df324a72f57a11d8fef2df51935d58447e543e60"
+        },
+        {
+          "path": "MangoPay\/BankAccountDetailsGB.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 348,
+          "sha1": "41083756ab1baa374753ee0e785e4785f6f89eef"
+        },
+        {
+          "path": "MangoPay\/KycPage.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 114,
+          "sha1": "8130faae40de59db9845822dc2b4e1ef39bcef97"
+        },
+        {
+          "path": "MangoPay\/Event.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 356,
+          "sha1": "da3b56f5f5cf30c87800147613651538a82afbd7"
+        },
+        {
+          "path": "MangoPay\/BankAccountDetailsIBAN.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 329,
+          "sha1": "58a42e8b7049951df75ebfaaa7e1e02d78166150"
+        },
+        {
+          "path": "MangoPay\/KeyValueArray.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 316,
+          "sha1": "6ba18f6560fbaf6c7e92e86c62cedd5451aa3fac"
+        },
+        {
+          "path": "MangoPay\/ApiDisputeDocuments.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1005,
+          "sha1": "34a23b33f984c0eab3230c926083a1a768fe5a51"
+        },
+        {
+          "path": "MangoPay\/TemporaryPaymentCard.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 767,
+          "sha1": "27a39b5e27ea5ea709de1bab21dfc21a6d3afb83"
+        },
+        {
+          "path": "MangoPay\/ApiCardPreAuthorizations.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1464,
+          "sha1": "d12edd72ca283193173bb78c3f127f59ae222c8b"
+        },
+        {
+          "path": "MangoPay\/UserNatural.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1776,
+          "sha1": "fa314fe74fbc56197902c086d16cd760df89a883"
+        },
+        {
+          "path": "MangoPay\/User.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 842,
+          "sha1": "4bf0c401686f8e42ddf57e999f2b70a601de92a9"
+        },
+        {
+          "path": "MangoPay\/ApiWallets.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1633,
+          "sha1": "d029f146b76964e83434325b04fd677fa21d4328"
+        },
+        {
+          "path": "MangoPay\/PayInPaymentDetailsBankWire.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 952,
+          "sha1": "b30b8fda421c77148d310023cba80f745406d793"
+        },
+        {
+          "path": "MangoPay\/DisputeReasonType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 322,
+          "sha1": "062c77482f19df7c9ae0a72038abdb8c5862fb92"
+        },
+        {
+          "path": "MangoPay\/ApiHooks.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1290,
+          "sha1": "44cbfa05b4ec1f42189ead34185748c62035e686"
+        },
+        {
+          "path": "MangoPay\/Transfer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 272,
+          "sha1": "8b4d5a0e613a65848e2ada8dcb17386963f428c7"
+        },
+        {
+          "path": "MangoPay\/Mandate.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1520,
+          "sha1": "c6c8ae437a1344b7fd3d5574b61c70f150f626bd"
+        },
+        {
+          "path": "MangoPay\/PayOutPaymentDetailsBankWire.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 425,
+          "sha1": "15876c57be07feb3b9d718279c6ed91bb8171d55"
+        },
+        {
+          "path": "MangoPay\/Dispute.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2539,
+          "sha1": "8af677de449bad33dee3f5dbf9cb3166af3102bb"
+        },
+        {
+          "path": "MangoPay\/KycDocumentType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 344,
+          "sha1": "94967b98847b6d4f818fbd055ecc6d91c98148d8"
+        },
+        {
+          "path": "MangoPay\/DisputeStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 358,
+          "sha1": "adb44d8a6a2b81726fbcc30e3e4cdd3d2163acdc"
+        },
+        {
+          "path": "MangoPay\/ApiRefunds.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 402,
+          "sha1": "41aff23d43e3bc7ffae7e1a86eccd2d37811ccd9"
+        },
+        {
+          "path": "MangoPay\/ApiPayOuts.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1228,
+          "sha1": "d123bd62283f451b698cae30292631daed096f73"
+        },
+        {
+          "path": "MangoPay\/DisputeDocument.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 451,
+          "sha1": "f30f9938ebfd9ba014449e299f41affb4a990d08"
+        },
+        {
+          "path": "MangoPay\/ApiClients.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3191,
+          "sha1": "86066d0f28bc00883457016fcd86e3e7c5408eaa"
+        },
+        {
+          "path": "MangoPay\/ApiPayIns.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2845,
+          "sha1": "244a0caa254a76c42d7ac1ccdb3bf463af121539"
+        },
+        {
+          "path": "MangoPay\/PayOutStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 172,
+          "sha1": "59359a8c8405a57096f9ea1b09149367b1b4f3e6"
+        },
+        {
+          "path": "MangoPay\/CardPreAuthorizationPaymentStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 247,
+          "sha1": "148fd77879f831f94133a49630145e9d1c3b190d"
+        },
+        {
+          "path": "MangoPay\/SettlementTransfer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1176,
+          "sha1": "753917f26395f9291602a6673fb3239f8fd92b6e"
+        },
+        {
+          "path": "MangoPay\/ApiTransfers.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1233,
+          "sha1": "91f1399eaa1fb519d1d4c61de7111e7cbf951c47"
+        },
+        {
+          "path": "MangoPay\/Hook.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 513,
+          "sha1": "82a0cdf57bb13043b52079181b3266e928a40832"
+        },
+        {
+          "path": "MangoPay\/CardRegistration.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1688,
+          "sha1": "4f174625e966f555eb016fc412287433c433e527"
+        },
+        {
+          "path": "MangoPay\/Wallet.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 954,
+          "sha1": "b5ced0628ddfe8452643b753ff7e453363cc66e2"
+        },
+        {
+          "path": "MangoPay\/ApiCardRegistrations.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1369,
+          "sha1": "701a834c67190ddab29e8057df5d4ec6bb0c27d8"
+        },
+        {
+          "path": "MangoPay\/Address.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 573,
+          "sha1": "3b1752e10fb20f718e4190e3caa926eee13ded07"
+        },
+        {
+          "path": "MangoPay\/BankAccount.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1794,
+          "sha1": "0d383ed24fb189a5429bcb93d95dd11f72424b02"
+        },
+        {
+          "path": "MangoPay\/Autoloader.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 867,
+          "sha1": "c61e11636d1e3eed7da975189ef962d5a4e8c8ea"
+        },
+        {
+          "path": "MangoPay\/PayIn.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2105,
+          "sha1": "a3fd0cf04f6d745ea6d9eb1981e23e568fecea89"
+        },
+        {
+          "path": "MangoPay\/BankAccountDetailsUS.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 457,
+          "sha1": "1f37f7abc0357c06944145b8ff206393f55e49b9"
+        },
+        {
+          "path": "MangoPay\/ApiMandates.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1624,
+          "sha1": "a62d291996a8d9b860bc9f74648a4c685f03bcde"
+        },
+        {
+          "path": "MangoPay\/PayInExecutionType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 141,
+          "sha1": "2776b851417f4a32b2a29f6d33c314b7e12997c0"
+        },
+        {
+          "path": "MangoPay\/CardPreAuthorizationStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 197,
+          "sha1": "39d8ff745b8faade2dc8edad2d64824fe159ebbc"
+        },
+        {
+          "path": "MangoPay\/PayInPaymentDetailsCard.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 364,
+          "sha1": "ed7a6ba8b310b8c52bc267da4b212e662144ab99"
+        },
+        {
+          "path": "MangoPay\/TemporaryImmediatePayIn.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 473,
+          "sha1": "7c003f93c92fb802110abfada55dc3370e4a46ef"
+        },
+        {
+          "path": "MangoPay\/ApiKycDocuments.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 994,
+          "sha1": "8540a29cca49236c5f0ed21bef4986c3ddcdb2dc"
+        },
+        {
+          "path": "MangoPay\/Client.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 433,
+          "sha1": "2df5943e46f3ed5b27c88d2ad1238de676621d33"
+        },
+        {
+          "path": "MangoPay\/PersonType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 139,
+          "sha1": "b10611460cd36ea29b76f6e483649f2f3e2e0d60"
+        },
+        {
+          "path": "MangoPay\/CardValidity.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 139,
+          "sha1": "91d502d1818fbb04d738fbc9686464edb7d345e9"
+        },
+        {
+          "path": "MangoPay\/Card.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 968,
+          "sha1": "11a143638f934124b19700067b55b3c544171939"
+        },
+        {
+          "path": "MangoPay\/PayInPaymentDetails.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 150,
+          "sha1": "8fd2dbabfac483b79c58aa51b0ce6558fc083905"
+        },
+        {
+          "path": "MangoPay\/CardPreAuthorization.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3147,
+          "sha1": "ae862ac9f9e27fa14f89e22fd478cb7c1b8cd636"
+        },
+        {
+          "path": "MangoPay\/FilterEvents.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 191,
+          "sha1": "0993443192733ae4617d2b51485dc2f6013bfc36"
+        },
+        {
+          "path": "MangoPay\/PayInPaymentDetailsPreAuthorized.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 309,
+          "sha1": "fd3ac68d8f9b11f2a4264bad3a4b26739ed99cdf"
+        },
+        {
+          "path": "MangoPay\/DisputeType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 194,
+          "sha1": "f2f700c4b7be33280f3d9846710828a52c34daa4"
+        },
+        {
+          "path": "MangoPay\/KycDocumentStatus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 233,
+          "sha1": "cf55ca09d58a53104a1b923c6d8e300bd284c98d"
+        },
+        {
+          "path": "MangoPay\/DisputeDocumentType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 409,
+          "sha1": "43085b6611b022ef164607ed6ca74f762206d515"
+        },
+        {
+          "path": "MangoPay\/PayOutPaymentType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 121,
+          "sha1": "a6acb37d22c83d0e389a2ec6f180ad4db9e1bee3"
+        },
+        {
+          "path": "MangoPay\/FilterTransactions.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 458,
+          "sha1": "d3c2b07d8e33ab09b168ebfbc7a97f6cb2779dda"
+        },
+        {
+          "path": "MangoPay\/PayInExecutionDetailsWeb.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1556,
+          "sha1": "9592a32100c57435c1e869756f245e99d6368acf"
+        },
+        {
+          "path": "MangoPay\/PayInExecutionDetailsDirect.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 589,
+          "sha1": "0821892ae46f56a51d14ad34b3500b2bff2ca712"
+        }
+      ]
+    },
+    "application\/libraries\/Engine\/Service\/Stripe": {
+      "type": "directory",
+      "path": "application\/libraries\/Engine\/Service\/Stripe",
+      "structure": [
+        {
+          "path": "Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1309,
+          "sha1": "841dae26f57abb0748235b720a8f976d0f9c0d1b"
+        }
+      ]
+    },
+    "application\/libraries\/Engine\/Service\/PayPalAdaptive": {
+      "type": "directory",
+      "path": "application\/libraries\/Engine\/Service\/PayPalAdaptive",
+      "structure": [
+        {
+          "path": "Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1710,
+          "sha1": "58f547931eda7c5624c92107936e57133a501d79"
+        }
+      ]
+    },
+    "application\/libraries\/Engine\/Service\/MangoPay": {
+      "type": "directory",
+      "path": "application\/libraries\/Engine\/Service\/MangoPay",
+      "structure": [
+        {
+          "path": "Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1704,
+          "sha1": "a7654aa17570330901736a8135c97459f9c1c287"
+        }
+      ]
+    },
+    "application\/libraries\/Engine\/Service\/Payumoney": {
+      "type": "directory",
+      "path": "application\/libraries\/Engine\/Service\/Payumoney",
+      "structure": [
+        {
+          "path": "Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1705,
+          "sha1": "da2657fc476064f9d69dbed6c37fd25b587fe599"
+        }
+      ]
+    },
+    "application\/libraries\/Engine\/Service\/Paynow": {
+      "type": "directory",
+      "path": "application\/libraries\/Engine\/Service\/Paynow",
+      "structure": [
+        {
+          "path": "Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1702,
+          "sha1": "2397754d01bb153c0f24279c3ef0da6f5bb9609f"
+        }
+      ]
+    },
+    "application\/languages\/en\/sitegateway.csv": {
+      "type": "file",
+      "path": "application\/languages\/en\/sitegateway.csv",
+      "structure": {
+        "path": "sitegateway.csv",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 8541,
+        "sha1": "b550f145bf42a41835b573d8228951a490815bdd"
+      }
+    },
+    "application\/libraries\/Engine\/Payment\/Gateway\/Stripe.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Payment\/Gateway\/Stripe.php",
+      "structure": {
+        "path": "Stripe.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 16792,
+        "sha1": "8ccbfad977827e14e3640a5795cff71f9966f7f5"
+      }
+    },
+    "application\/libraries\/Engine\/Payment\/Gateway\/MangoPay.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Payment\/Gateway\/MangoPay.php",
+      "structure": {
+        "path": "MangoPay.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 8066,
+        "sha1": "271e05c9e02e1ef9b9843481b16d1fe3c09fc21c"
+      }
+    },
+    "application\/libraries\/Engine\/Payment\/Gateway\/PayPalAdaptive.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Payment\/Gateway\/PayPalAdaptive.php",
+      "structure": {
+        "path": "PayPalAdaptive.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 11522,
+        "sha1": "250462252b2415368080f1772c91d46d67ab7c7f"
+      }
+    },
+    "application\/libraries\/Engine\/Payment\/Gateway\/Payumoney.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Payment\/Gateway\/Payumoney.php",
+      "structure": {
+        "path": "Payumoney.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 11325,
+        "sha1": "aeed3f4392515d9e175f859c2ed5787259124bac"
+      }
+    },
+    "application\/libraries\/Engine\/Payment\/Gateway\/Paynow.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Payment\/Gateway\/Paynow.php",
+      "structure": {
+        "path": "Paynow.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 20329,
+        "sha1": "3af0c12b40b19bdb83372ceb108a43b48f11c505"
+      }
+    },
+    "application\/libraries\/Engine\/Service\/Stripe.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Service\/Stripe.php",
+      "structure": {
+        "path": "Stripe.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 16246,
+        "sha1": "bc45fda55d6b6da24692ed64ce079f66811d8648"
+      }
+    },
+    "application\/libraries\/Engine\/Service\/MangoPay.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Service\/MangoPay.php",
+      "structure": {
+        "path": "MangoPay.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 24462,
+        "sha1": "2dbbcf35e3f0469667eaaa546bd2ec4ed0fafb56"
+      }
+    },
+    "application\/libraries\/Engine\/Service\/PayPalAdaptive.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Service\/PayPalAdaptive.php",
+      "structure": {
+        "path": "PayPalAdaptive.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 18708,
+        "sha1": "e9bd1ab66c4296e55b2c2230eacac7cda9856ab2"
+      }
+    },
+    "application\/libraries\/Engine\/Service\/Payumoney.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Service\/Payumoney.php",
+      "structure": {
+        "path": "Payumoney.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 9876,
+        "sha1": "8c5be2744c9c58d0fcb410c8ea1845ccc0d3a6f6"
+      }
+    },
+    "application\/libraries\/Engine\/Service\/Paynow.php": {
+      "type": "file",
+      "path": "application\/libraries\/Engine\/Service\/Paynow.php",
+      "structure": {
+        "path": "Paynow.php",
+        "dir": false,
+        "file": true,
+        "perms": "0777",
+        "size": 8852,
+        "sha1": "26bdcfb23ec50e13fb436bb653c5453c2ceb0788"
+      }
+    }
+  }
+}

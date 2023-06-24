@@ -1,0 +1,80 @@
+/*
+DEFAULT STYLES FOR THIS THEME
+*/
+@constants
+{
+  /* 
+  TEXT & LINKS
+  These values affect the size and colors of your text and links throughout your layout.
+  */
+  theme_font_size: 14px;
+  theme_font_size_small: 12px;
+  theme_font_color_light: #999;
+	theme_mini_menu_icon_color:#fff;
+	
+  /*
+  INPUT FIELDS AND BUTTONS
+  These values style input fields and buttons that appear throughout the layout.
+  */
+	theme_input_background_color:#5c6472;
+	theme_input_text_color:#ddd;
+	theme_input_border_color:#5B5F67;
+
+  /* 
+  BORDER COLORS
+  These colors are mostly applied to borders that separate items in lists of content.
+  */
+  theme_border_color: #5B5F67;
+  theme_border_medium_color: #5B5F67;
+  theme_border_dark_color: #5B5F67;
+	
+  /*
+  PHOTO BORDERS
+  These colors are applied to the borders drawn around most images and thumbnails.
+  */
+  theme_photo_border_color: #ddd;
+  theme_photo_border_color_hover: #aaa;
+	
+  /*
+  WIDGET BOX BORDER COLORS
+  These colors are applied to borders around or within boxes that have a background color,
+  like widgets.
+  */
+  theme_foreground_border_color: #303741;
+  theme_foreground_border_color_light: #303741;
+  theme_foreground_background_color: #3b424e;
+	theme_foreground_shadow:0 1px 3px rgba(0, 0, 0, 0.2);
+	
+  /*
+  INLINE PULLDOWN MENUS
+  These colors style the inline pulldown menus that appear throughout the layout.
+  */
+  theme_pulldown_background_gradient_top_color: #266da5;
+	theme_pulldown_background_gradient_bottom_color: #266da5;
+  theme_pulldown_arrow_color: #266da5;
+	theme_pulldown_header_color:#fff;
+  theme_pulldown_border_color: #444;
+  theme_pulldown_contents_background_color: #fff;
+	
+	/*
+	Activity Feeds 
+	These colors areapplied for feeds background and text color.
+	*/
+	theme_feed_background_color:#3b424e;
+	theme_feed_foreground_color:#313742;
+	theme_feed_shadow:0 1px 3px rgba(0, 0, 0, 0.2);
+	
+  /*
+  TABS
+  These colors are applied to tab menus (as seen on several pages, including
+  the member profile page).
+  */
+  theme_tabs_background_color:transprent;
+  theme_tabs_background_color_active:transprent;
+  theme_tabs_border_color:transprent;
+	theme_tabs_border_color_active:#266da5;
+  theme_tabs_font_color:#ddd;
+  theme_tabs_font_color_active:#fff;
+
+	
+}

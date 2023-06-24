@@ -1,0 +1,10 @@
+
+<windowslivelogin>
+  <appid>0000000040042607</appid>
+  <secret>iiYHsZB3koNMFWubrzH4hxmsOBnGbDnk</secret>
+  <securityalgorithm>wsignin1.0</securityalgorithm>
+
+  <returnurl>http://devaddons.socialengineaddons.com/LiveContactsPHP/delauth-handler.php</returnurl>
+  <policyurl>http://devaddons.socialengineaddons.com/LiveContactsPHP/policy.html</policyurl>
+</windowslivelogin>
+

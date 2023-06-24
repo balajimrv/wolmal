@@ -1,0 +1,294 @@
+ /* $Id: style_sitestoreinvite.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+.fleft{
+	float:left;
+}
+.clr{
+	clear:both;
+}
+/* css for view all friend storeinvites */
+#storeinvite_list_box
+{
+	width:100%;
+	float:left;
+	display:block;
+	margin:0;
+	padding:0;
+	margin-bottom:15px;
+}
+#storeinvite_list_box .heading
+{
+	display:block;
+	font-weight:bold;
+	font-size:13px;
+	margin-bottom:10px;
+	border-bottom-width:1px;
+	padding:5px;
+}
+#storeinvite_list_box .list
+{
+	float:left;
+	margin:10px;
+	width:25%;
+	height:60px;
+}
+#storeinvite_list_box .list .user_photo
+{
+	width:65px;
+	float:left;
+}
+#storeinvite_list_box .list .user_details
+{
+	float:left;
+	width:60%;
+}
+#storeinvite_list_box .list .user_details .name
+{
+	margin-bottom:5px;
+	font-size:12px;
+	font-weight:bold;
+}
+#storeinvite_list_box .list .user_details .buttonlink
+{
+	font-weight:normal !important;
+	font-size:11px;
+	line-height:16px;
+} 
+.storeinvites-friends
+{
+	clear:both;
+	float:left;
+	width:100%;
+	padding:10px 0;
+	border-bottom-width:1px;
+}
+.storeinvites-friends .store-heading
+{
+	font-weight:bold;
+	font-size:14px;
+	padding:5px 0;
+}
+.storeinvites-friends .header
+{
+	width:100%;
+	float:left;
+}
+.storeinvites-friends .header .title
+{
+	font-weight:bold;
+	float:left;
+}
+.storeinvites-friends .header .title img
+{
+	float:left;
+	margin-right:5px;
+}
+.storeinvites-friends .header .webmail-options
+{
+	float:right;
+	font-size:11px;
+	width:170px;
+}
+.storeinvites-friends .header .webmail-options .icons
+{
+	float:left;
+	margin-top:3px;	
+}
+.storeinvites-friends .header .webmail-options .icons a
+{
+	margin:0 2px;
+	float:left;
+}
+.storeinvites-friends .sub-title
+{
+	clear:left;
+	margin:10px 0 0 10px;
+	float:left;
+	font-size:11px;
+	font-weight:bold;
+}
+.storeinvites-friends .sub-txt
+{
+	clear:left;
+	margin:10px 0 0 10px;
+	float:left;
+	line-height:20px;
+	font-size:11px;
+}
+.storeinvites-friends .sub-txt img{
+	float:left;
+	margin-right:5px;
+}
+.storeinvites-friends .webacc-logos {
+	clear:both;
+	margin-top:10px;
+	float:left;
+	width:600px;
+}
+.storeinvites-friends .webacc-logos .webacc-logos-img{
+	width:200px;
+	float:left;
+	margin:5px 0;
+	height:50px;
+}
+.storeinvites-friends .upload-contact-file
+{
+	clear:both;
+	margin-top:10px;
+	float:left;
+	margin-left:10px;
+}
+.storeinvites-friends .upload-contact-file .op-cat
+{
+	float:left;
+	margin-right:10px;
+}
+.storeinvites-friends .upload-contact-file .op-field
+{
+	float:left;
+}
+.storeinvites-friends .upload-contact-file .op-field span
+{
+	font-size:11px;
+}
+.storeinvites-friends .store-des {
+	font-size:11px;
+}
+.storeinvites-friends .help-link
+{
+	float:right;
+	margin-top:10px;
+	font-size:11px;
+	width:170px;
+}
+.storeinvites-friends .help-link img{
+	float:left;
+	margin-right:2px;
+}
+.storeinvites-friends .people-search
+{
+	float:left;
+	margin:10px 0 0 20px;
+}
+.storeinvites-friends .member-friend-list
+{
+	float:left;
+	clear:both;
+	width:500px;
+	max-height:300px;
+	overflow:auto;
+	margin-top:10px;	
+}
+.storeinvites-friends .member-friend-list table
+{
+	border-width:2px;
+
+}
+.storeinvites-friends .member-friend-list td
+{
+	border-bottom-width:1px;
+	padding:5px;
+}
+.storeinvites-friends .buttons 
+{
+	clear:both;
+	margin:10px 0 0 5px;
+	float:left;
+}
+.storeinvites-friends .buttons form{
+	float:left;
+}
+.sitestoreinvite-send-button{
+	margin-right:4px;
+	float:left;
+}
+.sitestoreinvite-success-message{
+	float:left;
+	margin:0;
+}
+.sitestoreinvite-success-message li{
+	width:680px;
+}
+.storeinvites-friends .buttons button.disabled
+{
+  background-color: #868686;
+}
+.storeinvites-help-popup
+{
+	height:300px;
+	overflow:auto;
+	width:460px;
+	margin-bottom:15px;
+}
+.storeinvites-help-popup li
+{
+	padding:5px 0;
+	list-style:none;
+}
+.storeinvites-help-popup li ul
+{
+	padding:0 10px;
+	list-style:none;
+}
+.storeinvites-help-popup li ul li
+{
+	font-size:11px;
+	padding:2px 0;
+}
+.storeinvites-help-popup li a {
+	font-weight:bold;
+}
+.storeinvites-mail-supported img
+{
+	float:left;
+	margin-right:10px;
+	vertical-align:middle;
+	margin-top:5px;
+}
+#global_page_sitestoreinvite-index-inviteusers .global_form div.form-label{width:60px;}
+
+/*invite lightbox*/
+.sitestoreinvite_popup_heading
+{
+	font-weight:bold;
+	font-size:14px;
+	margin:15px 0;
+	float:left;
+	width:100%;
+}
+.sitestoreinvite_popup_suggestion_preview{
+	border-width:1px;
+	float: left;
+	margin: 0 0 10px;
+	padding: 5px;
+}
+.sitestoreinvite_popup_suggestion
+{
+	border-width:1px;
+	float: left;
+	margin: 10px 0;
+	padding: 5px;
+}
+.sitestoreinvite_popup_suggestion span.sitestore_notification
+{
+	background-image:url(../images/sitestore_sugg.png);
+	background-repeat:no-repeat;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	height: 16px;
+	padding-left: 23px;
+}
+.sitestoreinvite_popup_email_preview
+{
+	margin-top:5px;
+}
+.sitestoreinvite_popup_email_preview > table > tbody > tr > td
+{
+	padding:0px !important;
+}
+#global_page_sitestoreinvite-index-invitepreview .buttons{
+	clear:both;
+	width:90%;
+	margin-top:15px;
+}

@@ -1,0 +1,122 @@
+/* ---------------- themes insignia------------------- */
+@constants
+{
+theme_pulldown_font_color_active: #fff;
+}
+
+/* Advanced main menu */
+#sitemenu_main_menu_wrapper {
+	margin-bottom: 0;
+}
+#sitemenu_main_menu_wrapper > nav {
+	width: 90%;
+	margin: 0 auto;
+}
+.sitemenu_main_menu ul li > a.over {
+	color: theme_topbar_menu_link_color;
+}
+#sitemenu_mini_currency_updates_pulldown {
+	display: table-cell;
+}
+.updates_pulldown > a::before, .updates_pulldown_active > a::before {
+	content: " ";
+}
+.updates_pulldown, .updates_pulldown_active {
+	display: table-cell !important;
+}
+.layout_sitemenu_menu_mini {
+	padding-right: 5%;
+	display: inline-block;
+}
+.layout_sitemenu_menu_mini .layout_core_menu_mini {
+	padding-right: 0;
+}
+.layout_sitemenu_menu_mini .layout_core_menu_mini #core_menu_mini_menu > ul > li a.core_mini_admin, .layout_sitemenu_menu_mini .layout_core_menu_mini #core_menu_mini_menu > ul > li a.core_mini_messages, .layout_sitemenu_menu_mini .layout_sitemenu_menu_mini .layout_core_menu_mini #core_menu_mini_menu > ul > li a.core_mini_settings, .layout_sitemenu_menu_mini .updates_pulldown_active > a, .layout_sitemenu_menu_mini .updates_pulldown > a {
+	visibility: visible;
+	width: auto;
+	height: auto;
+}
+.layout_sitemenu_menu_mini .layout_core_menu_mini #core_menu_mini_menu > ul > li a.core_mini_admin::before, .layout_sitemenu_menu_mini .layout_core_menu_mini #core_menu_mini_menu > ul > li a.core_mini_messages::before, .layout_sitemenu_menu_mini .layout_core_menu_mini #core_menu_mini_menu > ul > li a.core_mini_settings::before, .layout_sitemenu_menu_mini .updates_pulldown_active > a::before, .layout_sitemenu_menu_mini .updates_pulldown > a::before {
+	border: none;
+	display: inline;
+	width: auto;
+	height: auto;
+	padding-top: 0;
+	margin: 0 2px;
+}
+.layout_sitemenu_menu_mini > .layout_core_menu_mini > div > ul > li a img, .layout_core_menu_mini > div > ul > li a img {
+	display: none;
+}
+.layout_sitemenu_menu_mini > .layout_core_menu_mini > div > ul > li a img.item_photo_user {
+	display: inline-block;
+}
+.layout_sitemenu_menu_mini > .layout_core_menu_mini > div > ul > li a::before, .layout_core_menu_mini > div > ul > li a::before {
+	font-family: "FontAwesome";
+	font-size: 19px;
+	font-weight: normal;
+}
+.layout_sitemenu_menu_mini #core_mini_messages_updates_pulldown > a::before {
+	content: "\f003";
+}
+.layout_sitemenu_menu_mini #sitemenu_mini_cart_updates_pulldown a::before {
+	content: "\f07a";
+}
+.layout_sitemenu_menu_mini #sitemenu_mini_friend_request_updates_pulldown a::before {
+	content: "\f234";
+}
+.layout_sitemenu_menu_mini #sitemenu_mini_notification_updates_pulldown a::before {
+	content: "\f0f3";
+}
+.layout_sitemenu_menu_mini #core_mini_settings_updates_pulldown > a::before {
+	content: "\f013";
+}
+.layout_sitemenu_menu_mini > .layout_core_menu_mini > div > ul > li a[title~="Admin"]::before, .layout_sitemenu_menu_mini .layout_core_menu_mini > div > ul > li a[title~="Admin"]::before {
+	content: "\f007";
+}
+.layout_siteadvsearch_menu_mini #global_search_form button,
+.layout_siteadvsearch_search_box #global_search_form button {
+	margin-left: 0;
+}
+#global_header .layout_siteadvsearch_menu_mini #global_search_form,
+#global_header .layout_siteadvsearch_search_box #global_search_form {
+	margin-right: 10px;
+}
+.layout_sitemenu_menu_mini .layout_core_menu_mini > div > ul {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.layout_sitemenu_menu_mini #core_menu_mini_menu #global_search_form {
+	padding-top: 0 !important;
+}
+.layout_sitemenu_menu_mini .updates_pulldown_active > a {
+	background-color: transparent;
+}
+.layout_sitemenu_menu_mini .updates_pulldown_active > a::before {
+color: $theme_topbar_minimenu_link_hover_color;
+}
+.layout_sitemenu_menu_mini #core_menu_mini_menu #core_mini_settings_pulldown_contents ul > li:hover a {
+	color: #fff;
+}
+
+
+/* internal form border */
+.global_form > div > div
+{
+box-sizing: border-box;
+}
+.global_form > div > div > h3 + p
+{
+	box-sizing: border-box;
+}
+
+.aaf_tabs_feed li.aaf_tabs_feed_tab_more:hover > a {color: #fff;}
+ul.feed .feed_item_date > ul {display: block; text-align: right;}
+ul.feed .feed_item_date > ul > li a,
+ul.feed .feed_item_date > ul > li > span {vertical-align: middle;}
+
+
+/*Profile Advanced Tabs*/
+.contentblock_right_inner_heading a:link{
+  color: #5f727f;
+}
+

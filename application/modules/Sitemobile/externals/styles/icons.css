@@ -1,0 +1,672 @@
+
+
+.ui-item-member-action a.userlink, .main-navigation .menu_core_main i.ui-menu-icon, .sm-ui-profile-tabs i{
+  background-image: url(../images/spimg-1.png);
+}
+/*Dashboard Icons*/
+.main-navigation .menu_core_main i.ui-menu-icon{
+	background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.main-navigation .core_main_blog i.ui-menu-icon                   { background-position: 0px -42px; }
+.main-navigation .core_main_sitebusiness i.ui-menu-icon           { background-position: 0px -84px; }
+.main-navigation .core_main_event i.ui-menu-icon                  { background-position: 0px -126px; }
+.main-navigation .core_main_cometchat i.ui-menu-icon              { background-position: 0px -168px;}
+.main-navigation .core_main_communityad i.ui-menu-icon            { background-position: 0px -210px;}
+.main-navigation .core_main_contact i.ui-menu-icon                { background-position: 0px -252px; }
+.main-navigation .core_main_document i.ui-menu-icon               { background-position: 0px -294px; }
+.main-navigation .core_main_sitefaq i.ui-menu-icon                { background-position: 0px -336px; }
+.main-navigation .core_main_feedback  i.ui-menu-icon              { background-position: 0px -420px; }
+.main-navigation .core_main_forum i.ui-menu-icon                  { background-position: 0px -546px; }
+.main-navigation .core_main_desktop i.ui-menu-icon                { background-position: 0px -630px; }
+.main-navigation .core_main_group i.ui-menu-icon                  { background-position: 0px -672px; }
+.main-navigation .core_main_sitegroup i.ui-menu-icon              { background-position: 0px -672px; }
+.main-navigation .core_main_home i.ui-menu-icon                   { background-position: 0px -714px; }
+
+.main-navigation .core_main_about_app i.ui-menu-icon              { background-position: -42px 0px;}
+.main-navigation .core_main_sitereview_listtype_1 i.ui-menu-icon  { background-position: -42px -42px; }
+.main-navigation .core_main_auth i.ui-menu-icon                   { background-position: -42px -84px; }
+.main-navigation .core_main_singout i.ui-menu-icon                { background-position: -42px -126px; }
+.main-navigation .core_main_messages i.ui-menu-icon               { background-position: -42px -252px; }
+.main-navigation .core_main_music i.ui-menu-icon                  { background-position: -42px -294px;}
+.main-navigation .core_main_update i.ui-menu-icon                 { background-position: -42px -378px; }
+.main-navigation .core_main_sitepage i.ui-menu-icon               { background-position: -42px -504px; }
+.main-navigation .core_main_poll i.ui-menu-icon                   { background-position: -42px -546px;}
+.main-navigation .core_main_privacy i.ui-menu-icon                { background-position: -42px -588px; }
+.main-navigation .core_main_search i.ui-menu-icon                 { background-position: -42px -672px; }
+.main-navigation .core_main_settings_app i.ui-menu-icon,
+.main-navigation .core_main_settings i.ui-menu-icon               { background-position: -42px -714px; }
+
+.main-navigation .core_main_signup i.ui-menu-icon                 { background-position: -84px 0px; }
+.main-navigation .core_main_socialfeed i.ui-menu-icon             { background-position: -84px -42px; }
+.main-navigation .core_main_album i.ui-menu-icon                  { background-position: -84px -84px; }
+.main-navigation .core_main_sitestoreproduct  i.ui-menu-icon      { background-position: -84px -126px; }
+.main-navigation .core_main_suggestion i.ui-menu-icon             { background-position: -84px -168px; }
+.main-navigation .core_main_terms i.ui-menu-icon      		        { background-position: -84px -210px; }
+.main-navigation .core_main_sitelike i.ui-menu-icon               { background-position: -84px -252px; }
+.main-navigation .core_main_user i.ui-menu-icon                   { background-position: -84px -294px; }
+.main-navigation .core_main_video i.ui-menu-icon                  { background-position: -84px -336px; }
+.main-navigation .core_main_pokes i.ui-menu-icon                  { background-position: -84px -378px;}
+
+/*Dashboard Icons For Multiple Listings*/
+.main-navigation .core_main_sitereview_listtype_1 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_2 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_3 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_4 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_5 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_6 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_7 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_8 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_9 i.ui-menu-icon,
+.main-navigation .core_main_sitereview_listtype_10 i.ui-menu-icon{
+  background-position: -42px -42px;
+}
+/*Profile Tabs Icon*/
+.sm-ui-profile-tabs i{ 
+	background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.tab_layout_sitemobile_album_profile_albums .tab-icon i,
+.tab_layout_sitemobile_group_profile_photos .tab-icon i,
+.tab_layout_sitemobile_event_profile_photos .tab-icon i,
+.tab_layout_sitepage_sitemobile_photos_sitepage .tab-icon i,
+.tab_layout_sitereview_photos_sitereview .tab-icon i{
+  background-position: -84px -84px;
+}
+.tab_layout_sitemobile_blog_profile_blogs .tab-icon i{ 
+  background-position: 0px -42px;
+}
+.tab_layout_sitemobile_event_profile_events .tab-icon i,
+.tab_layout_sitemobile_group_profile_events .tab-icon i,
+.tab_layout_sitepageevent_sitemobile_profile_sitepageevents .tab-icon i{
+  background-position: 0px -126px;
+}
+.tab_layout_sitemobile_group_profile_groups .tab-icon i{
+  background-position: 0px -672px;
+}
+.tab_layout_sitemobile_video_profile_videos .tab-icon i,
+.tab_layout_sitepagevideo_sitemobile_profile_sitepagevideos .tab-icon i,
+.tab_layout_sitereview_video_sitereview .tab-icon i{
+  background-position: -84px -336px;
+}
+.tab_layout_sitetagcheckin_sitemobile_map_sitetagcheckin .tab-icon i,
+.tab_layout_sitepage_sitemobile_location_sitepage .tab-icon i,
+.tab_layout_sitereview_location_sitereview .tab-icon i{
+  background-position: -42px -168px;
+}
+.tab_layout_sitemobile_user_profile_info_fields .tab-icon i,
+.tab_layout_sitemobile_event_profile_info .tab-icon i,
+.tab_layout_sitemobile_group_profile_info .tab-icon i,
+.tab_layout_sitepage_sitemobile_info_sitepage  .tab-icon i{
+  background-position: -42px 0px;;
+}
+.tab_layout_sitemobile_sitemobile_advfeed .tab-icon i{
+  background-position: 0px -378px;
+}
+.tab_layout_sitemobile_user_profile_friends .tab-icon i,
+.tab_layout_sitemobile_user_profile_friends_common .tab-icon i{
+  background-position: 0px -588px;
+}
+.tab_layout_sitemobile_user_profile_friends_followers .tab-icon i,
+.tab_layout_seaocore_sitemobile_followers .tab-icon i{
+  background-position: 0px -462px;
+}
+.tab_layout_sitemobile_user_profile_friends_following .tab-icon i{
+  background-position: 0px -504px;
+}
+.tab_layout_sitemobile_group_profile_members .tab-icon i,
+.tab_layout_sitemobile_event_profile_members .tab-icon i,
+.tab_layout_sitepagemember_sitemobile_profile_sitepagemembers .tab-icon i{
+ background-position: -84px -294px;
+}
+.tab_layout_sitemobile_profile_forum_posts .tab-icon i,
+.tab_layout_sitemobile_forum_profile_discussions .tab-icon i,
+.tab_layout_sitemobile_group_profile_discussions .tab-icon i,
+.tab_layout_sitemobile_event_profile_discussions .tab-icon i,
+.tab_layout_sitepage_sitemobile_discussion_sitepage .tab-icon i,
+.tab_layout_sitereview_discussion_sitereview .tab-icon i{
+  background-position: 0px -546px;
+}
+.tab_layout_sitetagcheckin_sitemobilecheckinbutton_sitetagcheckin .tab-icon i{
+  background-position: -42px -210px; 
+}
+.tab_layout_sitepagedocument_sitemobile_profile_sitepagedocuments .tab-icon i{
+  background-position: 0px -294px;
+}
+.tab_layout_sitepageoffer_sitemobile_profile_sitepageoffers .tab-icon i{
+  background-position: -42px -420px; 
+}
+.tab_layout_sitemobile_poll_profile_polls .tab-icon i,
+.tab_layout_sitepagepoll_sitemobile_profile_sitepagepolls .tab-icon i{
+  background-position: -42px -546px; 
+}
+.tab_layout_sitereview_profile_sitereview .tab-icon i,
+.tab_layout_sitereview_editor_profile_reviews_sitereview .tab-icon i,
+.tab_layout_sitepagereview_sitemobile_profile_sitepagereviews .tab-icon i,
+.tab_layout_sitereview_sitemobile_user_sitereview .tab-icon i,
+.tab_layout_sitereview_editor_reviews_sitereview .tab-icon i{
+  background-position: -42px -630px; 
+}
+.tab_layout_sitepagenote_sitemobile_profile_sitepagenotes .tab-icon i{
+  background-position: -42px -336px; 
+}
+.tab_layout_sitepage_sitemobile_overview_sitepage .tab-icon i,
+.tab_layout_sitereview_overview_sitereview .tab-icon i{
+  background-position: -42px -462px; 
+}
+.tab_layout_seaocore_sitemobile_people_like .tab-icon i{
+  background-position: -84px -252px;
+}
+.tab_layout_sitepage_profile_sitepage .tab-icon i,
+.tab_layout_sitepage_profile_joined_sitepage .tab-icon i{
+  background-position: -42px -504px;
+}
+.tab_layout_sitemobile_music_profile_music .tab-icon i,
+.tab_layout_sitepagemusic_sitemobile_profile_sitepagemusic .tab-icon i{
+  background-position: -42px -294px;
+}
+.tab_layout_sitereview_profile_sitereview .tab-icon i{
+  background-position: -42px -42px;
+}
+
+/*USER ICONS*/
+.ui-item-member-action a.userlink{
+	background-repeat:no-repeat;
+}
+.ui-item-member-action a.userlink-accept { background-position: -84px -419px; }
+.ui-item-member-action a.userlink-add    { background-position: -84px -460px; }
+.ui-item-member-action a.userlink-remove { background-position: -84px -501px; }
+.ui-item-member-action a.userlink-cancel { background-position: -84px -543px; }
+
+
+.sm-ui-notification-icon, .activity-post-options table td i, .new-label, .sm-fl, .albums_viewmedia_info_actions a, .eo-calendar-day{
+  background-image: url(../images/spimg-2.png);
+}
+/*Notification Icons*/
+.sm-ui-notification-icon{
+	background-position:0 0;
+}
+/*ACTIVITY NOTIFICATION TYPE ICONS*/
+.notification_type_commented, 
+.notification_type_commented_commented,
+.notification_type_shared{
+	background-position:0 0;
+}
+.notification_type_liked, 
+.notification_type_liked_commented{
+	background-position:-16px 0;
+}
+.notification_type_message_new{ 
+	background-position:-32px 0;
+}
+/*USER NOTIFICATION TYPE ICONS*/
+.notification_type_post_user{
+	background-position:0 0;
+}
+.notification_type_friend_accepted, 
+.icon_friend_accepted,
+.notification_type_friend_follow,
+.notification_type_friend_follow_accepted{
+	background-position:-64px 0;
+}
+.notification_type_friend_request,
+.notification_type_friend_follow_request{
+	background-position:-80px 0;
+}
+.notification_type_tagged, 
+.notification_type_sitetagcheckin_tagged{
+	background-position:-48px 0;
+}
+/*EVENT NOTIFICATION TYPE ICONS*/
+.notification_type_event_discussion_response, 
+.notification_type_event_discussion_reply{
+	background-position:0 0;
+}
+.notification_type_event_invite, 
+.notification_type_event_accepted{
+	background-position:-160px 0;
+}
+/*GROUP NOTIFICATION TYPE ICONS */
+.notification_type_group_discussion_response, 
+.notification_typegroup_discussion_reply{
+	background-position:0 0;
+}
+.notification_type_group_invite{
+	background-position:-96px 0;
+}
+.notification_type_group_approve{
+	background-position:-144px 0;
+}
+.notification_type_group_accepted{
+	background-position:-128px 0;
+}
+.notification_type_group_promote{
+	background-position:-112px 0;
+}
+/*VIDEO NOTIFICATION TYPE ICONS */
+.notification_type_video_processed { 
+	background-position:-176px 0;
+}
+/*SITEREVIEW NOTIFICATION TYPE ICONS */
+.notification_type_sitereview_editor_assign{
+	background-position:-192px 0;
+}
+.notification_type_sitereview_listing_editor{
+	background-position:-208px 0;
+}
+.notification_type_sitereview_approved_review, 
+.notification_type_sitereview_editorreview, 
+.notification_type_sitereview_write_review{
+	background-position:-224px 0;
+}
+.notification_type_sitereview_wishlist_follow{
+  background-position:-240px 0;
+}
+.notification_type_sitereview_wishlist_followers{
+  background-position:-256px 0;
+}
+.notification_type_follow_sitereview_wishlist{
+  background-position:-272px 0;
+}
+/*PAGE NOTIFICATION TYPE ICONS */
+.notification_type_sitepage_contentlike{
+	background-position:-16px 0;
+}
+.notification_type_sitepage_manageadmin{
+	background-position:-288px 0;
+}
+.notification_type_sitepageevent_invite, 
+.notification_type_sitepageevent_accepted, 
+.notification_type_sitepageevent_create{
+  background-position:-160px 0;
+}
+.notification_type_sitepage_notificationpost, 
+.notification_type_sitepagemember_notificationpost, 
+.notification_type_sitepage_contentcomment, 
+.notification_type_sitepage_discussion_response, 
+.notification_type_sitepage_discussion_reply{
+	background-position:0 0;
+}
+.notification_type_sitepagenote_create{
+	background-position:-304px 0;
+}
+.notification_type_sitepagevideo_create{
+	background-position:-176px 0;
+}
+.notification_type_sitepagealbum_create{
+	background-position:-320px 0;
+}
+.notification_type_sitepageoffer_create{
+	background-position:-336px 0;
+}
+.notification_type_sitepagemusic_create{
+	background-position:-352px 0;
+} 
+.notification_type_sitepage_join, 
+.notification_type_sitepagemember_approve, 
+.notification_type_sitepagemember_invite {
+	background-position:-144px 0;
+}
+.notification_type_sitepage_addmember{
+	background-position:-368px 0;
+}
+.notification_type_sitepagemember_accepted{
+	background-position:-384px 0;
+}
+.notification_type_sitepagemember_invite{
+  background-position:-384px 0;
+}
+.notification_type_sitepagepoll_create{
+  background-position:0 -16px;
+}
+/*BUSINESS NOTIFICATION TYPE ICONS */
+.notification_type_sitebusiness_contentlike{
+	background-position:-16px 0;
+}
+.notification_type_sitebusiness_manageadmin{
+	background-position:-288px 0;
+}
+.notification_type_sitebusinessevent_invite, 
+.notification_type_sitebusinessevent_accepted, 
+.notification_type_sitebusinessevent_create{
+  background-position:-160px 0;
+}
+.notification_type_sitebusiness_notificationpost, 
+.notification_type_sitebusinessmember_notificationpost, 
+.notification_type_sitebusiness_contentcomment, 
+.notification_type_sitebusiness_discussion_response, 
+.notification_type_sitebusiness_discussion_reply{
+	background-position:0 0;
+}
+.notification_type_sitebusinessnote_create{
+	background-position:-304px 0;
+}
+.notification_type_sitebusinessvideo_create{
+	background-position:-176px 0;
+}
+.notification_type_sitebusinessalbum_create{
+	background-position:-320px 0;
+}
+.notification_type_sitebusinessoffer_create{
+	background-position:-336px 0;
+}
+.notification_type_sitebusinessmusic_create{
+	background-position:-352px 0;
+} 
+.notification_type_sitebusiness_join, 
+.notification_type_sitebusinessmember_approve, 
+.notification_type_sitebusinessmember_invite {
+	background-position:-144px 0;
+}
+.notification_type_sitebusiness_addmember{
+	background-position:-368px 0;
+}
+.notification_type_sitebusinessmember_accepted{
+	background-position:-384px 0;
+}
+.notification_type_sitebusinessmember_invite{
+  background-position:-384px 0;
+}
+.notification_type_sitebusinesspoll_create{
+  background-position:0 -16px;
+}
+/*POKE NOTIFICATION TYPE ICON */
+.notification_type_Poke{
+  background-position:-304px -16px;
+}
+/*GROUP NOTIFICATION TYPE ICONS */
+.notification_type_sitegroup_contentlike{
+	background-position:-16px 0;
+}
+.notification_type_sitegroup_manageadmin{
+	background-position:-288px 0;
+}
+.notification_type_sitegroupevent_invite, 
+.notification_type_sitegroupevent_accepted, 
+.notification_type_sitegroupevent_create{
+  background-position:-160px 0;
+}
+.notification_type_sitegroup_notificationpost, 
+.notification_type_sitegroupmember_notificationpost, 
+.notification_type_sitegroup_contentcomment, 
+.notification_type_sitegroup_discussion_response, 
+.notification_type_sitegroup_discussion_reply{
+	background-position:0 0;
+}
+.notification_type_sitegroupnote_create{
+	background-position:-304px 0;
+}
+.notification_type_sitegroupvideo_create{
+	background-position:-176px 0;
+}
+.notification_type_sitegroupalbum_create{
+	background-position:-320px 0;
+}
+.notification_type_sitegroupoffer_create{
+	background-position:-336px 0;
+}
+.notification_type_sitegroupmusic_create{
+	background-position:-352px 0;
+} 
+.notification_type_sitegroup_join, 
+.notification_type_sitegroupmember_approve, 
+.notification_type_sitegroupmember_invite {
+	background-position:-144px 0;
+}
+.notification_type_sitegroup_addmember{
+	background-position:-368px 0;
+}
+.notification_type_sitegroupmember_accepted{
+	background-position:-384px 0;
+}
+.notification_type_sitegroupmember_invite{
+  background-position:-384px 0;
+}
+.notification_type_sitegrouppoll_create{
+  background-position:0 -16px;
+}
+/*SUGGESTION NOTIFICATION TYPE ICONS*/
+.icon_int_suggestion{
+  background-position:-16px -16px;
+}
+.notification_type_group_suggestion {
+  background-position:-128px 0;
+}
+.notification_type_siteevent_suggestion {
+  background-position:-160px 0;
+}
+.notification_type_sitestoreproduct_suggestion {
+  background-position:-16px -32px;
+}
+.notification_type_sitestore_suggestion {
+  background-position:-16px -48px;
+}
+.notification_type_page_album_suggestion,
+.notification_type_page_report_suggestion,
+.notification_type_album_suggestion,
+.notification_type_business_album_suggestion,
+.notification_type_group_album_suggestion {
+	background-position:-320px 0;
+}
+.notification_type_blog_suggestion {
+  background-position:-16px -64px;
+}
+.notification_type_page_event_suggestion,
+.notification_type_event_suggestion,
+.notification_type_business_event_suggestion,
+.notification_type_group_event_suggestion {
+	background-position:-160px 0;
+}
+.notification_type_classified_suggestion {
+  background-position:-16px -80px;
+}
+.notification_type_page_video_suggestion, 
+.notification_type_video_suggestion,
+.notification_type_business_video_suggestion,
+.notification_type_group_video_suggestion {
+	background-position:-176px 0;
+}
+.notification_type_page_music_suggestion,
+.notification_type_music_suggestion,
+.notification_type_business_music_suggestion,
+.notification_type_group_music_suggestion{
+	background-position:-352px 0;
+}
+.notification_type_page_offer_suggestion,
+.notification_type_business_offer_suggestion,
+.notification_type_group_offer_suggestion{
+	background-position:-336px 0;
+}
+.notification_type_recipe_suggestion{
+  background-position:-16px -96px;
+}
+.notification_type_picture_suggestion{
+  background-position:-16px -112px;
+}
+.notification_type_friend_suggestion{
+  background-position:-16px -128px;
+}
+.notification_type_page_poll_suggestion,
+.notification_type_poll_suggestion,
+.notification_type_business_poll_suggestion,
+.notification_type_group_poll_suggestion{
+  background-position:0 -16px;
+}
+.notification_type_forum_suggestion{
+  background-position:-16px -144px;
+}
+.notification_type_page_document_suggestion,
+.notification_type_document_suggestion,
+.notification_type_business_document_suggestion,
+.notification_type_group_document_suggestion{
+  background-position:-16px -160px;
+}
+.notification_type_listing_suggestion{
+  background-position:-208px 0px;
+}
+.notification_type_page_suggestion,
+.notification_type_business_suggestion,
+.notification_type_group_suggestion{
+  background-position:-288px 0px;
+}
+.notification_type_page_note_suggestion,
+.notification_type_business_note_suggestion,
+.notification_type_group_note_suggestion{
+	background-position:-304px 0;
+}
+.notification_type_page_review_suggestion,
+.notification_type_business_review_suggestion,
+.notification_type_group_review_suggestion{
+	background-position:-224px 0;
+}
+.notification_type_document_popup_suggestion,
+.icon_list_friend_suggestion,
+.icon_recipe_friend_suggestion,
+.recipe_suggest_friend, 
+.icon_suggestion{
+  background-position:-176px -160px;
+}
+/*STATUS BOX ICONS*/
+.activity-post-options table td i{
+	height:16px;
+	width:16px;
+}
+i.icon_pencil{
+	background-position: -208px -16px;
+}
+i.icon_photo{
+	background-position: -192px -16px;
+}
+i.icon_checkin{
+	background-position: -224px -16px;
+}
+.cm-icons{
+	background-image:url(../images/icons-post-24.png);
+	background-size:auto;
+	display:block;
+	height:26px;
+	width:26px;
+	float:left;
+}
+.cm-icon-attachement{
+  background-position:0 -0;
+}
+.cm-icon-map-marker{
+  background-position:0 -26px;
+}
+.cm-icon-user{
+  background-position:0 -52px;
+}
+.cm-icon-emoticons{
+  background-position:0 -78px;
+}
+.cm-icon-share{
+  background-position:0 -104px;
+}
+.cm-icon-onlyme{
+  background-position:0 -130px;
+}
+.cm-icon-friends{
+  background-position:0 -156px;
+}
+.cm-icon-networks{
+  background-position:0 -182px;
+}
+.cm-icon-everyone{
+  background-position:0 -208px;
+}
+.cm-icon-list{
+  background-position:0 -390px;
+}
+.cm-icon-network-list{
+  background-position:0 -182px;
+}
+.cm-icon-facebook{
+  background-position:0 -234px;
+}
+.composer_facebook_toggle_active .cm-icon-facebook{
+  background-position:0 -260px;
+}
+.cm-icon-twitter{
+  background-position:0 -286px;
+}
+.composer_twitter_toggle_active .cm-icon-twitter{
+  background-position:0 -312px;
+}
+.cm-icon-linkedin{
+  background-position:0 -338px;
+}
+.composer_linkedin_toggle_active .cm-icon-linkedin{
+  background-position:0 -364px;
+}
+.cm-icon-video{
+  background-position:0 -416px;
+}
+.cm-icon-photo{
+  background-position:0 -442px;
+}
+.cm-icon-link{
+  background-position:0 -468px;
+}
+.cm-icon-music{
+  background-position:0 -494px;
+}
+/*Active Icons*/
+.cm-icon-attachement.active{
+  background-position:26px -0;
+}
+.cm-icon-map-marker.active{
+  background-position:26px -26px;
+}
+.cm-icon-user.active{
+  background-position:26px -52px;
+}
+.cm-icon-emoticons.active{
+  background-position:26px -78px;
+}
+.cm-icon-share.active{
+  background-position:26px -104px;
+}
+.cm-icon-onlyme.active{
+  background-position:26px -130px;
+}
+.cm-icon-friends.active{
+  background-position:26px -156px;
+}
+.cm-icon-networks.active{
+  background-position:26px -182px;
+}
+.cm-icon-everyone.active{
+  background-position:26px -208px;
+}
+.cm-icon-list.active{
+  background-position:26px -390px;
+}
+.cm-icon-network-list.active{
+  background-position:26px -182px;
+}
+.cm-icon-video.active{
+  background-position:26px -416px;
+}
+.cm-icon-photo.active{
+  background-position:26px -442px;
+}
+.cm-icon-link.active{
+  background-position:26px -468px;
+}
+.cm-icon-music.active{
+  background-position:26px -494px;
+}
+/*Photo Rotate Icons*/
+.icon_photos_flip_horizontal{
+	background-position: -240px -16px;
+}
+.icon_photos_flip_vertical{
+	background-position: -256px -16px;
+}
+.icon_photos_rotate_ccw{
+	background-position: -272px -16px;
+}
+.icon_photos_rotate_cw{
+	background-position: -288px -16px;
+}

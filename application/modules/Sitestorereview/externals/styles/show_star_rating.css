@@ -1,0 +1,49 @@
+ /* $Id: show_star_rating.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+/* use the background position according to the table above to display the required images*/
+.rating{
+	width:80px;
+	height:16px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	background-repeat:no-repeat;
+	margin:2px auto 4px auto;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.nostar {background-position:0 0;}
+.halfstar {background-position:0 -16px;}
+.onestar {background-position:0 -32px;}
+.onehalfstar {background-position:0 -48px;}
+.twostar {background-position:0 -64px;}
+.twohalfstar {background-position:0 -80px;}
+.threestar {background-position:0 -96px;}
+.threehalfstar {background-position:0 -112px;}
+.fourstar {background-position:0 -128px;}
+.fourhalfstar {background-position:0 -144px;}
+.fivestar {background-position:0 -160px;}
+ul.rating li {
+	cursor: pointer;
+	float:left;
+	margin:0 3px;
+	text-indent:-999em;
+	clear:none !important;
+}
+ul.rating li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+	z-index: 200;
+}
+ul.rating li.half a {left:0;}
+ul.rating li.one a {left:16px;}
+ul.rating li.onehalf a {left:32px;}
+ul.rating li.two a {left:48px;}
+ul.rating li.twohalf a {left:64px;}
+ul.rating li.three a {left:80px;}
+ul.rating li.threehalf a {left:96px;}
+ul.rating li.four a {left:112px;}
+ul.rating li.fourhalf a {left:128px;}
+ul.rating li.five a {left:144px;}

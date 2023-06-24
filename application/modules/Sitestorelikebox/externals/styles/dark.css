@@ -1,0 +1,126 @@
+/* $Id: dark.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+/*
+STYLES FOR THE LIGHT COLOR SCHEME
+*/
+
+/*
+ BACKGROUND AND BORDER COLOR
+ These values are only used to style the embeddable badges' background color and border color. 
+*/
+#splb_wrapper
+{
+	background-color:#262C36;
+	border-color:#CCCCCC;
+}
+
+/* TEXT AND LINKS STYLE
+   These values affect the size and colors of text and links throughout your badge.
+*/
+div
+{
+	color: #DDDDDD;
+}
+a:link, a:visited 
+{
+	color: #5F93B4;
+	text-decoration: none;
+}
+a:hover
+{
+	color:#4e81a1;
+	text-decoration:underline;
+}
+
+/* INFO TAB TITLE AND USERS NAME
+   This value affect the color of the title text in the information tab and the name of the users who have liked the store.
+*/
+.splb_item_date span, .splb_info_tab > ul > li > span, .splb_fanbox_items div a, .splb_mtl
+{
+	color:#808080;
+}
+
+/* INFO TAB DESCRIPTION 
+   This value will affect the color of the description text in the information tab.
+*/
+.splb_info_tab > ul > li > span + span
+{
+	color: #DDDDDD;
+}
+
+/* HEADER COLOR AND TEXT
+   These colors are applied to the text and background in the header of your Badge. 
+*/
+.splb_header
+{
+	background-color:#197AAE;
+}
+.splb_header, .splb_header > a
+{
+	color:#ffffff;
+}
+
+/* BORDER COLORS
+   This color is mostly applied to borders that separate different blocks of Badge.
+*/
+.splb_stream, .splb_fanbox, .splb_btm, .splb_tabs
+{
+	border-color:#5c6173;
+}
+
+/* BLOCKS STYLING
+   The values below are use to style the different blocks in the Badge.
+*/
+
+/* BACKGROUND COLOR 
+   This color will style the background color of the blocks menu bar in the Badge.
+*/
+.splb_tabs, .splb_fanbox_heading
+{
+	background:#3B424E;
+}
+
+/* COLOR OF TEXT   
+   The color of the text in the menu bar of blocks will be affected by this color.
+*/
+.splb_tabs_alt > ul > li > a,
+.splb_fanbox_heading 
+{
+	color: #fff;
+}
+
+/* ACTIVE AND HOVER TAB COLOR  
+   These values style the color of active tab and other tabs on mouse hover.
+*/
+.splb_tabs_alt > ul > li > a:hover
+{
+	color: #fff;
+}
+.splb_tabs_alt > ul > li.active > a 
+{
+	color: #fff;
+}
+
+/* SEPARATOR COLOR 
+   This color is mostly applied to separate different contents in the store content block of Badge. 
+*/
+ul.splb_feed > li + li, .splb_info_tab h4, .splb_tab_cont_list li + li
+{
+	border-color:#333743
+}
+
+/* PHOTO BORDERS
+   These colors are applied to the borders drawn around images and thumbnails.
+*/
+img.thumb_icon, img.thumb_normal
+{
+	border-color:#DDDDDD;
+}
+
+/* POWERED BY BLOCK 
+   This color is styling the background color of the Powered By Block of the Badge.
+*/
+.splb_btm
+{
+	background-color:#262C36;
+}

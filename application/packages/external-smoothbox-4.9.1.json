@@ -1,0 +1,77 @@
+{
+  "type": "external",
+  "name": "smoothbox",
+  "version": "4.9.1",
+  "revision": "9747",
+  "path": "externals\/smoothbox",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Smoothbox",
+  "description": null,
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Smoothbox",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    
+  ],
+  "callback": null,
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "externals\/smoothbox": {
+      "type": "directory",
+      "path": "externals\/smoothbox",
+      "structure": [
+        {
+          "path": "smoothbox.js",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 14135,
+          "sha1": "365892e96dcdf58f95f77a25be2188df15d1b47d"
+        },
+        {
+          "path": "loading.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2248,
+          "sha1": "0a76d065f62bf9ba51ba666efa3ce7b30344d053"
+        },
+        {
+          "path": "smoothbox4.js",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 17373,
+          "sha1": "8a5da7d94624069ab0073eeffc4653588c85b8bc"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 377,
+          "sha1": "2e1c791f764354e9f07632252e81a5bfc084c625"
+        }
+      ]
+    }
+  }
+}

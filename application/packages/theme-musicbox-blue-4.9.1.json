@@ -1,0 +1,1292 @@
+{
+  "type": "theme",
+  "name": "musicbox-blue",
+  "version": "4.9.1",
+  "revision": "10267",
+  "path": "application\/themes\/musicbox-blue",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Musicbox Blue",
+  "description": null,
+  "thumb": "musicbox.png",
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Musicbox Blue",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Theme",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/themes\/musicbox-blue": {
+      "type": "directory",
+      "path": "application\/themes\/musicbox-blue",
+      "structure": [
+        {
+          "path": "mobile.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 21189,
+          "sha1": "188939f2ae2cd073c0b0167a56c07a52137cd39b"
+        },
+        {
+          "path": "constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7464,
+          "sha1": "dc0757fd6a82a16794f972c3691811ed9c9431cd"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2215,
+          "sha1": "ce9f1ddf492f44ab3296f5e709246c5f54a619e4"
+        },
+        {
+          "path": "theme.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 34689,
+          "sha1": "09d28bfcbbfbe56ce0f9091fc9d453bab80ff2b5"
+        },
+        {
+          "path": "color-variants",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-green",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-green\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7454,
+          "sha1": "34cb61efd20e87e5db43ff03feb644d6ee83e40c"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "5b9010b0d2a67a68f2e709874323a2edb99dd714"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-green\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "aae87236b7fe57c73d98844e803bb0795494b0fe"
+        },
+        {
+          "path": "color-variants\/musicbox-purple",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7452,
+          "sha1": "35296bc23e55017d5c27e34b7bc568c40f795377"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "c2c46b4830ef1e5bf6eed52a16566e309462914c"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-purple\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "03459d37890732090e0fe77e1fbbd4086c9fe6cc"
+        },
+        {
+          "path": "color-variants\/musicbox-brown",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7458,
+          "sha1": "bd6038d54e85d27cad4bf3c9cc9bdd30c9113466"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "2cdcce63c113064af3c5396f151ceb636a24887a"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-brown\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "67d5201b290a2883db1c94f594db45b543ef7ab0"
+        },
+        {
+          "path": "color-variants\/musicbox-pink",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7453,
+          "sha1": "36d34c12b374f16d8ba75568aefeb0c6b4cdf023"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "7ff2846ee554c2751a71bf181873e6d7f58ac5d0"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-pink\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "e6e392bf637540528083d0d80e23aa392d2ed4bc"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7454,
+          "sha1": "c2e075492389b6f5eb491962d9f9946f09ee28d4"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "2473b0643bd1857bd17ef22a7ed36667b3288a35"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-yellow\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "44fddda4acbbd45b729ab19686476ee3e65ab199"
+        },
+        {
+          "path": "color-variants\/musicbox-red",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-red\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7452,
+          "sha1": "700493e49da5e3052a5ebfb3f212b8fdd644f061"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "a2a02c9d97408366d8fde7de5a477ea602b523cd"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-red\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "d400ac65b1d500c95ce2796eb37ac850f105fb05"
+        },
+        {
+          "path": "color-variants\/musicbox-gray",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7443,
+          "sha1": "427733859d59f1d34aaf6e49406844ab055f8963"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "c2be274edeaa6f4d45736297a5d1ee588fbfc87a"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "color-variants\/musicbox-gray\/musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7807,
+          "sha1": "a24583287028f470645e330119a0d6019aab7baf"
+        },
+        {
+          "path": "images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "images\/transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 105,
+          "sha1": "261541bd46ef884af76e96aed6ddb37f50299411"
+        },
+        {
+          "path": "images\/icon_home_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 258,
+          "sha1": "126cf93341ccbe8811438a5d2dd0f2addcb8a302"
+        },
+        {
+          "path": "images\/bg_wrapper.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93,
+          "sha1": "7275b0881656301250923d9ba512efbba187d2b7"
+        },
+        {
+          "path": "images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "images\/icon_home.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "b156b6a533e9fff1c16dba478a5686f1fb22a3bf"
+        },
+        {
+          "path": "images\/icon_intro.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2195,
+          "sha1": "039be552943ee2e8c4ed8c4c7f9b6fb6d67de2f7"
+        },
+        {
+          "path": "images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "images\/icon_heart.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 330,
+          "sha1": "a7e4ab6fdf160c18cc786125f3e4bffe01402175"
+        },
+        {
+          "path": "images\/icon_arrow_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129,
+          "sha1": "b074df232c4bbe802389ea922fb20121cab92144"
+        },
+        {
+          "path": "images\/icon_arrow_small.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 128,
+          "sha1": "0a94baec741bc91646d0e525eef854db2f7b9482"
+        },
+        {
+          "path": "images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        },
+        {
+          "path": "images\/foreground.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 115,
+          "sha1": "ed014d048e2176872ba03621e239288f9a76097e"
+        },
+        {
+          "path": "images\/comment_arrow.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 187,
+          "sha1": "3bda1ede2236199cd4424f16b10c156ddb592ea4"
+        },
+        {
+          "path": "images\/icon_search.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 374,
+          "sha1": "5f6b98f776aaa6308bb9b7ac357bf1ccf2aa9bc6"
+        },
+        {
+          "path": "musicbox.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7907,
+          "sha1": "d839d3e79fb87c3f14bd17fbb738a0b1dcd6db6e"
+        }
+      ]
+    }
+  }
+}

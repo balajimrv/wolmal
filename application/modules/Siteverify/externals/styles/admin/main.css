@@ -1,0 +1,28 @@
+.siteverify_admin_popup
+{
+  +rounded(5px);
+  background-color: #E9F4FA;
+  float: left;
+  padding: 7px;
+  margin:10px;
+}
+.siteverify_admin_popup > div
+{
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #D7E8F1;
+  overflow: hidden;
+  padding: 10px;
+}
+.siteverify_admin_popup > div .global_form_popup
+{
+  padding:5px;
+}
+#global_page_siteverify-admin-approve-edit .settings textarea,
+#global_page_siteverify-admin-manage-edit .settings textarea{
+	height:70px;
+	min-height:inherit;
+	max-height:inherit;
+}
+.admin_member_stats li {
+ overflow: hidden;
+}

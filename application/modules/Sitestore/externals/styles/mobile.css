@@ -1,0 +1,539 @@
+/* $Id: mobile.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+.clear{clear:both !important;}
+.item_icon_sitestore{
+	background-image:url(~/application/modules/Sitestore/externals/images/icons/store.png);
+}
+.fleft{float:left!important;}
+.fright{float:right!important;}
+.mright10{margin-right:10px;!important}
+.mtop10{margin-top:10px!important;}
+.mleft5{margin-top:5px!important;}
+.mtop15{margin-top:15px!important;}
+.mbot15{margin-bottom:15px!important;}
+.ptop10{padding-top:10px!important;}
+.p5{padding:15px!important;}
+.border0{border:none !important}
+.bold{font-weight:bold!important;}
+.widthfull{width:100%!important;}
+
+.navigation .sitestore_main_create,
+.navigation .sitestore_main_claim{
+	display:none;
+}
+.layout_sitestore_recently_popular_random_sitestore #sitestore_home_store_tab5,
+.layout_sitestore_recently_popular_random_sitestore #sitestore_home_store_tab4{
+	display:none;
+}
+/*CSS FOR ALL LISTINGS SATRT HERE*/
+.sitestore_view_grid{
+	display:none !important;
+}
+ul.seaocore_browse_list
+{
+  clear: both;
+}
+ul.seaocore_browse_list > li
+{
+  clear: both;
+  padding: 0px 0px 15px 0px;
+  overflow: hidden;
+}
+ul.seaocore_browse_list > li .lists_highlight{
+	background-color:$theme_foreground_background_color;
+	padding:5px;
+}
+ul.seaocore_browse_list > li + li
+{
+  padding-top: 15px;
+  border-top-width: 1px;
+}
+ul.seaocore_browse_list .seaocore_browse_list_photo
+{
+  float: left;
+  overflow: hidden;
+  margin-right: 8px;
+}
+ul.seaocore_browse_list .seaocore_browse_list_photo img
+{
+  width: 100px;
+}
+ul.seaocore_browse_list .seaocore_browse_list_options
+{
+  float: right;
+  overflow: hidden;
+  padding-left: 20px;
+	width:150px;
+	display:none;
+}
+ul.seaocore_browse_list .seaocore_browse_list_options > a
+{
+  clear: both;
+  display: block;
+  margin: 5px;
+  font-size: .8em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info
+{
+  overflow: hidden;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_title
+{
+	font-weight:bold;
+	overflow:hidden;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_title h3
+{
+  margin: 0px;
+	overflow:hidden;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_title .seaocore_title
+{
+	overflow:hidden;
+	font-weight:bold;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_title span{
+	float:right;
+	margin-right:5px;
+	margin-left:5px;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_title span.list_rating_star span
+{
+	float:left;
+	margin:2px;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_date
+{
+  font-size: .8em;
+  color: $theme_font_color_light;
+}
+ul.seaocore_browse_list .seaocore_browse_list_info_blurb
+{
+  margin-top: 5px;
+}
+#global_page_sitestore-mobi-index .seaocore_browse_list_info_title span{
+	display:none;
+}
+.seaocore_browse_list_info .sitestoreoffer_box{
+	display:none;
+}
+/*CSS FOR ALL LISTINGS END HERE*/
+/*css for all modules view store*/
+.sitestore_viewstores_head {
+	padding-bottom:0 !important;
+	overflow:auto;
+	margin-bottom:5px !important;
+}
+.sitestore_viewstores_head img{
+	display:none;
+}	
+.sitestore_viewstores_head h2 {
+	overflow:hidden;
+	font-size:17px;
+	text-align:center;
+}
+.sitestore_viewstores_head > a {
+	float:left;
+}
+/*sitestore home store and browse store tabs content*/
+.layout_core_container_tabs {
+	clear:both;
+}
+#global_page_sitestore-index-home .layout_core_container_tabs .tabs_alt {
+	margin-bottom:5px !important;
+}
+.sitestore_view_select {
+	clear:both;
+	width:100%;
+	padding:0 0 5px 0;
+	float:left;
+	border-bottom-width:1px;
+	margin-bottom:10px;
+}
+.sitestore_view_select span {
+	cursor:pointer;
+	float:right;
+	margin:3px 10px;
+}
+.layout_sitestore_recently_popular_random_sitestore {
+	margin-bottom:15px;
+}
+.sitestore_img_view {
+	clear:both;
+	width:100%;
+}
+.sitestore_img_view_sitestore {
+	overflow:hidden;
+	width:100%;
+	float:left;
+	clear:both;
+}
+.sitestore_img_view .sitestore_browse_thumb {
+	display: block;
+	height: 190px;
+	margin: 10px auto;
+	padding: 2px;
+	text-align: center;
+	width: 102px;
+}
+.sitestore_img_view .sitestore_browse_thumb > div {
+	float:left;
+	display:block;
+	width:102px;
+	position:relative;
+	margin-bottom:3px;
+}
+.sitestore_img_view .sitestore_browse_thumb > div > a {
+	border-width:1px;
+	border-style:solid;
+	display:inline-block;
+	vertical-align:bottom;
+}
+.sitestore_img_view .sitestore_browse_thumb > div > a:hover {
+	border-width:1px;
+	border-style:solid;
+}
+.sitestore_img_view .sitestore_browse_thumb > div > a > span {
+	width:100px;
+	height:150px;
+	background-position:center 50%;
+	display:block;
+	background-repeat:no-repeat;
+}
+.sitestore_browse_thumb ul, .sitestore_browse_thumb ul li {
+	margin:0px;
+	padding:0px;
+}
+.sitestore_browse_thumb ul li > a {
+	font-size:11px;
+}
+.sitestore_browse_thumb_hover_color {
+	background-color:#000;
+	opacity:0.2;
+	filter:alpha(opacity=20);
+	position: absolute;
+	width:102px;
+	height:152px;
+	top:0;
+	z-index:100;
+}
+.sitestore_browse_thumb_hover_like_button {
+	margin-left:28px;
+	position:absolute;
+	top:64px;
+	z-index:110;
+}
+.sitestore_browse_thumb_hover_unlike_button {
+	margin-left:20px;
+	position:absolute;
+	top:66px;
+	z-index:110;
+}
+.sitestore_browse_thumb_hover_loader {
+	margin-left: 35px;
+	position: absolute;
+	top: 65px;
+	z-index: 110;
+}
+.sitestore_browse_liked,
+.sitestore_browse_liked ul li > a{
+	background-color:$theme_buttontabs_background_color_active;
+	color:$theme_buttontabs_font_color_active;
+}
+/* like button start here */
+.layout_sitestore_title_sitestore #profile_status > h2 {
+	letter-spacing:0px;
+}
+.layout_sitestore_profile_status {
+	float:left;
+}
+.layout_sitestore_store_like_button {
+	float:left;
+	margin-bottom:5px;
+}
+
+
+/*sitestore profile store*/
+#global_page_sitestore-mobi-view .layout_core_container_tabs .tip{ display:none;}
+.layout_sitestore_overview_sitestore .seaocore_add{display:none;}
+.layout_sitestore_title_sitestore #profile_status{
+	text-align:center;
+}
+.layout_sitestore_mainphoto_sitestore {
+	margin:10px auto;
+	width:200px;
+	overflow: hidden;
+	clear:both;
+}
+.layout_sitestore_mainphoto_sitestore .sitestore_photo > img{
+	width:200px;
+	border:none !important;
+}
+.sitestore_photo_edit_wrapper .sitestore_photo_edit{display:none !Important;}
+.sitestore_profile_sponsorfeatured {
+	height:30px;
+	width:100%;
+	clear:both;
+	text-align:center;
+	line-height:30px;
+	font-size:17px;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#666 0px 0px 5px;
+}
+.layout_sitestore_info_sitestore .comments{
+	width:auto;
+}
+.layout_sitestore_info_sitestore .comments .comments_options
+{
+	text-align:left;
+}
+.layout_sitestore_overview_sitestore .tip{
+	display:none;
+}
+.store_photo_lightbox_content{
+	background-color:$theme_body_background_color;
+}
+li.sitestoreoffer_show {
+	border:2px dashed $theme_foreground_border_color !important;
+	border-top:2px dashed $theme_foreground_border_color !important;
+	background-color:$theme_foreground_background_color;
+}
+/*FEED ITEMS*/
+ul.feed .feed_attachment_sitestore_store {
+	display:block;
+	overflow:hidden;
+	margin:0px 5px 5px 0px;
+	vertical-align:top;
+}
+ul.feed .feed_attachment_sitestore_store > div > a {
+	display:block;
+	float:left;
+	margin-right:7px;
+}
+ul.feed .feed_attachment_sitestore_store > div > a > img {
+	display:inline-block;
+	max-width:90px;
+	max-height:90px;
+	vertical-align:top;
+}
+ul.feed .feed_attachment_sitestore_store > div > div {
+	overflow:hidden;
+}
+
+
+/*activity feeds*/
+/*sitestorenote feed item start here*/
+.feed_attachment_sitestorenote_note > div{
+  overflow: hidden;
+}
+.feed_attachment_sitestorenote_note > div > a{
+  display: inline-block;
+  float: left;
+  margin-right: 7px;
+}
+.feed_attachment_sitestorenote_note > div > a > img{
+  display: block;
+  max-width: 90px;
+  max-height: 90px;
+}
+.feed_attachment_sitestorenote_note > div > div{
+  overflow: hidden;
+}
+/*sitestorenote feed item end here*/
+/*sitestorevent feed item start here*/
+.feed_attachment_sitestoreevent_event > div{
+  overflow: hidden;
+}
+.feed_attachment_sitestoreevent_event > div > a{
+  display: inline-block;
+  float: left;
+  margin-right: 7px;
+}
+.feed_attachment_sitestoreevent_event > div > a > img{
+  display: block;
+  max-width: 90px;
+  max-height: 90px;
+}
+.feed_attachment_sitestoreevent_event > div > div{
+  overflow: hidden;
+}
+/*sitestorevent feed item end here*/
+/*sitestoreoffer feed item start here*/
+.feed_attachment_sitestoreoffer_offer > div{
+  overflow: hidden;
+}
+.feed_attachment_sitestoreoffer_offer > div > a{
+  display: inline-block;
+  float: left;
+  margin-right: 7px;
+}
+.feed_attachment_sitestoreoffer_offer > div > a > img{
+  display: block;
+  max-width: 90px;
+  max-height: 90px;
+}
+.feed_attachment_sitestoreoffer_offer > div > div{
+  overflow: hidden;
+}
+/*sitestoreoffer feed item end here*/
+/*CSS FOR ALL SITESTORE MODULE LIST ON SITESTORE PROFILE START HERE*/
+.layout_core_container_tabs .layout_right{
+ display:none;
+}
+.seaocore_add,
+.layout_sitestoremusic_profile_sitestoremusic > h3,
+.layout_sitestoreform_sitestore_viewform > h3,
+.layout_sitestoreoffer_profile_sitestoreoffers > h3,
+.layout_sitestore_discussion_sitestore > h3,
+.layout_sitestorereview_profile_sitestorereviews h3,
+.layout_sitestorepoll_profile_sitestorepolls h3,
+.layout_sitestoreevent_profile_sitestoreevents > h3,
+.layout_sitestorenote_profile_sitestorenotes h3,
+.layout_sitestoredocument_profile_sitestoredocuments > h3{
+	display:none;
+}
+.layout_sitestorereview_profile_sitestorereviews .seaocore_add{
+	display:block;
+}
+ul.sitestore_profile_list {
+	clear:both;
+}
+ul.sitestore_profile_list > li {
+	clear:both;
+	padding:10px;
+	overflow:hidden;
+}
+ul.sitestore_profile_list > li + li {
+	border-top-width:1px;
+	padding-top:15px;
+}
+ul.sitestore_profile_list > li > img, 
+ul.sitestore_profile_list > li > a {
+	display:block;
+	float:left;
+	overflow:hidden;
+	margin-right:8px;
+	font-weight:bold;
+}
+ul.sitestore_profile_list li > a img {
+	border-width:1px;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_options {
+	display:none;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_info {
+	overflow:hidden;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_title {
+	font-weight:bold;
+	margin-bottom:5px;
+	overflow:auto;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_title > a, 
+ul.sitestore_profile_list li .sitestore_profile_list_title .list_title {
+	font-size:14px;
+	overflow:hidden;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_title span {
+	float:right;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_info_date {
+	font-size:.8em;
+	color:$theme_font_color_light;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_info_date .rating_star_big_generic {
+	width:8px;
+	height:8px;
+}
+ul.sitestore_profile_list li .sitestore_profile_list_info_des {
+	margin-top:5px;
+}
+/*CSS FOR ALL SITESTORE MODULE LIST ON SITESTORE PROFILE END HERE*/
+/*sitestore list filters start here*/
+.sitestore_list_filters {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding:7px;
+	overflow:hidden;
+	margin-bottom:15px;
+	clear:both;
+	+foreground;
+}
+.sitestore_list_filter_first {
+	float:left;
+	width:auto !important;
+	padding-top:3px;
+}
+.sitestore_list_filter_field {
+	float:left;
+	width:auto!important;
+}
+.layout_sitestoreevent_profile_sitestoreevents .sitestore_list_filter_field{
+	width:auto!important;
+}
+/*sitestore list filters end here*/
+
+/*css for all link button start here*/
+.sitestore_featuredadmins_add a, .sitestore_create_link a, .sitestore_getstarted_btn a, .sitestore_edit_content .sitestore_edit_header > a {
+	padding:5px 10px;
+	font-weight:bold;
+	border:none;
+	background-repeat:repeat-x;
+	background-position:0px 1px;
+	font-size:11px;
+	outline:none;
+}
+.sitestore_featuredadmins_add a:hover, .sitestore_create_link a:hover, .sitestore_getstarted_btn a:hover, .sitestore_edit_content .sitestore_edit_header > a:hover {
+	cursor:pointer;
+	text-decoration:none;
+}
+/*css for all link button end here*/
+/*css for all icon and constand end here*/
+
+/*review icons start here*/
+.activity_icon_sitestorereview_new, .icon_sitestores_review, .activity_icon_review_sitestore {
+	background-image: url(~/application/modules/Sitestore/externals/images/icons/review.png);
+}
+
+/*review icons end here*/
+
+/*invite icons start here*/
+ .sitestoreinvite_gutter_sitestoreinvite {
+	background-image:url(~/application/modules/Sitestore/externals/images/icons/invite.png);
+}
+.notification_type_sitestore_suggested {
+	background-image:url(~/application/modules/Sitestore/externals/images/icons/store.png);
+}
+/*invite icons end here*/
+
+
+/*Browse Location*/
+.sitestore_map_container, .sitestore_map_container_right{
+	display:none !important;
+}
+.sitestore_advanced_search_form #fieldset-grp3 .form-wrapper{
+	width:auto !important;
+	float:none !important;
+}
+.sitestore_advanced_search_form #fieldset-grp3 .form-element input[type="text"], 
+.sitestore_advanced_search_form #fieldset-grp3 .form-element select{
+	width:95% !important;	
+}
+.sitestore_advanced_search_form #fieldset-grp3 .description{
+	margin-bottom:10px;
+}
+.sitestore_advanced_search_form #advances_search{
+	margin:10px 0 0!important;
+}
+.sitestore_advanced_search_form #fieldset-grp1, 
+.sitestore_advanced_search_form #fieldset-grp2{
+	margin-top:10px !important;
+}
+#global_page_sitestore-index-mobilemap .sitestore_advanced_search_form #fieldset-grp1 .form-wrapper, 
+#global_page_sitestore-index-mobilemap .sitestore_advanced_search_form #fieldset-grp2 .form-wrapper{
+	display:block;
+}

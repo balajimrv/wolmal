@@ -1,0 +1,180 @@
+/* $Id: main.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+/*Icons*/
+.notification_type_sitestoreoffer_create, .sitestoreoffer_type_offer, .item_icon_sitestoreoffer_offer, .item_icon_sitestoreoffer{
+	background-image: url(~/application/modules/Sitestore/externals/images/icons/offer.png);
+}
+.sitestore_offer_invite{
+	background-image:url(~/application/modules/Sitestoreoffer/externals/images/invite.png)
+}
+/*Offer View*/
+.sitestore_offer_block{
+	background-color:$theme_foreground_background_color;
+	border:2px dashed $theme_foreground_border_color !important;
+	padding:10px;
+	overflow:hidden;
+	width:auto;
+}
+.sitestore_offer_block + .sitestore_offer_block{
+	margin-top:10px;
+}
+.seaocore_browse_list_info .sitestore_offer_block{
+	margin-top:10px;
+}
+.sitestore_offer_photo{
+	float:left;
+	margin-right:10px;
+}
+.sitestore_offer_photo img{
+	max-height: 150px;
+  max-width: 130px;
+}
+.sitestore_offer_details{
+	overflow:hidden;
+}
+.sitestore_offer_title{
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.feed_item_attachments .sitestore_offer_title{
+	margin:4px 0 10px;
+}
+.sitestore_offer_date{
+/*	font-size:11px;*/
+	margin-bottom:5px;
+	overflow:hidden;
+}
+.sitestore_offer_date span{
+	margin-right:5px;
+	float:left;
+}
+.get_offer_icon{
+	margin-right:5px;
+	float:left;
+}
+.sitestore_offer_stats{
+	clear:both;
+	margin-bottom:5px;
+}
+.sitestorecoupon_code{
+	margin-right:5px;
+	display:inline-block;
+}
+.sitestorecoupon_code .sitestorecoupon_code_num{
+	background-color:#000000;
+	border:none;
+	border-radius:3px 3px 3px 3px;
+	color:#FFFFFF;
+	display:inline-block;
+	font-size:13px;
+	font-weight:bold;
+	max-width:140px;
+	padding:5px 10px;
+	text-align:center;
+	width:130px !important;
+}
+.sitestore_offer_discount{
+	margin-right:5px;
+	background:url(~/application/modules/Sitestoreoffer/externals/images/dis-bg.png) no-repeat right;
+	padding-right:19px !important;
+	display:inline-block;
+}
+.sitestore_offer_discount span.discount_value{
+	background-color:#FF0000;
+	border-radius:3px 0px 0px 3px;
+	color:#FFFFFF;
+	display:inline-block;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px 0 5px 10px;
+}
+.sitestorecoupon_left{
+	border-radius:3px;
+	display:inline-block;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px 10px;
+	background-color:$theme_body_background_color;
+	border:1px solid $theme_border_color;
+}
+.sitestorecoupon_des{
+	clear:both;
+}
+.sitestorecoupon_action{
+	padding-top:10px;
+	font-weight:bold;
+}
+/*tooltip*/
+.sitestorecoupon_des_tip, .sitestorecoupon_tip{
+	display: none;
+	background-image:url(~/application/modules/Sitestoreoffer/externals/images/tip-bg.png);
+	padding:5px;
+	position: absolute;
+	text-align: left;
+	font-size:12px;
+	color:#FFFFFF;
+}
+.sitestorecoupon_des_tip i, .sitestorecoupon_tip i{
+	left:0px;
+	float:left;
+	height:6px;
+	left:5px;
+	position:absolute;
+	width:15px;
+}
+.sitestorecoupon_des_tip{
+	margin:10px 0 0 -5px;
+	clear:both;
+	width:160px;
+}
+.sitestorecoupon_des_tip i{
+	background-image:url(~/application/modules/Sitestoreoffer/externals/images/arrow-top.png);
+	top:-6px;
+}
+.sitestorecoupon_tip_wrapper{
+	position:relative;
+}
+.sitestorecoupon_tip{
+	left:0px;
+	font-weight:bold;
+	top:-30px;
+	white-space:nowrap;
+}
+.sitestorecoupon_tip i{
+	background-image:url(~/application/modules/Sitestoreoffer/externals/images/arrow-btm.png);
+	bottom:-6px;
+}
+.sitestorecoupon_tip_wrapper:hover .sitestorecoupon_tip,
+.sitestorecoupon_des_tip_wrapper:hover .sitestorecoupon_des_tip{
+	display:block;
+}
+.sitestorecoupon_sidebar_listing .sitestorecoupon_code .sitestorecoupon_tip{
+	top:-45px;
+	white-space:normal;
+	width:150px;
+}
+
+
+/*Sidebar widgets*/
+.layout_sitestoreoffer_offers_sitestoreoffers ul li + li{
+	margin-top:10px;
+	padding-top:10px;
+	border-top-width:1px;
+}
+.layout_sitestoreoffer_offers_sitestoreoffers img.thumb_profile{
+	max-width:99%;
+}
+.sitestore_sidebar_list .sitestorecoupon_des_tip, .sitestore_sidebar_list .sitestorecoupon_tip, 
+.layout_sitestoreoffer_offer_of_the_day .sitestorecoupon_des_tip, .layout_sitestoreoffer_offer_of_the_day .sitestorecoupon_tip, div.sitestore_offer_date .sitestore_offer_date{
+	font-size:11px
+}
+
+img.main, img.thumb_normal, img.thumb_profile, img.thumb_icon{
+	border-width:1px;
+}
+
+/*Coupon create form >> Check availability button*/
+#coupon_code-element #coupon_code_varify{
+	float:left;
+}

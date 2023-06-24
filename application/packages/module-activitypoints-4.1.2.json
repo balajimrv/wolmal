@@ -1,0 +1,955 @@
+{
+  "type": "module",
+  "name": "activitypoints",
+  "version": "4.1.2",
+  "revision": null,
+  "path": "application\/modules\/Activitypoints",
+  "repository": null,
+  "date": "Fri, 30 Nov 2012 12:14:40 +0000",
+  "title": "Activity Points plugin",
+  "description": "Activity Points plugin",
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "SocialEngineMods"
+  ],
+  "changeLog": null,
+  "meta": {
+    "date": "Fri, 30 Nov 2012 12:14:40 +0000",
+    "title": "Activity Points plugin",
+    "description": "Activity Points plugin",
+    "developer": null,
+    "authors": [
+      "SocialEngineMods"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "enable",
+    "disable"
+  ],
+  "callback": {
+    "path": "application\/modules\/Activitypoints\/settings\/install.php",
+    "class": "Activitypoints_Installer",
+    "priority": 100
+  },
+  "dependencies": {
+    "module-semods": {
+      "type": "module",
+      "name": "semods",
+      "guid": "module-semods",
+      "minVersion": "4.0.1",
+      "maxVersion": null,
+      "excludeExcept": null
+    }
+  },
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/modules\/Activitypoints": {
+      "type": "directory",
+      "path": "application\/modules\/Activitypoints",
+      "structure": [
+        {
+          "path": "Api",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Api\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 14600,
+          "sha1": "be3bcae3bc4023a06c2b0d0c122e94401e829139"
+        },
+        {
+          "path": "Bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 403,
+          "sha1": "76e8fdf0a48094af31315f200b4289c46edd8e04"
+        },
+        {
+          "path": "controllers",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "controllers\/AdminAssignpointsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5348,
+          "sha1": "951f512637eeda751ab2ff25fef9ccf4b10c22cd"
+        },
+        {
+          "path": "controllers\/AdminGivepointsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 10200,
+          "sha1": "293cf566ea1c03698ffb673402c635b73fd7bdd9"
+        },
+        {
+          "path": "controllers\/AdminHelpController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 976,
+          "sha1": "dc8390fd0303af2866e3847756e4ce033b16f907"
+        },
+        {
+          "path": "controllers\/AdminLevelsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2582,
+          "sha1": "9c12b590d442a65d987974004be6eac87cfb1097"
+        },
+        {
+          "path": "controllers\/AdminManageController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 24727,
+          "sha1": "3806747cb945683aac0e504e5bcccc25d27fdaed"
+        },
+        {
+          "path": "controllers\/AdminPointranksController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1992,
+          "sha1": "164c3a421550f5983aef8cd67c13b8df7caca712"
+        },
+        {
+          "path": "controllers\/AdminSettingsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 624,
+          "sha1": "5af2094d00ee58a9b609b752aa771195e3b48dbf"
+        },
+        {
+          "path": "controllers\/AdminTransactionsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3956,
+          "sha1": "33cdc5c7c1cfcd42dee29e9a983fc1bd20f24200"
+        },
+        {
+          "path": "controllers\/IndexController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 10433,
+          "sha1": "aaba17a2b9f108feb45b3ec15277e734d302d58b"
+        },
+        {
+          "path": "controllers\/TopusersController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2274,
+          "sha1": "0365ff4856d2785f57d086322aa8a3fcfb505dbc"
+        },
+        {
+          "path": "externals",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "externals\/.htaccess",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 147,
+          "sha1": "9f1638a8edbe1c5d28789e017fb35b2f2465f01e"
+        },
+        {
+          "path": "externals\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "externals\/images\/apps_dropdown.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 61,
+          "sha1": "1db18265bee740bf02b43e3bc15b3bf6508a11e2"
+        },
+        {
+          "path": "externals\/images\/apps_dropdown_active.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 61,
+          "sha1": "930728d27ace6d283a8509112f4a7f5a8c0d4a40"
+        },
+        {
+          "path": "externals\/images\/apps_dropdown_hover.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 61,
+          "sha1": "6e78c9b9c9b654342935f927f7f12d78edab1fd0"
+        },
+        {
+          "path": "externals\/images\/download_now.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3918,
+          "sha1": "99c9c2afad6bf806cfc5636944f603719e146767"
+        },
+        {
+          "path": "externals\/images\/error.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 609,
+          "sha1": "3b2625201431f4664f50bb639e0348c340435d3b"
+        },
+        {
+          "path": "externals\/images\/icons",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "externals\/images\/icons\/userpoints16.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 582,
+          "sha1": "8ca88f46f2c9a69e6792ea6f73ae79829b4764b1"
+        },
+        {
+          "path": "externals\/images\/icons\/userpoints_coins48.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3568,
+          "sha1": "7e855f737c3cdcec0e9e2133100d40e34c4f659f"
+        },
+        {
+          "path": "externals\/images\/icons\/userpoints_money48.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5184,
+          "sha1": "02cf4bbe4626efa4c3600127098f7034a5035417"
+        },
+        {
+          "path": "externals\/images\/icons\/userpoints_myvault48.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3093,
+          "sha1": "d746d01df87f0b8d3d8bbb839830b19e8d6a34f2"
+        },
+        {
+          "path": "externals\/images\/MemberQuarter-large.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1617,
+          "sha1": "efa0f5dbf6d5f944215866d30be06c8d7f133419"
+        },
+        {
+          "path": "externals\/images\/progress.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 644,
+          "sha1": "ed8c4b6721ad497c75bca3fe0433f3d91d461115"
+        },
+        {
+          "path": "externals\/images\/semods_ajaxprogress1.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 847,
+          "sha1": "9d8f230d5e14ff93c7523804faca71e5f46180d1"
+        },
+        {
+          "path": "externals\/images\/star-32x32.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2716,
+          "sha1": "e4dba7e0a75c0a859a0a1132f105c683d674db70"
+        },
+        {
+          "path": "externals\/images\/success.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 612,
+          "sha1": "af6c38505f11da189aebda86815ae0ef03244b3c"
+        },
+        {
+          "path": "externals\/images\/userpoints_coins16.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 582,
+          "sha1": "8ca88f46f2c9a69e6792ea6f73ae79829b4764b1"
+        },
+        {
+          "path": "externals\/images\/userpoints_coins32.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1717,
+          "sha1": "6997ed4865b91b5f8c47693e31bdc82fe9395538"
+        },
+        {
+          "path": "externals\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "externals\/scripts\/activitypoints.js",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "externals\/styles",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "externals\/styles\/main.css",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9227,
+          "sha1": "1e91d968756ddb19f1ab96c256ed5357ae07b6b9"
+        },
+        {
+          "path": "Form",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Level.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2931,
+          "sha1": "983ee6cf2ab9a44992d929afb27aefb9c01e5960"
+        },
+        {
+          "path": "Form\/Admin\/Manage",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Manage\/Edit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2569,
+          "sha1": "d51bdcb12270017bac39131cad6428e3914c40ae"
+        },
+        {
+          "path": "Form\/Admin\/Manage\/Filter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3136,
+          "sha1": "965e25f0cb7ed892157b91312bff6e5850d513f8"
+        },
+        {
+          "path": "Form\/Admin\/Manage\/TransactionsFilter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3608,
+          "sha1": "91c2787b00f7892bea00a27cda9698a6d69fb90f"
+        },
+        {
+          "path": "Form\/Admin\/Settings.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6298,
+          "sha1": "53aa5fdc545c32a81b7ec0ee74349560fd5bef20"
+        },
+        {
+          "path": "Form\/Admin\/Statistics",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Statistics\/Filter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1861,
+          "sha1": "94b357a374406b4c5eac6d6885cd4137d031d8ef"
+        },
+        {
+          "path": "Form\/Admin\/TransactionsFilter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4929,
+          "sha1": "ffbe87e163f5620d9e248cfe4de8dea780108f28"
+        },
+        {
+          "path": "Form\/TransactionsFilter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2178,
+          "sha1": "f9aa65891d6a593b2f3220db0f7f51f74dc6caa3"
+        },
+        {
+          "path": "Model",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Model\/DbTable",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Model\/DbTable\/Actionpoints.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2902,
+          "sha1": "84914d2789b74d4fe52e5caba50f4ecc98a15afc"
+        },
+        {
+          "path": "Model\/DbTable\/Counters.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9887,
+          "sha1": "a799d5bc9d51ef56727da3765c8712b71c3574b8"
+        },
+        {
+          "path": "Model\/DbTable\/Earner.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 462,
+          "sha1": "dc9c24fdfc2f1e7e14b2ff6abbc89b9cf25d87c0"
+        },
+        {
+          "path": "Model\/DbTable\/Earnertype.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 137,
+          "sha1": "da124f3a6856090d09428ded9b5a1852da57d29b"
+        },
+        {
+          "path": "Model\/DbTable\/Pointranks.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3432,
+          "sha1": "6e768f63750d8e8081a1f4f08e520da471f81fc0"
+        },
+        {
+          "path": "Model\/DbTable\/Points.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 7820,
+          "sha1": "72891f1b6f91cb2a6e4d77d4e09d20fba0eedb77"
+        },
+        {
+          "path": "Model\/DbTable\/Spender.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 513,
+          "sha1": "7d5f30846bb60cfdb46b83af9843db74177ddd6c"
+        },
+        {
+          "path": "Model\/DbTable\/Spendertype.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 139,
+          "sha1": "379c02e6e9a93d57373f2dd5190b081b8a923207"
+        },
+        {
+          "path": "Model\/DbTable\/Stats.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1100,
+          "sha1": "d261d946e59803519d87cc97c64c27449db3d33b"
+        },
+        {
+          "path": "Model\/DbTable\/Transactions.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2791,
+          "sha1": "8c1999081e557cdeefb0a2016c80a2b8e4ea18ea"
+        },
+        {
+          "path": "Plugin",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "Plugin\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4787,
+          "sha1": "82612e1da6e70bfb7d37273dd8fb188472ad049f"
+        },
+        {
+          "path": "Plugin\/Menus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1978,
+          "sha1": "a3da73dc7fc4423875efe204b170cf888ecd6e12"
+        },
+        {
+          "path": "Plugin\/Signup.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 57,
+          "sha1": "f6534d0d2ce4f47e0dfec46f5b979b1f1b40303d"
+        },
+        {
+          "path": "settings",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "settings\/content.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 910,
+          "sha1": "e6ddb3ec2425640d7c4c840232219263fe2ae4ec"
+        },
+        {
+          "path": "settings\/install.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 149,
+          "sha1": "4c7a18833476a8b46c96188f2e88c2685e938dcf"
+        },
+        {
+          "path": "settings\/manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4520,
+          "sha1": "78fb68226c30788da56836253a90940e6bfb6bfe"
+        },
+        {
+          "path": "settings\/my-upgrade-4.0.4-4.0.5.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 355,
+          "sha1": "59ddf8f85f0cf44d2b013ea45adfd02446566541"
+        },
+        {
+          "path": "settings\/my.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 40945,
+          "sha1": "a9271c8c54a99ac278e61f9b5daca11d83349165"
+        },
+        {
+          "path": "views",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-assignpoints",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-assignpoints\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4829,
+          "sha1": "87d8e47df8b768357720f91710a557f8a7174d61"
+        },
+        {
+          "path": "views\/scripts\/admin-givepoints",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-givepoints\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 7280,
+          "sha1": "35abd3d2152dca723a75f351e77423efc1ac3343"
+        },
+        {
+          "path": "views\/scripts\/admin-help",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-help\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1632,
+          "sha1": "cd5880b770091369070391eb10c7bf49845f3784"
+        },
+        {
+          "path": "views\/scripts\/admin-levels",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-levels\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 617,
+          "sha1": "fc4e6ba46d4dc439601c256fa1fe0fcbd808d85b"
+        },
+        {
+          "path": "views\/scripts\/admin-manage",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/edit.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1031,
+          "sha1": "3e85a012e9b99565e99a39f558ae003016409eac"
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4979,
+          "sha1": "96b8ac9bb3bcc6cc0580f97ce95b2086c97af697"
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/quotas.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4860,
+          "sha1": "6e95ec8c83c9c910b972f419cd5781ec902c2384"
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/stats.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3632,
+          "sha1": "ec93579c2b83e9790a5b239a5b077ab6ba477e8a"
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/transactions.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6354,
+          "sha1": "90cf24e8d2d4a7c95f7b77c84d44991dbea0543a"
+        },
+        {
+          "path": "views\/scripts\/admin-pointranks",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-pointranks\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5785,
+          "sha1": "3e3d2c0ba8582ca31823bb6eec2865d22fbe1c22"
+        },
+        {
+          "path": "views\/scripts\/admin-settings",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 786,
+          "sha1": "0d3e049d876c8714fc47d5cde1f2f6bf779b344a"
+        },
+        {
+          "path": "views\/scripts\/admin-transactions",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-transactions\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 7263,
+          "sha1": "8023ca58584fdf26790f0ebb857e3ade5616073d"
+        },
+        {
+          "path": "views\/scripts\/index",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/index\/help.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3946,
+          "sha1": "6cdb4492b166395db1ed01b0f81f92756b13039e"
+        },
+        {
+          "path": "views\/scripts\/index\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 11505,
+          "sha1": "873366c63df3b183674b2b2b4a0e52d1ae877a35"
+        },
+        {
+          "path": "views\/scripts\/index\/transactions.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3270,
+          "sha1": "2d104643ae2d37b367040ff6eca43ad5f9de8574"
+        },
+        {
+          "path": "views\/scripts\/topusers",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/topusers\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5080,
+          "sha1": "d46940bc771025f33b523385a805aeda345aced1"
+        },
+        {
+          "path": "widgets",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-topusers",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-topusers\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1642,
+          "sha1": "ace706c59ba61452b18352f8351988c10406db73"
+        },
+        {
+          "path": "widgets\/list-topusers\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 775,
+          "sha1": "b30768dbe9bcf2914cf64f17258a809b9d80adfd"
+        },
+        {
+          "path": "widgets\/profile-points",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/profile-points\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1443,
+          "sha1": "f742ed8ed443a5a4bfb54395b7d5786ef5c20645"
+        },
+        {
+          "path": "widgets\/profile-points\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 838,
+          "sha1": "d4a8c7bf247da56c91df2b11fc0c02c33e945339"
+        },
+        {
+          "path": "widgets\/userhome-points",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 0,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/userhome-points\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1825,
+          "sha1": "63dd35d67c83bd374bbddec1af9c0aff032b8c59"
+        },
+        {
+          "path": "widgets\/userhome-points\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2424,
+          "sha1": "6e1743b95e5c9d4401ffff17bdbdc0d6b433c573"
+        }
+      ]
+    },
+    "application\/languages\/en\/activitypoints.csv": {
+      "type": "file",
+      "path": "application\/languages\/en\/activitypoints.csv",
+      "structure": {
+        "path": "activitypoints.csv",
+        "dir": false,
+        "file": true,
+        "perms": "0666",
+        "size": 32872,
+        "sha1": "20c7371e1f90d2fdc511fd167bc9e1d83b1e6031"
+      }
+    }
+  }
+}

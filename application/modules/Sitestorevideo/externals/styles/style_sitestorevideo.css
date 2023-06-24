@@ -1,0 +1,74 @@
+/* $Id: style_sitestorevideo.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+/*css view sitestorevideo store, where a single	sitestorevideo is shown.*/
+div.sitestorevideo_view{
+	clear:both;
+	border-top-width:1px;
+	padding-top:10px;
+}
+div.sitestorevideo_view h3{
+	margin-bottom: 5px;
+}
+div.sitestorevideo_view .sitestorevideo_embed{
+	margin: 10px 0px 3px 0px;
+}
+div.sitestorevideo_view .sitestorevideo_date{
+	font-size: .8em;
+	margin-bottom:3px;
+}
+div.sitestorevideo_view .rating{
+	margin-top: 7px;
+}
+div.sitestorevideo_view .comments{
+	margin-top: 10px;
+	border-top-width: 1px;
+	padding-top: 10px;
+}
+div.sitestorevideo_view .comments_options span{
+	font-weight: bold;
+	font-size: 1em;
+	margin-bottom: 6px;
+}
+.sitestore_video_options{
+	margin-top:10px;
+}
+.sitestore_video_options > a{
+	font-size:11px;
+	line-height:16px;
+}
+.layout_sitestorevideo_profile_sitestorevideos h3{
+	display:none;
+}
+/*Create and Edit stores*/
+#global_page_sitestorevideo-index-create p.description, 
+#global_page_sitestorevideo-index-edit p.description{
+	font-size: 11px !important;
+	margin-bottom: 0 !important;
+}
+/*video home store*/
+.layout_sitestorevideo_sitestorevideolist_link{
+	margin-bottom:15px;
+}
+ul.sitestorevideos_browse{
+  overflow: hidden;
+}
+ul.sitestorevideos_browse > li{
+  float: left;
+  overflow: hidden;
+  margin-right: 20px;
+  height: 190px;
+  max-width: 140px;
+}
+html[dir="rtl"] ul.sitestorevideos_browse > li{
+  float: right;
+  margin-right: 0px;
+  margin-left: 20px;
+}
+ul.sitestorevideos_browse .video_title{
+  font-size: .8em;
+  font-weight: bold;
+  display: block;
+  clear: both;
+}
+ul.sitestorevideos_browse .video_stats{
+  font-size: .8em;
+}

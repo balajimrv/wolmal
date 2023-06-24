@@ -1,0 +1,212 @@
+{
+  "type": "theme",
+  "name": "snowbot",
+  "version": "4.9.1",
+  "revision": "10113",
+  "path": "application\/themes\/snowbot",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Snowbot",
+  "description": null,
+  "thumb": "snowbot_theme.jpg",
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Snowbot",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Theme",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/themes\/snowbot": {
+      "type": "directory",
+      "path": "application\/themes\/snowbot",
+      "structure": [
+        {
+          "path": "mobile.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 18740,
+          "sha1": "3582ec0558c5003fbfc570a2fdbba67824a26c34"
+        },
+        {
+          "path": "constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 6598,
+          "sha1": "8d19cb1ec7bcd06e990f0e6b245ce5ae954ed24e"
+        },
+        {
+          "path": "snowbot_theme.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6022,
+          "sha1": "fb7b8f9f5cd3d7666062053d3a507da6621c6104"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 965,
+          "sha1": "f97235dfee40fecb68cfabf9a5fe19bc6f07b305"
+        },
+        {
+          "path": "theme.css",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 35275,
+          "sha1": "f90f4bd2daa847469c27bc9c21186562abb6b73c"
+        },
+        {
+          "path": "images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "images\/search_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 259,
+          "sha1": "842e82b92ef61b21b0f59f47e0f68a4f716a04a3"
+        },
+        {
+          "path": "images\/quote_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 294,
+          "sha1": "ab2880446191d6d999856e3ec597335258f04d41"
+        },
+        {
+          "path": "images\/pulldown_row_bg_alt.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 282,
+          "sha1": "c3915f9b1ba2392c00bbaa0e400af07c8d1307a8"
+        },
+        {
+          "path": "images\/pulldown_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 893,
+          "sha1": "b2d303bb02c64dc2b3233e66ba61b356d7cf9b19"
+        },
+        {
+          "path": "images\/button_bg_pulldown.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 130,
+          "sha1": "cd01a0d9375159463183d0f375102e603acc0676"
+        },
+        {
+          "path": "images\/menu_bg_line.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 165,
+          "sha1": "a49e1b0aa98053a17938b9c49e659817b1a3728d"
+        },
+        {
+          "path": "images\/menu_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 149,
+          "sha1": "5a9eeba523673bdbe55d2e6d6d2a1d689e3a78e2"
+        },
+        {
+          "path": "images\/pulldown_row_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 293,
+          "sha1": "f5de9a69b73ae9853474564ade3b024f7c5df124"
+        },
+        {
+          "path": "images\/heading_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 141,
+          "sha1": "c220552a389caffcb1fb4edfa5def42cdb4de2e0"
+        },
+        {
+          "path": "images\/button_bg_hover.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 117,
+          "sha1": "e63bad64bd369f8b036c07fb6d7ff17f03980817"
+        },
+        {
+          "path": "images\/menu_bg_light.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 140,
+          "sha1": "9147fde60e9b3ce6c1fd7e3cf00b7cc5d82ac6b3"
+        },
+        {
+          "path": "images\/body_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 160,
+          "sha1": "d4aac60e828e5ae455f9bc11ca31b981fddc84ac"
+        },
+        {
+          "path": "images\/button_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 118,
+          "sha1": "53734991dee3e3a7bdb79f8de47eac65d25fa92a"
+        },
+        {
+          "path": "images\/feed_post_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 134,
+          "sha1": "5b7805cfda8b1fa1216bbad3f64a4692567a5d24"
+        }
+      ]
+    }
+  }
+}

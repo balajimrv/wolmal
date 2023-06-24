@@ -1,0 +1,681 @@
+/* SkayzThemes === Zephyr Theme */
+
+/* DEFAULT STYLES FOR THIS THEME */
+/* Be creative, choose unique colors to be unique! */
+
+@constants
+{
+  /* 
+  BODY BACKGROUND
+  Changes the background of the body tag.
+  */
+  theme_body_background_color: $zephyr_body_bgcolor;
+  theme_body_background_img: $zephyr_body_img;
+  theme_body_background_imgrepeat: $zephyr_body_imgrepeat;
+  theme_body_background_imgfixed: $zephyr_body_imgfixed;
+  theme_body_background_imgcover: $zephyr_body_imgcover;
+  
+  /* 
+  HOME PAGE STYLING
+  These values are only used to style the Home Page. Some applies only for one of the Home Page's styles, some applies for all styles.
+  */
+  theme_home_style: +home_style($zephyr_home_style);
+  
+  /* 
+  HEADER STYLING
+  These values are only used to style the site-wide header.
+  */
+  theme_topbar_background_color: $zephyr_header_bgcolor;
+  theme_topbar_background_img: $zephyr_header_img;
+  theme_topbar_background_imgrepeat: $zephyr_header_imgrepeat;
+  theme_topbar_background_imgfixed: $zephyr_header_imgfixed;
+  theme_topbar_background_imgcover: $zephyr_header_imgcover;
+  theme_topbar_border_bottom_color: $zephyr_header_bordercolor;
+  theme_topbar_border_bottom_width: $zephyr_header_border;
+  theme_topbar_menu_background_color: $zephyr_headermenu_bgcolor; /* Does not apply to all header layouts */
+  theme_topbar_menu_borders_color: $zephyr_headermenu_border; /* Try #EEE */
+  theme_topbar_menu_link_color: $zephyr_headermenu_color;
+  theme_topbar_menu_link_hover_color: $zephyr_headermenu_colorhover;
+  theme_topbar_menu_link_hover_background_color: $zephyr_headermenu_bghover;
+  theme_topbar_menu_link_decoration: none;
+  theme_topbar_menu_link_hover_decoration: none;
+  theme_topbar_menu_link_size: 100%;
+  theme_topbar_menu_text_size: $theme_topbar_menu_link_size;
+  theme_topbar_elements_height: $zephyr_header_height; /* This is deciding the height of the elements in the Header, including the Header's height. */
+  theme_topbar_icons_color: +header_iconscolor('$zephyr_header_icons');
+  
+  theme_topbar_search_text_color: $zephyr_header_searchcolor;
+  theme_topbar_search_focus_text_color: $theme_topbar_menu_link_hover_color;
+  
+  theme_topbar_minimenu_link_size: 90%;
+  theme_topbar_minimenu_link_color: $theme_topbar_menu_link_color;
+  theme_topbar_minimenu_link_hover_color: $theme_topbar_menu_link_hover_color;
+  theme_topbar_minimenu_link_hover_decoration: none;
+  theme_topbar_minimenu_link_background_color: transparent;
+  theme_topbar_minimenu_link_hover_background_color: transparent;
+  
+  theme_topbar_layout: +header_layout('$zephyr_header_layout');
+  theme_topbar_style: +header_style_css('$zephyr_header_style');  
+  
+
+  /*
+  CONTENT STYLING
+  These values are only used to style the site-wide content.
+  */
+  theme_content_background: transparent;
+  theme_content_border_color: transparent;
+  theme_content_small_text_size: 90%;
+  
+  /*
+  FOOTER STYLING
+  These values are only used to style the site-wide footer.
+  */
+  theme_footer_background: $zephyr_footer_bgcolor;
+  theme_footer_background_img: $zephyr_footer_img;
+  theme_footer_background_imgrepeat: $zephyr_footer_imgrepeat;
+  theme_footer_background_imgfixed: $zephyr_footer_imgfixed;
+  theme_footer_background_imgcover: $zephyr_footer_imgcover;
+  theme_footer_border_width: $zephyr_footer_border;
+  theme_footer_border_color: $zephyr_footer_bordercolor;
+  theme_footer_font_color: $zephyr_footer_color;
+  theme_footer_link_color: $zephyr_footer_linkcolor;
+  
+  theme_footer_style: +footer_style_css('$zephyr_footer_style'); 
+
+  /*
+  WIDTHS, HEIGHTS, and MARGINS
+  Specify the width, or/and height, or/and margins, for: Header, Content, Columns, Footer, Logo, Menu.
+  */
+  
+  /* Set HEADER, CONTENT, and FOOTER width. */
+  theme_topbar_width: +header_style('$zephyr_header_style');
+  theme_content_width: $zephyr_width_main;
+  theme_footer_width: +footer_style('$zephyr_footer_style');
+  /* Set dimensions for when the vertical Header is selected */
+  theme_topbar_vertical_width: 220px;
+  /* To find theme_topbar_vertical_totalWidth size do this sum: theme_topbar_vertical_width + theme_content_width + 40px */
+  theme_topbar_vertical_totalWidth: $zephyr_header_vertical_totalWidth;
+  
+  /* RIGHT and LEFT COLUMNS Width */
+  theme_content_columns_left_width: $zephyr_width_colleft;
+  theme_content_columns_right_width: $zephyr_width_colright;
+  
+  /* LOGO width and other settings */
+  theme_topbar_logo_width: auto;
+  theme_topbar_logo_margin_top: $zephyr_logo_margin;
+    
+  /* 
+  TEXT & LINKS
+  These values affect the size and colors of your text and links throughout your layout.
+  */
+  theme_font_family: +font_name('$zephyr_use_googlefonts');
+  theme_font_size: $zephyr_font_size;
+  theme_font_weight: $zephyr_text_fontweight;
+  theme_font_color: $zephyr_font_color;
+  theme_font_color_light: $zephyr_font_colorlight;
+  theme_text_align: left;
+  theme_link_color: $zephyr_link_color;
+  theme_link_color_hover: $zephyr_link_colorhover;
+  theme_link_decoration: none;
+  theme_link_decoration_hover: underline;
+  
+  /* 
+  BORDER COLORS
+  These colors are mostly applied to borders that separate items in lists of content.
+  */
+  theme_border_color: $zephyr_content_bordercolor;
+
+  /*
+  WIDGET BOX COLORS
+  These colors/styles are applied to the widgets.
+  */
+  theme_content_style: +content_style('$zephyr_content_style');
+  theme_widget_foreground_background_color: $zephyr_content_bgcolor;
+  theme_widget_foreground_border_color: $theme_border_color;
+  
+  /* 
+  HEADLINES
+  These values affect all the headlines like h1, h2, h3, h4, h5, h6.
+  */
+  theme_headline_color: $zephyr_headline_color;
+  theme_headline_size_large: 180%;
+  theme_headline_size_medium: 140%;
+  theme_headline_fontfamily: +font_name_headings('$zephyr_use_googlefonts');
+  /* The following values affect all the widget headlines like h3. */
+  theme_headline_background_color: transparent;
+  theme_headline_border_color: $theme_widget_foreground_border_color;
+  theme_headline_fontweight: $zephyr_headings_fontweight;
+  
+  /*
+  INSIDE WIDGET BOX BORDER COLORS
+  These colors are applied to borders around or within boxes that have a background color,
+  like widgets.
+  */
+  theme_foreground_border_color: transparent;
+  theme_foreground_border_color_light: transparent;
+  theme_foreground_background_color: transparent;
+
+  /*
+  INPUT FIELDS AND BUTTONS
+  These values style input fields and buttons that appear throughout the layout.
+  */
+  theme_input_background_color: $zephyr_input_bgcolor;
+  theme_input_font_color: $theme_font_color;
+  theme_input_border_colors: $theme_widget_foreground_border_color;
+  theme_button_background: $zephyr_button_bgcolor;
+  theme_button_font_color: $zephyr_button_color;
+
+  /*
+  PHOTO BORDERS
+  These colors are applied to the borders drawn around most images and thumbnails.
+  */
+  theme_photo_border_color: transparent;
+  theme_photo_border_color_hover: transparent;
+
+  /* 
+  FORMS
+  These colors are applied to most forms throughout the layout.
+  */
+  theme_form_border_color: transparent;
+  theme_form_border_bottom_color: transparent;
+  theme_form_background_color: transparent;
+  theme_form_label_font_color: $theme_font_color;
+
+  /*
+  TABS (BUTTON-STYLE)
+  These colors are applied to the button-style tab menus which are often shown
+  on browse pages.
+  */
+  theme_buttontabs_font_color: $theme_link_color;
+  theme_buttontabs_font_color_hover: $theme_link_color_hover;
+  theme_buttontabs_font_color_active: $theme_link_color_hover;
+  theme_buttontabs_background_color: transparent;
+  theme_buttontabs_background_color_hover: rgba(160,160,160,0.1);
+  theme_buttontabs_background_color_active: transparent;
+  theme_buttontabs_border_color: $theme_widget_foreground_border_color;
+
+  /*
+  TABS
+  These colors are applied to tab menus (as seen on several pages, including
+  the member profile page).
+  */
+  theme_tabs_font_color: $theme_link_color;
+  theme_tabs_font_color_hover: $theme_link_color_hover;
+  theme_tabs_font_color_active: $theme_link_color_hover;
+  theme_tabs_background_color: $theme_widget_foreground_background_color;
+  theme_tabs_background_color_hover: $theme_widget_foreground_background_color;
+  theme_tabs_background_color_active: transparent;
+  theme_tabs_border_color: $theme_widget_foreground_border_color;
+
+  /*
+  ACTIVITY FEED
+  These styles are applied only to the Activity Feed.
+  */
+  theme_newsfeed_style: +news_feed_style('$zephyr_newsfeed_style');
+  theme_activity_comment_background_color: $zephyr_comment_bgcolor;
+  theme_activity_comment_border_color_light: $theme_widget_foreground_border_color;
+  
+  /*
+  LISTS
+  These colors are applied to some lists, especially in pull-down menus.
+  */
+  theme_list_background_color: $theme_widget_foreground_background_color;
+  theme_list_background_color_alt: $theme_widget_foreground_background_color;
+  theme_list_background_color_hover: $theme_activity_comment_background_color;
+
+  /*
+  TAGS
+  These colors are applied to tags, which appear on blogs, messages, etc.
+  */
+  theme_tag_background_color: $theme_activity_comment_background_color;
+  
+  /*
+  INLINE PULLDOWN MENUS
+  These colors style the inline pulldown menus that appear throughout the layout.
+  */
+  theme_pulldown_background_color: $theme_widget_foreground_background_color;
+  theme_pulldown_background_color_hover: $theme_widget_foreground_background_color;
+  theme_pulldown_background_color_active: $theme_widget_foreground_background_color;
+  theme_pulldown_font_color: $theme_font_color_light;
+  theme_pulldown_font_color_hover: $theme_font_color;
+  theme_pulldown_font_color_active: $theme_pulldown_font_color;
+  theme_pulldown_border_color: $theme_widget_foreground_border_color;
+  theme_pulldown_contents_background_color: $theme_widget_foreground_background_color;
+  theme_pulldown_contents_list_background_color: $theme_pulldown_contents_background_color;
+  theme_pulldown_contents_list_background_color_hover: $theme_activity_comment_background_color;
+  theme_pulldown_contents_list_background_color_active: $theme_pulldown_contents_list_background_color_hover;
+  theme_pulldown_contents_list_updates_border_color: $theme_activity_comment_background_color;
+  
+  /* RESPONSIVE LAYOUT */
+  theme_layout_responsive: +responsive_layout('$zephyr_responsive_layout');
+}
+
+
+/* Global member photos and icons */
+img.main
+{
+  max-width: 720px;
+  max-height: 720px;
+}
+img.thumb_normal
+{
+  max-width: 140px;
+  max-height: 160px;
+}
+img.thumb_profile
+{
+  max-width: 200px;
+  max-height: 400px;
+}
+img.thumb_icon
+{
+  width: 48px;
+  height: 48px;
+}
+img.main, img.thumb_normal, img.thumb_profile, img.thumb_icon
+{
+  border: 0px solid $theme_photo_border_color;
+  border-radius: 0px;
+}
+
+
+/*
+GLOBAL MIXINS
+These groups of styles called "mixins" are included in other
+classes throughout the stylesheet.
+*/
+
+/* Gives an element a background and/or border */
+=widget_foreground
+{
+  background-color: $theme_widget_foreground_background_color;
+  border: 1px solid $theme_widget_foreground_border_color;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 15px;
+  /* box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.3); */
+}
+
+/* Gives an element a background and/or border */
+=foreground
+{
+  background-color: $theme_foreground_background_color;
+  border: 0px solid $theme_foreground_border_color;
+  border-radius: 0px;
+}
+
+/* Gives an element a drop shadow */
+=shadow($offset_x = 0, $offset_y = 0, $blur_radius = 0, $spread_radius = 0, $shadow_color = "#aaa")
+{
+  -moz-box-shadow: $offset_x $offset_y $blur_radius $spread_radius $shadow_color;
+  -webkit-box-shadow: $offset_x $offset_y $blur_radius $spread_radius $shadow_color;
+  box-shadow: $offset_x $offset_y $blur_radius $spread_radius $shadow_color;
+}
+/* Gives an element a inset shadow */
+=shadowin($offset_x = 0, $offset_y = 0, $blur_radius = 0, $spread_radius = 0, $shadow_color = "#aaa")
+{
+  -moz-box-shadow: inset $offset_x $offset_y $blur_radius $spread_radius $shadow_color;
+  -webkit-box-shadow: inset $offset_x $offset_y $blur_radius $spread_radius $shadow_color;
+  box-shadow: inset $offset_x $offset_y $blur_radius $spread_radius $shadow_color;
+}
+
+/* Gives an element rounded corners. */
+=rounded($radius = 4px, $hidecorner1 = false, $hidecorner2 = false, $hidecorner3 = false, $hidecorner4 = false)
+{
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+
+  @if($hidecorner1 == true)
+  {
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-left-radius: 0px;
+    border-radius-topleft: 0px;
+  }
+  @if($hidecorner2 == true)
+  {
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-right-radius: 0px;
+    border-radius-topright: 0px;
+  }
+  @if($hidecorner3 == true)
+  {
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border-radius-bottomright: 0px;
+  }
+  @if($hidecorner4 == true)
+  {
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    border-radius-bottomleft: 0px;
+  }
+}
+
+/* Gives an element a backrgound gradient on Y axis (~vertical) */
+=gradienty($start_gradient_color = #444444, $end_gradient_color = #222222)
+{
+  background: $end_gradient_color; /* Old browsers */
+  background: -moz-linear-gradient(top,  $start_gradient_color 0%, $end_gradient_color 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_gradient_color), color-stop(100%,$end_gradient_color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $start_gradient_color 0%,$end_gradient_color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $start_gradient_color 0%,$end_gradient_color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $start_gradient_color 0%,$end_gradient_color 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $start_gradient_color 0%,$end_gradient_color 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_gradient_color', endColorstr='$end_gradient_color',GradientType=0 ); /* IE6-9 */
+}
+
+/* Gives an element a backrgound gradient on X axis (~horizontal) */
+=gradientx($start_gradient_color_x = #444, $end_gradient_color_x = #222)
+{
+  background: $start_gradient_color_x; /* Old browsers */
+  background: -moz-linear-gradient(left,  $start_gradient_color_x 0%, $end_gradient_color_x 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start_gradient_color_x), color-stop(100%,$end_gradient_color_x)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  $start_gradient_color_x 0%,$end_gradient_color_x 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  $start_gradient_color_x 0%,$end_gradient_color_x 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  $start_gradient_color_x 0%,$end_gradient_color_x 100%); /* IE10+ */
+  background: linear-gradient(to right,  $start_gradient_color_x 0%,$end_gradient_color_x 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_gradient_color_x', endColorstr='$end_gradient_color_x',GradientType=1 ); /* IE6-9 */
+}
+
+/* Prevents users from selecting contents */
+=noselect
+{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+=home_style($status = 1)
+{
+  @if($status == 1) {}
+  @if($status == 2) { 
+	#global_page_core-index-index #global_content { width: $theme_content_width; margin: 30px auto; padding: 0px; border-radius: 6px; }
+	.layout_theme_home > div { width: auto; padding: 0px 20px; }
+	.layout_theme_home_boxes .home_boxes { padding: 0px 10px; }
+	.layout_theme_home_community .home_community_img { width: 96%; margin: 20px auto 0px; }
+	.px_slider .backstretch { border-radius: 6px 6px 0px 0px; }
+	.px_slider .slides > li .px_slider_container > div > div { padding-left: 2%; padding-right: 2%; }
+	.px_slider .slides > li .px_slider_container.img_left div.px_slider_content, .px_slider .slides > li .px_slider_container.img_right div.px_slider_content { width: 42%; }
+	@media only screen and (max-width: $theme_content_width) {
+	  .px_slider .backstretch { border-radius: 0px; }
+	}
+  }
+}
+=header_style($status = 2)
+{
+  @if($status == 1) { 98%; }
+  @if($status == 2) { $zephyr_width_main; }
+  @if($status == 3) { $zephyr_width_main; }
+}
+=header_style_css($status = 2)
+{
+  @if($status == 1) {}
+  @if($status == 2) {}
+  @if($status == 3) {
+	  .layout_page_header { margin: 0px auto; width: $theme_topbar_width; border-radius: 0px 0px 5px 5px; }
+	  .layout_page_header .layout_main > div { padding: 0px 10px; }
+	  #global_header .header_2 .layout_core_menu_container > div.header_Bottom, #global_header .header_4 .layout_core_menu_container > div.header_Bottom, #global_header .header_5 .layout_core_menu_container > div.header_Bottom { border-radius: 0px 0px 5px 5px; }
+	  #global_header .header_2 .layout_core_menu_main > ul, #global_header .header_3 .layout_core_menu_main > ul, #global_header .header_4 .layout_core_menu_main > ul, #global_header .header_5 .layout_core_menu_main > ul { border: none; }
+	  #global_header .header_2 .layout_core_menu_main > ul > li:first-child > a, #global_header .header_4 .layout_core_menu_main > ul > li:first-child > a, #global_header .header_5 .layout_core_menu_main > ul > li:first-child > a { border-radius: 0px 0px 0px 5px; }
+	  html[dir="rtl"] #global_header .header_2 .layout_core_menu_main > ul > li:first-child > a, html[dir="rtl"] #global_header .header_4 .layout_core_menu_main > ul > li:first-child > a, html[dir="rtl"] #global_header .header_5 .layout_core_menu_main > ul > li:first-child > a { border-radius: 0px 0px 5px 0px; }
+	  .header_2 .layout_core_menu_main > ul > li:first-child > a, .header_3 .layout_core_menu_main > ul > li:first-child > a, .header_5 .layout_core_menu_main > ul > li:first-child > a { border-left: 0; }
+	  html[dir="rtl"] .header_2 .layout_core_menu_main > ul > li:first-child > a, html[dir="rtl"] .header_3 .layout_core_menu_main > ul > li:first-child > a, html[dir="rtl"] .header_5 .layout_core_menu_main > ul > li:first-child > a { border-right: 0; }
+  }
+}
+=header_layout($status = 1)
+{
+  @if($status == 1) { 
+	  #global_header .layout_theme_header_menu_bar .layout_core_menu_main > ul { border: none; }
+  }
+  @if($status == 2) {
+	  #global_header .layout_theme_header_menu_bar {
+		  padding-bottom: 32px;
+		  .layout_core_menu_container > div { clear: both; }
+		  .layout_core_menu_container > div.header_Bottom { background: $theme_topbar_menu_background_color; border-top: 1px solid $theme_topbar_menu_borders_color; position: absolute; width: 100%; left: 0px; right: 0px; bottom: 0px; }
+		  #global_search_form_container > form { border: none !important; background: none !important; filter: none !important; }
+		  .layout_core_menu_main { float: none !important; width: $theme_content_width; margin: 0px auto; }
+		  .layout_core_menu_main > ul { display: table; width: 100%; }
+		  .layout_core_menu_main > ul > li { display: table-cell; float: none !important; text-align: center; }
+		  .layout_core_menu_main > ul > li > a { height: auto; line-height: 30px; display: block; text-align: center; }
+	  }
+	  #global_header .header_2.no_menu { padding-bottom: 0px; }
+  }
+  @if($status == 3) {
+	  #global_header .layout_theme_header_menu_bar {
+		  padding-top: 32px;
+		  .layout_core_menu_container > div { clear: both; }
+		  .layout_core_menu_container > div.header_Top { background: $theme_topbar_menu_background_color; border-bottom: 1px solid $theme_topbar_menu_borders_color; position: absolute; width: 100%; left: 0px; right: 0px; top: 0px; }
+		  #global_search_form_container > form { border: none !important; background: none !important; filter: none !important; }
+		  .layout_core_menu_main { float: none !important; width: $theme_content_width; margin: 0px auto; }
+		  .layout_core_menu_main > ul { display: table; width: 100%; }
+		  .layout_core_menu_main > ul > li { display: table-cell; float: none !important; text-align: center; }
+		  .layout_core_menu_main > ul > li > a { height: auto; line-height: 30px; display: block; text-align: center; }
+	  }
+	  #global_header .header_3.no_menu { padding-top: 0px; }
+  }
+  @if($status == 4) {
+	  #global_header .layout_theme_header_menu_bar {
+		  padding-top: 32px; padding-bottom: 32px;
+		  .layout_core_menu_container > div { clear: both; }
+		  .layout_core_menu_container > div.header_Top { background: $theme_topbar_menu_background_color; border-bottom: 1px solid $theme_topbar_menu_borders_color; position: absolute; width: 100%; left: 0px; right: 0px; top: 0px; }
+		  .layout_core_menu_container > div.header_Bottom { background: $theme_topbar_menu_background_color; border-top: 1px solid $theme_topbar_menu_borders_color; position: absolute; width: 100%;
+		left: 0px; right: 0px; bottom: 0px; }
+		  #global_search_form_container > form { border: none !important; background: none !important; filter: none !important; }
+		  .layout_core_menu_main { float: none !important; }
+		  .layout_core_menu_main > ul { text-align: center; width: 100%; border: none !important; }
+		  .layout_core_menu_main > ul > li { display: inline-block; float: none !important; text-align: center; }
+		  .layout_core_menu_main > ul > li > a { height: auto; line-height: 30px; display: block; text-align: center; border: none !important; }
+		  #global_search_form_container > form, .layout_core_menu_mini > div > ul { height: auto; line-height: 30px; }
+		  #global_search_form_container > form > * { vertical-align: 1px; }
+		  .layout_core_menu_logo { width: 100%; padding-left: 0px; padding-right: 0px; text-align: center; }
+		  .has_banner .layout_core_menu_logo { float: left; width: auto; }
+		  .layout_core_menu_logo > a { display: inline-block; }
+		  .layout_core_menu_mini > div > ul > li > a { background-color: transparent; height: 26px; line-height: 22px; padding: 0px 5px; }
+		  .layout_core_menu_mini > div > ul > li.minimenu_profile_button > a > img { width: 24px; height: 24px; }
+		  .header_bannerad { float: right; }
+	  }
+	  #global_header .header_4.no_menu { padding-bottom: 0px; }
+	  html[dir="rtl"] #global_header .header_4 .has_banner .layout_core_menu_logo { float: right; }
+	  html[dir="rtl"] #global_header .header_4 .header_bannerad { float: left; }
+  }
+  @if($status == 5) {
+	  #global_header .layout_theme_header_menu_bar {
+		  padding-bottom: 32px;
+		  .layout_core_menu_container > div { clear: both; }
+		  .layout_core_menu_container > div.header_Bottom { background: $theme_topbar_menu_background_color; border-top: 1px solid $theme_topbar_menu_borders_color; position: absolute; width: 100%; left: 0px; right: 0px; bottom: 0px; }
+		  #global_search_form_container > form { border: none !important; background: none !important; filter: none !important; }
+		  .layout_core_menu_main > ul > li > a, #global_search_form_container > form, .layout_core_menu_mini > div > ul { height: auto; line-height: 30px; }
+		  #global_search_form_container > form > * { vertical-align: 1px; }
+		  .layout_core_menu_mini > div > ul > li > a { background-color: transparent; height: 26px; line-height: 22px; padding: 0px 5px; }
+		  .layout_core_menu_mini > div > ul > li.minimenu_profile_button > a > img { width: 24px; height: 24px; }
+		  .header_bannerad { line-height: 0px; float: right; }
+	  }
+	  html[dir="rtl"] #global_header .header_5 .header_bannerad { float: left; }
+  }
+  @if($status == 6) {
+	  html body { margin-left: $theme_topbar_vertical_width; }
+	  html[dir="rtl"] body { margin-left: 0px; margin-right: $theme_topbar_vertical_width; }
+	  #global_header {
+		  position: fixed; left: 0px; top: 0px; height: 100%; width: $theme_topbar_vertical_width;
+		  background-color: $theme_topbar_background_color;
+		  background-image: url(../../../$theme_topbar_background_img);
+		  background-repeat: $theme_topbar_background_imgrepeat;
+		  background-attachment: $theme_topbar_background_imgfixed;
+		  -webkit-background-size: $theme_topbar_background_imgcover;
+		  -moz-background-size: $theme_topbar_background_imgcover;
+		  -o-background-size: $theme_topbar_background_imgcover;
+		  background-size: $theme_topbar_background_imgcover;
+		  background-position: center center;
+		  border-right: $theme_topbar_border_bottom_width solid $theme_topbar_border_bottom_color;
+		  box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
+	  }
+	  html[dir="rtl"] #global_header { left: auto; right: 0px; box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.1);  }
+	  #global_header .layout_core_menu_logo { padding-left: 0px; padding-right: 0px; width: 100%; text-align: center; }
+	  #global_header .layout_page_header { background: none !important; border-bottom: none; box-shadow: none; position: relative; margin-left: auto; margin-right: auto; }
+	  #global_header .layout_page_header .layout_main { width: 100%; }
+	  #global_header .layout_page_header .layout_core_menu_main { float: none; clear: both; }
+	  #global_header .layout_page_header .layout_core_menu_main > ul { border-left: 0px transparent; border-right: 0px transparent; }
+	  #global_header .layout_page_header .layout_core_menu_main > ul > li { float: none; width: 100%; }
+	  #global_header .layout_page_header .layout_core_menu_main > ul > li > a { display: block; line-height: 36px; height: 36px; border-left: 0px transparent; border-right: 0px transparent; border-bottom: 1px solid $theme_topbar_menu_borders_color; }
+	  #global_header .layout_page_header .layout_core_menu_main > ul > li:first-child > a { border-top: 1px solid $theme_topbar_menu_borders_color; }
+	  #global_header .layout_page_header .layout_core_menu_main > ul > li > ul { top: 0px; right: auto; left: 100%; margin-left: 5px; margin-top: 0px; }
+	  html[dir="rtl"] #global_header .layout_page_header .layout_core_menu_main > ul > li > ul { right: 100%; left: auto; margin-left: 0px; margin-right: 5px; }
+	  #global_header .layout_page_header .layout_core_menu_mini { float: none; clear: both; padding: 0px 10px; margin-bottom: 10px; background-color: $theme_topbar_menu_link_hover_background_color; }
+	  #global_header .layout_page_header .layout_core_menu_mini > div > ul { text-align: center; height: 40px; line-height: 38px; }
+	  #global_header .layout_page_header .updates_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header #core_menu_mini_menu_update.mini_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header #messages_pulldown.mini_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header #requests_pulldown.mini_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header .mini_pulldown_active .pulldown_contents_wrapper
+	  { right: auto; left: 100%; margin-left: 5px; margin-top: 0px; top: 9px; }
+	  html[dir="rtl"] #global_header .layout_page_header .updates_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header #core_menu_mini_menu_update.mini_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header #messages_pulldown.mini_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header #requests_pulldown.mini_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header .mini_pulldown_active .pulldown_contents_wrapper
+	  { right: 100%; left: auto; margin-left: 0px; margin-right: 5px; }
+	  
+	  #global_header .layout_page_header #global_search_form_container { clear: both; width: 100%; border-top: 1px solid $theme_topbar_menu_borders_color; margin-top: 10px; }
+	  #global_header .layout_page_header #global_search_form_container > form { display: block; }
+	  #global_header .layout_page_header #global_search_form_container > form input { width: 90%; padding-left: 10%; }
+	  html[dir="rtl"] #global_header .layout_page_header #global_search_form_container > form input { background-position: 212px -134px; }
+	  #global_header .layout_page_header #global_search_form_container > form.search_active button#global_search_button, #global_header .layout_page_header #global_search_form_container > form.search_active button#search_field_clear
+	  { display: none; }
+	  
+	  #global_wrapper, #global_footer { padding: 0px 20px; }
+	  #global_wrapper #global_content, #global_footer .layout_page_footer { margin: 0px; }
+	  .social_icons { top: 20px !important; }
+	  .px_slider .backstretch { border-radius: 0px !important; }
+	  #global_page_core-index-index #global_wrapper { padding: 0px; }
+	  #global_page_core-index-index #global_wrapper #global_content { width: 100%; margin: 0px; border-radius: 0px; }
+	  
+	  @media only screen and (max-width: $theme_topbar_vertical_totalWidth) {
+		  .width_main, #global_page_core-index-index #global_wrapper > #global_content .layout_top > .layout_middle > div.generic_layout_container .tabbed_members_container { width: 100%; }
+		  #global_header .layout_page_header .layout_main { width: 100%; margin-left: auto; margin-right: auto; }
+		  #global_wrapper { padding: 0px; }
+		  #global_wrapper #global_content { width: 98%; padding-left: 1%; padding-right: 1%; border: none; }
+		  #global_page_core-index-index #global_wrapper #global_content { width: 100%; padding: 0px; }
+		  .layout_page_footer { width: 100%; border-left: none; border-right: none; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }
+		  html body #global_footer { width: auto !important; }
+		  html body #global_footer .layout_page_footer .width_main > div { padding: 0px; }
+		  .layout_left, .layout_right { width: 25%; padding: 0 0 0 0; margin: 0 0; }
+		  .layout_middle { padding: 0 1%; margin: 0 0; }
+		  .layout_top .layout_middle { padding: 0px; }
+		  
+		  .px_slider, .px_slider .slides > li { height: auto !important; }
+		  .px_slider div.px_slider_illustration, .px_slider div.px_slider_content { padding: 20px 0px !important; }
+		  .px_slider .slides > li .px_slider_container { padding: 0px 10px; }
+	  }
+	  @media only screen and (max-width: $theme_content_width) {
+		  #global_header { position: relative; width: 100%; box-shadow: 0px 1px 2px rgba(0,0,0,0.1); }
+		  html body { margin: 0px !important; }
+		  #global_header .layout_page_header .layout_core_menu_mini { float: right; background: transparent; clear: none; margin: 0px; padding: 0px; }
+		  html[dir="rtl"] #global_header .layout_page_header .layout_core_menu_mini { float: left; }
+		  #global_header .layout_page_header .layout_core_menu_mini > div > ul { height: $theme_topbar_elements_height; line-height: $theme_topbar_elements_height; }
+		  #global_header .layout_core_menu_logo { float: left; width: auto; padding-left: 10px; padding-right: 10px; }
+		  html[dir="rtl"] #global_header .layout_core_menu_logo { float: left; width: auto; }
+		  #global_header .layout_page_header #global_search_form_container { float: right; width: auto; clear: none; border: 0px transparent; margin: 0px; }
+		  html[dir="rtl"] #global_header .layout_page_header #global_search_form_container { float: left; }
+		  #global_header .layout_page_header #global_search_form_container > form input { padding: 0px 0px 0px 20px; width: 140px; }
+		  #global_header .layout_page_header .layout_core_menu_main { float: left; clear: none; }
+		  html[dir="rtl"] #global_header .layout_page_header .layout_core_menu_main { float: right; }
+		  #global_header .layout_page_header .layout_core_menu_main > ul > li > ul { top: 100%; right: 0px; left: auto; margin-left: 0px; margin-top: 5px; }
+		  html[dir="rtl"] #global_header .layout_page_header .layout_core_menu_main > ul > li > ul { right: auto; left: 0px; margin-left: 0px; margin-right: 0px; }
+		  #global_header .layout_page_header .layout_core_menu_main > ul > li { float: left; width: auto; }
+		  html[dir="rtl"] #global_header .layout_page_header .layout_core_menu_main > ul > li { float: right; }
+		  #global_header .layout_page_header .layout_core_menu_main > ul > li > a { border: 0px transparent !important; height: $theme_topbar_elements_height; line-height: $theme_topbar_elements_height; }
+		  
+		  #global_header .layout_page_header .updates_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header #core_menu_mini_menu_update.mini_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header #messages_pulldown.mini_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header #requests_pulldown.mini_pulldown_active .pulldown_contents_wrapper, #global_header .layout_page_header .mini_pulldown_active .pulldown_contents_wrapper
+		  { right: 0px; left: auto; margin-left: 0px; margin-top: 5px; top: 100%; }
+		  html[dir="rtl"] #global_header .layout_page_header .updates_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header #core_menu_mini_menu_update.mini_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header #messages_pulldown.mini_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header #requests_pulldown.mini_pulldown_active .pulldown_contents_wrapper, html[dir="rtl"] #global_header .layout_page_header .mini_pulldown_active .pulldown_contents_wrapper
+		  { right: auto; left: 0px; margin-left: 0px; margin-right: 0px; }
+	  }
+	  
+  }
+}
+=footer_style($status = 2)
+{
+  @if($status == 1) { 98%; }
+  @if($status == 2) { $zephyr_width_main; }
+  @if($status == 3) { $zephyr_width_main; }
+}
+=footer_style_css($status = 2)
+{
+  @if($status == 1) {}
+  @if($status == 2) {}
+  @if($status == 3) {
+	#global_footer { margin: 0px auto; width: $theme_footer_width; border-radius: 5px 5px 0px 0px; }
+	.layout_page_footer > div { padding-left: 10px; padding-right: 10px; }	  
+  }
+}
+
+=font_name($status = false)
+{
+  @if($status == true) { $zephyr_google_fontfix; }
+  @if($status == false) { $zephyr_main_font; }
+}
+=font_name_headings($status = false)
+{
+  @if($status == true) { $zephyr_google_headingsfontfix; }
+  @if($status == false) { $zephyr_headings_font; }
+}
+=header_iconscolor($status = 1)
+{
+  @if($status == 1) { sprite_black.png }
+  @if($status == 2) { sprite_white.png }
+}
+
+=responsive_layout($status = false)
+{
+  @if($status == true) { @include "media-queries.css"; }
+}
+=content_style($status = 1)
+{
+  @if($status == 1) {}
+  @if($status == 2) {
+	  #global_wrapper .layout_left > div, #global_wrapper .layout_right > div, #global_wrapper .layout_middle > div, #global_wrapper .layout_middle > div.layout_core_container_tabs > .generic_layout_container, .browsemembers_criteria, .chat_container, #global_content > .headline, #global_content > form.global_form, #global_content > table, .compose-content, .notifications_layout, body .layout_right > .generic_layout_container, body .tl_left > .generic_layout_container, body .timeline-profile-tabs .he-tab-pane:not(:last-child), .like_interests_wrapper, #global_page_like-interests-index .headline + .description, .wall-stream
+	  { background: transparent; border: none; }
+	  #global_content { background-color: $theme_widget_foreground_background_color; border-left: 1px solid $theme_widget_foreground_border_color; border-right: 1px solid $theme_widget_foreground_border_color; padding-left: 10px; padding-right: 10px; }
+	  #memberphotomenu_photo { margin: -30px -10px 10px !important; border-radius: 0px !important; }
+	  #memberphotomenu_photo > div { margin-top: 0px !important; }
+  }
+}
+=news_feed_style($status = 1)
+{
+  @if($status == 1) {}
+  @if($status == 2) {
+	  ul.feed .feed_item_photo { margin: 0px !important; padding-right: 10px; position: relative; }
+	  html[dir="rtl"] ul.feed .feed_item_photo { padding-right: 0px; padding-left: 10px; }
+	  ul.feed .feed_item_photo:after
+	  { content: " "; display: block; height: 1px; width: 10px; background: $theme_widget_foreground_border_color; position: absolute; right: 0px; z-index: 1; top: 50%; }
+	  html[dir="rtl"] ul.feed .feed_item_photo:after { right: auto; left: 0px; }
+	  ul.feed .feed_item_photo > a > img { border-radius: 100%; }
+	  ul.feed .feed_item_body { overflow: hidden !important; }
+	  ul.feed .feed_item_photo > a { display: inline-block; border: 3px solid $theme_widget_foreground_border_color; border-radius: 100%; }
+  }
+  @if($status == 3) {
+	  ul.feed > li { padding-bottom: 25px; }
+	  ul.feed .feed_item_photo { margin: 0px 0px -27px 0px !important; clear: both; width: 100%; }
+	  ul.feed .feed_item_photo > a { display: inline-block !important; border: 3px solid $theme_widget_foreground_border_color; border-radius: 100%; margin-left: 10px; }
+	  ul.feed .feed_item_photo > a > img { border-radius: 100%; }
+	  ul.feed .feed_item_body { clear: both; padding-top: 20px; }
+	  html[dir="rtl"] ul.feed .feed_item_photo > a { margin-left: 0px; margin-right: 10px; }
+	  ul.feed .feed_item_icon { padding: 0px !important; overflow: hidden; position: absolute; top: 10px; right: 10px; }
+	  html[dir="rtl"] ul.feed .feed_item_icon { right: auto; left: 10px; }
+	  ul.feed .feed_item_date { color: $theme_font_color; }
+	  .wall-menu-expand-link { top: 30px; }
+  }
+  @if($status == 4) {
+	  ul.feed > li { padding-bottom: 25px; }
+	  ul.feed .feed_item_photo { margin: 0px -27px 0px 0px !important; }
+	  html[dir="rtl"] ul.feed .feed_item_photo { margin: 0px 0px 0px -27px !important; }
+	  ul.feed .feed_item_photo > a { display: inline-block !important; border: 3px solid $theme_widget_foreground_border_color; border-radius: 100% 0% 100% 100%; margin-left: 0px; }
+	  html[dir="rtl"] ul.feed .feed_item_photo > a { border-radius: 0% 100% 100% 100%; margin-right: 0px; }
+	  ul.feed .feed_item_photo > a > img { border-radius: 100% 0% 100% 100%; }
+	  html[dir="rtl"] ul.feed .feed_item_photo > a > img { border-radius: 0% 100% 100% 100%; }
+	  ul.feed .feed_item_body { overflow: hidden !important; padding-left: 25px; }
+	  html[dir="rtl"] ul.feed .feed_item_body { padding-left: 0px; padding-right: 25px; }
+	  ul.feed .feed_item_body div[id^="comment-likes-activity-item-"] { margin-left: -25px; }
+	  html[dir="rtl"] ul.feed .feed_item_body div[id^="comment-likes-activity-item-"] { margin-left: 0px; margin-right: -25px; }
+	  ul.feed .feed_item_icon { padding: 10px 10px 10px 35px !important; }
+	  html[dir="rtl"] ul.feed .feed_item_icon { padding: 10px 35px 10px 10px !important; }
+	  ul.feed.wall-feed .feed_item_body > .comments { margin-left: -25px; }
+	  html[dir="rtl"] ul.feed.wall-feed .feed_item_body > .comments { margin-left: 0px; margin-right: -25px; }
+	  ul.feed.wall-feed .feed_item_icon { padding: 10px !important; }
+  }
+}
+=custom_css
+{
+  $zephyr_custom_css
+}

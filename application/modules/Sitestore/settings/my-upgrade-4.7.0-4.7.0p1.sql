@@ -1,0 +1,1 @@
+ALTER TABLE `engine4_sitestoreproduct_otherinfo` ADD `bundle_product_info` TEXT NULL;

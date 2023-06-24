@@ -1,0 +1,148 @@
+"SITEMOBILE_LOADING_PAGE_MESSAGE";"Loading..."
+"SITEMOBILE_ERROR_LOADING_PAGE_MESSAGE";"Error On Loading Page"
+"SITEMOBILE_LOADING_PHOTOGALLERY_MESSAGE";"Loading..."
+"SITEMOBILE_PAGE_BACK";"Back"
+"mobilepagetitle-sitemobile-browse-browse";"Dashboard"
+"SM_GO_BACK_BUTTON";"Back"
+
+"SITEMOBILE_PLUGIN_TITLE";"Mobile Plugin"
+
+"SITEMOBILE_HOME_ICON_DESC";"Use this area to manage the mobile home icon for your website. You can upload home screen icon of your choice here. Click "Edit" to browse another icon for a particular size and click "Recreate from original image" to recreate the icon."
+
+
+"SITEMOBILE_VIEWS_SCRIPTS_ADMINMENU_INDEX_DESCRIPTION";"Use this area to manage the various navigation menus that appear in the dashboard of mobile view of your community. When you select the menu you wish to edit, a list of the menu items it contains will be shown. You can drag these items up and down to change their order. 
+You can also add a separator to visually categorize Dashboard / Panel Navigation Menu links."
+
+"SITEMOBILE_LAYOUT_DESC";"Use the layout editor to decide what content appears on specific pages or in your site-wide header and footer. Click and drag the colored ""blocks"" to arrange the content you want on each page. Drag blocks to and from the ""Available Blocks"" area to add or remove them from your page. Use ""HTML Blocks"" if you want to drop in raw HTML or other content."sss
+
+"SITEMOBILE_VIEWS_SCRIPTS_ADMINTHEMES_THEMES_DESCRIPTION";"Customize your community's overall look and feel by editing your current theme. Your theme consists of several CSS files. If you want to make custom changes to these files, select the one you want to edit from the pull-down below."
+
+"SITEMOBILE_VIEWS_SCRIPTS_ADMINTHEMES_THEMES_ROLLER_DESCRIPTION";"Customize your community's overall look and feel by editing your current theme. If you want to make custom changes to these themes, edit theme settings in left side form. You can also edit swatches here. Select the color you want and drag it to the theme. If you would rather just pick an entirely different theme."
+
+"SITEMOBILE_HTML_SETTINGS_DESC";"Use this area to manage view attributes of the various components of your site. Click "Edit" to change the attributes of components. These settings will change the mobile UI of your community."
+
+"SITEMOBILE_SPLASH_DESC";"Use this area to upload an image for the mobile splash screen of your choice. You can view uploaded splash screen image’s preview by clicking on "Preview" link. Below, you can also add more splash screen images by using the "Add more" link. 
+Note: You can add only one splash screen image for a specific dimension"
+
+"SITEMOBILE_VIEWS_SCRIPTS_ADMINTHEMES_INDEX_REVERTTHEMEFILE";"Are you sure that you want to revert all the changes you have made to this theme? If yes, The original theme will be restored immediately and your changes lost. If you want to backup your changes, export it to your computer first."
+
+"SITEMOBILE_VIEWS_SCRIPTS_ADMINTHEMES_INDEX_REVERTTHEMECHANGES";"Are you sure that you want to revert all the changes you have made to this theme? If yes, The original theme will be restored immediately and your changes lost. If you want to backup your changes, export it to your computer first."
+
+"SITEMOBILE_STORAGE_UPLOAD_DESCRIPTION";"Click ""Upload Photos"" to select one or more photos from your system. After you have selected the photos click the button below your photo list to save them to your album."
+
+"SITEMOBILE_STORAGE_UPLOAD_MUSIC_DESCRIPTION";"Click ""Add Music"" to select one or more songs from your system. After you have selected the songs click the button below the song list to save them to your playlist."
+
+"SITEMOBILE_MANAGE_MODULE_DESC";""
+
+# User
+"mobilepagetitle-user-home-index";"Member Home Page"
+"mobilepagetitle-user-browse-index";"Browse Members"
+"mobilepagetitle-core-index-index";""
+
+#Album
+"mobilepagetitle-album-upload-index";"Add New Photos"
+"mobilepagetitle-album-browse-index";"Browse Albums"
+"mobilepagetitle-album-manage-index";"My Albums"
+"mobilepagetitle-album-editphotos-album";"Manage Photos"
+"mobilepagetitle-album-edit-album";"Edit Settings"
+
+# Blog
+"mobilepagetitle-blog-index-index";"Browse Entries"
+"mobilepagetitle-blog-manage-index";"My Entries"
+"mobilepagetitle-blog-create-index";"Write New Entry"
+"mobilepagetitle-blog-view-index";"Blog"
+"mobilepagetitle-blog-edit-index";"Edit Blog"
+
+#Group
+"mobilepagetitle-group-browse-index";"Browse Groups"
+"mobilepagetitle-group-manage-index";"My Groups"
+"mobilepagetitle-group-create-index";"Create New Group"
+"mobilepagetitle-group-edit-group";"Edit Event"
+
+#Event
+"mobilepagetitle-event-browse-index";"Browse Events"
+"mobilepagetitle-event-manage-index";"My Events"
+"mobilepagetitle-event-create-index";"Create New Event"
+
+#Video
+"mobilepagetitle-video-browse-index";"Browse Videos"
+"mobilepagetitle-video-manage-index";"My Videos"
+"mobilepagetitle-video-create-index";"Post New video"
+"mobilepagetitle-video-edit-index";"Edit Video"
+
+#Message
+"mobilepagetitle-messages-inbox-messages";"Inbox"
+"mobilepagetitle-messages-outbox-messages";"Sent Messages"
+"mobilepagetitle-messages-compose-messages";"Compose Message"
+
+#Notifications
+"mobilepagetitle-activity-index-notifications";"Notifications"
+
+#search
+"mobilepagetitle-core-index-search";"Search"
+
+#settings
+"mobilepagetitle-user-general-settings";"Settings"
+"mobilepagetitle-user-privacy-settings";"Privacy"
+"mobilepagetitle-user-notifications-settings";"Notifications"
+"mobilepagetitle-user-password-settings";"Change Password"
+"mobilepagetitle-user-delete-settings";"Delete User"
+"mobilepagetitle-user-network-settings";"Network Setting"
+"Status";"Status"
+"Photo";"Photo"
+"Check In";"Check In"
+"Update Status";"Update Status"
+"mobilepagetitle-user-network-settings";"Networks"
+
+#USER
+"SM_USER_SELF";"You"
+"%s mutual follower.";"%s mutual follower.";"%s mutual followers."
+"%s mutual friend.";"%s mutual friend.";"%s mutual friends."
+"%s - %1s of %2s";"%s - %1s of %2s"
+"%s follower.";"%s follower.";"%s followers."
+"%s friend.";"%s friend.";"%s friends."
+
+"SITEMOBILE_MODULE_NOT_SUPPORT";"Not Compatible with Mobile / Tablet Plugin"
+"SITEMOBILE_MODULE_NOT_SUPPORT_DESC";"You cannot view this page in Mobile as this page belongs to a module which might not be compatible with the ""Mobile / Tablet Plugin""."
+"Add Photo";"Add Photo"
+"Sorry, the browser you are using does not support Photo uploading. You can create an album from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. You can create an album from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to create an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to create an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to create a Group from your mobile / tablet without uploading a profile photo for it. You can later upload the profile photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to create a Group from your mobile / tablet without uploading a profile photo for it. You can later upload the profile photo from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. You can edit your profile picture from your desktop.";"Sorry, the browser you are using does not support Photo uploading. You can edit your profile picture from your desktop."
+"Sorry, the browser you are using does not support Photo uploading, so please skip this step for now. You can upload a profile picture from your desktop.";"Sorry, the browser you are using does not support Photo uploading, so please skip this step for now. You can upload a profile picture from your desktop."
+"Main Photo";"Main Photo"
+"Profile Photo";"Profile Photo"
+"Start typing a name...";"Start typing a name..."
+"Sorry, the browser you are using does not support Photo uploading. You can upload the Photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. You can upload the Photo from your Desktop."
+
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to create an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to create an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to create an Offer from your mobile / tablet without uploading a main photo for it. You can later upload the offer picture from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to create an Offer from your mobile / tablet without uploading a main photo for it. You can later upload the offer picture from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit an Offer from your mobile / tablet without uploading a main photo for it. You can later upload the offer picture from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit an Offer from your mobile / tablet without uploading a main photo for it. You can later upload the offer picture from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit an Event from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. You can upload photo for note from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. You can upload photo for note from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to create a Note from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to create a Note from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop."
+"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit a Note from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop.";"Sorry, the browser you are using does not support Photo uploading. We recommend you to edit a Note from your mobile / tablet without uploading a main photo for it. You can later upload the main photo from your Desktop."
+"Sorry, the browser you are using does not support Document uploading. You can upload document from your Desktop.";"Sorry, the browser you are using does not support Document uploading. You can upload document from your Desktop."
+
+#Sitemobile
+"SITEMOBILE_MUSIC_FEED_PREVIEW_DESCRIPTION";"Your song has been attached to your post. If you want to detach this song then click cancel."
+
+"%s reply";"%s reply";"%s replies"
+"New to %s?";"New to %s?"
+
+"Reset Password";"Reset Password"
+
+"%s to read the terms of services.";"%s to read the terms of services."
+"Click here";"Click here"
+"Start typing...";"Start typing..."
+"Pull down to refresh...";"Pull down to refresh..."
+"Release to refresh...";"Release to refresh..."
+"Pull up to load more...";"Pull up to load more..."
+"Release to load more...";"Release to load more..."
+"There are no more posts to show.";"There are no more posts to show."
+"ITEM_TYPE_SITEPAGEDOCUMENT_DOCUMENT";"Documents page"
+"Advanced Album";"Advanced Album"
+"Advanced Member";"Advanced Member"
+"Files To Upload";"Files To Upload"
+"%1sClick here%2s to read the terms of service";"%1sClick here%2s to read the terms of service"

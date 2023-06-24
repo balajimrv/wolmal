@@ -1,0 +1,28 @@
+"_EMAIL_SITESTOREADMINCONTACT_CONTACTS_EMAIL_NOTIFICATION_TITLE";"Contact Showroom
+Owners Email Notification"
+"_EMAIL_SITESTOREADMINCONTACT_CONTACTS_EMAIL_NOTIFICATION_DESCRIPTION";"This
+email is sent to Showroom Admins when Site Admin contact them through emails or
+messages."
+"_EMAIL_SITESTOREADMINCONTACT_CONTACTS_EMAIL_NOTIFICATION_SUBJECT";"[subject]"
+"_EMAIL_SITESTOREADMINCONTACT_CONTACTS_EMAIL_NOTIFICATION_BODY";"
+[template_header]
+[header]
+
+[message]
+
+[footer]
+[template_footer]"
+"Status";"Status"
+"Hold down the CTRL key to select or de-select specific Store Status for which Admins of corresponding Stores need to be sent emails.";"Hold down the CTRL key to select or de-select specific Showroom Status for which Admins of corresponding Showrooms need to be sent emails."
+"All Stores";"All Showrooms"
+"Draft Stores";"Draft Showrooms"
+"Published Stores";"Published Showrooms"
+"Open Stores";"Open Showrooms"
+"Closed Stores";"Closed Showrooms"
+"Featured Stores";"Featured Showrooms"
+"Sponsored Stores";"Sponsored Showrooms"
+"Approved Stores";"Approved Showrooms"
+"Dis-approved Stores";"Dis-approved Showrooms"
+"Running Stores";"Running Showrooms"
+"Expired Stores";"Expired Showrooms"
+"Hold down the CTRL key to select or de-select specific Store Status for which Admins of corresponding Stores need to be sent messages.";"Hold down the CTRL key to select or de-select specific Showroom Status for which Admins of corresponding Showrooms need to be sent messages."

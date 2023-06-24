@@ -1,0 +1,140 @@
+{
+  "type": "theme",
+  "name": "bamboo",
+  "version": "4.9.1",
+  "revision": "10113",
+  "path": "application\/themes\/bamboo",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Bamboo",
+  "description": null,
+  "thumb": "bamboo_theme.jpg",
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Bamboo",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Theme",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/themes\/bamboo": {
+      "type": "directory",
+      "path": "application\/themes\/bamboo",
+      "structure": [
+        {
+          "path": "mobile.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 18817,
+          "sha1": "b64d83606057f1b25c5fafb540785e506ec528f8"
+        },
+        {
+          "path": "constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 6647,
+          "sha1": "6cd9a0cdd0a48946ffbf03a700962751bd635d41"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 960,
+          "sha1": "6d2a40230efbaa320ef28a4f746deb441ab20a61"
+        },
+        {
+          "path": "theme.css",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 29880,
+          "sha1": "861e6c42e1b11ae162986daf90a34051633c7ea2"
+        },
+        {
+          "path": "bamboo_theme.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6011,
+          "sha1": "4b8b956190d27babec19ba8b64ce181c55c89ba5"
+        },
+        {
+          "path": "images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "images\/search_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 259,
+          "sha1": "842e82b92ef61b21b0f59f47e0f68a4f716a04a3"
+        },
+        {
+          "path": "images\/button_bg.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 694,
+          "sha1": "d79580619049097671d628568a3ec3b61dfd8099"
+        },
+        {
+          "path": "images\/stripes.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 1805,
+          "sha1": "f80870c2455caad954036f65a7274b195c8b75c3"
+        },
+        {
+          "path": "images\/body_bg.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 1909,
+          "sha1": "658e5c66ef8599d1a1668c1a24fcdad8443ed824"
+        },
+        {
+          "path": "images\/button_bg2.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 694,
+          "sha1": "93e62ff70f1111f1d19635a755f7dd222602359f"
+        }
+      ]
+    }
+  }
+}

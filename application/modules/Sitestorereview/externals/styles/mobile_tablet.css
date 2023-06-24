@@ -1,0 +1,77 @@
+/* $Id: mobile_tablet.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+/* use the background position according to the table above to display the required images*/
+ul.rating{ background-image: url(~/application/modules/Sitestorereview/externals/images/star-matrix.png); background-repeat:no-repeat; width:80px; height:16px; padding:0; list-style:none; clear:both;margin: 0;}
+.nostar{background-position:0 0}
+.onestar{background-position:0 -16px;}
+.twostar{background-position:0 -32px;}
+.threestar{background-position:0 -48px;}
+.fourstar{background-position:0 -64px;}
+.fivestar{background-position:0 -80px }
+ul.rating li{cursor: pointer;float:left;text-indent:-999em;}
+ul.rating li a{position:absolute;left:0;top:0;width:16px;height:16px;text-decoration:none;z-index: 200;}
+ul.rating li.one a{left:0;}
+ul.rating li.two a{left:16px;}
+ul.rating li.three a{left:32px;}
+ul.rating li.four a{left:48px;}
+ul.rating li.five a{left:64px;}
+ul.rating li a:hover{z-index:2;width:160px;height:16px;overflow:hidden;left:0;}
+ul.rating li.one a:hover{background-position:0 -176px;}
+ul.rating li.two a:hover{background-position:0 -192px;}
+ul.rating li.three a:hover{background-position:0 -208px;}
+ul.rating li.four a:hover{background-position:0 -224px;}
+ul.rating li.five a:hover{background-position:0 -240px;}
+/* end rating code */
+
+/*Show Rating Star*/
+.show-rating{ background-image: url(~/application/modules/Sitestorereview/externals/images/show-star-matrix.png);background-repeat:no-repeat;width:80px;height:16px;padding:0;list-style:none;clear:both;margin:2px auto 4px auto;}
+.show-rating.nostar{background-position:0 0;}
+.show-rating.halfstar{background-position:0 -16px;}
+.show-rating.onestar{background-position:0 -32px;}
+.show-rating.onehalfstar{background-position:0 -48px;}
+.show-rating.twostar{background-position:0 -64px;}
+.show-rating.twohalfstar{background-position:0 -80px;}
+.show-rating.threestar{background-position:0 -96px;}
+.show-rating.threehalfstar{background-position:0 -112px;}
+.show-rating.fourstar{background-position:0 -128px;}
+.show-rating.fourhalfstar{background-position:0 -144px;}
+.show-rating.fivestar{background-position:0 -160px;}
+.show-rating li{cursor: pointer;float:left;margin:0 3px;text-indent:-999em;clear:none !important;}
+.show-rating li a{position:absolute;left:0;top:0;width:16px;height:16px;text-decoration:none;z-index: 200;}
+
+/*Ratting Parameters*/
+.rating-box{ background-image: url(~/application/modules/Sitestorereview/externals/images/rating-img.png); background-repeat:no-repeat;height:10px;padding:0; list-style:none;clear:both; margin:0; width:130px;}
+.nostar-box{background-position:0 0;}
+.onestar-box{background-position:0 -12px;}
+.twostar-box{background-position:0 -24px;}
+.threestar-box{background-position:0 -36px;}
+.fourstar-box{background-position:0 -48px;}
+.fivestar-box{background-position:0 -60px;}
+ul.rating-box li{cursor: pointer;float:left;margin:0 3px;text-indent:-999em;clear:none !important;}
+ul.rating-box li a{position:absolute;left:0;top:0;width:24px;height:10px;text-decoration:none;z-index: 200;}
+ul.rating-box li.one a{left:0px;}
+ul.rating-box li.two a{left:27px;}
+ul.rating-box li.three a{left:53px;}
+ul.rating-box li.four a{left:79px;}
+ul.rating-box li.five a{left:106px;}
+ul.rating-box li a:hover{background-image: url(~/application/modules/Sitestorereview/externals/images/rating-img.png);z-index:2;height:10px;overflow:hidden;left:0;width:130px;}
+ul.rating-box li.one a:hover{background-position:0 -12px;}
+ul.rating-box li.two a:hover{background-position:0 -24px;}
+ul.rating-box li.three a:hover{background-position:0 -36px;}
+ul.rating-box li.four a:hover{background-position:0 -48px;}
+ul.rating-box li.five a:hover{background-position:0 -60px;}
+
+/*Show Rating Parameters*/
+.rating-box-small{  background-image: url(~/application/modules/Sitestorereview/externals/images/rating-img-small.png); background-repeat:no-repeat; height:5px;padding:0;list-style:none;clear:both;margin:3px;width:63px;}
+.rating-box-small li{cursor: pointer;float:left;text-indent:-999em;clear:none !important;padding:0px !important;font-size:0px;}
+.nostar-small-box{background-position:0 0;}
+.halfstar-small-box{background-position:0 -6px;}
+.onestar-small-box{background-position:0 -12px;}
+.onehalfstar-small-box{background-position:0 -18px;}
+.twostar-small-box{background-position:0 -24px;}
+.twohalfstar-small-box{background-position:0 -30px;}
+.threestar-small-box{background-position:0 -36px;}
+.threehalfstar-small-box{background-position:0 -42px;}
+.fourstar-small-box{background-position:0 -48px;}
+.fourhalfstar-small-box{background-position:0 -54px;}
+.fivestar-small-box{background-position:0 -60px;}

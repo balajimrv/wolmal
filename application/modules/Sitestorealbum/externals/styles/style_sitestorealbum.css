@@ -1,0 +1,403 @@
+ /* $Id: style_sitestorealbum.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+/*upload form*/
+#global_page_sitestore-photo-upload-album .global_form div.form-label{
+	width:auto;
+}
+#global_page_sitestore-photo-upload-album .global_form div.form-element{
+	clear:both;
+}
+#global_page_sitestore-photo-upload-album .global_form #search-wrapper div.form-label,
+#global_page_sitestore-photo-upload-album .global_form #file-wrapper div.form-label,
+#global_page_sitestore-photo-upload-album .global_form #submit-wrapper div.form-label{
+	display:none;
+}
+#global_page_sitestore-photo-upload-album .global_form > div > div > h3 + div, 
+#global_page_sitestore-photo-upload-album .global_form > div > div > h3 + p + div{
+	margin-top:10px;
+}
+
+/* sitestore photos tab */
+.layout_sitestore_photos_sitestore > h3 {
+	display:none;
+}
+.sitestore_profile_photos_head {
+	clear: both;
+	display: block;
+	float: left;
+	font-size: 13px;
+	margin-top: 3px;
+	width: 100%;
+}
+.sitestore_album_box {
+	padding:5px;
+	overflow:auto;
+	margin-bottom:15px;
+	border-width:1px;
+	border-style:solid;
+}
+.sitestore_profile_album_title {
+	width:150px;
+	clear:both;
+	margin-top:5px;
+	font-weight:bold;
+}
+.sitestore_profile_album_stat {
+	font-size:.8em;
+	margin-top:3px;
+	clear:both;
+	width:150px;
+}
+.sitestore_profile_album_paging {
+	clear:both;
+	float:right;
+	width:100%;
+	margin-bottom:5px;
+}
+.sitestore_profile_album_paging > div {
+	padding:0 3px;
+	float:right;
+}
+.sitestore_profile_album_paging > div.paging_count {
+	font-weight:bold;
+}
+.sitestore_profile_album_paging > div.paging_count a {
+	font-weight:normal;
+}
+ul.sitestore_thumbs {
+	overflow: hidden;
+}
+ul.sitestore_thumbs > li {
+	float: left;
+	margin: 10px 10px;
+	height: 120px;
+}
+html[dir="rtl"] ul.sitestore_thumbs > li {
+	float: right;
+	margin: 0px 0px 0px 10px;
+}
+ul.sitestore_thumbs .thumbs_photo {
+	display: inline-block;
+	padding: 4px;
+	vertical-align: bottom;
+}
+ul.sitestore_thumbs .thumbs_photo:hover {
+	cursor: pointer;
+}
+ul.sitestore_thumbs .thumbs_photo > span {
+	display: block;
+	width: 142px;
+	height: 106px;
+	background-position: center 50%;
+	background-repeat: no-repeat;
+}
+ul.sitestore_thumbs .thumbs_info {
+	padding-top: 4px;
+	display: block;
+	font-size: .8em;
+	overflow: hidden;
+}
+ul.sitestore_thumbs .thumbs_title {
+	width: 142px;
+	display: block;
+	font-weight: bold;
+	word-wrap: break-word;
+	max-height: 2.6em;
+	overflow: hidden;
+}
+ul.sitestore_thumbs .thumbs_nocaptions > li {
+	height: auto;
+	margin-bottom: 10px;
+}
+/*view album*/
+.layout_sitestorealbum_sitestorealbumlist_link{
+	margin-bottom:15px;
+}
+.sitestore_album_options {
+	margin: 5px 0px 12px 0px;
+}
+.sitestore_album_options a {
+	margin:3px 15px 3px 0;
+}
+html[dir="rtl"] .sitestore_album_options a {
+	margin:3px 0 3px 15px;
+}
+/*view photo*/
+div.sitestore_photo_view {
+	margin: 25px auto 0px auto;
+	max-width: 750px;
+	min-width: 400px;
+	overflow: visible;
+}
+div.sitestore_photo_view #media_photo {
+	margin: auto;
+	display: block;
+	max-width: 720px;
+}
+div.sitestore_photo_view .sitestore_photo_nav {
+	clear: both;
+	overflow: visible;
+	margin-bottom: 4px;
+}
+div.sitestore_photo_view .sitestore_photo_nav > div {
+	float: left;
+	overflow: visible;
+}
+div.sitestore_photo_view .sitestore_photo_nav > div + div {
+	float: none;
+	text-align: right;
+}
+div.sitestore_photo_view .sitestore_photo_nav > div + div > a + a {
+	margin-left: 20px;
+}
+div.sitestore_photo_info {
+	text-align: center;
+	padding: 10px;
+	border-width: 5px;
+	border-style:solid;
+	clear:both;
+}
+div.sitestore_photo_info p {
+	text-align: left;
+}
+div.sitestore_photo_container {
+	position: relative;
+	display: inline-block;
+}
+div.sitestore_photo_container a:link {
+	text-decoration: none;
+}
+div.sitestore_photo_container img{
+	max-width:720px;
+}
+div.sitestore_photo_view > span + div > a {
+	display: block;
+	margin-bottom: 5px;
+	text-align: center;
+}
+div.sitestore_photo_view > span + div > a:link {
+	display: block;
+	margin-bottom: 5px;
+	text-align: center;
+}
+div.sitestore_photo_info .sitestore_photo_title {
+	margin-top: 5px;
+	font-weight: bold;
+}
+div.sitestore_photo_info .sitestore_photo_description {
+	font-size: .8em;
+	margin-top: 3px;
+}
+div.sitestore_photo_info .sitestore_photo_title + .sitestore_photo_tags, div.sitestore_photo_info .sitestore_photo_description + .sitestore_photo_tags {
+	margin-top: 15px;
+}
+div.sitestore_photo_info .sitestore_photo_tags {
+	font-size: .8em;
+	margin-top: 5px;
+}
+div.sitestore_photo_info .sitestore_photo_date {
+	font-size: .8em;
+	margin-top: 5px;
+}
+div.sitestore_photo_view > div.comments {
+	margin-top: 15px;
+}
+.store_photo_right_options a {
+	float:left;
+	height:16px;
+	margin-left:10px;
+	width:16px;
+}
+/*edit photos*/
+ul.sitestores_editphotos > li {
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	padding-top: 15px;
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 15px;
+}
+ul.sitestores_editphotos .sitestores_editphotos_photo {
+	float: left;
+	margin-right: 15px;
+	overflow: hidden;
+}
+ul.sitestores_editphotos .sitestores_editphotos_photo img {
+	display: block;
+	margin: 3px;
+	width: 170px;
+}
+ul.sitestores_editphotos .sitestores_editphotos_info {
+	overflow: hidden;
+}
+#global_page_sitestore-album-edit h3, #global_page_sitestore-photo-photoedit h3 {
+	margin-bottom:10px;
+}
+#global_page_sitestore-album-edit #title-wrapper input, 
+#global_page_sitestore-photo-photoedit input, 
+ul.sitestores_editphotos .sitestores_editphotos_title_input input {
+	margin: 2px 0px 6px 0px;
+	width: 25em;
+}
+#global_page_sitestore-photo-photoedit textarea, ul.sitestores_editphotos .sitestores_editphotos_caption_input textarea {
+	margin: 2px 0px 6px 0px;
+	width: 25em;
+	height: 3em;
+	min-height: 0px;
+}
+ul.sitestores_editphotos .albums_editphotos_label ,
+ul.sitestores_editphotos .photo-delete-wrapper {
+	float: left;
+}
+ul.sitestores_editphotos .albums_editphotos_cover {
+	float: left;
+	margin-left:10px;
+}
+
+ul.sitestores_editphotos .photo-delete-wrapper > label {
+	display: block;
+	float: left;
+}
+/*SITESTORE ALBUM SIDEBAR WIDGET START HERE*/
+.sitestorealbum_sidebar .sitestorealbum_sidebar_header {
+	clear:both;
+	overflow:auto;
+	padding-bottom:5px;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+}
+.sitestorealbum_sidebar > div + ul + div{
+	margin:5px auto;
+}
+.sitestorealbum_sidebar .sitestorealbum_sidebar_header span {
+	float:left;
+	font-size:11px;
+}
+.sitestorealbum_sidebar .sitestorealbum_sidebar_header span + span {
+	float:right;
+}
+.sitestorealbum_sidebar ul li {
+	padding:5px 0;
+	clear:both;
+	overflow:auto;
+}
+.sitestorealbum_sidebar ul li > a {
+	float:left;
+	margin-right:5px;
+}
+.sitestorealbum_sidebar_photo {
+	float:left;
+}
+.sitestorealbum_sidebar ul li .sitestorealbum_info {
+	overflow:auto;
+}
+.sitestorealbum_sidebar ul li .sitestorealbum_title {
+	font-weight:bold;
+}
+.sitestorealbum_sidebar ul li .sitestorealbum_thumbs_details, .sitestorealbum_sidebar ul li .sitestorealbum_details {
+	font-size:.8em;
+	margin-top:3px;
+	clear:both;
+}
+ul.sitestorealbum_sidebar_thumbs {
+	overflow: hidden;
+}
+ul.sitestorealbum_sidebar_thumbs > li {
+	float: left;
+	margin:0;
+	clear:none !important;
+	border:none;
+	padding:0;
+	margin:4px;
+}
+ul.sitestorealbum_sidebar_thumbs .thumbs_photo {
+	display: inline-block;
+	padding: 4px;
+	vertical-align: bottom;
+	margin:0;
+}
+ul.sitestorealbum_sidebar_thumbs .thumbs_photo:hover {
+	cursor: pointer;
+}
+ul.sitestorealbum_sidebar_thumbs .thumbs_photo > span {
+	display: block;
+	width: 70px;
+	height: 70px;
+	background-position: center 50%;
+	background-repeat: no-repeat;
+}
+.layout_middle .sitestorealbum_sidebar .generic_sitestorealbum_photo_widget{
+	overflow:hidden;
+}
+.layout_middle .sitestorealbum_sidebar ul li{
+	float:left;
+	height:220px;
+	clear:none;
+	margin:0 13px;
+}
+/*profile store top photo strip start here*/
+.layout_sitestore_photorecent_sitestore {
+	clear:both;
+}
+.sitepge_photos_list {
+	clear:both;
+	display:block;
+	margin:0px 0 10px;
+	width:100%;
+	float:left;
+}
+.sitepge_photos_list div.thumb_photo {
+	width:100px;
+	height:70px;
+	overflow:hidden;
+	margin:2px;
+	float:left;
+	background:#CCCCCC;
+	position:relative;
+}
+.sitepge_photos_list div.thumb_photo a.thumb_img {
+	width:100px;
+	height:70px;
+	float:left;
+	background-repeat:no-repeat;
+	background-position:0 50%;
+}
+.sitepge_photos_list div.thumb_photo .photo_hide {
+	position:absolute;
+	right:3px;
+	top:3px;
+	float:left;
+	padding:0;
+	display:none;
+}
+.sitepge_photos_list div.thumb_photo:hover .photo_hide {
+	display:block;
+}
+.sitepge_photos_list div.thumb_photo .photo_hide a {
+	height:11px;
+	width:11px;
+	background-color:#222;
+	background-position:right;
+	float:left;
+}
+.sitepge_photos_list div.thumb_photo .photo_hide a:hover {
+	background-position:left;
+}
+/*overrites*/
+#global_page_sitestore-album-viewalbum ul.thumbs > li, #global_page_sitestore-album-view ul.thumbs > li {
+	margin:10px 15px;
+}
+#global_page_sitestore-index-view ul.thumbs > li {
+	margin:10px;
+	height:200px;
+}
+ul.thumbs.thumbs_nocaptions > li{
+	position:relative;
+}
+
+/*----------------- Responsive css -----------------------*/
+
+@media only screen and (max-width:920px){
+/* photos tab at store's profile page */
+#global_page_sitestore-index-view ul.thumbs > li{width:31%;margin:1%;}
+	
+}

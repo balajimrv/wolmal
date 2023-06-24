@@ -1,0 +1,1 @@
+UPDATE `engine4_core_modules` SET `version` = '1.2.5'  WHERE `name` = 'zephyrtheme';

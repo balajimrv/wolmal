@@ -1,0 +1,4 @@
+"ACTIVITYREWARDS_MAXUSE_DAYHOURMINUTE"; "You have reached the maximum allowed purchases, next time will be in %d days, %d hours and %d minutes."
+"ACTIVITYREWARDS_MAXUSE_HOURMINUTESECOND"; "You have reached the maximum allowed purchases, next time will be in %d hours, %d minutes and %d seconds"
+"ACTIVITYREWARDS_MAXUSE_MINUTESECOND"; "You have reached the maximum allowed purchases, next time will be in %d minutes and %d seconds"
+"ACTIVITYREWARDS_MAXUSE_SECOND"; "You have reached the maximum allowed purchases, next time will be in %d seconds"

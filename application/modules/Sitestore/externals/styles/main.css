@@ -1,0 +1,416 @@
+/* $Id: main.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+.activity_icon_sitestore_post_self, .activity_icon_sitestore_post{
+	background-image: url(~/application/modules/Sitestore/externals/images/sitestore_post.png);
+}
+.icon_sitestore_new, .item_icon_sitestore, .item_icon_sitestore_store, .notification_type_sitestore_manageadmin, .notification_type_sitestore_suggested{
+	background-image:url(~/application/modules/Sitestore/externals/images/icons/store.png);
+}
+/*.notification_type_liked, .notification_type_sitestore_contentlike{
+	background-image: url(~/application/modules/Sitestore/externals/images/like.png) !important;
+}*/
+.item_icon_sitestore_post, 
+.notification_type_sitestore_notificationpost, 
+.notification_type_sitestore_contentcomment {
+	background-image:url(~/application/modules/Sitestore/externals/images/icons/comment.png);
+}
+.activity_icon_sitestorereview_new, 
+.icon_sitestores_review, 
+.activity_icon_review_sitestore, 
+.item_icon_sitestorereview{
+	background-image: url(~/application/modules/Sitestore/externals/images/icons/review.png);
+}
+.activity_icon_sitestorealbum_photo_new, 
+.sitestore_icon_photos_manage, 
+.item_icon_sitestore_photo, 
+.activity_icon_sitestore_photo_upload{
+	background-image: url(~/application/modules/Sitestore/externals/images/photo/view.png);
+}
+.item_icon_sitestorevideo_video, .activity_icon_sitestorevideo_new, .icon_type_sitestorevideo, .notification_type_sitestorevideo_create{
+	background-image: url(~/application/modules/Sitestore/externals/images/icons/video16.png);
+}
+.sitestore_home_wishlist::before,
+.user_profile_wishlist::before {content: "\\f004";}
+/*CSS FOR ALL SIDEBAR WIDGETS START HERE*/
+.sitestore_search_alphabetic, .sitestorealbum_sidebar, ul.sitestore_browse_sitestore_day, ul.sitestorelike_users_block, ul.sitestore_sidebar_info, ul.sitestore_sidebar_list{
+	+foreground;
+	+rounded;
+	padding: 5px;
+	margin-bottom:15px;
+}
+.sitestorevideo_length{
+	+opacity(.7);
+	+rounded(4px, true, true, false, true);
+}
+/*rounded*/
+.layout_sitestore_contactdetails_sitestore, .sitestore_sitestores_options, ul.sitestore_sitestores .sitestore_sitestores_replies, .button{
+	+rounded;
+}
+/*foreground*/
+.Sitestorecontent_featured_slider, ul.admin_fields .field, ul.sitestore_sitestores_thread > li, ul.sitestore_sitestores .sitestore_sitestores_replies, .sitestore_sitestores_options, .sitestore_getstarted .sitestore_getstarted_num div, .sitestore_list_filters, .browsesitestores_criteria, .sitestore_profile_location, .sitestorelike_members_ponpup .top, div.storelayout_layoutbox_menu, .sitestoredocument_carousel{
+	+foreground;
+}
+.layout_sitestore_contactdetails_sitestore{
+	background-image: url( ~/application/modules/Seaocore/externals/images/blk-bg.png);
+	+foreground;
+}
+div.sitestore_photo_info, .sitestorereviews_gutter, .sitestore_gutter{
+	+foreground;
+	+rounded;
+}
+#global_page_sitestore-layout-widget .global_form div.form-label{
+	width:70px!important;
+}
+li.sitestoreoffer_show{
+	border:2px dashed $theme_foreground_border_color !important;
+	border-top:2px dashed $theme_foreground_border_color !important;
+}
+/*constants css start here*/
+/*theme body background color*/
+.sitestore_reports_list_wrapper > div, ul.sitestore_sitestores_thread .sitestore_sitestores_thread_body blockquote, ul.sitestore_package_list, .edit_form .global_form_box > div, .sitestore_edit_insights > div, .sitestore_map_container, .sitestore_location_fields_map{
+	background-color:$theme_body_background_color;
+}
+/*theme foreground background color*/
+.sitestore_cover_information, .sitestore_reports_list_wrapper, .sitestore_reports_list_wrapper > div table th, li.sitestoreoffer_show, .sitestorevideo_owner, .layout_simple_head, .sitestore_package_stat, .sitestore_package_store, .sitestorelike_popup_paging .paginator_previous a:hover, .sitestorelike_popup_paging .paginator_next a:hover, .edit_form .global_form_box, .sitestore_edit_insights{
+	background-color:$theme_foreground_background_color;
+}
+/*theme foreground border color*/
+.sitestore_reports_list_wrapper > div,ul.sitestore_sitestores_thread > li, ul.sitestore_sitestores_thread .sitestore_sitestores_thread_details, div.sitestore_photo_info, ul.sitestoreoffer_list > li + li, .sitestoreform_separator, ul.sitestore_package_list, .layout_simple_head, .sitestore_edit_insights > div, ul.sitestorelike_users_block h3, .edit_form .global_form_box > div{
+	border-color:$theme_foreground_border_color;
+}
+/*theme border color dark*/
+.sitestore_categories_sitestore h6, .sitestore_img_view .sitestore_thumb ul li > a:hover, .sitestore_map_container, .sitestore_map_container_map_area{
+	border-color:$theme_border_dark_color
+}
+.sitestore_advanced_search_form #fieldset-grp1, .sitestore_advanced_search_form #fieldset-grp2{
+	border-color:$theme_border_medium_color
+}
+/*theme font color*/
+.sitestore_search_alphabetic a.bold, .sitestore_slidebox h5, .sitestore_slidebox h5 a, ul.searchbox_autosuggest > li.autocompleter-selected, ul.searchbox_autosuggest > li:hover{
+	color:$theme_font_color;
+}
+/*theme buttontabs*/
+.sitestorelike_members_popup .sitestorelike_member_search_box a.selected{
+	background-color:$theme_buttontabs_background_color_active;
+	color:$theme_buttontabs_font_color_active;
+}
+.sitestorelike_members_popup .sitestorelike_member_search_box .link a{
+	color:$theme_buttontabs_font_color;
+}
+/*theme form background color*/
+.sitestore_claim_comment, .sitestore_form > div > div{
+	background-color: $theme_form_background_color;
+}
+/*theme form border color*/
+.sitestore_claim_comment, .sitestore_form > div > div{
+	border-color:$theme_form_border_color;
+}
+/*theme list background color*/
+ul.searchbox_autosuggest{
+	background:$theme_list_background_color;
+}
+ul.searchbox_autosuggest > li.autocompleter-selected, ul.searchbox_autosuggest > li:hover, .sitestore_getstarted_head, #sitestore_options li:hover, #sitestore_options .active{
+	background:$theme_list_background_color_hover;
+}
+.sitestorealbum_sidebar .sitestorealbum_sidebar_header{
+	border-color:$theme_foreground_border_color_light;
+}
+.sitestore_controllers, .sitestore_badge_buttons a, #store_url-element a.check_availability_button, .sitestore_featuredadmins_add a, .sitestore_create_link a, .sitestore_getstarted_btn a, .sitestore_edit_content .sitestore_edit_header > a{
+	background-color:$theme_button_background_color;
+}
+.sitestore_controllers:hover, .sitestore_badge_buttons a:hover, #store_url-element a.check_availability_button:hover, .sitestore_featuredadmins_add a:hover, .sitestore_create_link a:hover, .sitestore_getstarted_btn a:hover, .sitestore_edit_content .sitestore_edit_header > a:hover{
+	background-color:$theme_button_background_color_hover;
+}
+.button, .sitestore_badge_buttons a, #store_url-element a.check_availability_button, .sitestore_featuredadmins_add a, .sitestore_create_link a, .sitestore_getstarted_btn a, .sitestore_edit_content .sitestore_edit_header > a{
+	color: $theme_button_font_color !important;
+}
+.sitestore_categories_sitestore .sub_cat a:hover, .sitestore_categories_sitestore .sub_cat a.active{
+	background-color:$theme_border_color;
+}
+ul.sitestorealbum_sidebar_thumbs .thumbs_photo, ul.sitestore_thumbs .thumbs_photo, div.sitestore_photo_view #media_photo, #compose-sitestorevideo-body .compose-preview-image{
+	border: 1px solid $theme_photo_border_color;
+}
+ul.sitestore_thumbs .thumbs_photo:hover{
+	border: 1px solid $theme_photo_border_color_hover;
+}
+/*theme font color light*/
+.sitestore_gutter_view_stats,
+.sitestoreoffer_list_info_date,
+.sitestore_report_table table th,
+div.sitestore_sitestores_thread_options_closed, 
+ul.sitestore_sitestores .sitestore_sitestores_lastreply_info_date, 
+ul.sitestore_sitestores .sitestore_sitestores_replies, 
+ul.sitestore_sitestores_thread .sitestore_sitestores_thread_details_date, 
+.sitestore_profile_album_stat, 
+ul.sitestore_thumbs .thumbs_info, 
+ul.sitestorereview_profile li .sitestorereview_profile_info_date, 
+ul.sitestorereviews_view .sitestorereviews_view_stats, 
+div.sitestorevideo_view .comments_options span, 
+.sitestorevideo_stats > span, 
+div.sitestorevideo_view .sitestorevideo_date, 
+ul.sitestorevideo_profile .sitestorevideo_profile_info_date, 
+.sitestorepolls_view .sitestorepolls_view_info_date, 
+ul.sitestore_sidebar_list .sitestore_sidebar_list_details, 
+ul.searchbox_autosuggest > li.autocompleter-choices > a, 
+.sitestore_featuredadmins_count, 
+.sitestores_browse_filters .form-element span.overTxtLabel, 
+ul.sitestore_sidebar_info li ul li, 
+.sitestorelike_popup_user_likes_sitestore .item_details .item_stat, 
+.browsesitestores_criteria span.overTxtLabel,
+.sitestore_edit_insights_table table th, 
+ul.sitestore_profile_list li .sitestore_profile_list_info_date, 
+ul.sitestores_locationdetails .sitestores_locationdetails_info_date, 
+ul.sitestorevideos_browse .video_stats{
+	color:$theme_font_color_light;
+}
+/*theme border color medium*/
+.sitestore_album_box, .sitestore_img_view .sitestore_thumb ul li > a, .sitestore_search_header, .sitestore_search_result, ul.sitestore_sitestores_thread .sitestore_sitestores_thread_body blockquote, div.details, div.write_link, div.sitestore_write_overview .des_edit, div.sitestore_write_overview .textarea textarea{
+	border-color:$theme_border_medium_color;
+}
+/*theme border bottom color*/
+ul.searchbox_autosuggest{
+	border-color:$theme_border_color;
+}
+ul.sitestores_editphotos > li, .sitestore_categories_sitestore .sub_cat a, ul.searchbox_autosuggest > li + li, .print_store_title, .sitestore_addremove_fav_popup_title{
+	border-bottom-color:$theme_border_color;
+}
+.tabs > ul li.sitestore_tab_open > a{
+  border-bottom: none;
+  background-color: $theme_pulldown_background_color_active !important;
+  color: $theme_pulldown_font_color_active !important;
+  position: relative;
+}
+.sitestore_tab_open ul li.active > a{
+	color:$theme_font_color !important;
+}
+.sitestore_list_highlight{
+  background-image: url(~/application/modules/Seaocore/externals/images/blk-bg.png);
+	background-color:$theme_foreground_background_color;
+	border:1px solid $theme_foreground_border_color !important;
+	+rounded;
+	padding:10px;
+	margin:10px 0 0;
+}
+/*constants css end here*/
+.mright10{margin-right:10px!important;}
+.mtop10{margin-top:10px!important;}
+.mtop5{margin-top:5px!important;}
+.mleft5{margin-left:5px!important;}
+.mtop15{margin-top:15px!important;}
+.mbot15{margin-bottom:15px!important;}
+.mbot5{margin-bottom:5px!important;}
+.mbot10{margin-bottom:10px!important;}
+.ptop10{padding-top:10px!important;}
+.p5{padding:5px!important;}
+.border0{border:none !important}
+.btop{border-top-width:1px;}
+.bold{font-weight:bold!important;}
+.widthfull{width:100%!important;}
+.center{text-align:center !important;}
+
+/*FEED ITEMS*/
+.feed_attachment_sitestore_store, 
+.feed_attachment_sitestoreoffer_offer{
+	display:block;
+	overflow:hidden;
+	margin:0px 5px 5px 0px;
+	vertical-align:top;
+}
+.feed_attachment_sitestore_store > div, 
+.feed_attachment_sitestoreoffer_offer > div{
+  overflow: hidden;
+}
+.feed_attachment_sitestore_store > div > a, 
+.feed_attachment_sitestoreoffer_offer > div > a{
+	display:block;
+	float:left;
+	margin-right:7px;
+}
+.feed_attachment_sitestore_store > div > a > img, 
+.feed_attachment_sitestoreoffer_offer > div > a > img{
+	display:block;
+	max-width:90px;
+	max-height:90px;
+	vertical-align:top;
+}
+.feed_attachment_sitestore_store > div > div, 
+.feed_attachment_sitestoreoffer_offer > div > div{
+	overflow:hidden;
+}
+/*User Facebook Store Feed Widget*/
+.store_fb_feed_mainbox{border:1px solid $theme_border_dark_color;}
+.store_fb_feed_box_top{border-bottom:1px solid $theme_border_medium_color;}
+.feed_attachment_facebook_photo{border:1px solid $theme_photo_border_color;}
+.feed_attachment_facebook_photo:hover{border:1px solid $theme_photo_border_color_hover;}
+.feed_attachment_facebook > div > div {border-left:2px solid $theme_border_medium_color;}
+ul.store_fb_feeds .feed_item_stats *{ color:$theme_font_color_light;}
+
+/*Video Feeds*/
+.feed_item_attachments .sitestore_video_thumb_wrapper{
+  margin-right: 7px;
+}
+html[dir="rtl"] .feed_item_attachments .sitestore_video_thumb_wrapper{
+  margin-right: 0px;
+  margin-left: 7px;
+}
+.feed_item_attachments .video_info{
+  overflow: hidden;
+}
+.feed_item_attachments .video_info > a{
+  font-size: .8em;
+  font-weight: bold;
+}
+.video_title{
+  font-size: .8em;
+  font-weight: bold;
+  display: inline-block;
+  clear: both;
+}
+.feed_item_attachments .video_desc{
+  margin-top: 2px;
+  font-size: .8em;
+}
+/*Video Thumb*/
+.sitestore_video_length{
+  display: inline-block;
+  position: absolute;
+  margin: 6px;
+  padding: 3px 5px 3px 5px;
+  background: #000;
+  color: #fff;
+  font-size: .7em;
+}
+.sitestore_video_thumb_wrapper{
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+  float: left;
+  margin-bottom: 2px;
+  background: #666;
+}
+html[dir="rtl"] .sitestore_video_thumb_wrapper{
+  float: right;
+}
+.sitestore_video_thumb_wrapper:hover{
+  background: #777;
+}
+.sitestore_video_thumb_wrapper a{
+  display: block;
+}
+.sitestore_video_thumb_wrapper img, 
+.sitestore_video_thumb_wrapper span.item_nophoto{
+  display: block;
+  margin: 5px;
+  border: 1px solid #888;
+}
+/*css for video thumb end here*/
+/**/
+.layout_sitestore_view_my_sitestore{
+  margin-bottom: 15px;
+  clear: both;
+}
+.sitestore_view_all_store{
+  background-image: linear-gradient(#FC5B3F, #ED4F23);
+	border-radius: 3px;
+	font-size: 14px;
+	padding: 10px 5px;
+}
+.sitestore_view_all_store:hover{
+	background-image: linear-gradient(#FC5B3F, #C6310B);
+}
+.sitestore_view_all_store a{
+	color: #FFFFFF;
+	text-decoration:none;
+}
+#sitestore_overview #body-element #body_ifr{
+  height: 450px !important;
+}
+
+
+/*==================================Responsive Css work for Store/Marketplace Plugin====================================*/
+
+@media only screen and (max-width: 920px) {
+/*Css for Sitestoreproduct Navigation Bar*/
+.layout_sitestoreproduct_navigation_sitestoreproduct .tabs > ul > li > a {padding-bottom:5px;}
+/* Advanced search form */
+#filter_form input[type="text"], #filter_form input[type="email"], #filter_form input[type="password"], #filter_form input.text, textarea{padding:2px;box-sizing:border-box;}
+/* Browse stores*/
+.generic_layout_container .sitestore_browse_thumb{width:47% !important;margin:1%;}
+/* Get direction popup */
+#global_page_seaocore-index-view-map .seaocore_viewmap_content_main{width:100%;}
+.seaocore_viewmap_content_main .seaocore_viewmap_search_options input[type="text"] {width: 100% !important;}
+/* Carausel css */
+html .slideshow a img {border: 0 none;left: 0 !important;width: 100% !important;}
+html .slideshow-images, html .slideshow{width:100% !important;}
+#product_type_form > div {float: none;}
+/* Carausel ajax based */
+.sr_sitestoreproduct_carousel{width:100% !important;}
+.sr_sitestoreproduct_carousel_horizontal .sr_sitestoreproduct_carousel_content{width:94% !important;overflow-y:hidden !important;overflow-x:scroll !important;}
+.sr_sitestoreproduct_carousel div.sr_sitestoreproduct_carousel_button{width:3%;}
+.sr_sitestoreproduct_carousel_content .sitestoreproduct_grid_view{width:880px !important;}
+/* Featured posts carousel */
+.seaocore_slideshow_wrapper, .featured_slideshow_wrapper{overflow-y:hidden;}
+/* Product details slidehow description tab */
+.sr_sitestoreproduct_media_slideshow_wrapper{width:100% !important;}
+.sr_sitestoreproduct_media_slideshow{width:100% !important;}
+div.sr_sitestoreproduct_media_slideshow_mask{overflow-x:auto; width:100% !important;}
+.sr_sitestoreproduct_media_slidebox_photo td img{float:left;}
+#global_page_sitestoreproduct-photo-view div.sitestoreproduct_photo_view {max-width: inherit;min-width: inherit;width: 100%;}
+.albums_viewmedia_info div.sitestoreproduct_photo_container #media_image {max-width: inherit;width: 100%;}
+/* billing-shipping address form[My store account-my addresses]*/
+.sitestoreproduct_manage_address .global_form > div{width:100%;}
+.sitestoreproduct_manage_address .global_form div.form-element{width:60%;}
+#dynamic_address_content.sitestoreproduct_manage_address input[type="text"], #dynamic_address_content.sitestoreproduct_manage_address input[type="email"], #dynamic_address_content.sitestoreproduct_manage_address input[type="password"], #dynamic_address_content.sitestoreproduct_manage_address input.text, #dynamic_address_content.sitestoreproduct_manage_address textarea, #dynamic_address_content.sitestoreproduct_manage_address select{width:100%;box-sizing:border-box;max-width:none;}
+/* Global form into entire store */
+form.global_form .form-label {padding-right: 2% !important;width: 25% !important;}
+form.global_form .form-element {width: 70% !important;}
+form.global_form .form-element input[type="text"], form.global_form .form-element textarea, form.global_form .form-element select {box-sizing: border-box;max-width: 100% !important;min-width: 100% !important;width: 100% !important;}
+#start_time-element > select, #end_time-element > select, #start_date-element > select {margin: 0 4px;max-width: inherit !important;min-width: 50px !important;width: auto !important;}
+/* Overview element text area */
+#overview-element textarea{height:180px !important;}
+
+}
+
+.sitestore-search-box .form-elements{
+  background-color: $theme_body_background_color;
+  border: 1px solid $theme_border_medium_color;
+}
+
+@media only screen and (max-width: 768px) {
+.seaocore_tbs_cont, #dynamic_menus_content .global_form div.form-element, #dynamic_menus_content .sitestoreproduct_pcbox .global_form > div{width:auto !important;float:none;}
+/*Sitestoreproduct searchbox widget (Quick Search) 
+.sitestore_quick_search{width:94%;}*/
+}
+
+@media only screen and (max-width: 600px) {
+	/*Dashboard >> Manage sections*/
+	.sitestore_section_list_cont, .sitestore_section_showproducts{width:99% !important; float:left;}
+	.sitestore_section_showproducts select {width:auto;}
+	/*Filter form */
+	#filter_form li {width: 100%;}
+	#filter_form input[type="text"], #filter_form input[type="email"], #filter_form input[type="password"], #filter_form input.text, #filter_form textarea, #filter_form select{width:100%; max-width:100%;box-sizing:border-box;}
+	/* Get direction pop up */
+	#global_page_seaocore-index-view-map .seaocore_viewmap_content_main{margin-left:2px;}
+	/*Store edit Location Map*/
+	html .sitestore_location_fields_map, html .sitestore_location_fields_map_canvas {width:100% !important;}
+	/*Global form into entire store */
+     form.global_form .form-label {width: 100% !important;}
+     form.global_form .form-element {width:100% !important;}
+}
+
+@media only screen and (max-width: 450px) {
+	/* Browse stores grid view */
+	.generic_layout_container .sitestore_browse_thumb{width:100% !important;margin:0 0 10px 0;}
+	/* coupons page */
+	.sitestore_offer_photo {width: 25%;}
+	.sitestore_offer_photo img{width:100%;}
+	/* Discount coupon label */
+	span.sitestorecoupon_code .sitestorecoupon_code_num{width:95px !important;}
+}
+
+@media only screen and (max-width: 380px) {
+	.seao_pflinks_block .btnlink {float: left;margin: 0 0 8px;width: 100%;}
+	/* Carausel ajax based */
+.sr_sitestoreproduct_carousel_horizontal .sr_sitestoreproduct_carousel_content{width:92% !important;}
+.sr_sitestoreproduct_carousel div.sr_sitestoreproduct_carousel_button{width:4%;}
+}

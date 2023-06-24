@@ -1,0 +1,319 @@
+
+
+.layout_sespymk_friend_requests,
+.layout_sespymk_suggestion_page,
+.layout_sespymk_invite,
+.layout_sespymk_suggestion_friends,
+.layout_sespymk_suggestion_carousel{
+	margin-bottom:15px;
+}
+/*PEOPLE YOU MAY KNOW WIDGET CSS START HERE*/
+.sespymk_remove{
+	height:16px;
+	line-height:14px;
+	width:16px;
+	position:absolute;
+	text-align:center;
+	display:none !important;
+}
+.sespymk_sidebar_list_remove:before{
+	line-height:0;
+}
+/*All Members List*/
+.sespymk_list li + li{
+	border-top-width:1px;
+}
+.sespymk_list_item{
+	padding:10px 0;
+}
+.sespymk_list_item_inner{
+	display:table;
+	position:relative;
+	width:100%;
+}
+.sespymk_list_item_inner > div{
+	display:table-cell;
+	vertical-align:middle;
+}
+.sespymk_list_item_photo{
+	width:80px;
+}
+.sespymk_list_item_photo img{
+	border-width:0;
+	float:left;
+	height:70px;
+	object-fit:cover;
+	width:70px;
+}
+.sespymk_list_item:hover .sespymk_remove{
+	right:5px;
+	display:block !important;
+}
+.sespymk_list_item_title{
+	font-weight:bold;
+	margin-right:16px;
+}
+.sespymk_list_item_stat{
+	margin-top:2px;
+}
+.sespymk_list_item_stat a{
+	font-size:12px;
+}
+.sespymk_list_item_btn button,
+.sespymk_list_item_btn .sesbasic_button{
+	display:inline-block;
+	vertical-align:middle;
+	font-size:11px;
+	padding:0 10px;
+	font-weight:bold;
+	height:26px;
+	line-height:24px;
+}
+.sespymk_list_item_btn button i{
+	margin-right:5px;
+}
+[dir="rtl"] .sespymk_list_item_btn button i{
+	margin-left:5px;
+	margin-right:0;
+}
+.sespymk_list_more{
+	border-bottom-width: 1px;
+	padding: 10px 0;
+}
+/*Sidebar Widget*/
+.sespymk_sidebar_list{
+	+foreground;
+	+rounded;
+	padding:5px;
+}
+.sespymk_sidebar_list li + li{
+	margin-top:5px;
+}
+.sespymk_sidebar_list_item_photo{
+	float:left;
+	margin-right:10px;
+}
+.sespymk_sidebar_list_item_cont{
+	display:block;
+	overflow:hidden;
+	position:relative;
+}
+.sespymk_sidebar_list_item .sespymk_remove{
+	right:0;
+	top:2px;
+}
+.sespymk_sidebar_list_item:hover .sespymk_remove{
+	display:block !important;
+}
+.sespymk_sidebar_list_item_title{
+	font-weight:bold;
+	margin-right:16px;
+}
+.sespymk_sidebar_list_item_stat a{
+	font-size:12px;
+}
+.sespymk_sidebar_list_item_btn button{
+	font-size:11px;
+	margin-top:5px;
+	padding:5px 10px;
+}
+.sespymk_sidebar_list_more{
+	text-align:right;
+	font-size:12px;
+}
+/*Horrizontal List*/
+.sespymk_horrizontal_list_item{
+	border-width:1px;
+	float:left;
+	position:relative;
+	margin:0 5px 5px;
+	width:150px;
+}
+.sespymk_horrizontal_list_item_photo{
+	height:150px;
+	width:100%;
+}
+.sespymk_horrizontal_list_item_photo img{
+	border-width:0;
+	height:100%;
+	object-fit:cover;
+	width:100%;
+}
+.sespymk_horrizontal_list_remove{
+	background-color:rgba(0, 0, 0, .5);
+	color:#fff !important;
+	position:absolute;
+	right:5px;
+	top:5px;
+	height:16px;
+	text-align:center;
+	line-height:14px;
+	width:16px;
+	display:none !important;
+}
+.sespymk_horrizontal_list_remove:hover{
+	background-color:rgba(0, 0, 0, .9);
+	text-decoration:none;
+}
+.sespymk_horrizontal_list_item:hover .sespymk_horrizontal_list_remove{
+	display:block !important;
+}
+.sespymk_horrizontal_list_item_cont{
+	border-top-width:1px;
+	padding:5px;
+}
+.sespymk_horrizontal_list_item_title{
+	font-weight:bold;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.sespymk_horrizontal_list_item_stats{
+	height:16px;
+	overflow:hidden;
+}
+.sespymk_horrizontal_list_item_stat a{
+	font-size:12px;
+}
+.sespymk_horrizontal_list_item_btn button{
+	margin-top:3px;
+	padding:5px 0;
+	font-size:11px;
+	width:100%;
+}
+.sespymk_horrizontal_list_more{
+	font-size:12px;
+	float:right;
+	margin-top:-25px;
+	margin-left:5px;
+}
+[dir="rtl"] .sespymk_horrizontal_list_more{
+	float:left;
+	margin-left:5px;
+	margin-right:0;
+}
+.sespymk_request_success_message{
+	color:#060;
+	padding:10px;
+}
+/*PEOPLE YOU MAY KNOW WIDGET CSS END HERE*/
+/*CAROUSEL WIDGET CSS START HERE*/
+.sespymk_carousel_wrapper{
+  clear:both;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+}
+.sespymk_carousel{
+  overflow:hidden;
+  width:100%;
+}
+/*Horizontal Carousel*/
+.sespymk_carousel_h_wrapper .sespymk_carousel_nav a{
+	border-width:1px;
+	border-radius:3px;
+  position:absolute;
+	height:30px;
+	margin-top:-15px;
+	top:50%;
+  width:30px;
+	text-align:center;
+  z-index:5;
+}
+.sespymk_carousel_h_wrapper .sespymk_carousel_nav a:hover{
+  opacity:.8;
+  filter:alpha(opacity=80);
+}
+.sespymk_carousel_h_wrapper .sespymk_carousel_nav a.sespymk_carousel_nav_pre{
+  left:-40px;
+}
+.sespymk_carousel_h_wrapper:hover .sespymk_carousel_nav a.sespymk_carousel_nav_pre{
+  left:10px;
+}
+.sespymk_carousel_h_wrapper .sespymk_carousel_nav a.sespymk_carousel_nav_nxt{
+  right:-40px;
+}
+.sespymk_carousel_h_wrapper:hover .sespymk_carousel_nav a.sespymk_carousel_nav_nxt{
+  right:10px;
+}
+.sespymk_carousel_h_wrapper .sespymk_carousel_nav a i{
+	line-height:30px;
+	padding-top:2px;
+}
+.sespymk_carousel_h_wrapper .sespymk_carousel_nav a i:before{
+  font-size:25px;
+	line-height:0;
+}
+/*Vertical Carousel*/
+.sespymk_carousel_v_wrapper .sespymk_horrizontal_list_item{
+  margin:0 !important;
+	width:100% !important;
+}
+.sespymk_carousel_v_wrapper .sespymk_carousel_nav{
+  clear:both;
+  margin-top:10px;
+  text-align:center;
+}
+.sespymk_carousel_v_wrapper .sespymk_carousel_nav a{
+	border-width:1px;
+	border-radius:3px;
+	display:inline-block;
+	height:30px;
+  width:30px;
+	text-align:center;
+}
+.sespymk_carousel_v_wrapper .sespymk_carousel_nav a i{
+	line-height:30px;
+	padding-top:2px;
+}
+.sespymk_carousel_v_wrapper .sespymk_carousel_nav a i:before{
+  font-size:25px;
+	line-height:0;
+}
+/*CAROUSEL WIDGET CSS END HERE*/
+/*Button CSS Start Here*/
+.sespymk_button a{
+	display:block;
+}
+.sespymk_button a i{
+	margin-right:5px;
+}
+/*Button CSS End Here*/
+/*Invite Form CSS Start Here*/
+.sespymk_invite_form .global_form_box{
+	padding:10px;
+}
+.sespymk_invite_form .global_form_box .form-wrapper{
+	margin-bottom:10px;
+}
+.sespymk_invite_form .global_form_box .form-wrapper:nth-last-child(1){
+	margin-bottom:0;
+}
+.sespymk_invite_form .global_form_box label{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.sespymk_invite_form textarea{
+	width:100%;
+	height:60px;
+	padding:5px;
+}
+.sespymk_invite_form textarea + p{
+	font-size:12px;
+}
+.sespymk_invite_form .global_form_box input + label{
+	display:block;
+	overflow:hidden;
+	margin:0;
+}
+.sespymk_invite_form .global_form_box button{
+	width:100%;
+}
+.sespymk_invite_success_message{
+	background-color:#c8e5bc;
+	border:1px solid #b2dba1;
+	font-size:12px;
+	padding:10px;
+	text-align:center;
+}
+/*Invite Form CSS Start Here*/

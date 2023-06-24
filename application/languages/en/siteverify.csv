@@ -1,0 +1,94 @@
+##### Siteverify/widgets/verify-button/ #####
+"Verify %s";"Verify %s"
+"Verified Member";"Verified Member"
+"%s has been verified by";"%s has been verified by"
+"View Details";"View Details"
+"You have verified this member.";"You have verified this member."
+"Cancel Verification";"Cancel Verification"
+"Your verification to %s will be approved by administrator.";"Your verification to %s will be approved by administrator."
+"Edit Request";"Edit Request"
+"Cancel Request";"Cancel Request"
+
+
+##### Siteverify/views/scripts/index/content-verify-member-list.tpl #####
+"%s has been verified by:";"%s has been verified by:"
+"No results were found.";"No results were found."
+
+
+##### Siteverify/views/scripts/index/delete-verify.tpl #####
+"Are you sure that you want to cancel your verification for this user?";"Are you sure that you want to cancel your verification for this user?"
+" or ";" or "
+
+
+##### Siteverify/views/scripts/index/edit-verify.tpl #####
+"You can modify your verification comments for this member here.";"You can modify your verification comments for this member here."
+"characters left.";"characters left."
+"Modify";"Modify"
+
+
+
+##### Siteverify/views/scripts/index/verify.tpl #####
+"Verify %s ?";"Verify %s ?"
+"Are you sure you want to verify %s?";"Are you sure you want to verify %s?"
+" You can also add your comment below for this.";" You can also add your comment below for this."
+"Why are you verifying ";"Why are you verifying "
+
+
+
+# notify_siteverify_new
+"_EMAIL_NOTIFY_SITEVERIFY_NEW_TITLE";"User Verify"
+"_EMAIL_NOTIFY_SITEVERIFY_NEW_DESCRIPTION";"This email is sent to the members when they are verified by other members."
+"_EMAIL_NOTIFY_SITEVERIFY_NEW_SUBJECT";"You have been verified by [sender_title]."
+"_EMAIL_NOTIFY_SITEVERIFY_NEW_BODY";"[header]
+
+You have been verified by [sender_title]. Please click the following link to view your profile:
+
+http://[host][recipient_link]
+
+[footer]"
+
+# notify_siteverify_admin_approve
+"_EMAIL_NOTIFY_SITEVERIFY_ADMIN_APPROVE_TITLE";"User Verify Approve"
+"_EMAIL_NOTIFY_SITEVERIFY_ADMIN_APPROVE_DESCRIPTION";"This email is sent to the members who is requesting to verify."
+"_EMAIL_NOTIFY_SITEVERIFY_ADMIN_APPROVE_SUBJECT";"Site administrator has approved your verification to [sender_title]."
+"_EMAIL_NOTIFY_SITEVERIFY_ADMIN_APPROVE_BODY";"[header]
+
+Site administrator has approved your verification to [sender_title]. Please click the following link to view your profile:
+
+http://[host][sender_link]
+
+[footer]"
+
+
+# notify_siteverify_user_request
+"_EMAIL_NOTIFY_SITEVERIFY_USER_REQUEST_TITLE";"User Verify Request"
+"_EMAIL_NOTIFY_SITEVERIFY_USER_REQUEST_DESCRIPTION";"This email is sent to the Site administrator when members verify to other members.(When admin approve setting is enabled.)"
+"_EMAIL_NOTIFY_SITEVERIFY_USER_REQUEST_SUBJECT";"[sender_title] has requested you to approve verification request."
+"_EMAIL_NOTIFY_SITEVERIFY_USER_REQUEST_BODY";"[header]
+
+[sender_title] has requested you to approve verification request. Please click the following link to view your profile:
+
+http://[host][recipient_link]
+
+[footer]"
+
+
+
+
+"{item:$object} was verified by {item:$subject}:";"{item:$object} was verified by {item:$subject}:"
+"Site administrator has approved your verification to {item:$subject}.";"Site administrator has approved your verification to {item:$subject}."
+"You have been verified by {item:$subject}.";"You have been verified by {item:$subject}."
+"{item:$subject} has requested you to approve verification request.";"{item:$subject} has requested you to approve verification request."
+
+
+
+
+"ACTIVITY_TYPE_SITEVERIFY_ADMIN_APPROVE";"When site admin approves your verification request."
+"ACTIVITY_TYPE_SITEVERIFY_NEW";"When You have been verified by someone."
+"ACTIVITY_TYPE_SITEVERIFY_USER_REQUEST";"When someone has requested you to approve verification request."
+"ADMIN_ACTIVITY_TYPE_SITEVERIFY_NEW";"When someone is verified by a user(Subject)."
+"{item:$object} was verified by {item:$subject}.";"{item:$object} was verified by {item:$subject}."
+"Verify";"Verify"
+"%s user";"%s user";"%s users"
+"_ACTIVITY_ACTIONTYPE_SITEVERIFY_NEW";"When You have been verified by someone."
+"ACTIVITY_CATEGORY_TYPE_SITEVERIFY";"Member Verifications"

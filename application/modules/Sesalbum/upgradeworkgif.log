@@ -1,0 +1,101 @@
+Index: controllers/defaultsettings.php
+===================================================================
+--- controllers/defaultsettings.php	(revision 15254)
++++ controllers/defaultsettings.php	(working copy)
+@@ -1183,4 +1183,5 @@
+     'sesalbum_locked' as `name`,
+     1 as `value`,
+     NULL as `params`
+-  FROM `engine4_authorization_levels` WHERE `type` NOT IN('public');");
+\ No newline at end of file
++  FROM `engine4_authorization_levels` WHERE `type` NOT IN('public');");
++$db->query('ALTER TABLE `engine4_album_albums` ADD `draft` TINYINT(1) NOT NULL DEFAULT "0";');
+\ No newline at end of file
+Index: settings/my-upgrade-4.8.13p1-4.9.0.sql
+===================================================================
+--- settings/my-upgrade-4.8.13p1-4.9.0.sql	(nonexistent)
++++ settings/my-upgrade-4.8.13p1-4.9.0.sql	(working copy)
+@@ -0,0 +1 @@
++ALTER TABLE `engine4_album_albums` ADD `draft` TINYINT(1) NOT NULL DEFAULT "0";
+\ No newline at end of file
+
+Property changes on: settings/my-upgrade-4.8.13p1-4.9.0.sql
+___________________________________________________________________
+Added: svn:executable
+## -0,0 +1 ##
++*
+\ No newline at end of property
+Index: views/scripts/_composePhoto.tpl
+===================================================================
+--- views/scripts/_composePhoto.tpl	(revision 15254)
++++ views/scripts/_composePhoto.tpl	(working copy)
+@@ -202,7 +202,7 @@
+    {
+ 			var url = files[i].name;
+     	var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+-			if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG')){
++			if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG' || ext == 'gif' || ext == 'GIF')){
+ 				var status = new createStatusbar(obj,files[i]); //Using this we can set progress.
+ 				status.setFileNameSize(files[i].name,files[i].size);
+ 				statusArray[countUploadSes] =status;
+Index: views/scripts/admin-categories/index.tpl
+===================================================================
+--- views/scripts/admin-categories/index.tpl	(revision 15254)
++++ views/scripts/admin-categories/index.tpl	(working copy)
+@@ -243,7 +243,7 @@
+ 		 var idMsg = 'chanel_cover';
+ 		else
+ 			var idMsg = 'chanel_thumbnail';
+-    if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG')){
++    if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG' || ext == 'gif' || ext == 'GIF')){
+         var reader = new FileReader();
+         reader.onload = function (e) {
+ 					 jqueryObjectOfSes('#'+id+'-wrapper').show();
+Index: views/scripts/index/create.tpl
+===================================================================
+--- views/scripts/index/create.tpl	(revision 15254)
++++ views/scripts/index/create.tpl	(working copy)
+@@ -427,7 +427,7 @@
+    {
+ 			var url = files[i].name;
+     	var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+-			if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG')){
++			if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG' || ext == 'gif' || ext == 'GIF')){
+ 				var status = new createStatusbarsesalbum(obj,files[i]); //Using this we can set progress.
+ 				status.setFileNameSize(files[i].name,files[i].size);
+ 				statusArray[countUploadSes] =status;
+@@ -613,7 +613,7 @@
+ 	var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+ 	var name = url.split('/').pop();
+ 	name = name.substr(0, name.lastIndexOf('.'));
+-		if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG')){
++		if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG' || ext == 'gif' || ext == 'GIF')){
+ 			var status = new createStatusbarsesalbum(sesJqueryObject('.dragandrophandler'),url,'url'); //Using this we can set progress.
+ 			var fd = new FormData();
+ 			fd.append('Filedata', url);
+Index: widgets/album-view-page/index.tpl
+===================================================================
+--- widgets/album-view-page/index.tpl	(revision 15254)
++++ widgets/album-view-page/index.tpl	(working copy)
+@@ -1219,7 +1219,7 @@
+ function uploadCoverArt(input){
+ 	 var url = input.value;
+     var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+-    if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG')){
++    if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG' || ext == 'gif' || ext == 'GIF')){
+ 				uploadFileToServer(input.files[0]);
+     }else{
+ 				//Silence
+Index: widgets/profile-photo/index.tpl
+===================================================================
+--- widgets/profile-photo/index.tpl	(revision 15254)
++++ widgets/profile-photo/index.tpl	(working copy)
+@@ -149,7 +149,7 @@
+ function readImageUrlsesalbum(input){
+ 	var url = input.files[0].name;
+ 	var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+-	if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG')){
++	if((ext == "png" || ext == "jpeg" || ext == "jpg" || ext == 'PNG' || ext == 'JPEG' || ext == 'JPG' || ext == 'gif' || ext == 'GIF')){
+ 		var formData = new FormData();
+ 		formData.append('webcam', input.files[0]);
+ 		formData.append('user_id', '<?php echo $this->user_id; ?>');

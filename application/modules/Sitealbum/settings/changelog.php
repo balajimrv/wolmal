@@ -1,0 +1,115 @@
+<?php
+
+/**
+ * SocialEngine
+ *
+ * @category   Application_Extensions
+ * @package    Sitealbum
+ * @copyright  Copyright 2010-2011 BigStep Technologies Pvt. Ltd.
+ * @license    http://www.socialengineaddons.com/license/
+ * @version    $Id: changelog.php 2011-08-026 9:40:21Z SocialEngineAddOns $
+ * @author     SocialEngineAddOns
+ */
+return array(
+  '4.1.8' => array(
+		'controllers/AdminAlbumController.php' => 'Fixed Pagination Problem',
+		'controllers/AdminPhotoController.php' => 'Fixed Pagination Problem',
+		'controllers/AdminSettingsController.php' => 'Minor Optimization',
+		'controllers/BadgeController.php' => 'Minor Optimization',
+		'settings/content.php' => 'Added Settings for "View More" link',
+		'settings/manifest.php' => 'Incremaint Virsions 4.1.8',
+		'settings/my.sql' => 'Incremaint Virsions 4.1.8',
+		'settings/my-upgrade-4.1.7p3-4.1.8.sql' => 'Added',
+		'views/scripts/_lightboxPhoto.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/_photoView.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/admin-album/add-album-of-day.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/admin-album/add-featured.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/admin-photo/add-featured.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/admin-photo/add-photo-of-day.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/admin-settings/index.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/album/add-album-of-day.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/badge/create.tpl' => 'Added static base URL for CDN support',
+		'views/scripts/badge/index.tpl' => 'Minor Optimization',
+		'views/scripts/photo/add-photo-of-day.tpl' => 'Added static base URL for CDN support',
+		'widgets/album-of-the-day/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/album-view/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/featured-albums-slideshow/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/featured-albums/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/featured-photos-carousel/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/featured-photos/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/friends-photo-albums/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/friends-photos/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/inthis-album/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/like-button/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/list-albums-tabs-view/index.tpl' => 'Added View More Link, Added static base URL for CDN support',
+		'widgets/list-photos-tabs-view/index.tpl' => 'Added View More Link,  Added static base URL for CDN support',
+		'widgets/list-popular-albums/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/list-popular-photos/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/list-recent-photos/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/photo-of-the-day/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/photo-strips/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/photo-view/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/profile-photos/index.tpl' => 'Added static base URL for CDN support',
+		'widgets/you-and-owner/index.tpl' => 'Added static base URL for CDN support',
+	),
+
+  '4.1.7p3' => array(
+		'Api/Core.php' => 'Minor modification for Suggestions / Recommendations Plugin and Added method for show default albums or not',
+		'controllers/AdminAlbumController.php' => 'Minor Optimizations',
+		'controllers/AdminPhotoController.php' => 'Minor Optimizations',
+		'controllers/AdminSettingsController.php' => 'Minor modifications for Show / Hide Default Albums',
+		'controllers/BadgeController.php' => 'Minor modifications for Show / Hide Default Albums',
+		'Form/Admin/Global.php' => 'Added settings for Show / Hide Default Albums',
+		'Model/DbTable/Itemofthedays.php' => 'Minor Optimizations',
+		'Plugin/Core.php' => 'Minor modifications for compatibility with Touch Mobiles',
+		'settings/manifest.php' => 'Incremented version',
+		'settings/my.sql' => 'Incremented version',
+		'settings/my-upgrade-4.1.7p2-4.1.7p3.sql' => 'Added',
+		'views/scripts/admin-photo/delete.tpl, Minor Optimizations',
+		'views/scripts/admin-settings/faq_help.tpl' => 'Minor modifications for Show / Hide Default Albums',
+		'views/scripts/admin-settings/index.tpl' => 'Minor modifications for Show / Hide Default Albums',
+		'widgets/album-view/Controller.php' => 'Minor modification for Suggestions / Recommendations Plugin',
+		'widgets/album-view/index.tpl' => 'Minor modification for Suggestions / Recommendations Plugin',
+		'widgets/list-albums-tabs-view/Controller.php' => 'Add Random Tab In Album Home Pages Widget and Minor modifications for Show / Hide Default Albums',
+		'widgets/list-photos-tabs-view/Controller.php' => 'Add Random Tab In Album Home Pages Widget and Minor modifications for Show / Hide Default Albums',
+		'widgets/list-photos-tabs-view/index.tpl' => 'Add Random Tab In Album Home Pages Widget',
+		'widgets/list-popular-albums/Controller.php' => 'Minor modifications for Show / Hide Default Albums',
+		'widgets/list-popular-photos/Controller.php' => 'Minor modifications for Show / Hide Default Albums',
+		'widgets/list-recent-photos/Controller.php' => 'Minor modifications for Show / Hide Default Albums',
+		'widgets/photo-strips/Controller.php' => 'Minor modifications for Show / Hide Default Albums',
+	),
+
+  '4.1.7p2' => array(
+		'Api/Core.php' => 'Added global settings of download and make profile photo link',
+		'controllers/PhotoController.php' => 'Fixed issue of photo display in order',
+		'controllers/AdminSettingsController.php' => 'Added global settings of download and make profile photo link',
+		'controllers/BadgeController.php' => "Apply condition for SocialEngine's Album Plugin",
+		'externals/styles/mooRainbow.css' => 'Minor optimizations',
+		'externals/styles/style_sitealbum.css' => 'Minor optimizations',
+		'Form/Admin/Global.php' => 'Added global settings of download and make profile photo link',
+		'views/scripts/_photoView.tpl' => 'Added global settings of download and make profile photo link, Fixed tag 	problem',
+		'settings/manifest.php' => 'Incremented version',
+		'settings/my.sql' => 'Incremented version',
+		'views/scripts/photo/light-box-view.tpl' => 'Added global settings of download and make profile photo link,Fixed issue of photo display in order',
+		'views/scripts/badge/create.tpl' => 'Minor optimizations',
+		'views/scripts/badge/index.tpl' => "Minor optimizations,Apply condition for SocialEngine's Album Plugin",
+		'views/scripts/admin-settings/check-album-plugin.tpl' => "Apply condition for SocialEngine's Album Plugin",
+		'views/scripts/admin-settings/readme.tpl' => "Apply condition for SocialEngine's Album Plugin",
+		'widgets/album-view/index.tpl' => 'Fixed issue of margin in case of photo and album display using ajax',
+		'widgets/list-albums-tabs-view/Controller.php' => 'Fixed issue of margin in case of photo and album display using ajax',
+		'widgets/list-albums-tabs-view/index.tpl' => 'Fixed issue of margin in case of photo and album display using ajax',
+		'widgets/list-photos-tabs-view/Controller.php' => 'Fixed issue of margin in case of photo and album display using ajax',
+		'widgets/list-photos-tabs-view/index.tpl' => 'Fixed issue of margin in case of photo and album display using ajax',
+	),
+
+  '4.1.7' => array(
+		'widgets/featured-albums-slideshow/index.tpl' => 'Minor optimizations',
+		'widgets/album-view/index.tpl' => 'Fixed comment problem',
+		'controllers/IndexController.php' => 'Minor optimizations',
+		'controllers/MobiController.php' => 'Minor optimizations',
+		'Api/Core.php' => 'Compatible with Social Engine Mobile Plugin',
+		'settings/manifest.php' => 'Incremented version',
+		'settings/my.sql' => 'Incremented version',
+  ),
+)
+?>

@@ -1,0 +1,90 @@
+#application/modules/Sitegateway/Form/Order/Stripe.php
+"Stripe Account Configuration";"Stripe Account Configuration"
+"1) If you haven't already, you will need to establish a <a href='https://dashboard.stripe.com/register' target='_blank'>Stripe</a> account.<br/>2) Enable API access on your Stripe account via: Your Account > Account Settings > API Keys > API Secret Key & API Publishable Key.<br/>3) Insert the Stripe API Secret Key and API Publishable Key values into this form.";"1) If you haven't already, you will need to establish a <a href='https://dashboard.stripe.com/register' target='_blank'>Stripe</a> account.<br/>2) Enable API access on your Stripe account via: Your Account > Account Settings > API Keys > API Secret Key & API Publishable Key.<br/>3) Insert the Stripe API Secret Key and API Publishable Key values into this form."
+"API Secret Key";"API Secret Key"
+"API Publishable Key";"API Publishable Key"
+"Enabled?";"Enabled?"
+"Save Changes";"Save Changes"
+
+#application/modules/Sitegateway/Plugin/Gateway/Abstract.php
+"Unknown order type for IPN";"Unknown order type for IPN"
+
+#application/modules/Sitegateway/Plugin/Gateway/Stripe.php
+"There was an error processing your transaction. Please try again later.";"There was an error processing your transaction. Please try again later."
+"There was an error processing your transaction. Please try again later.";"There was an error processing your transaction. Please try again later."
+"Unknown or unsupported IPN type, or missing transaction or order ID";"Unknown or unsupported IPN type, or missing transaction or order ID"
+"Plugin class not instance of Engine_Payment_Gateway";"Plugin class not instance of Engine_Payment_Gateway"
+"Gateways do not match";"Gateways do not match"
+
+#application/modules/Sitegateway/controllers/PaymentController.php
+"Payment by new signup user for subscription: %s";"Payment by new signup user for subscription: %s"
+"Payment by %1s for product: %2s";"Payment by %1s for product: %2s"
+
+#application/libraries/Engine/Payment/Gateway/Stripe.php
+"Please provide valid secret key.";"Please provide valid secret key."
+"Please provide valid publishable key.";"Please provide valid publishable key."
+"Please provide valid secret key for test mode.";"Please provide valid secret key for test mode."
+"Please provide valid publishable key for test mode.";"Please provide valid publishable key for test mode."
+"Please provide valid client id.";"Please provide valid client id."
+
+#application/modules/Sitegateway/views/scripts/_stripeConnectButton.tpl
+"Stripe Connect";"Stripe Connect"
+"You have connected your Stripe account successfully.";"You have connected your Stripe account successfully."
+"Unable to connect.";"Unable to connect."
+"You are already connected with your Stripe account.";"You are already connected with your Stripe account."
+"You can reconnect with different Stripe account or re-configure your current Stripe account by clicking %s.";"You can reconnect with different Stripe account or re-configure your current Stripe account by clicking %s."
+"You are not yet connected with Stripe. To get started, click the 'Connect with Stripe' button and sign up.";"You are not yet connected with Stripe. To get started, click the 'Connect with Stripe' button and sign up."
+"Connect With Stripe";"Connect With Stripe"
+
+#application/modules/Sitegateway/settings/my.sql
+"Stripe";"Stripe"
+"stripe";"stripe"
+
+"You will be able to securely make payment for your order using %s.";"You will be able to securely make payment for your order using %s."
+"Please click on 'Connect with Stripe' button before saving the changes.";"Please click on 'Connect with Stripe' button before saving the changes."
+
+"SITEGATEWAY_FORM_ADMIN_GATEWAY_PAYPALADAPTIVE_DESCRIPTION";"PayPal Adaptive Account Configuration:  <br />
+1) If you haven't already, you will need to establish a <a target=""_blank"" href=""%1$s"">Paypal account</a>.<br />
+2) Enable <a target=""_blank"" href=""%1$s"">API access</a> on your Paypal account via: <em>My Account &gt; Profile &gt; API Access &gt; Request API credentials &gt; Request API Signature</em>.<br />
+3) Go to My Account > Profile Settings > Selling Tools > API Access. From here, you will get the PayPal API Username, Password, and Signature values.<br />
+4) Enter ‘Application ID’ to make your PayPal account live. If you have not generated the Application ID yet and need help to do so then <a target=""_blank"" href=""%2$s"">Click here</a>.<br />[Note: You can also refer the video <a href=""%3$s"" target=""_blank"">%3$s</a> to know the detailed steps on how to generate PayPal Adaptive Live App ID.] <br />
+5) Enter the values of PayPal Email, API Username, API Password, API Signature and Application ID below.<br />"
+
+"SITEGATEWAY_FORM_ADMIN_GATEWAY_MANGOPAY_DESCRIPTION";"MangoPay Account Configuration:  <br />
+1) Sign-up to create your MangoPay <a target=""_blank"" href=""%1$s"">Account</a>.<br />
+2) Note-down the Client Id and Passphrase which is visible to you at the end of MangoPay account creation process. [Note: For security reasons, MangoPay do not save your Passphrase. So, keep it safe with yourself.] <br />
+3) MangoPay will send you an email for account activation. Activate your MangoPay account by clicking on the URL present in that email. <br />
+4) Enter the Client ID and Passphrase below."
+
+"Paypaladaptive";"PayPal Adaptive"
+"Mangopay";"MangoPay"
+"mangopay";"MangoPay"
+"PayPalAdaptive";"PayPal Adaptive"
+"paypaladaptive";"PayPal Adaptive"
+"Payumoney";"PayUmoney"
+"payumoney";"PayUmoney"
+
+"SITEGATEWAY_FORM_ADMIN_GATEWAY_PAYUMONEY_DESCRIPTION";"PayUmoney Account Configuration:  <br />
+1) If you haven't already, you will need to establish a <a target=""_blank"" href=""%1$s"">PayUmoney account</a>.<br />
+2) To get Key and Salt you need to submit below information:<br />
+&nbsp;&nbsp;&nbsp;a) Pan Card details.
+&nbsp;&nbsp;&nbsp;b) Savings bank account details.
+&nbsp;&nbsp;&nbsp;c) Business address. <br />
+3) Note-down the Key and Salt values which is visible to you at the end of PayUmoney account creation process.<br />
+4) Enter Key and Salt values below. [Note: You will be able to perform transactions once your account is verified by the PayUmoney.] <br />
+5) PayUmoney will verify the details provided by you. To verify your savings bank account, PayUmoney will deposit a amount (for e.g. 7.16) in your savings account, you need to enter the same value by signing into your PayuMoney account to complete the verification process.<br />
+6) Once all the verification process is done by PayUmoney (Usually takes 4-6 days), you will be able to perform transactions using this payment gateway.<br />"
+
+"SITEGATEWAY_FORM_ORDER_GATEWAY_PAYUMONEY_DESCRIPTION";"PayUmoney Account Configuration:  <br />
+1) If you haven't already, you will need to establish a <a target=""_blank"" href=""%1$s"">PayUmoney account</a>.<br />
+2) To get Key and Salt you need to submit below information:<br />
+&nbsp;&nbsp;&nbsp;a) Pan Card details.
+&nbsp;&nbsp;&nbsp;b) Savings bank account details.
+&nbsp;&nbsp;&nbsp;c) Business address. <br />
+3) Note-down the Key and Salt values which is visible to you at the end of PayUmoney account creation process.<br />
+4) Enter Key and Salt values below. [Note: You will be able to perform transactions once your account is verified by the PayUmoney.] <br />
+5) PayUmoney will verify the details provided by you. To verify your savings bank account, PayUmoney will deposit a amount (for e.g. 7.16) in your savings account, you need to enter the same value by signing into your PayuMoney account to complete the verification process.<br />
+6) Once all the verification process is done by PayUmoney (Usually takes 4-6 days), you will be able to perform transactions using this payment gateway.<br />"
+
+"SITEGATEWAY_FORM_ORDER_MANGOPAY_KYC_DESCRIPTION";" As you have enabled MangoPay payment method on this site so you need to upload the KYC documents for your MangoPay account to continue transactions on this site because MangoPay required the KYC documents to process the further transactions after certain volume of transactions completed for your MangoPay account.<br /><b>Proof of identity:</b> The copy of an official and valid identity document : for French citizens a copy of the identity card (double-sided), and for the foreigners residing in France or abroad, the passport<br/><br/><b>Proof of address:</b> Proof of residence that may be requested at the discretion of the Issuer.<br/><br/><br/><br/>"
+"ACTIVITY_CATEGORY_TYPE_SITEGATEWAY";"Payment Gateways"

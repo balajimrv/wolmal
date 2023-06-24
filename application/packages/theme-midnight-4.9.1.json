@@ -1,0 +1,148 @@
+{
+  "type": "theme",
+  "name": "midnight",
+  "version": "4.9.1",
+  "revision": "10113",
+  "path": "application\/themes\/midnight",
+  "repository": null,
+  "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+  "title": "Midnight",
+  "description": null,
+  "thumb": "midnight_theme.jpg",
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Wed, 26 Apr 2017 15:50:15 +0000",
+    "title": "Midnight",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Theme",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/themes\/midnight": {
+      "type": "directory",
+      "path": "application\/themes\/midnight",
+      "structure": [
+        {
+          "path": "mobile.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 18920,
+          "sha1": "30f26713728ec2c3f4bfd375443c0256f2f1fa1f"
+        },
+        {
+          "path": "constants.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7463,
+          "sha1": "e4c5a72f1bd0d4a70286ebfc0898176c6a9ac418"
+        },
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1643,
+          "sha1": "fcf5bdf41980898b16c4ae168448cc009bf45830"
+        },
+        {
+          "path": "theme.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 30364,
+          "sha1": "d423488d90315634b4a18b8d4b30fdd22ab3f55d"
+        },
+        {
+          "path": "midnight_theme.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6613,
+          "sha1": "66166165921441c82fc8134848a3701f3857b73b"
+        },
+        {
+          "path": "images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "images\/nophoto_user_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3212,
+          "sha1": "bd6f15e8f7b3607ad3ef7d1b936545cf5ac437ce"
+        },
+        {
+          "path": "images\/topbar_menu_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 254,
+          "sha1": "18da5fd9ad8e340ae8ba29b6acbabcd1918bdfed"
+        },
+        {
+          "path": "images\/topbar_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 13285,
+          "sha1": "189deb8f84195b62aa20afb1c9433503cf44534f"
+        },
+        {
+          "path": "images\/nophoto_event_thumb_normal.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4995,
+          "sha1": "224c78438fe5d2b542058d420729881b78c2ffa3"
+        },
+        {
+          "path": "images\/nophoto_event_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5832,
+          "sha1": "54422322cb1c232114efd429351f7d5489ae1dc0"
+        },
+        {
+          "path": "images\/nophoto_user_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 731,
+          "sha1": "df297bc518b4da8f9500cf2ca004219a402942b4"
+        }
+      ]
+    }
+  }
+}
