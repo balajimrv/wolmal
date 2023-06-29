@@ -12,8 +12,9 @@ wolmal\demo\application\modules\Sescustomize\controllers\IndexController.php
 wolmal\demo\application\modules\Sescustomize\views\scripts\admin-transaction\index.tpl
 wolmal\demo\application\modules\Sescustomize\views\scripts\admin-transaction\payment-made.tpl
 wolmal\demo\application\modules\Sescustomize\views\scripts\index\requests.tpl
-wolmal\demo\application\modules\Activitypoints\views\scripts\index\bridges.tpl
-
 wolmal\demo\application\modules\Sescustomize\views\scripts\admin-manage\ebvalue.tpl
 wolmal\demo\application\modules\Sescustomize\views\scripts\admin-manage\fbvalue.tpl
 wolmal\demo\application\modules\Sescustomize\Model\DbTable\Fbvalues.php
+
+wolmal\demo\application\modules\Activitypoints\views\scripts\index\bridges.tpl
+
