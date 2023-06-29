@@ -3,9 +3,9 @@
 class Sescustomize_Form_Redeem extends Engine_Form {
 
   public function init() {
-    $ebValueUserTable =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize');
-   $selectEb = $ebValueUserTable->select()->where('DATE_FORMAT(creation_date,"%Y-%m") =?',date('Y-m'))->where('user_id =?',Engine_Api::_()->user()->getViewer())->where('type =?','insert')->limit(1);
-   $ebVal = $ebValueUserTable->fetchRow($selectEb);
+    $fbValueUserTable =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize');
+   $selectFb = $fbValueUserTable->select()->where('DATE_FORMAT(creation_date,"%Y-%m") =?',date('Y-m'))->where('user_id =?',Engine_Api::_()->user()->getViewer())->where('type =?','insert')->limit(1);
+   $fbVal = $fbValueUserTable->fetchRow($selectFb);
     $description = "";
     if($_SESSION['totalEarn'] < 10000)
         $description = 'Minimum Balance EB required to apply for withdrawal as Encashment is 10000';

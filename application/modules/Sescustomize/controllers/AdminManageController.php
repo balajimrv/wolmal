@@ -1,17 +1,17 @@
 <?php
 
 class Sescustomize_AdminManageController extends Core_Controller_Action_Admin {
-  public function ebvalueAction(){
+  public function fbvalueAction(){
       $this->view->navigation = Engine_Api::_()->getApi('menus', 'core')->getNavigation('sescustomize_admin_main', array(), 'sescustomize_admin_main_ebbb');
       
-      $table = Engine_Api::_()->getDbTable('ebvalues','sescustomize');
-      $selectEb = $table->select()->from($table->info('name'),array('ebcount'=>new Zend_db_Expr('SUM(total)')))->where('type =?','insert');
-      $result = $table->fetchRow($selectEb);
-      $this->view->ebCount = $result->ebcount;
+      $table = Engine_Api::_()->getDbTable('fbvalues','sescustomize');
+      $selectFb = $table->select()->from($table->info('name'),array('fbcount'=>new Zend_db_Expr('SUM(total)')))->where('type =?','insert');
+      $result = $table->fetchRow($selectFb);
+      $this->view->fbCount = $result->fbcount;
       
-      $selectEb1 = $table->select()->from($table->info('name'),array('redeemcount'=>new Zend_db_Expr('SUM(total)')))
+      $selectFb1 = $table->select()->from($table->info('name'),array('redeemcount'=>new Zend_db_Expr('SUM(total)')))
 		  ->where('type =?','redeem');
-      $result1 = $table->fetchRow($selectEb1);
+      $result1 = $table->fetchRow($selectFb1);
       $this->view->redeemCount = $result1->redeemcount;
       
       

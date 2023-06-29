@@ -30,24 +30,24 @@ class Sescustomize_Plugin_Task_Jobs extends Core_Plugin_Task_Abstract {
                                       WHEN level_id = 13 AND (SUM($tableName.buyer_bb) + SUM($tableName.buyer_cb) + SUM($tableName.buyer_db)) * engine4_sescustomize_bbvalues.value  <= 2000000 then (SUM($tableName.buyer_bb) + SUM($tableName.buyer_cb) + SUM($tableName.buyer_db)) * engine4_sescustomize_bbvalues.value 
                                       WHEN level_id = 14 AND (SUM($tableName.buyer_bb) + SUM($tableName.buyer_cb) + SUM($tableName.buyer_db)) * engine4_sescustomize_bbvalues.value  > 5000000 then 5000000 
                                       WHEN level_id = 14 AND (SUM($tableName.buyer_bb) + SUM($tableName.buyer_cb) + SUM($tableName.buyer_db)) * engine4_sescustomize_bbvalues.value  <= 5000000 then (SUM($tableName.buyer_bb) + SUM($tableName.buyer_cb) + SUM($tableName.buyer_db)) * engine4_sescustomize_bbvalues.value 
-                                      ELSE 0 END as eb_count                                      
+                                      ELSE 0 END as fb_count                                      
                                        ") ,$tableName.".buyer_user_id",new Zend_Db_Expr("'insert'"),new Zend_Db_Expr("'".date('Y-m-d',strtotime($dateBack))."'")))
                        ->where('DATE_FORMAT('.$tableName.'.creation_date,"%Y-%m") =?', $dateYM)
                        ->setIntegrityCheck(false)
                        ->joinLeft('engine4_sescustomize_bbvalues','engine4_sescustomize_bbvalues.date = DATE_FORMAT('.$tableName.'.creation_date,"%m-%Y")',null)
                        //->join($table2,'engine4_sesbasic_bridges_2.buyer_user_id = '.$tableName.'.buyer_user_id AND DATE_FORMAT(engine4_sesbasic_bridges_2.creation_date,"%Y-%m") = "'.$dateYM.'" AND engine4_sesbasic_bridges_2.buyer_bb != 0',null)
                        ->joinLeft('engine4_users','engine4_users.user_id = '.$tableName.'.buyer_user_id',null)
-                       ->joinLeft('engine4_sescustomize_ebvalues','engine4_sescustomize_ebvalues.user_id = '.$tableName.'.buyer_user_id AND engine4_sescustomize_ebvalues.creation_date = "'.date('Y-m-d',strtotime($dateBack)).'" AND engine4_sescustomize_ebvalues.type = "insert"',null)
-                       ->where('engine4_sescustomize_ebvalues.ebvalue_id IS NULL')
+                       ->joinLeft('engine4_sescustomize_fbvalues','engine4_sescustomize_fbvalues.user_id = '.$tableName.'.buyer_user_id AND engine4_sescustomize_fbvalues.creation_date = "'.date('Y-m-d',strtotime($dateBack)).'" AND engine4_sescustomize_fbvalues.type = "insert"',null)
+                       ->where('engine4_sescustomize_fbvalues.fbvalue_id IS NULL')
                        ->where('engine4_users.user_id IS NOT NULL')
-                       //->having("eb_count > 0 AND COUNT(engine4_sesbasic_bridges_2.bridge_id) > 0")
-                       ->having("eb_count > 0")
+                       //->having("fb_count > 0 AND COUNT(engine4_sesbasic_bridges_2.bridge_id) > 0")
+                       ->having("fb_count > 0")
                        ->where("(SELECT COUNT(bridge_id) FROM engine4_sesbasic_bridges as m WHERE buyer_bb != 0 AND buyer_user_id =  engine4_sesbasic_bridges.buyer_user_id AND (DATE_FORMAT(m.creation_date,'%Y-%m') ='".$dateYM."')) > 0")
                        ->group("$tableName.buyer_user_id")
                        ->group("YEAR($tableName.creation_date)")
                        ->group("MONTH($tableName.creation_date)");
-        //$querySub = "UPDATE engine4_users u1 JOIN (".$selectTable.") b1 ON (u1.user_id = b1.buyer_user_id AND bb_update_date != '".$dateYM."') SET u1.eb_count = b1.eb_count,bb_update_date = '".$dateYM."'" ;  
-        $querySub = "INSERT INTO `engine4_sescustomize_ebvalues`(`total`, `user_id`, `type`, `creation_date`) ".$selectTable ;
+        //$querySub = "UPDATE engine4_users u1 JOIN (".$selectTable.") b1 ON (u1.user_id = b1.buyer_user_id AND bb_update_date != '".$dateYM."') SET u1.fb_count = b1.fb_count,bb_update_date = '".$dateYM."'" ;  
+        $querySub = "INSERT INTO `engine4_sescustomize_fbvalues`(`total`, `user_id`, `type`, `creation_date`) ".$selectTable ;
         $db->query($querySub);
         }
         

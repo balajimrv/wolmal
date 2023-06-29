@@ -1,5 +1,5 @@
 <?php
-class Sescustomize_Model_DbTable_Ebvalues extends Engine_Db_Table
+class Sescustomize_Model_DbTable_Fbvalues extends Engine_Db_Table
 {
   function earning($params = array()){
     $sum = $this->select()
@@ -60,7 +60,7 @@ class Sescustomize_Model_DbTable_Ebvalues extends Engine_Db_Table
       ;
   }
   
-  function currentEb($params = array()){
+  function currentFb($params = array()){
     $e = $this->earning($params);
     $ex = $this->expend($params);
       return  $e - $ex;

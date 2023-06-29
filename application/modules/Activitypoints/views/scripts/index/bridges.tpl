@@ -35,9 +35,10 @@
           <th class="nodata"></th>
           <th class="isdata _db">DB<span>DIRECT BRIDGES</span><p><span>GAINED</span><span>VALUE</span></p></th>
           <th class="nodata"></th>
-          <th class="isdata _eb">EB<span>EARNED BRIDGES</span><span>EB = Value of BB+CB+DB</span></th>
+          <th class="isdata _eb">EB<span>EXTRA BRIDGES </span><span>(INR)</span></th>
+          <th class="isdata _eb">FB<span>FINAL BRIDGES (INR)</span><span>FB = Value of (BB+CB+DB)+EB</span></th>
           <th class="nodata"></th>
-          <th class="isdata _ebRedeemed">EB<p><span>Redeemed</span><span>To Bank A/C</span><span>Balance</span><span>Total Balance</span></p></th>
+          <th class="isdata _ebRedeemed">FB<p><span>Redeemed</span><span>To Bank A/C</span><span>Balance</span><span>Total Balance</span></p></th>
         </tr>
       </thead>
 	  <tbody>
@@ -74,6 +75,7 @@
               <td class="nodata"></td>
               <td class="isdata _db"><p><span onclick="showUsers('<?php echo date('m', mktime(0, 0, 0, $i, 10));?>', 'db','<?php echo $db;?>')"><?php echo $db;?></span><span><?php echo $db*$bridgesValue;?></span></p></td>
               <td class="nodata"></td>
+              <td class="isdata _eb"><span>0</td>
               <td class="isdata _eb"><span><?php echo $bb*$bridgesValue + $cb*$bridgesValue + $db*$bridgesValue ;?></span></td>
               <td class="nodata"></td>
               <td class="isdata _ebRedeemed"><p><span>-</span><span>-</span><span>-</span><span><?php echo $bb*$bridgesValue+$cb*$bridgesValue+$db*$bridgesValue;?></span></p></td>

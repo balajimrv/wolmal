@@ -400,16 +400,16 @@ function checkoutProcess(process_no)
   }
 }
 <?php
-//eb
- //if($grand_total > Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->earningGroupBy(array('month'=>date('Y-m')))){ 
- if($grand_total > Engine_Api::_()->sitestoreproduct()->getEBTotal()){ ?>
+//get FB total
+ //if($grand_total > Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->earningGroupBy(array('month'=>date('Y-m')))){ 
+ if($grand_total > Engine_Api::_()->sitestoreproduct()->getFBTotal()){ ?>
   sesJqueryObject('#ebpay_payment_method_message_10').show();
   sesJqueryObject('.ebpay_payment_btn_label').remove();
   sesJqueryObject('.ebpay_payment_btn').remove();
   sesJqueryObject('.ebpay_payment_btn').attr('disabled','disabled');
   
   sesJqueryObject(document).on('click','.noebcount',function(){
-      alert('You Don\'t have enough EB to make payment.');
+      alert('You Don\'t have enough FB to make payment.');
   })
   
       <?php

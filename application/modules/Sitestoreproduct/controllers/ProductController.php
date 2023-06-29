@@ -2527,7 +2527,7 @@ class Sitestoreproduct_ProductController extends Seaocore_Controller_Action_Stan
           //remove from bb table
           $dbObject = Engine_Db_Table::getDefaultAdapter();
           $dbObject->query('DELETE FROM engine4_sesbasic_bridges where order_id ='.$order_id);
-          $dbObject->query('DELETE FROM engine4_sescustomize_ebvalues where order_id ='.$order_id);
+          $dbObject->query('DELETE FROM engine4_sescustomize_fbvalues where order_id ='.$order_id);
         }
                
         // SEND MAIL AND NOTIFICATIONS

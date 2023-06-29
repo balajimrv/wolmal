@@ -45,8 +45,8 @@ class Sescustomize_AdminTransactionController extends Core_Controller_Action_Adm
       }
       if($type == 1){
         //insert into reedem table //type bank
-        $ebvaluestable = Engine_Api::_()->getDbtable('ebvalues', 'sescustomize');
-        $ebvaluestable->insert(array(
+        $fbvaluestable = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize');
+        $fbvaluestable->insert(array(
           'user_id' => $item->user_id,
           'total' => @round($item->amount, 2),
           'type'=>'bank',

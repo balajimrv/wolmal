@@ -24,10 +24,10 @@ class Sescustomize_IndexController extends Core_Controller_Action_Standard
     $db = Engine_Db_Table::getDefaultAdapter();
     $this->_helper->layout->setLayout('admin-simple');
     $id = $this->_getParam('id','');
-    //$total = Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->earning();
+    //$total = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->earning();
     
     $total = $_SESSION['totalEarn'];
-    $exp = Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend();
+    $exp = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend();
     $isEarn = $total- $exp;
     if(!$isEarn)
       return $this->_forward('notfound', 'error', 'core');
@@ -78,7 +78,7 @@ class Sescustomize_IndexController extends Core_Controller_Action_Standard
     $type = $this->view->type = $this->_getParam('type','');
     $month = $this->_getParam('month','');
     $this->view->viewmore = $this->_getParam('viewmore','0');
-    $table = Engine_Api::_()->getDbTable('ebvalues','sescustomize');
+    $table = Engine_Api::_()->getDbTable('fbvalues','sescustomize');
     $select = $table->select()->where('type =?',$type)
                 ->where('user_id =?',Engine_Api::_()->user()->getViewer()->getIdentity())
                 ->where('DATE_Format(creation_date,"%Y-%m") =?',$month);

@@ -5878,16 +5878,16 @@ $this->view->creditAllow=$creditAllow;
                    $order_row->gateway_id = 50;
                    $user = $this->view->viewer();
                    $db = Zend_Db_Table_Abstract::getDefaultAdapter();
-                   $ebvaluestable = Engine_Api::_()->getDbtable('ebvalues', 'sescustomize');
+                   $fbvaluestable = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize');
                    $user->eb_count = $user->eb_count - @round($value['grand_total'], 2);
-                   $ebvaluestable->insert(array(
+                   $fbvaluestable->insert(array(
                       'user_id' => $viewer_id,
                       'order_id' => $order_row->getIdentity(),
                       'total' => @round($value['grand_total'], 2),
                       'type'=>'redeem',
                       'creation_date' => date('Y-m-d H:i:s'),
                     ));
-                    $ebValuesId = $db->lastInsertId();
+                    $fbValuesId = $db->lastInsertId();
                    $user->save();
                  }
                  //SES CUSTOM WORK

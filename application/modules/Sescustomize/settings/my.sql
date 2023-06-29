@@ -35,13 +35,13 @@ CREATE TABLE IF NOT EXISTS  `engine4_sescustomize_reedemrequests` (
   PRIMARY KEY (`reedemrequest_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-CREATE TABLE `engine4_sescustomize_ebvalues` (
-  `ebvalue_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `engine4_sescustomize_fbvalues` (
+  `fbvalue_id` int(11) NOT NULL AUTO_INCREMENT,
   `total` text NOT NULL,
   `user_id` int(11) NOT NULL,
   `type` enum('redeem','insert','bank') NOT NULL COMMENT 'redeem = withdraw,insert = earn',
   `creation_date` datetime NOT NULL,
-  PRIMARY KEY (`ebvalue_id`)
+  PRIMARY KEY (`fbvalue_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 #{"route":"sescustomize_bridges","module":"sescustomize","controller":"index","action":"bridges"}

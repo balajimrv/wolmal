@@ -4090,7 +4090,7 @@ class Sitestoreproduct_Api_Core extends Core_Api_Abstract {
         return $angle;
     }
     
-    public function getEBTotal() {
+    public function getFBTotal() {
 		$bridgeTable = Engine_Api::_()->getDbTable('bridges', 'sesbasic');
 		$selectTable = $bridgeTable->select()
     	               ->from($bridgeTable->info('name'), array("SUM(buyer_bb) as total_full_bb","SUM(buyer_cb) as total_full_cb","SUM(buyer_db) as total_full_db", "creation_date"))
@@ -4118,18 +4118,20 @@ class Sitestoreproduct_Api_Core extends Core_Api_Abstract {
 			$valueRs = Engine_Api::_()->sescustomize()->getValue($monthYear);
 			$bridges_value = $valueRs['value'];
 			
-			$Bank =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
-			$Redeem =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
+			$Bank =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
+			$Redeem =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
 		  
-		  
+		  	$EB_value = 0;
 			if($previous_bb > 0){
-				$EB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value));
+				//$EB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value));
+				$FB_value = ($bridges_value*($previous_bb + $previous_cb + $previous_db))+$EB_value;
 			}else{
+				$FB_value = 0;
 				$EB_value = 0;
 			}
 			
 			$RD_value = ($Bank+$Redeem);
-			$totalEarn = $totalEarn + ($EB_value - $RD_value);
+			$totalEarn = $totalEarn + ($FB_value - $RD_value);
 		}
 
 			return $totalEarn;

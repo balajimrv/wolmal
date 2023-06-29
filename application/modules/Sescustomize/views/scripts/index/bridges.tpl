@@ -11,18 +11,20 @@ foreach($this->full_bridges as $x => $value) {
     $valueRs = Engine_Api::_()->sescustomize()->getValue($monthYear);
     $bridges_value = $valueRs['value'];
     
-    $Bank =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
-    $Redeem =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
+    $Bank =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
+    $Redeem =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
   
-  
+  	$EB_value = 0;
     if($previous_bb > 0){
-        $EB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value));
+        //$EB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value));
+    	$FB_value = $FB_value + (($bridges_value * ($total_bb + $total_cb + $previous_db)) + $EB_value);
     }else{
+    	$FB_value = 0;
         $EB_value = 0;
     }
     
     $RD_value = ($Bank+$Redeem);
-    $totalPreviousEarn = $totalPreviousEarn + ($EB_value - $RD_value);
+    $totalPreviousEarn = $totalPreviousEarn + ($FB_value - $RD_value);
 }
 
     $totalEarn = $totalPreviousEarn;
@@ -44,7 +46,7 @@ foreach($this->full_bridges as $x => $value) {
 </div>
 <?php endif; ?>
 <?php $bridgesValue = Engine_Api::_()->getApi('settings', 'core')->getSetting('sescustomize.bridges.value', 10);?>
-  <?php $isBalance = Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->currentEb(); 
+  <?php $isBalance = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->currentFb(); 
         $isRequestSend = Engine_Api::_()->getDbtable('reedemrequests', 'sescustomize')->isReqExists();; 
   ?>
   <?php $viewer = Engine_Api::_()->user()->getViewer();?>
@@ -78,9 +80,11 @@ foreach($this->full_bridges as $x => $value) {
           <th class="nodata"></th>
           <th class="isdata _db">DB<span>DIRECT BRIDGES</span><p><span>GAINED</span><span>VALUE</span></p></th>
           <th class="nodata"></th>
-          <th class="isdata _eb">EB<span>EARNED BRIDGES</span><span>EB= Value of (BB+CB+DB)</span></th>
+          <th class="isdata _eb">EB<span>EXTRA BRIDGES </span><span>(INR)</span></th>
+          <td class="nodata"></td>
+          <th class="isdata _eb">FB<span>FINAL BRIDGES</span><span>FB = Value of (BB+CB+DB)+EB</span></th>
           <th class="nodata"></th>
-          <th class="isdata _ebRedeemed">EB 
+          <th class="isdata _ebRedeemed">FB 
             <p>
               <span>Redeemed</span>
               <span>To Bank A/C <?php if($totalEarn >= 10000 || $_SESSION['totalEarn'] >= 5000){ ?><br> (<a href="javascript:;" class="redeem_amt" data-src="sescustomize/index/redeem-form/<?php if($isRequestSend){ ?>id/<?php echo $isRequestSend; } ?>"><?php if($isRequestSend){ ?> VIEW REQUEST <?php }else{ ?> WITHDRAWAL FORM <?php } ?></a>) <?php  } ?></span>
@@ -112,29 +116,29 @@ foreach($this->full_bridges as $x => $value) {
 	    ?>
 	          <?php  
 	          
-	               $ebValueUserTable =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize');
-	               $selectEb = $ebValueUserTable->select()->where('DATE_FORMAT(creation_date,"%Y-%m") =?',$dateMonth)->where('user_id =?',$this->viewer()->getIdentity())->where('type =?','insert')->limit(1);
-	               $ebVal = $ebValueUserTable->fetchRow($selectEb);
+	               $fbValueUserTable =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize');
+	               $selectFb = $fbValueUserTable->select()->where('DATE_FORMAT(creation_date,"%Y-%m") =?',$dateMonth)->where('user_id =?',$this->viewer()->getIdentity())->where('type =?','insert')->limit(1);
+	               $fbVal = $fbValueUserTable->fetchRow($selectFb);
 	               
-	                /* echo $selectEb; */
-	               
-	               if($ebVal)
-	                $ebVal = $ebVal->total;
+	                /* echo $selectFb; */
+	               $EB_value = 0;
+	               if($fbVal)
+	                $fbVal = $fbVal->total;
 	               else
-	                $ebVal = 0;
-	                $earn =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->earningGroupBy(array('month'=>$dateMonth));
-                    $bank =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
-                    $redeem =  Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
+	                $fbVal = 0;
+	                $earn =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->earningGroupBy(array('month'=>$dateMonth));
+                    $bank =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
+                    $redeem =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
                    
                    if($bb > 0){
-                    $ebValue = (($bb*$bridgesValue) + ($cb*$bridgesValue) + ($db*$bridgesValue));
+                    $fbValue = ($bridgesValue*($bb + $cb + $db))+$EB_value;
                    }else{
-                    $ebValue = 0;
+                    $fbValue = 0;
                    }
                    
                    $redeemValue = ($bank+$redeem);
                    
-                   $totalEarn = $totalEarn + ($ebValue - $redeemValue);
+                   $totalEarn = $totalEarn + ($fbValue - $redeemValue);
                    
                    $_SESSION['totalEarn'] = $totalEarn;
                    
@@ -151,7 +155,9 @@ foreach($this->full_bridges as $x => $value) {
               <td class="nodata"></td>
               <td class="isdata _db"><p><span style="cursor:pointer;" onclick="showUsers('<?php echo date('m', mktime(0, 0, 0, $i, 10,(!empty($_GET['year']) && $_GET['year'] ? $_GET['year'] : date('Y'))));?>', 'db','<?php echo $db;?>',<?php echo (!empty($_GET['year']) && $_GET['year'] ? $_GET['year'] : date('Y')); ?>)"><?php echo $db;?></span><span><?php echo $db*$bridgesValue;?></span></p></td>
               <td class="nodata"></td>
-              <td class="isdata _eb"><span><?php echo round($ebValue,1) ;?></span></td>
+              <td class="isdata _eb"><span>0</span></td>
+              <td class="nodata"></td>
+              <td class="isdata _eb"><span><?php echo round($fbValue,1) ;?></td>
               <td class="nodata"></td>
               <td class="isdata _ebRedeemed">
                 <p>

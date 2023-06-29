@@ -39,7 +39,7 @@
             <tr>
               <td><?php echo $item->reedemrequest_id; ?></td>
               <td><?php echo $this->htmlLink($user->getHref(), $this->translate(Engine_Api::_()->sesbasic()->textTruncation($user->getTitle(),16)), array('title' => $user->getTitle(), 'target' => '_blank')); ?></td>
-              <td><?php echo Engine_Api::_()->sitestoreproduct()->getPriceWithCurrency(Engine_Api::_()->getDbtable('ebvalues', 'sescustomize')->currentEb($item->user_id)); ?></td>
+              <td><?php echo Engine_Api::_()->sitestoreproduct()->getPriceWithCurrency(Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->currentFb($item->user_id)); ?></td>
               <td><?php echo Engine_Api::_()->sitestoreproduct()->getPriceWithCurrency($item->amount); ?></td>
               <td><?php echo $item->creation_date; ?></td> 
               <td>
