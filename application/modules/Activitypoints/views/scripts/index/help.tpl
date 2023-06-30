@@ -84,9 +84,6 @@ function showhide(id1) {
 
 	</tbody>
 	</table>
-
-	<br><br>
-	<h2 style="padding-left: 110px;">Total Bridges per Day - <b>250</b></h2>
   </div>
 </div>
 
