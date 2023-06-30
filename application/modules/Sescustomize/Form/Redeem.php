@@ -77,7 +77,7 @@ class Sescustomize_Form_Redeem extends Engine_Form {
         'description' => '', 
     ));
     $this->addElement('Text', 'pan_name', array(
-        'label' => 'Namee on Pan Card',
+        'label' => 'Name on Pan Card',
         'required'=>true,
         'allowEmpty'=>false,
         'description' => '', 
