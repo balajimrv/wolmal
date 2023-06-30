@@ -17,7 +17,7 @@ foreach($this->full_bridges as $x => $value) {
   	$EB_value = 0;
     if($previous_bb > 0){
         //$EB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value));
-    	$FB_value = $FB_value + (($bridges_value * ($total_bb + $total_cb + $previous_db)) + $EB_value);
+    	$FB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value)) + $EB_value;
     }else{
     	$FB_value = 0;
         $EB_value = 0;
