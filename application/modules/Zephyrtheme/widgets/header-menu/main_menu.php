@@ -30,6 +30,20 @@ else { ?>
 				$s += 1;
 			} else {
 			?>
+            <?php
+			if($this->translate($label) == "LOCKER"){
+				$viewer = Engine_Api::_()->user()->getViewer();
+				$userid = $viewer->getIdentity(); 
+				
+				//Get Level ID
+				$usertbl = Engine_Api::_()->getDbTable('users', 'user');
+				$selectrow = $usertbl->select('level_id')->where('user_id = ?', $userid);
+				$query = $usertbl->fetchRow($selectrow);
+				$level_id = $query['level_id'];
+				
+				if($level_id !=4 && $level_id !=5){
+				
+			?>
 			<li>
 				<?php echo $this->htmlLink($item->getHref(), $item_icon.'<span>'.$this->translate($label).'</span>', array(
 					'class' => $class,
@@ -37,6 +51,17 @@ else { ?>
 				)) ?>
 			</li>
 			<?php
+				}
+			}else{
+				?>
+                <li>
+				<?php echo $this->htmlLink($item->getHref(), $item_icon.'<span>'.$this->translate($label).'</span>', array(
+					'class' => $class,
+					'target' => $item->get('target')
+				)) ?>
+			</li>
+                <?php
+			}
 				$s += 1;
 			}
 		} else {
