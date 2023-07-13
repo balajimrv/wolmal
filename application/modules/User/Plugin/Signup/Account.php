@@ -176,36 +176,36 @@ class User_Plugin_Signup_Account extends Core_Plugin_FormSequence_Abstract
 	  $query = $user_tbl->fetchRow($select_row);
       $level_id = $query['level_id'];
 	  
-	  	$RSO = 7;
-		$CSO = 8;
-		$CSO_Plus = 9;
-		$WAC = 10;
-		$WBC = 11;
-		$WCC = 12;
-		$WDC = 13;
-		$WEC = 14;
-		$REC = 15;
-		$EFC = 16;
+	  	$rso = 7;
+		$cso = 8;
+		$cso_plus = 9;
+		$wac = 10;
+		$wbc = 11;
+		$wcc = 12;
+		$wdc = 13;
+		$wec = 14;
+		$rec = 15;
+		$efc = 16;
 		
-	    if($level_id == $RSO){ //5000 AB
+	    if($level_id == $rso){ //5000 AB
 			$reward = 5000;
-		}else if($level_id == $CSO){//10000 AB
+		}else if($level_id == $cso){//10000 AB
 			$reward = 10000;
-		}else if($level_id == $CSO_Plus){//15000 AB
+		}else if($level_id == $cso_plus){//15000 AB
 			$reward = 15000;
-		}else if($level_id == $REC){//20000 AB
+		}else if($level_id == $rec){//20000 AB
 			$reward = 20000;
-		}else if($level_id == $EFC){//25000 AB
+		}else if($level_id == $efc){//25000 AB
 			$reward = 25000;
-		}else if($level_id == $WAC){//30000 AB
+		}else if($level_id == $wac){//30000 AB
 			$reward = 30000;
-		}else if($level_id == $WBC){//35000 AB
+		}else if($level_id == $wbc){//35000 AB
 			$reward = 35000;
-		}else if($level_id == $WCC){//40000 AB
+		}else if($level_id == $wcc){//40000 AB
 			$reward = 40000;
-		}else if($level_id == $WDC){//50000 AB
+		}else if($level_id == $wdc){//50000 AB
 			$reward = 50000;
-		}else if($level_id == $WEC){//100000 AB
+		}else if($level_id == $wec){//100000 AB
 			$reward = 100000;
 		}
 		
