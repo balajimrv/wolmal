@@ -162,52 +162,25 @@ class User_Plugin_Signup_Account extends Core_Plugin_FormSequence_Abstract
 	
 	//Award Assign
 	if ($data['code']!="") {
-	  $new_signup_user_id = $user->getIdentity();
-	  $user_tbl = Engine_Api::_()->getDbTable('users', 'user');
-	  
-	  $signup_code = $data['code'];
-	  
-	  //Get User ID
-	  $codes_tbl = Engine_Api::_()->getDbTable('codes', 'inviter');
-	  $user_id = $codes_tbl->getUserId($signup_code);
-	  
-	  //$user_tbl = Engine_Api::_()->getDbTable('users', 'user');
-	  $select_row = $user_tbl->select('level_id')->where('user_id = ?', $user_id);
-	  $query = $user_tbl->fetchRow($select_row);
-      $level_id = $query['level_id'];
-	  
-	  	$rso = 7;
-		$cso = 8;
-		$cso_plus = 9;
-		$wac = 10;
-		$wbc = 11;
-		$wcc = 12;
-		$wdc = 13;
-		$wec = 14;
-		$rec = 15;
-		$efc = 16;
+		$new_signup_user_id = $user->getIdentity();
+		$user_tbl = Engine_Api::_()->getDbTable('users', 'user');
 		
-	    if($level_id == $rso){ //5000 AB
-			$reward = 5000;
-		}else if($level_id == $cso){//10000 AB
-			$reward = 10000;
-		}else if($level_id == $cso_plus){//15000 AB
-			$reward = 15000;
-		}else if($level_id == $rec){//20000 AB
-			$reward = 20000;
-		}else if($level_id == $efc){//25000 AB
-			$reward = 25000;
-		}else if($level_id == $wac){//30000 AB
-			$reward = 30000;
-		}else if($level_id == $wbc){//35000 AB
-			$reward = 35000;
-		}else if($level_id == $wcc){//40000 AB
-			$reward = 40000;
-		}else if($level_id == $wdc){//50000 AB
-			$reward = 50000;
-		}else if($level_id == $wec){//100000 AB
-			$reward = 100000;
-		}
+		$signup_code = $data['code'];
+		
+		//Get User ID
+		$codes_tbl = Engine_Api::_()->getDbTable('codes', 'inviter');
+		$user_id = $codes_tbl->getUserId($signup_code);
+		
+		//Get Level ID
+		$select_row = $user_tbl->select('level_id')->where('user_id = ?', $user_id);
+		$query = $user_tbl->fetchRow($select_row);
+		$level_id = $query['level_id'];
+		
+		//Get Reward for handshake
+		$levels_tbl = Engine_Api::_()->getDbTable('levels', 'authorization');
+		$level_row = $levels_tbl->select('reward')->where('level_id = ?', $level_id);
+		$row = $levels_tbl->fetchRow($level_row);
+		$reward = $row['reward'];
 		
 		$userpoints = Engine_Api::_()->getApi('core', 'activitypoints')->getPoints($user_id);
 		$userpoints['userpoints_count'];
