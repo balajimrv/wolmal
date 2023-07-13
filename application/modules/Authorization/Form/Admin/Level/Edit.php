@@ -39,6 +39,12 @@ class Authorization_Form_Admin_Level_Edit extends Authorization_Form_Admin_Level
       'allowEmpty' => true,
       'required' => false,
     ));
+	
+	$this->addElement('Text', 'level_order', array(
+      'label' => 'Level Order',
+      'allowEmpty' => false,
+      'required' => true,
+    ));
 
     if( !$this->isPublic() ) {
 

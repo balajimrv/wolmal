@@ -33,7 +33,7 @@ class Authorization_AdminLevelController extends Core_Controller_Action_Admin
       $values = $formFilter->getValues();
 
       $select = $table->select()
-       ->order( !empty($values['orderby']) ? $values['orderby'].' '.$values['orderby_direction'] : 'level_id DESC' );
+       ->order( !empty($values['orderby']) ? $values['orderby'].' '.$values['orderby_direction'] : 'level_order ASC' );
       
       if( $values['orderby'] && $values['orderby_direction'] != 'ASC') {
         $this->view->orderby = $values['orderby'];
@@ -240,6 +240,7 @@ class Authorization_AdminLevelController extends Core_Controller_Action_Admin
     $values = $form->getValues();
     $level->title = $values['title'];
     $level->description = $values['description'];
+	$level->level_order = $values['level_order'];
     $level->save();
 
     // get messages

@@ -60,7 +60,7 @@ class Authorization_Model_DbTable_Levels extends Engine_Db_Table
   {
     $levels = $this->select()
         ->from($this, array('level_id', 'title'))
-        ->order('level_id ASC')
+        ->order('level_order ASC')
         ->query()
         ->fetchAll();
     

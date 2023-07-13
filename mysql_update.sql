@@ -9,3 +9,5 @@ CREATE TABLE `wffbnbcg_dem982`.`engine4_sescustomize_fbvalues` (  `ebvalue_id` i
 ALTER TABLE `engine4_sescustomize_fbvalues` CHANGE `ebvalue_id` `fbvalue_id` INT(11) NOT NULL AUTO_INCREMENT; 
 
 UPDATE `engine4_core_menuitems` SET `params` = '{\"route\":\"admin_default\",\"module\":\"sescustomize\",\"controller\":\"manage\",\"action\":\"fbvalue\"}' WHERE `engine4_core_menuitems`.`id` = 666; 
+
+ALTER TABLE `engine4_authorization_levels` ADD `level_order` INT NOT NULL AFTER `flag`; 

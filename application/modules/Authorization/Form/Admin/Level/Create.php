@@ -54,7 +54,14 @@ class Authorization_Form_Admin_Level_Create extends Engine_Form
     // Element: parent
     $defaultLevelIdentity = null;
     $parentMultiOptions = array();
-    foreach( Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll() as $level ) {
+	
+	/*$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$select = new Zend_Db_Select($level_tbl->getAdapter());
+	$select = $level_tbl->select()->order('level_id DESC');
+    $user_levels = $table->fetchAll($select);*/
+	
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
       if( $level->type == 'public' ) {
         continue;
       }
@@ -70,6 +77,17 @@ class Authorization_Form_Admin_Level_Create extends Engine_Form
       'value' => $defaultLevelIdentity,
     ));
     $this->parent->getDecorator('Description')->setOption('placement', 'append');
+	
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$fetch_order = $level_tbl->fetchRow($level_tbl->select('level_order')->order('level_order DESC'));
+	$level_order = $fetch_order['level_order'] + 1;
+	// Element: Order
+    $this->addElement('Text', 'level_order', array(
+      'label' => 'Level Order',
+      'allowEmpty' => false,
+      'required' => true,
+	  'value' => $level_order,
+    ));
 
 
     // Buttons
