@@ -154,84 +154,9 @@ class User_Plugin_Signup_Account extends Core_Plugin_FormSequence_Abstract
     $user->save();
 
     Engine_Api::_()->user()->setViewer($user);
-	
-	
+
     // Increment signup counter
     Engine_Api::_()->getDbtable('statistics', 'core')->increment('user.creations');
-	
-	
-	//Award Assign
-	if ($data['code']!="") {
-	  $new_signup_user_id = $user->getIdentity();
-	  $user_tbl = Engine_Api::_()->getDbTable('users', 'user');
-	  
-	  $signup_code = $data['code'];
-	  
-	  //Get User ID
-	  $codes_tbl = Engine_Api::_()->getDbTable('codes', 'inviter');
-	  $user_id = $codes_tbl->getUserId($signup_code);
-	  
-	  //$user_tbl = Engine_Api::_()->getDbTable('users', 'user');
-	  $select_row = $user_tbl->select('level_id')->where('user_id = ?', $user_id);
-	  $query = $user_tbl->fetchRow($select_row);
-      $level_id = $query['level_id'];
-	  
-	  	$RSO = 7;
-		$CSO = 8;
-		$CSO_Plus = 9;
-		$WAC = 10;
-		$WBC = 11;
-		$WCC = 12;
-		$WDC = 13;
-		$WEC = 14;
-		$REC = 15;
-		$EFC = 16;
-		
-	    if($level_id == $RSO){ //5000 AB
-			$reward = 5000;
-		}else if($level_id == $CSO){//10000 AB
-			$reward = 10000;
-		}else if($level_id == $CSO_Plus){//15000 AB
-			$reward = 15000;
-		}else if($level_id == $REC){//20000 AB
-			$reward = 20000;
-		}else if($level_id == $EFC){//25000 AB
-			$reward = 25000;
-		}else if($level_id == $WAC){//30000 AB
-			$reward = 30000;
-		}else if($level_id == $WBC){//35000 AB
-			$reward = 35000;
-		}else if($level_id == $WCC){//40000 AB
-			$reward = 40000;
-		}else if($level_id == $WDC){//50000 AB
-			$reward = 50000;
-		}else if($level_id == $WEC){//100000 AB
-			$reward = 100000;
-		}
-		
-		$userpoints = Engine_Api::_()->getApi('core', 'activitypoints')->getPoints($user_id);
-		$userpoints['userpoints_count'];
-		$userpoints['userpoints_totalearned'];
-		$userpoints_count = $userpoints['userpoints_count']+$reward;
-		$userpoints_totalearned = $userpoints['userpoints_totalearned']+$reward;
-		
-		Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count, 'userpoints_totalearned' => $userpoints_totalearned), array('userpoints_user_id =?' => $user_id));
-		
-		
-		//Insert transaction details into semods_uptransactions table
-		$transaction_text = "Handshake Reward from (User ID:<a href='https://wolmal.com/profile/".$new_signup_user_id."' target='_blank'>$new_signup_user_id</a>)";
-		
-		
-		$transaction_id = Engine_Api::_()->getDbTable('transactions','activitypoints')->add(
-														$user_id,
-														1,
-														1,  // cat
-														0,
-														$transaction_text,
-														$reward
-                                                   );
-		
-    }
 
     if ($user->verified && $user->enabled) {
       // Create activity for them
