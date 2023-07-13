@@ -240,6 +240,7 @@ class Authorization_AdminLevelController extends Core_Controller_Action_Admin
     $values = $form->getValues();
     $level->title = $values['title'];
     $level->description = $values['description'];
+	$level->reward = $values['reward'];
 	$level->level_order = $values['level_order'];
     $level->save();
 

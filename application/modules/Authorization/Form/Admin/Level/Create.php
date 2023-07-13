@@ -78,6 +78,13 @@ class Authorization_Form_Admin_Level_Create extends Engine_Form
     ));
     $this->parent->getDecorator('Description')->setOption('placement', 'append');
 	
+	// Element: title
+    $this->addElement('Text', 'reward', array(
+      'label' => 'Reward',
+      'allowEmpty' => false,
+      'required' => false,
+    ));
+	
 	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
 	$fetch_order = $level_tbl->fetchRow($level_tbl->select('level_order')->order('level_order DESC'));
 	$level_order = $fetch_order['level_order'] + 1;

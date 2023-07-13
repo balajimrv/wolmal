@@ -10,4 +10,8 @@ ALTER TABLE `engine4_sescustomize_fbvalues` CHANGE `ebvalue_id` `fbvalue_id` INT
 
 UPDATE `engine4_core_menuitems` SET `params` = '{\"route\":\"admin_default\",\"module\":\"sescustomize\",\"controller\":\"manage\",\"action\":\"fbvalue\"}' WHERE `engine4_core_menuitems`.`id` = 666; 
 
-ALTER TABLE `engine4_authorization_levels` ADD `level_order` INT NOT NULL AFTER `flag`; 
+ALTER TABLE `engine4_authorization_levels` ADD `level_order` INT NOT NULL AFTER `flag`;
+
+ALTER TABLE `engine4_authorization_levels` ADD `reward` FLOAT NOT NULL AFTER `flag`;
+
+ALTER TABLE `engine4_authorization_levels` CHANGE `reward` `reward` INT NOT NULL; 
