@@ -49,7 +49,7 @@ foreach($this->full_bridges as $x => $value) {
   <?php $isBalance = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->currentFb(); 
         $isRequestSend = Engine_Api::_()->getDbtable('reedemrequests', 'sescustomize')->isReqExists();; 
   ?>
-  <?php $viewer = Engine_Api::_()->user()->getViewer();?>
+  <?php echo $viewer = Engine_Api::_()->user()->getViewer();?>
 <div class="actpoints_bridges_page">
   <h3>Vallet</h3><b>Year:</b>&nbsp;
   <?php $date = new DateTime();?>
@@ -62,8 +62,15 @@ foreach($this->full_bridges as $x => $value) {
 </select>&nbsp;
   <b>NAME:</b>&nbsp;<?php echo $viewer->displayname;?>&nbsp;&nbsp;&nbsp;&nbsp;<b>PROFILE ID:</b>&nbsp;<?php echo $viewer->user_id;?>&nbsp;&nbsp;&nbsp;&nbsp;<b>RANK:</b>&nbsp;<?php echo Engine_Api::_()->getItem('authorization_level',$viewer->level_id)->title;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->url(array('action'=>'reference-member'),'sescustomize_bridges',true);?>" ><?php echo $this->translate("My Referrals");?></a>
   
-  <div style="float:right;margin: 20px;font-size: 16px;">
-      <a href="/bridges/view-request/">View Requests</a>
+  
+  <div style="float:right;margin: 20px;">
+  	  <span><strong>TOTAL AMOUNT</strong> (Redeemed+Withdrawn): 
+      <strong><?php
+  echo $earn =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->totalAmount($viewer->user_id);
+  ?></strong></span>
+  <span style="font-size: 16px; padding-left: 20px;">
+      <a href="/bridges/view-request/">View Requests
+  </span></a>
   </div>
   
   <div class="actpoints_bridges_table">

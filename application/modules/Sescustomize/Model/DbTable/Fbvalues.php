@@ -40,6 +40,24 @@ class Sescustomize_Model_DbTable_Fbvalues extends Engine_Db_Table
     }
     return 0;      
   }
+  
+  
+  function totalAmount($user_id){
+    $sum = $this->select()
+      ->from($this->info('name'), array('totalRedeem'=> new Zend_Db_Expr('SUM(CASE WHEN `type` = "redeem" THEN  total END)')
+                                , 'totalBank'=> new Zend_Db_Expr('SUM(CASE WHEN `type` = "bank" THEN  total END)')
+      ))
+      ->group('user_id');
+      //->where('type =?','insert');
+      	$sum->where('user_id = ?', $user_id);
+    	$row = $this->fetchRow($sum);
+    if($row>0){
+      return $row->totalRedeem + $row->totalBank;
+    }
+    return 0;
+  }
+  
+  
   function expend($params = array()){
     $sum = $this->select()
       ->from($this->info('name'), new Zend_Db_Expr('SUM(total)'))
