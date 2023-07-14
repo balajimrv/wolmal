@@ -15,8 +15,16 @@
           
           <?php if($this->minimenushow_profileimg == true) { ?>
           <li class="minimenu_profile_button">
-            <?php echo $this->htmlLink($this->viewer()->getHref(), 
-                      $this->itemPhoto($this->viewer(), 'thumb.icon'), array('title'=>$this->translate('My Profile'))); ?>
+            <?php 	 $viewer = Engine_Api::_()->user()->getViewer();
+					$userid = $viewer->getIdentity(); 
+				
+				//Get Level ID
+				$usertbl = Engine_Api::_()->getDbTable('users', 'user');
+				$selectrow = $usertbl->select('displayname')->where('user_id = ?', $userid);
+				$query = $usertbl->fetchRow($selectrow);
+				$displayname = $query['displayname'];
+					  echo $this->htmlLink($this->viewer()->getHref(), 
+                      $this->itemPhoto($this->viewer(), 'thumb.icon'), array('title'=>$this->translate($displayname))); ?>
           </li>
           <?php } ?>
           
