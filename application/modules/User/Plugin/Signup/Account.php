@@ -186,9 +186,8 @@ class User_Plugin_Signup_Account extends Core_Plugin_FormSequence_Abstract
 		$userpoints['userpoints_count'];
 		$userpoints['userpoints_totalearned'];
 		$userpoints_count = $userpoints['userpoints_count']+$reward;
-		$userpoints_totalearned = $userpoints['userpoints_totalearned']+$reward;
 		
-		Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count, 'userpoints_totalearned' => $userpoints_totalearned), array('userpoints_user_id =?' => $user_id));
+		Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count), array('userpoints_user_id =?' => $user_id));
 		
 		
 		//Insert transaction details into semods_uptransactions table
