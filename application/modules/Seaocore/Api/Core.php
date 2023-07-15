@@ -1854,8 +1854,8 @@ Stores - Notes Extension ", "sitestoreevent" => "Directory / Stores - Events Ext
     public function clearMenuCache() {
 
         $cache = Zend_Registry::get('Zend_Cache');
-        $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->getLevelsAssoc();
-        foreach ($levels as $level_id => $level_name) {
+			$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->getLevelsAssoc($level_tbl->select()->order('level_order ASC')) as $level_id => $level_name ) {
             $cache->remove('main_menu_html_for_' . $level_id);
             $cache->remove('main_menu_cache_level_' . $level_id);
         }

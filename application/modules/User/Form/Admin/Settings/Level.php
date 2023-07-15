@@ -28,12 +28,10 @@ class User_Form_Admin_Settings_Level extends Engine_Form
     $this->getDecorator('Description')->setOptions(array('tag' => 'h4', 'placement' => 'PREPEND'));
 
     // prepare user levels
-    $table = Engine_Api::_()->getDbtable('levels', 'authorization');
-    $select = $table->select();
-    $user_levels = $table->fetchAll($select);
-
-    foreach ($user_levels as $user_level) {
-      $levels_prepared[$user_level->level_id] = $user_level->getTitle();
+    
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $user_level ) {      
+		$levels_prepared[$user_level->level_id] = $user_level->getTitle();
     }
 
     // category field

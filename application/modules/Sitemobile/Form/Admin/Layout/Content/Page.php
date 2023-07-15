@@ -83,8 +83,8 @@ class Sitemobile_Form_Admin_Layout_Content_Page extends Engine_Form {
 
     // Page Audience
     // prepare levels
-    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
-    foreach ($levels as $level) {
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
       $levels_prepared[$level->getIdentity()] = $level->getTitle();
     }
     reset($levels_prepared);

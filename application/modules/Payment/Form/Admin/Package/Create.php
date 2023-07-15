@@ -48,7 +48,9 @@ class Payment_Form_Admin_Package_Create extends Engine_Form
 
     // Element: level_id
     $multiOptions = array('' => '');
-    foreach( Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll() as $level ) {
+	
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
       if( $level->type == 'public' || $level->type == 'admin' || $level->type == 'moderator' ) {
         continue;
       }

@@ -68,8 +68,9 @@ class User_Form_Admin_Manage_Edit extends Engine_Form
 
     // Init level
     $levelMultiOptions = array(); //0 => ' ');
-    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
-    foreach( $levels as $row ) {
+	
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $row ) {
       $levelMultiOptions[$row->level_id] = $row->getTitle();
     }
     $this->addElement('Select', 'level_id', array(

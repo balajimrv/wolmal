@@ -199,8 +199,8 @@ class Sitestore_ManageadminController extends Seaocore_Controller_Action_Standar
     }
     $user_id_array = $user_id_array . '0';
     $noncreate_owner_level = array();
-    $permissionsTable = Engine_Api::_()->getDbtable('permissions', 'authorization');
-    foreach (Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll() as $level) {
+    $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
       $can_create = 0;
       if ($level->type != "public") {
         $can_create = Engine_Api::_()->authorization()->getPermission($level->level_id, 'sitestore_store', 'create');

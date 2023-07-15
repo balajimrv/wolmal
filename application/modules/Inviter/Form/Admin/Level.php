@@ -29,9 +29,8 @@ class Inviter_Form_Admin_Level extends Engine_Form
     $this->getDecorator('Description')->setOptions(array('tag' => 'h4', 'placement' => 'PREPEND'));
 
     // prepare user levels
-    $table = Engine_Api::_()->getDbtable('levels', 'authorization');
-    $select = $table->select();
-    $user_levels = $table->fetchAll($select);
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$user_levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
     
     foreach ($user_levels as $user_level){
       $levels_prepared[$user_level->level_id]= $user_level->getTitle();

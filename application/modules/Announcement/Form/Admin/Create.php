@@ -41,7 +41,8 @@ class Announcement_Form_Admin_Create extends Engine_Form
     
     // Prepare Member levels
     $levelOptions = array();
-    foreach( Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll() as $level ) {
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
       $levelOptions[$level->level_id] = $level->getTitle();
     }
     // Select Member Levels

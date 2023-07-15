@@ -51,7 +51,7 @@ class Payment_Form_Admin_Package_Filter extends Engine_Form
     $levels = Engine_Api::_()->getDbtable('levels', 'authorization')
       ->select()
       ->from('engine4_authorization_levels', array('level_id', 'title'))
-      ->order('level_id ASC')
+      ->order('level_order ASC')
       ->query()
       ->fetchAll();
     $multiOptions = array('' => '');

@@ -69,7 +69,9 @@ class Core_Form_Admin_Message_Mail extends Engine_Form
 
     $member_levels = array();
     $public_level = Engine_Api::_()->getDbtable('levels', 'authorization')->getPublicLevel();
-    foreach( Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll() as $row ) {
+	
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $row ) {
       if( $public_level->level_id != $row->level_id ) {
         $member_count = $row->getMembershipCount();
 

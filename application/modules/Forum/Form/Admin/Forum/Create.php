@@ -23,7 +23,9 @@ class Forum_Form_Admin_Forum_Create extends Forum_Form_Forum_Create
     parent::init();
     
     // Element: levels
-    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
+	
     $multiOptions = array();
     foreach( $levels as $level ) {
       $multiOptions[$level->getIdentity()] = $level->getTitle();

@@ -157,7 +157,7 @@ class Activityrewards_AdminOffersController extends Core_Controller_Action_Admin
       
       $item_levels = $newitem ? array() : (empty($upearner->userpointearner_levels) ? array() : explode(',',$upearner->userpointearner_levels));
       
-      $rows = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+      $rows = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll($level_tbl->select()->order('level_order ASC'));
       $levels = array();
       
       foreach( $rows as $row ) {
@@ -187,7 +187,9 @@ class Activityrewards_AdminOffersController extends Core_Controller_Action_Admin
     $tags = array_filter(array_map("trim", $tags));
     
     $levels = $values['levels'];
-    $rows = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$rows = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
+	
     foreach( $rows as $row ) {
       $levels_array[] = $row->level_id;
     }

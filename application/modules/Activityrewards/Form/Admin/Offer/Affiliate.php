@@ -75,8 +75,8 @@ class Activityrewards_Form_Admin_Offer_Affiliate extends Activityrewards_Form_Ad
 
 
     $levelMultiOptions = array();
-    
-    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+    $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
     foreach( $levels as $row )
     {
       $levelMultiOptions[$row->level_id] = $row->getTitle();

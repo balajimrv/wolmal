@@ -66,8 +66,8 @@ class Forum_AdminManageController extends Core_Controller_Action_Admin
     if( $auth->isAllowed($forum, 'everyone', 'view') ) {
       
     } else {
-      $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
-      foreach( $levels as $level ) {
+      $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	  foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
         if( Engine_Api::_()->authorization()->context->isAllowed($forum, $level, 'view') ) {
           $allowed[] = $level->getIdentity();
         }
@@ -109,7 +109,9 @@ class Forum_AdminManageController extends Core_Controller_Action_Admin
       $forum->save();
       
       // Handle permissions
-      $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+	  
+	  $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	  $levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
 
       // Clear permissions
       $auth->setAllowed($forum, 'everyone', 'view', false);
@@ -240,7 +242,8 @@ class Forum_AdminManageController extends Core_Controller_Action_Admin
 
       // Handle permissions
       $auth = Engine_Api::_()->authorization()->context;
-      $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+      $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	  $levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
 
       // Clear permissions
       $auth->setAllowed($forum, 'everyone', 'view', false);

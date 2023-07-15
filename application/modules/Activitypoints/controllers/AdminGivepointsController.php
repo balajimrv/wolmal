@@ -247,8 +247,8 @@ class Activitypoints_AdminGivepointsController extends Core_Controller_Action_Ad
     
     }
     
-    
-    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	$levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
 
     // @tbd - only enabled
     $subnets = Engine_Api::_()->getDbtable('networks', 'network')->fetchAll();

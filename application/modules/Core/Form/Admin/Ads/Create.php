@@ -117,9 +117,10 @@ class Core_Form_Admin_Ads_Create extends Engine_Form
     $this->limit_ctr->getDecorator('Description')->setOption('placement', 'append');
 
     // Element: ad_levels
-    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
+    
     $multiOptions = array();
-    foreach ($levels as $level){
+	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+	foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $level ) {
       $multiOptions[$level->getIdentity()] = $level->getTitle();
     }
     $this->addElement('Multiselect', 'ad_levels', array(

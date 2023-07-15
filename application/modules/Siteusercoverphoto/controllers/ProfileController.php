@@ -170,8 +170,8 @@ class Siteusercoverphoto_ProfileController extends Core_Controller_Action_Standa
             $coreSettingsApi = Engine_Api::_()->getApi("settings", "core");
             $postionParams = Zend_Json_Encoder::encode($this->_getParam('position', array('top' => '0', 'left' => 0)));
             if (!empty($defaultCover)) {
-                $level_ids = Engine_Api::_()->getDbtable('levels', 'authorization')->getLevelsAssoc();
-                foreach ($level_ids as $key => $value) {
+                $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+				foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $value ) {
                     $public_level_id = Engine_Api::_()->getDbtable('levels', 'authorization')->getPublicLevel()->level_id;
                     if ($public_level_id == $key)
                         continue;
@@ -1058,9 +1058,10 @@ class Siteusercoverphoto_ProfileController extends Core_Controller_Action_Standa
                 
                 if ($this->view->count > 1) {
                     $postionParamss['fontcolor'] = $_POST['siteusercover_font_color'];
-                    $level_ids = Engine_Api::_()->getDbtable('levels', 'authorization')->getLevelsAssoc();
+					
+					$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
+					foreach( $level_tbl->getLevelsAssoc($level_tbl->select()->order('level_order ASC')) as $key => $value ) {
                     
-                    foreach ($level_ids as $key => $value) {
                        Engine_Api::_()->siteusercoverphoto()->setSiteUserDefaultSettingsParams($key, Zend_Json_Encoder::encode($postionParamss));
                     }
                 } else {
