@@ -67,7 +67,7 @@ foreach($this->full_bridges as $x => $value) {
   	  <span><strong>TOTAL AMOUNT</strong> (Redeemed+Withdrawn): 
       <strong><?php
   $earn =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->totalAmount($viewer->user_id);
-  echo round($$earn,1);
+  echo round($earn,1);
   ?></strong></span>
   <span style="font-size: 16px; padding-left: 20px;">
       <a href="/bridges/view-request/">View Requests
