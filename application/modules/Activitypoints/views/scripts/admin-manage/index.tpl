@@ -89,6 +89,7 @@ function selectAll()
         <th style='width: 1%;'><a href="javascript:void(0);" onclick="javascript:changeOrder('email', 'ASC');"><?php echo $this->translate("Email") ?></a></th>
         <th style='width: 1%;'><a href="javascript:void(0);" onclick="javascript:changeOrder('userpoints_count', 'ASC');"><?php echo $this->translate("Points Balance") ?></a></th>
         <th style='width: 1%;'><a href="javascript:void(0);" onclick="javascript:changeOrder('userpoints_totalearned', 'ASC');"><?php echo $this->translate("Total Points Earned") ?></a></th>
+        <th style='width: 1%;'><?php echo $this->translate("Award Count") ?></th>
         <th style='width: 1%;' class='admin_table_options'><?php echo $this->translate("Options") ?></th>
       </tr>
     </thead>
@@ -110,6 +111,7 @@ function selectAll()
             </td>
             <td><?php echo $item->userpoints_count ?></td>
             <td><?php echo $item->userpoints_totalearned ?></td>
+            <td><?php echo $item->award_count ?></td>
             <td class='admin_table_options'>
               <a href='<?php echo $this->url(array('action' => 'edit', 'id' => $item->user_id));?>'><?php echo $this->translate("edit") ?></a>
             </td>

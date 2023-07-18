@@ -25,6 +25,11 @@ class Activitypoints_Form_Admin_Manage_Edit extends Engine_Form
       'label' => 'Total Points Spent',
       'description' => 'This is the cumulative of total points user spent. This counter only increases.'
     ));
+	
+	$this->addElement('Text', 'award_count', array(
+      'label' => 'Award Count',
+      'description' => 'For every 1 lakh AB collected, As per membership level award will be given only 10 times, after 10 times 2 Lakh AB will be given to all membership level.'
+    ));
 
     $this->addElement('hidden', 'id', array(
       'value' => 0
@@ -58,13 +63,15 @@ class Activitypoints_Form_Admin_Manage_Edit extends Engine_Form
     $user_points = intval( $this->getElement('userpoints_count')->getValue() );
     $userpoints_totalearned = intval( $this->getElement('userpoints_totalearned')->getValue() );
     $userpoints_totalspent = intval( $this->getElement('userpoints_totalspent')->getValue() );
+	$award_count = intval( $this->getElement('award_count')->getValue() );
 
 
     Engine_Api::_()->getApi('core', 'activitypoints')->setPoints($user_id, $user_points);
 
 
     $table = Engine_Api::_()->getDbtable('points', 'activitypoints')->update( array('userpoints_totalearned'  => $userpoints_totalearned,
-                                                                                    'userpoints_totalspent'   => $userpoints_totalspent
+                                                                                    'userpoints_totalspent'   => $userpoints_totalspent,
+																					'award_count'   => $award_count
                                                                                    ),
                                                                              array('userpoints_user_id = ?' => $user_id)
                                                                              );

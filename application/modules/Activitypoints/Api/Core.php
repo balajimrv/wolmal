@@ -93,8 +93,8 @@ class Activitypoints_Api_Core extends Core_Api_Abstract
 
     if($update_totalearned) {
       $this->updateStats( $user_id, "earn", $amount );
-    }
-  
+	}
+	
   }
   
   
@@ -145,6 +145,81 @@ class Activitypoints_Api_Core extends Core_Api_Abstract
     if(Semods_Utils::getSetting('activitypoints.enable_statistics')) {
       Engine_Api::_()->getDbTable('stats', 'activitypoints')->update($user_id, $type, $amount);
     }
+	
+	//Get Level ID
+	    $user_tbl = Engine_Api::_()->getDbTable('users', 'user');
+		$select_row = $user_tbl->select('level_id')->where('user_id = ?', $user_id);
+		$query = $user_tbl->fetchRow($select_row);
+		$level_id = $query['level_id'];
+		
+		//Get award
+		$levels_tbl = Engine_Api::_()->getDbTable('levels', 'authorization');
+		$level_row = $levels_tbl->select('award')->where('level_id = ?', $level_id);
+		$row = $levels_tbl->fetchRow($level_row);
+		$award = $row['award'];
+		
+		$userpoints = Engine_Api::_()->getApi('core', 'activitypoints')->getPoints($user_id);
+		$userpoints_count = $userpoints['userpoints_count'];
+		$userpoints_totalearned = $userpoints['userpoints_totalearned'];
+		$award_count = $userpoints['award_count'];
+		
+		$flag = false;
+		
+		
+		$earned_points_start = (($award_count+1)*100000);
+		$earned_points_end = ($earned_points_start + 100000);
+		$awardcount = (substr($earned_points_start, 0, 2)-1); //get first 2 digit
+		
+		if($award_count < 10){
+			if($userpoints_totalearned >= 100000 && $userpoints_totalearned < 200000 && $award_count == 0){
+				$flag = true;
+			}else if($userpoints_totalearned >= 200000 && $userpoints_totalearned < 300000 && $award_count == 1){
+				$flag = true;
+			}else if($userpoints_totalearned >= 300000 && $userpoints_totalearned < 400000 && $award_count == 2){
+				$flag = true;
+			}else if($userpoints_totalearned >= 400000 && $userpoints_totalearned < 500000 && $award_count == 3){
+				$flag = true;
+			}else if($userpoints_totalearned >= 500000 && $userpoints_totalearned < 600000 && $award_count == 4){
+				$flag = true;
+			}else if($userpoints_totalearned >= 600000 && $userpoints_totalearned < 700000 && $award_count == 5){
+				$flag = true;
+			}else if($userpoints_totalearned >= 700000 && $userpoints_totalearned < 800000 && $award_count == 6){
+				$flag = true;
+			}else if($userpoints_totalearned >= 800000 && $userpoints_totalearned < 900000 && $award_count == 7){
+				$flag = true;
+			}else if($userpoints_totalearned >= 900000 && $userpoints_totalearned < 1000000 && $award_count == 8){
+				$flag = true;
+			}else if($userpoints_totalearned >= 1000000 && $userpoints_totalearned < 1100000 && $award_count == 9){
+				$flag = true;
+			}
+			if($flag){
+				$award_count = $award_count+1;
+				$userpoints_count = $userpoints['userpoints_count'] + $award;
+				Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count, 'award_count' => $award_count), array('userpoints_user_id =?' => $user_id));
+			}
+			//Above 10 lakhs
+		}else if($userpoints_totalearned >= $earned_points_start && $userpoints_totalearned < $earned_points_end && $award_count == $awardcount){
+			$flag = true;
+			$award = 200000;
+			$award_count = $award_count+1;
+			$userpoints_count = $userpoints['userpoints_count'] + $award;
+			Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count, 'award_count' => $award_count), array('userpoints_user_id =?' => $user_id));
+		}
+  		
+		if($flag){
+			//Insert transaction details into semods_uptransactions table
+			$transaction_text = "Award - For Each 1 Lakh AB Collected";
+			
+			
+			$transaction_id = Engine_Api::_()->getDbTable('transactions','activitypoints')->add(
+															$user_id,
+															1,
+															1,  // cat
+															0,
+															$transaction_text,
+															$award
+													   );
+		}
   
   }
   

@@ -64,7 +64,7 @@ foreach($this->full_bridges as $x => $value) {
   
   
   <div style="float:right;margin: 20px;">
-  	  <span><strong>TOTAL AMOUNT</strong> (Redeemed+Withdrawn): 
+  	  <span><strong>AMOUNT</strong> (Redeemed+Withdrawn): 
       <strong><?php
   $earn =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->totalAmount($viewer->user_id);
   echo round($earn,1);
@@ -74,8 +74,24 @@ foreach($this->full_bridges as $x => $value) {
   </span></a>
   </div>
   
+  <style>
+     .actpoints_bridges_table {
+  
+  
+    overflow-x: auto;
+    white-space: nowrap;
+    width:100%;
+}
+
+.actpoints_bridges_table table {
+  width: 1170px;
+}
+
+
+ </style>
+  
   <div class="actpoints_bridges_table">
-  	<table>
+  	<table style="width: 110020px; max-width:1120px;">
     	<thead>
       	<tr>
           <th class="isdata _year">Year <?php echo $this->year;?></th>

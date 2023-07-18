@@ -79,6 +79,13 @@ class Authorization_Form_Admin_Level_Create extends Engine_Form
     $this->parent->getDecorator('Description')->setOption('placement', 'append');
 	
 	// Element: title
+    $this->addElement('Text', 'award', array(
+      'label' => 'Award',
+      'allowEmpty' => false,
+      'required' => false,
+    ));
+	
+	// Element: title
     $this->addElement('Text', 'reward', array(
       'label' => 'Reward',
       'allowEmpty' => false,

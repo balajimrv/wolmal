@@ -80,7 +80,6 @@ class Activitypoints_Model_DbTable_Points extends Engine_Db_Table
   }
 
 
-
   public function add($user_id, $amount, $update_totalearned = true) {
     
     $db = $this->getTable()->getAdapter();

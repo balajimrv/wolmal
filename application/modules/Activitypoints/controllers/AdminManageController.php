@@ -129,6 +129,7 @@ class Activitypoints_AdminManageController extends Core_Controller_Action_Admin
     $form->getElement('userpoints_count')->setValue($points['userpoints_count']);
     $form->getElement('userpoints_totalearned')->setValue($points['userpoints_totalearned']);
     $form->getElement('userpoints_totalspent')->setValue($points['userpoints_totalspent']);
+	$form->getElement('award_count')->setValue($points['award_count']);
     $form->getElement('id')->setValue($id);
 
 

@@ -124,7 +124,8 @@
       <th style="width: 1%;"><?php echo $this->translate("Members") ?></th>
       <th style="width: 1%;"><?php echo $this->translate("Type") ?></th>
       <th style="width: 1%;" class="admin_table_centered"><?php echo $this->translate("Default Level") ?></th>
-      <th style="width: 1%;"><?php echo $this->translate("Reward") ?></th>
+      <th><?php echo $this->translate("Award (AB)") ?></th>
+      <th><?php echo $this->translate("Reward (AB)") ?></th>
       <th style="width: 1%;"><a href="javascript:void(0);" onclick="javascript:changeOrder('level_order', '<?php if($this->orderby == 'level_order') echo "ASC"; else echo "DESC"; ?>');">Order</a></th>
       <th style="width: 1%;"><?php echo $this->translate("Options") ?></th>
     </tr>
@@ -155,6 +156,9 @@
             <?php else: ?>
               <?php echo $this->formRadio('default', $item->level_id, array('onchange' => "setDefault({$item->level_id});",'disable'=>($item->flag || $item->type != 'user')), '') ?>
             <?php endif; ?>
+          </td>
+          <td class="admin_table_bold">
+            <?php echo $this->translate($item->award) ?>
           </td>
           <td class="admin_table_bold">
             <?php echo $this->translate($item->reward) ?>
