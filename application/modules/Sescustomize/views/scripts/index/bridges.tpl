@@ -28,6 +28,7 @@ foreach($this->full_bridges as $x => $value) {
 }
 
     $totalEarn = $totalPreviousEarn;
+    
 ?>
 <?php if( count($this->navigation) ): ?>
 <div class="headline">
@@ -64,7 +65,12 @@ foreach($this->full_bridges as $x => $value) {
   
   
   <div style="float:right;margin: 20px;">
-  	  <span><strong>AMOUNT</strong> (Redeemed+Withdrawn): 
+  
+  <span><strong>ACTUAL TOTAL AMOUNT: <?php echo $totalPreviousEarn;?></strong></span>
+  <span style="padding-left: 20px;">
+  <strong>ELIGIBLE TOTAL AMOUNT: <?php echo $isBalance = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->monthlyIncomeLimit($viewer->user_id); ?></strong></span>	
+  
+  	  <span style="padding-left: 20px;"><strong>AMOUNT</strong> (Redeemed+Withdrawn): 
       <strong><?php
   $earn =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->totalAmount($viewer->user_id);
   echo round($earn,1);

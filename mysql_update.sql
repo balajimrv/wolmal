@@ -17,3 +17,5 @@ ALTER TABLE `engine4_authorization_levels` ADD `reward` FLOAT NOT NULL AFTER `fl
 ALTER TABLE `engine4_authorization_levels` CHANGE `reward` `reward` INT NOT NULL; 
 
 ALTER TABLE `engine4_semods_userpoints` ADD `award_count` INT NOT NULL DEFAULT '0' AFTER `userpoints_totalspent`; 
+
+ALTER TABLE `engine4_authorization_levels` ADD `monthly_income_limit` INT NOT NULL DEFAULT '0' AFTER `flag`; 

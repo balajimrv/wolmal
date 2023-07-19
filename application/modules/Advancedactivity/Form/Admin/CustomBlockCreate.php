@@ -73,8 +73,7 @@ class Advancedactivity_Form_Admin_CustomBlockCreate extends Engine_Form {
 
 
     //PREPARE LEVELS
-    $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
-	$levels = $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC'));
+    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->fetchAll();
     $levelKey = array();
     foreach ($levels as $level) {
       $levels_prepared[$level->getIdentity()] = $level->getTitle();

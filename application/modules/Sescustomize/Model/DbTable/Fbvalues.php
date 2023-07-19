@@ -84,4 +84,18 @@ class Sescustomize_Model_DbTable_Fbvalues extends Engine_Db_Table
       return  $e - $ex;
   }
   
+  
+  function monthlyIncomeLimit($user_id){
+		$user_tbl = Engine_Api::_()->getDbTable('users', 'user');
+		$select_row = $user_tbl->select('level_id')->where('user_id = ?', $user_id);
+		$query = $user_tbl->fetchRow($select_row);
+		$level_id = $query['level_id'];
+		
+		//Get award
+		$levels_tbl = Engine_Api::_()->getDbTable('levels', 'authorization');
+		$level_row = $levels_tbl->select('monthly_income_limit')->where('level_id = ?', $level_id);
+		$row = $levels_tbl->fetchRow($level_row);
+		return $row['monthly_income_limit'];
+  }
+  
 }
