@@ -122,7 +122,7 @@ $this->headLink()
             <?php if (!empty($this->showContent) && in_array("verify", $this->showContent) && ($verify_count >= $verify_limit)): ?>  
             <span class="siteverify_tip_wrapper">
                 <i class="sitemember_list_verify_label mleft5"></i>
-                <span class="siteverify_tip"><?php echo $this->translate('Certified'); ?><i></i></span>
+                <span class="siteverify_tip"><?php echo $this->translate('Verified'); ?><i></i></span>
             </span>
             <?php endif; ?>
         	<?php endif; ?>
