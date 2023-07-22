@@ -242,6 +242,7 @@ class Authorization_AdminLevelController extends Core_Controller_Action_Admin
     $level->description = $values['description'];
 	$level->award = $values['award'];
 	$level->reward = $values['reward'];
+	$level->monthly_income_limit = $values['monthly_income_limit'];
 	$level->level_order = $values['level_order'];
     $level->save();
 

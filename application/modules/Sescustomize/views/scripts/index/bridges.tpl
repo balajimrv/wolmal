@@ -165,9 +165,9 @@ foreach($this->full_bridges as $x => $value) {
           <th class="nodata"></th>
           <th class="isdata _db">DB<span>DIRECT BRIDGES</span><p><span>GAINED</span><span>VALUE</span></p></th>
           <th class="nodata"></th>
-          <th class="isdata _eb">EB<span>EXTRA BRIDGES </span><span>(INR)</span></th>
+          <th class="isdata _eb" style="background-color:#FFCCE6;">EB<span>EXTRA BRIDGES </span><span>(INR)</span></th>
           <td class="nodata"></td>
-          <th class="isdata _eb">FB<span>FINAL BRIDGES</span><span>FB = Value of (BB+CB+DB)+EB</span></th>
+          <th class="isdata _eb" style="background-color:#E6CCFF;">FB<span>FINAL BRIDGES</span><span>FB = Value of (BB+CB+DB)+EB</span></th>
           <th class="nodata"></th>
           <th class="isdata _ebRedeemed">FB 
             <p>

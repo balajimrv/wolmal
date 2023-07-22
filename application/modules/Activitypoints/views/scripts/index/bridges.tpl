@@ -35,8 +35,8 @@
           <th class="nodata"></th>
           <th class="isdata _db">DB<span>DIRECT BRIDGES</span><p><span>GAINED</span><span>VALUE</span></p></th>
           <th class="nodata"></th>
-          <th class="isdata _eb">EB<span>EXTRA BRIDGES </span><span>(INR)</span></th>
-          <th class="isdata _eb">FB<span>FINAL BRIDGES (INR)</span><span>FB = Value of (BB+CB+DB)+EB</span></th>
+          <th class="isdata _eb" style="background-color:#FD9EFF;">EB<span>EXTRA BRIDGES </span><span>(INR)</span></th>
+          <th class="isdata _eb" style="background-color:#C8AEF5;">FB<span>FINAL BRIDGES (INR)</span><span>FB = Value of (BB+CB+DB)+EB</span></th>
           <th class="nodata"></th>
           <th class="isdata _ebRedeemed">FB<p><span>Redeemed</span><span>To Bank A/C</span><span>Balance</span><span>Total Balance</span></p></th>
         </tr>

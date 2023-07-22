@@ -40,6 +40,12 @@ class Authorization_Form_Admin_Level_Edit extends Authorization_Form_Admin_Level
       'required' => false,
     ));
 	
+	$this->addElement('Text', 'monthly_income_limit', array(
+      'label' => 'Monthly Income Limit',
+      'allowEmpty' => false,
+      'required' => false,
+    ));
+	
 	$this->addElement('Text', 'award', array(
       'label' => 'Award',
       'allowEmpty' => false,
