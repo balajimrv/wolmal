@@ -1,4 +1,9 @@
 <?php
+
+$previous_qualified_total=0;
+$previous_non_qualified_total=0;
+$EB_value = 0;
+
 foreach($this->full_bridges as $x => $value) {
     $previous_bb = $this->full_bridges[$x]['total_full_bb'];
     $previous_cb = $this->full_bridges[$x]['total_full_cb'];
@@ -14,21 +19,27 @@ foreach($this->full_bridges as $x => $value) {
     $Bank =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
     $Redeem =  Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
   
-  	$EB_value = 0;
     if($previous_bb > 0){
-        //$EB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value));
     	$FB_value = (($previous_bb*$bridges_value) + ($previous_cb*$bridges_value) + ($previous_db*$bridges_value)) + $EB_value;
     }else{
     	$FB_value = 0;
-        $EB_value = 0;
     }
     
     $RD_value = ($Bank+$Redeem);
     $totalPreviousEarn = $totalPreviousEarn + ($FB_value - $RD_value);
+    
+    //for non qualified amount
+    if($previous_bb == 0){
+        $previous_non_qualified_total = $previous_non_qualified_total + ((($previous_cb*$bridges_value) + ($previous_db*$bridges_value)) + $EB_value);
+    }
+    
+    //for qualified amount
+    $previous_qualified_total = $previous_qualified_total + $FB_value;
 }
 
     $totalEarn = $totalPreviousEarn;
-    
+    $non_qualified_total=$previous_non_qualified_total;
+    $qualified_total=$previous_qualified_total;
 ?>
 <?php if( count($this->navigation) ): ?>
 <div class="headline">
@@ -66,9 +77,53 @@ foreach($this->full_bridges as $x => $value) {
   
   <div style="float:right;margin: 20px;">
   
-  <span><strong>ACTUAL TOTAL AMOUNT: <?php echo $totalPreviousEarn;?></strong></span>
+  <span>
+      <strong>
+          NON QUALIFIED AMOUNT: 
+            <?php
+                for($i=1;$i<13;$i++){
+                    $dateMonth = date('Y-m', mktime(0, 0, 0, $i, 10,(!empty($_GET['year']) && $_GET['year'] ? $_GET['year'] : date('Y'))));
+                    if(!empty($this->bridges[$i])) {
+                        $item = $this->bridges[$i];
+                        $bb = (float)$item['total_bb'];
+                        $cb = (float)$item['total_cb'];
+                        $db = (float)$item['total_db'];         
+                    }
+                    else {
+                        $bb = $cb = $db =  0;
+                    }
+                    
+                    $date = date('m-Y', mktime(0, 0, 0, $i, 10,(!empty($_GET['year']) && $_GET['year'] ? $_GET['year'] : date('Y'))));
+                    $get_bridges_value = Engine_Api::_()->sescustomize()->getValue($date);
+                    $bridges_value = 0;
+                    if($get_bridges_value){
+                        $bridges_value = (int)$get_bridges_value['value'];
+                    }
+                    
+                    if($bb == 0){
+                        $non_qualified_total = $non_qualified_total + ((($cb * $bridges_value) + ($db * $bridges_value)) + $EB_value);
+                    }
+                    
+                    //Qualified Total Amount
+                    $bank =  (float)Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'bank'));
+                    $redeem =  (float)Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->expend(array('month'=>$dateMonth,'type'=>'redeem'));
+                   
+                    $fb_value=0;
+                    if($bb > 0){
+                        $fb_value = ($bb * $bridges_value) + ($cb * $bridges_value) + ($db * $bridges_value) + $EB_value;
+                    }
+                    $redeemValue = ($bank+$redeem);
+                    $qualified_total = $qualified_total + ($fb_value);
+                }
+                echo round($non_qualified_total,1);
+            ?>
+      </strong>
+  </span>
   <span style="padding-left: 20px;">
-  <strong>ELIGIBLE TOTAL AMOUNT: <?php echo $isBalance = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->monthlyIncomeLimit($viewer->user_id); ?></strong></span>	
+      <strong>QUALIFIED TOTAL AMOUNT: 
+        <?php echo round($qualified_total,1); ?>
+      </strong>
+  </span>	
   
   	  <span style="padding-left: 20px;"><strong>AMOUNT</strong> (Redeemed+Withdrawn): 
       <strong><?php
@@ -117,7 +172,7 @@ foreach($this->full_bridges as $x => $value) {
           <th class="isdata _ebRedeemed">FB 
             <p>
               <span>Redeemed</span>
-              <span>To Bank A/C <?php if($totalEarn >= 10000 || $_SESSION['totalEarn'] >= 5000){ ?><br> (<a href="javascript:;" class="redeem_amt" data-src="sescustomize/index/redeem-form/<?php if($isRequestSend){ ?>id/<?php echo $isRequestSend; } ?>"><?php if($isRequestSend){ ?> VIEW REQUEST <?php }else{ ?> WITHDRAWAL FORM <?php } ?></a>) <?php  } ?></span>
+              <span>To Bank A/C <?php if($totalEarn >= 10000 || $_SESSION['totalEarn'] >= 5000){ ?><br> (<a href="javascript:;" class="redeem_amt" data-src="sescustomize/index/redeem-form/">WITHDRAWAL FORM<?php  } ?></a>)</span>
               <span>Total Balance</span>
             </p>
           </th>
@@ -150,8 +205,6 @@ foreach($this->full_bridges as $x => $value) {
 	               $selectFb = $fbValueUserTable->select()->where('DATE_FORMAT(creation_date,"%Y-%m") =?',$dateMonth)->where('user_id =?',$this->viewer()->getIdentity())->where('type =?','insert')->limit(1);
 	               $fbVal = $fbValueUserTable->fetchRow($selectFb);
 	               
-	                /* echo $selectFb; */
-	               $EB_value = 0;
 	               if($fbVal)
 	                $fbVal = $fbVal->total;
 	               else
