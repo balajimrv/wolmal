@@ -137,7 +137,17 @@ class Activitypoints_Api_Core extends Core_Api_Abstract
   
   
   /*********************** STATISTICS FUNCTIONS *********************/
-  
+  //function to count number of digits
+	function countDigits($userPoints){
+	  $userPoints = (int)$userPoints;
+	  $count = 0;
+	
+	  while($userPoints != 0){
+		$userPoints = (int)($userPoints / 10);
+		$count++;
+	  }
+	  return $count;
+	}
   
   
   function updateStats($user_id, $type, $amount = 1) {
@@ -165,46 +175,47 @@ class Activitypoints_Api_Core extends Core_Api_Abstract
 		
 		$flag = false;
 		
+		$countDigits = $this->countDigits($userpoints_totalearned);
 		
-		$earned_points_start = (($award_count+1)*100000);
-		$earned_points_end = ($earned_points_start + 100000);
-		$awardcount = (substr($earned_points_start, 0, 2)-1); //get first 2 digit
-		
-		if($award_count < 10){
-			if($userpoints_totalearned >= 100000 && $userpoints_totalearned < 200000 && $award_count == 0){
-				$flag = true;
-			}else if($userpoints_totalearned >= 200000 && $userpoints_totalearned < 300000 && $award_count == 1){
-				$flag = true;
-			}else if($userpoints_totalearned >= 300000 && $userpoints_totalearned < 400000 && $award_count == 2){
-				$flag = true;
-			}else if($userpoints_totalearned >= 400000 && $userpoints_totalearned < 500000 && $award_count == 3){
-				$flag = true;
-			}else if($userpoints_totalearned >= 500000 && $userpoints_totalearned < 600000 && $award_count == 4){
-				$flag = true;
-			}else if($userpoints_totalearned >= 600000 && $userpoints_totalearned < 700000 && $award_count == 5){
-				$flag = true;
-			}else if($userpoints_totalearned >= 700000 && $userpoints_totalearned < 800000 && $award_count == 6){
-				$flag = true;
-			}else if($userpoints_totalearned >= 800000 && $userpoints_totalearned < 900000 && $award_count == 7){
-				$flag = true;
-			}else if($userpoints_totalearned >= 900000 && $userpoints_totalearned < 1000000 && $award_count == 8){
-				$flag = true;
-			}else if($userpoints_totalearned >= 1000000 && $userpoints_totalearned < 1100000 && $award_count == 9){
+		if($award_count < 10 && $countDigits == 6){
+			
+			$earned_points_start = (($award_count+1)*100000);
+			$earned_points_end = ($earned_points_start + 10000);
+			
+			$awardcount = (substr($earned_points_start, 0, 1)-1); //get first 1 digit
+			
+			if($userpoints_totalearned >= $earned_points_start && $userpoints_totalearned < $earned_points_end && $award_count == $awardcount){
 				$flag = true;
 			}
+			
 			if($flag){
 				$award_count = $award_count+1;
 				$userpoints_count = $userpoints['userpoints_count'] + $award;
 				Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count, 'award_count' => $award_count), array('userpoints_user_id =?' => $user_id));
 			}
 			//Above 10 lakhs
-		}else if($userpoints_totalearned >= $earned_points_start && $userpoints_totalearned < $earned_points_end && $award_count == $awardcount){
+		}else if($countDigits == 7){ // 10 to 99 Lakhs
+		
+		$earned_points_start = (($award_count+1)*100000);
+		$earned_points_end = ($earned_points_start + 100000);
+		$awardcount = (substr($earned_points_start, 0, 2)-1); //get first 2 digit
+		
+		}else if($countDigits == 8){ // 100 to 999 Lakhs
+			$earned_points_start = (($award_count+1)*100000);
+			$earned_points_end = ($earned_points_start + 100000);
+			$awardcount = (substr($earned_points_start, 0, 3)-1); //get first 3 digit
+		}else if($countDigits == 9){ // 1000 to 9999 Lakhs
+		
+		}
+		
+		
+		/*else if($userpoints_totalearned >= $earned_points_start && $userpoints_totalearned < $earned_points_end && $award_count == $awardcount){
 			$flag = true;
 			$award = 200000;
 			$award_count = $award_count+1;
 			$userpoints_count = $userpoints['userpoints_count'] + $award;
 			Engine_Api::_()->getDbtable('points', 'activitypoints')->update(array('userpoints_count' => $userpoints_count, 'award_count' => $award_count), array('userpoints_user_id =?' => $user_id));
-		}
+		}*/
   		
 		if($flag){
 			//Insert transaction details into semods_uptransactions table
