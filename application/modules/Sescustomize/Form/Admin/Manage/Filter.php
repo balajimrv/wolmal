@@ -45,9 +45,8 @@ class Sescustomize_Form_Admin_Manage_Filter extends Engine_Form
 
     $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->getLevelsAssoc();
 	
-	$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
     $levelMultiOptions = array(0 => ' ');
-   foreach( $level_tbl->fetchAll($level_tbl->select()->order('level_order ASC')) as $key => $value ) {
+   foreach( $levels as $key => $value ) {
       $levelMultiOptions[$key] = $value;
     }
     

@@ -1059,8 +1059,9 @@ class Siteusercoverphoto_ProfileController extends Core_Controller_Action_Standa
                 if ($this->view->count > 1) {
                     $postionParamss['fontcolor'] = $_POST['siteusercover_font_color'];
 					
-					$level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
-					foreach( $level_tbl->getLevelsAssoc($level_tbl->select()->order('level_order ASC')) as $key => $value ) {
+					$level_ids = Engine_Api::_()->getDbtable('levels', 'authorization')->getLevelsAssoc();
+
+                    foreach ($level_ids as $key => $value) {
                     
                        Engine_Api::_()->siteusercoverphoto()->setSiteUserDefaultSettingsParams($key, Zend_Json_Encoder::encode($postionParamss));
                     }

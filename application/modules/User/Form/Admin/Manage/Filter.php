@@ -59,9 +59,9 @@ class User_Form_Admin_Manage_Filter extends Engine_Form
       ->addDecorator('Label', array('tag' => null, 'placement' => 'PREPEND'))
       ->addDecorator('HtmlTag', array('tag' => 'div'));
 
+    $levels = Engine_Api::_()->getDbtable('levels', 'authorization')->getLevelsAssoc();
     $levelMultiOptions = array(0 => ' ');
-    $level_tbl = Engine_Api::_()->getDbtable('levels', 'authorization');
-	foreach( $level_tbl->getLevelsAssoc($level_tbl->select()->order('level_order ASC')) as $key => $value ) {
+    foreach ($levels as $key => $value) {
       $levelMultiOptions[$key] = $value;
     }
     

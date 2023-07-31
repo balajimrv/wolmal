@@ -8,7 +8,7 @@ class Sescustomize_Form_Redeem extends Engine_Form {
    $fbVal = $fbValueUserTable->fetchRow($selectFb);
     $description = "";
     if($_SESSION['totalEarn'] < 10000)
-        $description = 'Minimum Balance EB required to apply for withdrawal as Encashment is 10000';
+        $description = 'Minimum Balance FB required to apply for withdrawal as Encashment is 10000';
 
     $this->setTitle('Amount Reedem Form')
             ->setDescription($description);
