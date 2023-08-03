@@ -23,7 +23,6 @@
           <thead>
             <tr>
               <th><?php echo $this->translate("Id"); ?></th>
-              <th title="Total Amount"><?php echo $this->translate("Total Amount") ?></th>
               <th title="Requested Amount"><?php echo $this->translate("Req.Amount") ?></th>
               <th title="Requested Date"><?php echo $this->translate("Req.Date") ?></th>
               <th><?php echo $this->translate("Status") ?></th>
