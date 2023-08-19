@@ -56,16 +56,40 @@ foreach($this->full_bridges as $x => $value) {
 	?>
   </div>
 </div>
-<?php endif; ?>
-<?php $bridgesValue = Engine_Api::_()->getApi('settings', 'core')->getSetting('sescustomize.bridges.value', 10);?>
-  <?php $isBalance = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->currentFb(); 
-        $isRequestSend = Engine_Api::_()->getDbtable('reedemrequests', 'sescustomize')->isReqExists();; 
+<?php endif; 
+  $bridgesValue = Engine_Api::_()->getApi('settings', 'core')->getSetting('sescustomize.bridges.value', 10); 
+  
+  $isBalance = Engine_Api::_()->getDbtable('fbvalues', 'sescustomize')->currentFb(); 
+  
+  $isRequestSend = Engine_Api::_()->getDbtable('reedemrequests', 'sescustomize')->isReqExists();
+    
+  $viewer = Engine_Api::_()->user()->getViewer(); 
+  
+  $user_level = Engine_Api::_()->user()->getViewer()->level_id; 
   ?>
-  <?php echo $viewer = Engine_Api::_()->user()->getViewer();?>
+  
 <div class="actpoints_bridges_page">
-  <h3>Vallet</h3><b>Year:</b>&nbsp;
-  <?php $date = new DateTime();?>
-<?php $years = $date->format('Y')-'2017';?>  
+  <h3>Vallet</h3>
+  
+  <?php
+  if($user_level == 3){ ?>
+  
+  <div style="margin-top:25px; text-align:center;">
+  <p style="text-align:center;"><img src="https://wolmal.com/application/modules/Sescustomize/externals/images/sad.png" style="width:50px; height:50px;" /></p>
+  	<p style="margin-top:20px; font-size:20px;"><strong>Sorry, This page is not available for you!</strong><br /><br />
+
+	Contact: <a href="mailto:mail@wolmal.com" title="Click Here">mail@wolmal.com</a></p>
+  </div>
+  
+  <?php }else{ ?>
+  
+  
+  <b>Year:</b>&nbsp;
+  
+  
+  
+  
+  <?php $date = new DateTime(); $years = $date->format('Y')-'2017';?>  
  <select name="parent" id="parent" class="postform" onChange="showYearData(this.value)">
  
   <?php for ($i=0; $i<=$years; $i++): ?>
@@ -254,6 +278,8 @@ foreach($this->full_bridges as $x => $value) {
       </tbody>
     </table>
   </div>
+  
+<?php } ?>
 
 </div>
 
